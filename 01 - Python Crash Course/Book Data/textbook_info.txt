@@ -1,0 +1,15 @@
+We are using the textbook "Python Crash Course" from "No Starch Press"
+
+2nd Edition
+Title: Python Crash Course
+Author: Eric Matthes
+ISBN: 978-1593279288
+Amazon: https://www.amazon.com/gp/product/1593279280
+Resources: https://github.com/ehmatthes/pcc_2e/zipball/master/
+
+3rd Edition
+Title: Python Crash Course
+Author: Eric Matthes
+ISBN: 978-1718502703
+Amazon: https://www.amazon.com/Python-Crash-Course-Eric-Matthes/dp/1718502702
+Resources: https://github.com/ehmatthes/pcc_3e/archive/refs/heads/main.zip

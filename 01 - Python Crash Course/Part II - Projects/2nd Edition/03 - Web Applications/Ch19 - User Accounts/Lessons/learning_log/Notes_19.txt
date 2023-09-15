@@ -1,0 +1,123 @@
+Add Topics, Add Entries, & Edit Entries Steps
+
+37. Create ModelForms
+    - forms.py
+
+38. Create User "Add Topic" | "Add Entry" |  "Edit Entry" Pages
+    - urls.py
+    - views.py
+    - new_topic.html
+    - new_entry.html
+
+39. Link to new pages
+    - topics.html -> new_topic.html
+    - topic.html -> new_entry.html
+    - topic.html -> edit_entry.html
+
+TRY IT YOURSELF
+
+Assignment 19.1
+Blog: Start a new Django project called Blog. Create an app called blogs in the project and a model called BlogPost.
+      The model should have fields like title, text, and date_added. Create a superuser for the project, and use the
+      admin site to make a couple of short posts. Make a home page that shows all posts in chronological order. Create
+      a form for making new posts and another for editing existing posts. Fill in your forms to make sure they work.
+
+Create Users App Steps
+
+40. Create the new "users" app
+    > python manage.py startapp users
+
+41. Add to installed apps
+    - settings.py
+
+42. Add application URLs to server URLs
+    - learning_log/urls.py
+
+43. Create application URLs file
+    - users/urls.py
+
+44. Create default registration folder
+    - users/templates/registration
+
+45. Create login template
+    - users/.../login.html
+
+46. Links to the login page and logout
+    - learning_logs/.../base.html
+
+47. Add logout landing template
+    - users/.../logged_out.html
+
+User Registration Steps
+
+48. Add URL
+    - users/urls.py
+
+49. Create register view
+    - users/views.py
+
+50. Create register template
+    - register.html
+
+51. Link to register page
+    - base.html
+
+TRY IT YOURSELF
+
+Assignment 19.2
+Blog Accounts: Add a user authentication and registration system to the Blog project you started in Exercise 19-1.
+               Make sure logged-in users see their username somewhere on the screen and unregistered users see a
+               link to the registration page.
+
+Restricting Access Steps
+
+52. Require login
+    - add @login_required to views: topics, then test and add to all views in learning_logs/views.py except index
+
+53. Configure LOGIN_URL
+    - settings.py
+
+54. Tie topics to owners
+    - learning_logs/models.py
+
+55. Verify users in database
+    > python manage.py shell
+    >>> from django.contrib.auth.models import User
+    >>> for user in User.objects.all():
+    ...     print(user.username, user.id)
+    <ENTER> twice
+
+56. Migrate the database (since we changed a model)
+    > python manage.py makemigrations learning_logs
+    Select an option: 1
+    >>> 1
+    > python manage.py migrate
+
+57. Verify user IDs on topics
+    > python manage.py shell
+    >>> from learning_logs.models import Topic
+    >>> for topic in Topic.objects.all():
+    ...     print(topic, topic.owner)
+    <ENTER> twice
+
+58. Restrict users to viewing their own topics (and fix new_topic)
+    - views.py
+
+TRY IT YOURSELF
+
+Assignment 19.3
+Refactoring: There are two places in views.py where we make sure the user associated with a topic matches the
+             currently logged in user. Put the code for this check in a function called check_topic_owner(),
+             and call this function where appropriate.
+
+Assignment 19.4
+Protecting new_entry: Currently, a user can add a new entry to another user’s learning log by entering a URL
+                      with the ID of a topic belonging to another user. Prevent this attack by checking that
+                      the current user owns the entry’s topic before saving the new entry.
+
+Assignment 19.5
+Protected Blog: In your Blog project, make sure each blog post is connected to a particular user. Make sure
+                all posts are publicly accessible but only registered users can add posts and edit existing posts.
+                In the view that allows users to edit their posts, make sure the user is editing their own post
+                before processing the form.
+

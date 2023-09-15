@@ -1,0 +1,25 @@
+{% extends "blogs/base.html" %}
+
+{% block content %}
+<p>Blog is an online diary.</p>
+<p>Blog Posts:</p>
+<ul>
+    {% for blog in blogs %}
+        <li>
+            <p>
+                <a href="{% url 'blogs:edit_blog' blog.id %}">Edit</a>
+                {{blog.date_added|date:"m-d-Y"}} -
+                <span style="font-weight:bold">{{blog.title}}</span>
+                (Posted By: <span style="font-style:italic">{{blog.owner}}</span>)<br/>
+                {{blog.text}}
+            </p>
+        </li>
+    {% empty %}
+        {% if user.is_authenticated %}
+            <li>There are no blog entries yet...</li>
+        {% else %}
+            <li>You must be logged in to view blogs.</li>
+        {% endif %}
+    {% endfor %}
+</ul>
+{% endblock content %}

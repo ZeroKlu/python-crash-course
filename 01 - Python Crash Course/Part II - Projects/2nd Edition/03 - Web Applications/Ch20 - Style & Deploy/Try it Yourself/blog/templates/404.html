@@ -1,0 +1,9 @@
+{% extends "blogs/base.html" %}
+{% load bootstrap_icons %}
+
+{% block page_header %}
+	<h2>
+		The item you requested is not available. (404)
+		<a href="{% url 'blogs:index' %}">{% bs_icon 'house' %}</a>
+	</h2>
+{% endblock page_header %}

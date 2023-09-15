@@ -1,0 +1,22 @@
+{% extends "learning_logs/base.html" %}
+
+{% block page_header %}
+    <h3>Topics</h3>
+{% endblock page_header %}
+
+{% block content %}
+
+<p><a href="{% url 'learning_logs:new_topic' %}">Add a new topic</a></p>
+
+{% for topic in topics %}
+    <div class="card mb-3">
+        <h4 class="card-header">{{topic}}</h4>
+        <div class="card-body">
+            <a href="{% url 'learning_logs:topic' topic.id %}">View entries about {{topic}}</a>
+        </div>
+    </div>
+{% empty %}
+    <li>No topics have been added yet.</li>
+{% endfor %}
+
+{% endblock content %}

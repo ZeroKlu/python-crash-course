@@ -1,0 +1,105 @@
+# Note: While we're including multiple classes in this file, it is because they are related.
+#       It's smart in the real world to separate unrelated classes in separate modules
+#       In lesson 9.11, we will separate these
+
+# Include a module-level doc string
+"""A set of classes used to represent gas and electric cars"""
+
+class Car:
+    """Define a car"""
+
+    def __init__(self, make, model, year):
+        """Initialize a new instance of the Car class"""
+        self.make = make
+        self.model = model
+        self.year = year
+        self.odometer_reading = 0
+        self.fuel_level = 0
+
+    def get_descriptive_name(self):
+        """Describe the car"""
+        long_name = f"{self.year} {self.make} {self.model}"
+        return long_name.title()
+
+    def read_odometer(self):
+        """Get the odometer mileage"""
+        print(f"This car has {self.odometer_reading} miles on it.\n")
+
+    def set_odometer(self, mileage):
+        """Set the odometer mileage"""
+        if mileage >= self.odometer_reading:
+            print(f"Setting odometer to {mileage}")
+            self.odometer_reading = mileage
+        else:
+            print("You can't roll back an odometer!")
+
+    def increment_odometer(self, miles=1):
+        """Increment the odometer mileage"""
+        if miles > 0:
+            self.odometer_reading += miles
+            print(f"Updated odometer to {self.odometer_reading}")
+        else:
+            print("You can't add negative miles!")
+
+    def fill_gas_tank(self):
+        """Set the fuel level to full"""
+        self.fuel_level = 1
+
+    def check_fuel_level(self):
+        """Get the fuel level"""
+        fuel_state = "empty"
+        if self.fuel_level == 1.0:
+            fuel_state = "full"
+        elif self.fuel_level >= 0.75:
+            fuel_state = "three quarters full"
+        elif self.fuel_level >= 0.5:
+            fuel_state = "half full"
+        elif self.fuel_level >= 0.25:
+            fuel_state = "one quarter full"
+        elif self.fuel_level > 0.0:
+            fuel_state = "running on fumes"
+        print(f"Fuel Status: {fuel_state}\n")        
+
+
+class ElectricCar(Car):
+    """ Define an electric car as a subclass of Car"""
+
+    def __init__(self, make, model, year):
+        """Initialize a new instance of the ElectricCar class"""
+        super().__init__(make, model, year)
+        self.battery = Battery()
+
+    def fill_gas_tank(self):
+        """Set the fuel level to full"""
+        print("This car doesn't have a gas tank!")
+
+    def check_fuel_level(self):
+        """Get the fuel level"""
+        print("This car doesn't contain any fuel!\n")
+
+
+class Battery:
+    """Define a battery"""
+
+    def __init__(self, battery_size = 75):
+        """Initialize a new instance of the Battery class"""
+        self.battery_size = battery_size
+
+    def describe_battery(self):
+        """Describe the battery"""
+        print(f"This car has a {self.battery_size}-kWh battery.")
+
+    def get_range(self):
+        """Get the battery range in miles"""
+        range = "unknown"
+        if self.battery_size == 75:
+            range = 260
+        elif self.battery_size == 100:
+            range = 315
+        print(f"This car can go about {range} miles on a full charge.\n")
+
+    def upgrade_battery(self):
+        """Upgrade the battery"""
+        if self.battery_size < 100:
+            self.battery_size = 100
+            print("Upgraded battery.")

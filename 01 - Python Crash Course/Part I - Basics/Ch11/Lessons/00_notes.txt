@@ -1,0 +1,6 @@
+The second edition of our textbook used the built-in unittest library for testing
+
+The third edition switches to using pytest for testing
+This library needs to be installed
+> python -m pip install pytest
+

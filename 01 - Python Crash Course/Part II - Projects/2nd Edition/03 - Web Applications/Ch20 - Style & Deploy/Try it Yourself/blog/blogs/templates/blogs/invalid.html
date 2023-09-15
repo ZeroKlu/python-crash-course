@@ -1,0 +1,10 @@
+{% extends "blogs/base.html" %}
+
+{% block content %}
+<div class="card mb-3">
+    <h4 class="card-header">You are not permitted to edit or delete someone else's post.</h4>
+    <div class="card-body">
+        <a href="{% url 'blogs:index' %}">Return to the Blogs home page</a>
+    </div>
+</div>
+{% endblock content %}

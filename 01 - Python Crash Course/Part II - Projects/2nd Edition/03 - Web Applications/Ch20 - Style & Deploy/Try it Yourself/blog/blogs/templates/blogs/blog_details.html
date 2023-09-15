@@ -1,0 +1,36 @@
+{% extends "blogs/base.html" %}
+{% load bootstrap_icons %}
+
+{% block page_header %}
+    <h3>Blog Details</h3>
+{% endblock page_header %}
+
+{% block content %}
+    <h4><a href="{% url 'blogs:add_comment' blog.id %}">Add Comment</a></h4>
+    <div class="card mb-3">
+        <h4 class="card-header">
+            {{blog.date_added|date:"m-d-Y"}} -
+            <span style="font-weight:bold">{{blog.title}}</span>
+            (Posted By: <span style="font-style:italic">{{blog.owner}}</span>)
+            <a href="{% url 'blogs:edit_blog' blog.id %}">{% bs_icon 'pencil' %}</a>
+            <a href="{% url 'blogs:delete_blog' blog.id %}">{% bs_icon 'trash' %}</a>
+        </h4>
+        <div class="card-body">{{blog.text}}</div>
+    </div>
+    <h4>Comments:</h4>
+    {% for comment in comments %}
+    <div class="card mb-3">
+        <h4 class="card-header" style="background-color: #444444; color: #E0E0E0;">
+            <small>
+                {{comment.date_added|date:"m-d-Y"}} -
+                (Posted By: <span style="font-style:italic">{{comment.owner}}</span>)
+            </small>
+            <a href="{% url 'blogs:edit_comment' comment.id %}">{% bs_icon 'pencil' color='whitesmoke' %}</a>
+            <a href="{% url 'blogs:delete_comment' comment.id %}">{% bs_icon 'trash' color='whitesmoke' %}</a>
+        </h4>
+        <div class="card-body">{{comment.text}}</div>
+    </div>
+    {% empty %}
+        <h4>There are no comments yet...</h4>
+    {% endfor %}
+{% endblock content %}

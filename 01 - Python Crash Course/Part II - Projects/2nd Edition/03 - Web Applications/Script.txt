@@ -1,0 +1,25 @@
+> python -m venv .venv
+> .venv\scripts\activate
+CTRL+SHIFT+P (click the .venv interpreter)
+> python -m pip install --upgrade pip
+> python -m pip install django
+> django-admin startproject <<PROJECT>> .
+> python manage.py migrate
+< python manage.py runserver
+http://localhost:8000
+> python manage.py startapp <<APP_NAME>>
+: models.py
+: settings.py
+> python manage.py makemigrations <<APP_NAME>>
+> python manage.py migrate
+> python manage.py createsuperuser
+: admin.py
+http://localhost:8000/admin
+: <<PROJECT>>/urls.py
+: <<APP_NAME>>/urls.py
+: views.py
+: <<APP_NAME>>/templates/<<APP_NAME>>/<<PAGE>>.html
+: forms.py
+> pip install django-bootstrap4
+: settings.py
+: <<APP_NAME>>/templates/<<APP_NAME>>/<<PAGE>>.html

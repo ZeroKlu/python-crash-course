@@ -1,0 +1,169 @@
+STYLING & DEPLOYING AN APP
+
+Styling Steps
+
+59. Install Bootstrap
+    > pip install django-bootstrap4
+
+60. Register Bootstrap
+    - settings.py
+
+61. Define HTML headers
+    - base.html
+
+62. Define the navbar
+    - base.html
+
+63. Add jumbotron
+    - index.html
+
+64. Style log-on
+    - login.html
+
+65. Style the entries
+    - topic.html
+
+TRY IT YOURSELF
+
+Assignment 20.1
+Other Forms: We applied Bootstrap’s styles to the login page. Make similar changes to the rest of the form-based pages
+             including new_topic, new_entry, edit_entry, and register.
+
+Assignment 20.2
+Stylish Blog: Use Bootstrap to style the Blog project you created in Chapter 19.
+> python -m pip install django_bootstrap_icons
+
+Deploying App Steps
+
+66. Create Heroku account
+    - Browser: https://www.heroku.com/ -> [Sign Up]
+      * Be sure to click the link in the confirmation email to activate your account
+
+67. Install the Heroku CLI
+    - Browser: https://devcenter.heroku.com/articles/heroku-cli
+      * Follow the online instructions
+      * Download: https://cli-assets.heroku.com/heroku-x64.exe
+
+68. Verify install
+    > heroku --version
+      * May need to run CMD as Administrator
+
+69. Log in:
+    > heroku login
+    * will launch browser for you to log in (alternately, use [> heroku login i])
+
+70. Install packages to use with Heroku
+    > python -m pip install psycopg2
+      * Don't version lock - 2.7 is incompatible with our Python version
+    > python -m pip install django-heroku
+    > python -m pip install gunicorn
+
+71. Create dependency file
+    > python -m pip freeze > requirements.txt
+
+72. Create Python runtime file
+    > python --version
+    - Store version in "runtime.txt" -> python-3.10.4
+
+73. Add Heroku settings
+    - settings.py
+
+74. Create process start file
+    - Procfile
+        web: gunicorn learning_log.wsgi --log-file -
+
+75. Verify Git
+    > git --version
+
+76. Configure Git (optional)
+    > git config --global user.name "<<username>>"
+    > git config --global user.email "<<email address>>"
+
+77. Create an ignore file
+    - .gitignore
+    * If necessary change File Explorer Settings -> View
+      - Radio Select: Show hidden files, folders, and drives
+      - Un-check:     Hide file extensions for known file types
+
+78. Commit the project (optional)
+    > git init
+    > git add .
+    > git commit -am "Ready for deployment to heroku"
+    > git status
+
+79. Push to Heroku (may have to provide absolute path)
+    > heroku login
+    > heroku create
+    > git push heroku master
+        - will take a moment
+    > heroku ps
+    > heroku open
+
+80. Set up the database in Heroku
+    > heroku run python manage.py migrate
+
+81. Create superuser
+    > heroku run bash
+    $ python manage.py createsuperuser
+      ... follow process
+    $ exit
+
+82. Rename the application
+    > heroku apps:rename learning-log-smclean
+
+83. Hide errors to secure the application
+    - settings.py
+
+84. Commit changes
+    > git commit -am "Set DEBUG based on environment variables."
+    > git status
+    > git push heroku master
+
+85. Set Heroku Environment Variables
+    > heroku config:set DEBUG=FALSE
+
+86. Compare local versus hosted errors
+    - Browser: https://learning-log-smclean.herokuapp.com/letmein/ (simple error)
+    - Browser: http://localhost:8000/letmein/                      (full error)
+
+Custom Error Pages Steps
+
+87. Create Error Templates
+    - learning_log/templates/404.html
+    - learning_log/templates/500.html
+
+88. Assign error templates in settings
+    - settings.py
+
+98. Commit
+    > git add .
+    > git commit -am "Added custom 404 and 500 error pages."
+    > git push heroku master
+
+99. View styled error:
+    - Browser: https://learning-log-smclean.herokuapp.com/letmein/
+
+100. Force 404 on invalid entry
+    - views.py
+
+TRY IT YOURSELF
+
+Assignment 20.3
+Live Blog: Deploy the Blog project you’ve been working on to Heroku. Make sure you set DEBUG to False, so users
+           don’t see the full Django error pages when something goes wrong.
+
+Assignment 20.4
+More 404s: The get_object_or_404() function should also be used in the new_entry() and edit_entry() views.
+           Make this change, test it by entering a URL like http://localhost:8000/new_entry/999/, and check that
+           you see a 404 error.
+
+Assignment 20.5
+Extended Learning Log: Add one feature to Learning Log, and push the change to your live deployment. Try a
+                       simple change, such as writing more about the project on the home page. Then try adding
+                       a more advanced feature, such as giving users the option of making a topic public.
+                       This would require an attribute called public as part of the Topic model (this should be
+                       set to False by default) and a form element on the new_topic page that allows the user to
+                       change a topic from private to public. You’d then need to migrate the project and revise
+                       views.py so any topic that’s public is visible to unauthenticated users as well. Remember
+                       to migrate the live database after you’ve pushed your changes to Heroku.
+

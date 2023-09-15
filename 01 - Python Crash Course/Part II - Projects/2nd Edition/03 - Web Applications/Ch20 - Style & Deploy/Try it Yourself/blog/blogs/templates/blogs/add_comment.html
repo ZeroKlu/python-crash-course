@@ -1,0 +1,16 @@
+{% extends "blogs/base.html" %}
+{% load bootstrap4 %}
+
+{% block page_header %}
+    <h3>Add Comment</h3>
+{% endblock page_header %}
+
+{% block content %}
+<form method="post" action="{% url 'blogs:add_comment' blog.id %}">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+        <button name="submit" class="btn btn-primary">Add Comment</button>
+    {% endbuttons %}
+</form>
+{% endblock content %}

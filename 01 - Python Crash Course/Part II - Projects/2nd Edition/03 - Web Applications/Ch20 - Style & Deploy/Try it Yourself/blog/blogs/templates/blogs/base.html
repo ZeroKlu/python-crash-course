@@ -1,0 +1,52 @@
+{% load bootstrap4 %}
+
+<!doctype html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title>Blogs</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4IiB2aWV3Qm94PSIwIDAgMTYgMTYiIHZlcnNpb249IjEuMSI+CjxnIGlkPSJzdXJmYWNlMSI+CjxwYXRoIHN0eWxlPSIgc3Ryb2tlOm5vbmU7ZmlsbC1ydWxlOm5vbnplcm87ZmlsbDpyZ2IoMjYuMjc0NTElLDQ5LjAxOTYwOCUsMTAwJSk7ZmlsbC1vcGFjaXR5OjE7IiBkPSJNIDEzLjI1NzgxMiAxLjk3MjY1NiBDIDExLjgwNDY4OCAwLjY5OTIxOSA5LjkzMzU5NCAtMC4wMDM5MDYyNSA4IDAgTCAwIDAgTCAwIDEwLjIzMDQ2OSBaIE0gMTMuMjU3ODEyIDEuOTcyNjU2ICIvPgo8cGF0aCBzdHlsZT0iIHN0cm9rZTpub25lO2ZpbGwtcnVsZTpub256ZXJvO2ZpbGw6cmdiKDI2LjI3NDUxJSw0OS4wMTk2MDglLDEwMCUpO2ZpbGwtb3BhY2l0eToxOyIgZD0iTSAxMy4yNTc4MTIgMS45NzI2NTYgTCAwLjAwMzkwNjI1IDE2IEwgOCAxNiBDIDEyLjQxNzk2OSAxNiAxNiAxMi40MTc5NjkgMTYgOCBDIDE2IDUuNTk3NjU2IDE0LjkzNzUgMy40NDE0MDYgMTMuMjU3ODEyIDEuOTcyNjU2IFogTSAxMy4yNTc4MTIgMS45NzI2NTYgIi8+CjwvZz4KPC9zdmc+Cg==" />
+    {% bootstrap_css %}
+    {% bootstrap_javascript jquery='full' %}
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light mb-4 border">
+        <a class="navbar-brand" href="{% url 'blogs:index' %}">Blogs</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <span class="navbar-text">Hello {{user.username}}</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'users:logout' %}">Log Out</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'blogs:export_blogs' %}">Export to Excel</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'users:register' %}">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'users:login' %}">Log In</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+    <main role="main" class="container">
+        <div class="pb-2 mb-2 border-bottom">
+            {% block page_header %}{% endblock page_header %}
+        </div>
+        <div>
+            {% block content %}{% endblock content %}
+        </div>
+    </main>
+</body>
+</html>
