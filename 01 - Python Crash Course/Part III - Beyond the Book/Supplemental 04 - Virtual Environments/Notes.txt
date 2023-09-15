@@ -1,0 +1,54 @@
+In order to ensure that your Python projects can easily be deployed to other systems, it's important to be able to
+enforce the installation of necessary modules. The process for doing this is as follows:
+
+I.  In Windows Explorer
+    1.  Create a folder named for your project
+        - In my example, I have called this "zip_lookup"
+
+    2.  Open the folder in VS Code
+        - There are several options for how to do this:
+        a.  From a Command or PowerShell Prompt:
+            i.  Navigate to the folder you created in step 1
+            ii. Enter the following command:
+                > Code .
+        b.  From Windows Explorer:
+            i.  Hold down <SHIFT> and right-click the folder you created in step 1
+            ii. From the context menu that pops up, select "Open with Code"
+        c.  In VS Code:
+            i.  Either select File > Open Folder from the menu or press <CTRL>+K <CTRL>+O
+            ii. Select the folder you created in step 1
+
+II. In Visual Studio Code
+    3.  Open a terminal and ensure it is pointed to the folder you created in step 1
+
+    4.  Create a virtual environment by entering the following command:
+        > python -m venv .venv
+        a. This will create a folder (named ".venv") containing an installation of Python
+        b. Note: The name ".venv" is a convention, not a requirement
+
+    5.  Activate the virtual environment by entering the following command:
+        > .venv\scripts\activate
+        - You can validate that this worked when your terminal line is preceded by (.venv)
+        - You can always repeat this step each time you open VS Code or a new terminal
+
+    6.  Select the Python interpreter for your virtual environment
+        - This ensures that both your testing and your terminal commands will use the same underlying architecture
+        a.  Either click the settings cog and select "Command Pallette" or press <CTRL>+<SHIFT>+P
+        b.  Select "Python: Select Interpreter" from the menu
+        c.  Select the one associated with your virtual environment - Python 3.x.x ('.venv': venv)
+
+    7.  (optional) Upgrade PIP in the virtual environment by entering the following command:
+        > python -m pip install --upgrade pip
+
+    8.  Install any necessary Python modules to your virtual environment using the following command:
+        > python -m pip install <<module_name>>
+        - Note: This does not install the module globally at the machine level, only in .venv
+                This step can be repeated later if additional modules are required
+        - In my example, I installed the "requests" module
+            > python -m pip install requests
+
+    9.  Write your application code (repeating steps 5 and or 8 whenever necessary)
+        - In my example, I created a simple Python script to query a web service hosted on my OnBase VM
+
+    10. Create a dependency file by entering the following command:
+        > python -m pip freeze > requirements.txt
