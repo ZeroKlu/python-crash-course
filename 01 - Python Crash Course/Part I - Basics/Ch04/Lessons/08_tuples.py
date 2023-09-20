@@ -21,3 +21,9 @@ for dim in dimensions: print(dim)
 dimensions = (250, 50)
 print("Modified dimensions:")
 for dim in dimensions: print(dim)
+
+# You can produce a list of tuples using the zip() function
+letters = ["a", "b", "c"]
+numbers = [1, 2, 3]
+tuples = zip(letters, numbers)
+print(list(tuples))
