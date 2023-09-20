@@ -3,7 +3,7 @@ print("Exercise 8 - Tuples")
 
 # In Python, a "tuple" is simply an immutable list (Note: The syntax uses parentheses instead of square-brackets)
 dimensions = (200, 50)
-print(f"Dimensions: {dimensions[0]} x {dimensions[1]}")
+print(f"\nDimensions: {dimensions[0]} x {dimensions[1]}")
 
 # The line below would produce an error, since you cannot change the values of a tuple
 # dimensions[0] = 250
@@ -16,14 +16,20 @@ three = (3,)
 for dim in dimensions: print(dim)
 
 # Unlike an actual constant, you can reassign a new value to the entire tuple, just not its components
-print("Original dimensions:")
+print("\nOriginal dimensions:")
 for dim in dimensions: print(dim)
 dimensions = (250, 50)
-print("Modified dimensions:")
+print("\nModified dimensions:")
 for dim in dimensions: print(dim)
+
+# Tuples are well suited for multiple assignment (which we call unpacking)
+coordinates = (2, 6)
+x, y = coordinates
+print(f"\nCoordinates: {coordinates}\nx = {x}\ny = {y}")
 
 # You can produce a list of tuples using the zip() function
 letters = ["a", "b", "c"]
 numbers = [1, 2, 3]
 tuples = zip(letters, numbers)
+print()
 print(list(tuples))
