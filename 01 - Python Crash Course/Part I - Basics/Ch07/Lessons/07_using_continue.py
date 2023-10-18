@@ -12,5 +12,5 @@ while current_number < 10:
     current_number += 1
     if current_number % 2 == 0:
         # We're using "continue" to skip even numbers but continue the loop
-        continue    
+        continue
     print(current_number)

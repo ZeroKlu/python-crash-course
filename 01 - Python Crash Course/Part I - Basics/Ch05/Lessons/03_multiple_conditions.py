@@ -1,7 +1,7 @@
 print("Chapter 5:")
 print("Exercise 3 - Handling Multiple Conditions")
 
-# Using logical operators, you can heck more than one condition in an if statement
+# Using logical operators, you can check more than one condition in an if statement
 
 # Logical "and"
 #  p | and | q

@@ -5,7 +5,7 @@ print("Exercise 6 - Using 'if' with Lists")
 requested_toppings = ["mushrooms", "green peppers", "extra cheese"]
 for requested_topping in requested_toppings:
     print( f"Adding {requested_topping}.")
-print("\nFinished making your pizza!")
+print("Finished making your pizza!\n")
 
 # Handling special values is also easier when using lists
 requested_toppings = ["mushrooms", "green peppers", "extra cheese"]
@@ -14,7 +14,7 @@ for requested_topping in requested_toppings:
         print("Sorry, we are out of green peppers right now.")
     else:
         print( f"Adding {requested_topping}.")
-print("\nFinished making your pizza!")
+print("Finished making your pizza!\n")
 
 # You can further refine this by using two lists
 out_of_stock = ["green peppers", "anchovies"]
@@ -38,10 +38,14 @@ else:
 
 # Frequently, you'll want to compare values against multiple lists
 available_toppings = ["mushrooms", "olives", "green peppers", "pepperoni", "pineapple", "extra cheese"]
+out_of_stock = ["green peppers", "mushrooms"]
 requested_toppings = ["mushrooms", "french fries", "extra cheese"]
 for requested_topping in requested_toppings:
     if requested_topping in available_toppings:
-        print( f"Adding {requested_topping}.")
+        if requested_topping in out_of_stock:
+            print(f"Sorry. We're out of {requested_topping}")
+        else:
+            print( f"Adding {requested_topping}.")
     else:
         print( f" Sorry, we don't have {requested_topping}.")
 print("Finished making your pizza!")

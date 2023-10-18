@@ -3,7 +3,7 @@ print("Exercise 5 - Using 'if' Statements")
 
 age = 19
 # We looked at an example of an "if" block at the beginning of the chapter
-if (age >= 18):
+if age >= 18:
     print("You are old enough to vote!")
     print("Have you registered to vote yet?")
 

@@ -1,20 +1,25 @@
-# In many languages, you will encounter the ?: ternary logic operator, where the
+# Let's get a value from the user:
+user_entry = input("Enter whatever you want:\n> ")
+
+# If the user entered nothing but whitespace, then set the value to the string "nothing"
+
+# Up to now, if we wanted to do that, we'd have structured an if/else like this:
+if user_entry.strip() == "":
+    data = "nothing"
+else:
+    data = user_entry.strip()
+print(f"You entered: [{data}]")
+
+# In many languages, you will encounter a ?: ternary logic operator, where the
 #   syntax looks like condition ? value_if_true : value_if_false
 
 # Python does not have an operator for this, but we can accomplish the same thing
 #   using the following syntax:     value_if_true if condition else value_if_false
 
-# Example:
-numbers = range(1, 16)
-five_multiples = ["0", "5"]
-for n in numbers:
-    # Here we are setting the value of 'state' based on whether the number ends in 0 or 5 or not.
-    state = "" if str(n)[-1] in five_multiples else "not "
-    print(f"{n} is {state}a multiple of 5")
+# Examples:
+# Here, we're setting a value for data based on whether or not the user entered non-space characters
+data = "nothing" if user_entry.strip() == "" else user_entry.strip()
+print(f"You entered: [{data}]")
 
-# There is a much better way of doing this, which I will show below, but you'll have to wait until
-#   chapter 8 to learn the underlying operator
-# for n in numbers:
-#     # Here we are setting the value of 'state' based on whether the number is divisible by 5 or not.
-#     state = "" if n % 5 == 0 else "not "
-#     print(f"{n} is {state}a multiple of 5")
+# We could also just use the ternary operator right in the print() statement
+print(f"You entered: [{'nothing' if user_entry.strip() == '' else user_entry.strip()}]")
