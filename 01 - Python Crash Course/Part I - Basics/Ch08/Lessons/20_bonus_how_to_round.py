@@ -4,6 +4,9 @@ from statistics import mean
 import random
 random.seed(100)
 
+print("Chapter 8:")
+print("Exercise 20 - Bonus Lesson - Understanding Rounding")
+
 # Now that we're looking at libraries and common functions, we need to take a side-trip to discuss rounding.
 
 # Consider these floating-point numbers

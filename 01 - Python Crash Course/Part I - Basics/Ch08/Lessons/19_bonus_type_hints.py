@@ -1,5 +1,5 @@
 print("Chapter 8:")
-print("Exercise 17 - Bonus Lesson - Type Hints")
+print("Exercise 19 - Bonus Lesson - Type Hints")
 
 # To best communicate the intent of a function, it is useful to be able to provide another developer
 #   who may be working with your code with hints as to the expected data types for parameters.
@@ -12,7 +12,9 @@ print("Exercise 17 - Bonus Lesson - Type Hints")
 
 # This will become especially useful when we start packaging our functions in modules
 
-def calculate(operation: str, x: int, y: int) -> int:
+# Here, I am type-hinting the float type for my numbers (because float implicitly includes integer types)
+
+def calculate(operation: str, x: float, y: float) -> float:
     """Perform basic arithmetic calculation"""
     op = operation[0].lower()
     if op == "a":
@@ -31,13 +33,19 @@ def calculate(operation: str, x: int, y: int) -> int:
         print(f"Operation [{operation}] not supported!")
         return None
 
+# In Python 3.10+ we can specify multiple acceptable types using bitwise OR (|)
+
+def calc(operation: str, x: int | float, y: int | float) -> int | float:
+    """Perform basic arithmetic calculation"""
+    return calculate(operation, x, y)
+
 x = 3
 y = 2
 print(f"{x} + {y} = {calculate('add', x, y)}")
 print(f"{x} - {y} = {calculate('subtract', x, y)}")
 print(f"{x} * {y} = {calculate('multiply', x, y)}")
-print(f"{x} / {y} = {calculate('divide', x, y)}")
-print(f"{x} to the {y} power = {calculate('power', x, y)}")
+print(f"{x} / {y} = {calc('divide', x, y)}")
+print(f"{x} to the {y} power = {calc('power', x, y)}")
 
-# Hover the mouse over any instance of calculate() to see a clear description of the hinted data types
+# Hover the mouse over any instance of calculate() or calc() to see a clear description of the hinted data types
 # Keep in mind, this does not enforce these types. It just provides the developer guidance in using the function.
