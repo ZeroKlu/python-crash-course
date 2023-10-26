@@ -12,8 +12,6 @@ print("Exercise 1 - Read a File\n")
 file_path = get_path("pi_digits.txt", "Files")
 
 # Here we are actually opening the file
-# Note: Using the 'with' keyword will ensure that we release the file after reading it
-#       This is similar to the C# 'using' keyword
 # Create a path object
 path_object = Path(file_path)
 # Read in the file contents as text
