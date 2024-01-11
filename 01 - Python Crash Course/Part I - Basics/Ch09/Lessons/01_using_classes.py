@@ -4,13 +4,13 @@
 print("Chapter 9:")
 print("Exercise 1 - Creating and Using a Class")
 
-# This is a simple model for a dog
 class Dog:
-    # The Python class constructor uses the '__init__' keyword
+    """This is a simple model for a dog"""
+    # The Python class constructor uses the '__init__' keyword (see lesson 15 for deeper discussion)
     def __init__(self, name, age):
         """Initialize a new instance of the Dog class"""
         # We initialize the attributes (name and age)
-        # Note the syntax: self.<<variable>> to make the value a global member (attribute/property) of the class
+        # Note the syntax: self.<<variable>> to make the value a global member (attribute) of the class
         self.name = name
         self.age = age
 

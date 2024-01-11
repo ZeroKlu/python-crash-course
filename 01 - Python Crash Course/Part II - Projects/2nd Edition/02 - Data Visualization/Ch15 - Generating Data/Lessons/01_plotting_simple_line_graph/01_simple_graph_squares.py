@@ -1,8 +1,7 @@
 # matplotlib provides graphing/charting capabilities
 # Samples here: https://matplotlib.org/gallery/
 # You may need to run the following to get this to work
-# > python -m pip install --user matplotlib
-# > python3 -m pip install --user matplotlib
+# > python -m pip install matplotlib
 
 import matplotlib.pyplot as plt
 

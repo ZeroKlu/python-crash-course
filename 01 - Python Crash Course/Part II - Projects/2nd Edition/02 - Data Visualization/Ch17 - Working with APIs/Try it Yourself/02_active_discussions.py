@@ -45,6 +45,7 @@ data = [{
         "line": {"width": 1.5, "color": "rgb(25, 25, 25)"}
     },
     "opacity": 0.6,
+    # "hovertext": titles
 }]
 
 my_layout = {
