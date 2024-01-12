@@ -15,10 +15,10 @@
 
 ### How do I get set up? ###
 
-* Install and configure the development environment
-    * Use the files provided in ./00 - Setup Instructions/
-        * Setting Up Your Workstation for Development Training.pdf
-        * Setting Up Your Workstation for Python Training.pdf
+* Follow setup steps in:
+    * [Setting Up Your Workstation for Development Training.pdf](https://drive.google.com/open?id=1nUeMa4p58ylraf_kB5VrL1hZiNpOCt5M&usp=drive_fs)
+    * [Setting Up Your Workstation for Python Training.pdf](https://drive.google.com/open?id=1o1geFIV9FVFPdT--ZvQELBSEcZYEzYvD&usp=drive_fs)
+
 * Create a virtual environment
     * ```python.exe -m venv .venv``` 
 * Activate your virtual environment
@@ -39,6 +39,10 @@
         * Plotly Express (3rd ed): ```python.exe -m pip install plotly.express```
     * (Chapter 18-20 - Web Portal)
         * Django: ```python.exe -m pip install django```
+
+### Documentation ###
+
+* All documentation located in /00 - Resources/Setup Documentation/
 
 ### Who do I talk to? ###
 
