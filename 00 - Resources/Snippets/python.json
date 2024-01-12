@@ -2,9 +2,6 @@
     "Basic Script Template": {
         "prefix": "&template",
         "body": [
-            "from sm_utils import Timed",
-            "",
-            "@Timed",
             "def my_function(*args: any, **kwargs: any) -> None:",
             "    \"\"\"Doc string for function\"\"\"",
             "    pass",
