@@ -11,6 +11,9 @@ print(f"UPPER CASE: {name.upper()}")
 # Print in lower case
 print(f"lower case: {name.lower()}")
 
+# Print in sentence case
+print(f"Sentence case: {name.capitalize()}")
+
 first_name = "ada"
 last_name = "lovelace"
 full_name = f"{first_name} {last_name}"

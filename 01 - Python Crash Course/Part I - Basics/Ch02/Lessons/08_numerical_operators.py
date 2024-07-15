@@ -1,5 +1,5 @@
 print("Chapter 2:")
-print("Exercise 7 - Numerical Operators")
+print("Exercise 8 - Numerical Operators")
 
 x = 3
 y = 2

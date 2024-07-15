@@ -10,7 +10,7 @@ print(f"2 * 0.2 = {2 * 0.2}")
 print(f"0.2 + 0.1 = {0.2 + 0.1}")
 print(f"3 * 0.1 = {3 * 0.1}")
 # ... but not always
-print(f"{0.3}")
+print(f"0.3 = {0.3}")
 
 # If any operand is a float, the result is a float
 x = 3
