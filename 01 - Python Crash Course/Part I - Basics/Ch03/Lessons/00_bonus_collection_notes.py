@@ -1,11 +1,4 @@
-# Python Collection (Array) Types
-# 
-#    Type          |   Syntax        |   Ordered   |   Changeable   |   Add/Remove   |   Duplicates Allowed
-# ------------------------------------------------------------------------------------------------------------
-#    List            [1, 2, 3]              X               X                 X                   X
-#    Tuple           (1, 2, 3)              X                                                     X
-#    Set             {1, 2, 3}                                                X
-#    Dictionary      {"a":1, "b":2}         X               X                 X
+# Python Collection Examples
 
 my_list = [1, 2, 3]
 print(my_list[0])
