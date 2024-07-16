@@ -58,7 +58,7 @@ Output:
 
 ```python
 my_list = [5, "banana", "fig", 1, "date"]
-my_list.sort() # Error occurs here
+my_list.sort() # TypeError occurs here
 print(my_list)
 ```
 
