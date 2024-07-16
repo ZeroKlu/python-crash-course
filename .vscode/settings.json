@@ -211,6 +211,7 @@
         "nbmru",
         "ncode",
         "ncrypt",
+        "nohtyp",
         "nono",
         "nostarch",
         "opython",
