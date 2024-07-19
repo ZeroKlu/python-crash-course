@@ -2,7 +2,8 @@
 
 ### What is this repository for? ###
 
-* This repository contains all the code samples (as well as my comments and some additional lessons) for the 8-week Python training course at DataBank.
+* This repository contains all the code samples (as well as my comments and 
+  some additional lessons) for a planned 8-week Python training course.
 * For this training course, we use the following textbook:
     * Title: Python Crash Course
     * Author: Eric Matthes
@@ -16,8 +17,8 @@
 ### How do I get set up? ###
 
 * Follow setup steps in:
-    * [Setting Up Your Workstation for Development Training.pdf](https://drive.google.com/open?id=1nUeMa4p58ylraf_kB5VrL1hZiNpOCt5M&usp=drive_fs)
-    * [Setting Up Your Workstation for Python Training.pdf](https://drive.google.com/open?id=1o1geFIV9FVFPdT--ZvQELBSEcZYEzYvD&usp=drive_fs)
+    * [Setting Up Your Workstation for Development Training.pdf](./00%20-%20Resources/Setup%20Documents/01%20Setting%20Up%20Your%20Workstation%20for%20Development%20Training.pdf)
+    * [Setting Up Your Workstation for Python Training.pdf](./00%20-%20Resources/Setup%20Documents/02%20Setting%20Up%20Your%20Workstation%20for%20Python%20Training.pdf)
 
 * Create a virtual environment
     * ```python.exe -m venv .venv``` 
@@ -47,5 +48,4 @@
 ### Who do I talk to? ###
 
 * Any questions can be addressed to the following
-    * [Scott McLean](mailto:smclean@databankimx.com)
-    * [Dev Team](mailto:development@databankimx.com)
+    * [ZeroKlu](mailto:zeroklu@protonmail.com?subject=Python%20Training%20Repository%20Feedback)
