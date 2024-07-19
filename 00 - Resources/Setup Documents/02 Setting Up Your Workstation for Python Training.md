@@ -1,11 +1,13 @@
 
 ---
 
-<div style="text-align:center;font-size:16pt;padding-top:100px;padding-bottom:100px;">
+<div style="text-align:center;padding-top:100px;">
 <a href="https://github.com/ZeroKlu">
 <img src="./images/zeroklu.png" alt="GitHub - ZeroKlu" style="width:80px;border-radius:40px;">
 </a>
+</div>
 
+<div style="text-align:center;font-size:16pt;padding-bottom:100px;">
 Python Training - Workstation Setup Guide
 </div>
 
