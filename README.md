@@ -43,9 +43,8 @@
 
 ### Documentation ###
 
-* All documentation located in /00 - Resources/Setup Documentation/
+* All documentation located in the [Setup Documents](./00%20-%20Resources/Setup%20Documents/) folder.
 
 ### Who do I talk to? ###
 
-* Any questions can be addressed to the following
-    * [ZeroKlu](mailto:zeroklu@protonmail.com?subject=Python%20Training%20Repository%20Feedback)
+* Any questions can be addressed to [zeroklu@protonmail.com](mailto:zeroklu@protonmail.com?subject=Python%20Training%20Repository%20Feedback)
