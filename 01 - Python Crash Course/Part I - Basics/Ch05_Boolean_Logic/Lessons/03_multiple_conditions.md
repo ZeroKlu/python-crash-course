@@ -50,6 +50,11 @@ It is a convention to call the operands of a logical operator `p` and `q`, so I
 will use that nomenclature below. In the truth tables, I will also abbreviate 
 `True` and `False` as `T` and `F` respectively.
 
+I have provided a separate file
+[Boolean Logic Test Page](./boolean_logic_tester.html)
+to allow you to play around with combinations of values and how the logical
+operators evaluate them.
+
 ---
 
 #### Logical `and`
