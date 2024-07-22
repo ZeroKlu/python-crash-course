@@ -1,7 +1,6 @@
 print("Chapter 6:")
-print("Exercise 14 - Nesting Dictionaries in a List")
+print("Exercise 12 - Nesting Dictionaries in a List")
 
-# You can nest dictionaries in a list
 alien_0 = {"color": "green", "points": 5}
 alien_1 = {"color": "yellow", "points": 10}
 alien_2 = {"color": "red", "points": 15}
@@ -10,15 +9,13 @@ for alien in aliens:
     print(alien)
 
 print("---")
-# Often, you'll do this sort of nesting iteratively as needed
-aliens = []
 
-# Add 30 green aliens
-for alien_number in range(30):
+num_aliens = 30
+aliens = []
+for alien_number in range(num_aliens):
     new_alien = {"color": "green", "points": 5, "speed": "slow"}
     aliens.append(new_alien)
 
-# Change the speed on the first three aliens
 for alien in aliens[:3]:
     if alien["color"] == "green":
         alien["color"] = "yellow"

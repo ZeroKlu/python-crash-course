@@ -1,22 +1,23 @@
 print("Chapter 6:")
-print("Exercise 15 - Nesting Lists in a Dictionary")
+print("Exercise 13 - Nesting Lists in a Dictionary")
 
-# When it makes sense as part of an object's description, consider using a list as a value
 pizza = {
     "crust": "thick",
     "toppings": ["mushrooms", "extra cheese"]
 }
 
-print(f"You ordered a {pizza['crust']}-crust pizza with the following toppings:")
-for topping in pizza["toppings"]:
-    print(f"\t{topping}")
+if pizza["toppings"]:
+    print(f"You ordered a {pizza['crust']}-crust pizza with the following toppings:")
+    for topping in pizza["toppings"]:
+        print(f"\t{topping}")
+else:
+    print(f"You ordered a {pizza['crust']}-crust plain pizza")
 
-# This can be especially useful with multiple objects
 favorite_languages = {
     "jen": ["python", "ruby"],
     "sarah": ["c"],
     "edward": ["ruby", "go"],
-    "phil": ["python", "Haskell"],
+    "phil": ["python", "haskell", "rust"],
 }
 
 for name, languages in favorite_languages.items():

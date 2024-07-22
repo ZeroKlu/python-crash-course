@@ -1,5 +1,5 @@
 print("Chapter 6:")
-print("Exercise 9 - Looping Dictionary Keys")
+print("Exercise 8 - Looping Dictionary Keys")
 
 favorite_languages = {
     "jen": "python",
@@ -8,12 +8,12 @@ favorite_languages = {
     "phil": "python",
 }
 
-# if you only need to get the keys, there is a property for that as well
+print(favorite_languages.keys(), "\n")
+
 for name in favorite_languages.keys():
     print(name.title())
 
 print()
 
-# The keys are the default return as well, so this accomplishes the same thing
 for name in favorite_languages:
     print(name.title())

@@ -1,7 +1,6 @@
 print("Chapter 6:")
-print("Exercise 16 - Nesting Dictionaries in a Dictionary")
+print("Exercise 14 - Nesting Dictionaries in a Dictionary")
 
-# You can nest dictionaries in dictionaries, but be careful, as it can make your code complicated to read and edit
 users = {
     "aeinstein": {
         "first": "albert",
