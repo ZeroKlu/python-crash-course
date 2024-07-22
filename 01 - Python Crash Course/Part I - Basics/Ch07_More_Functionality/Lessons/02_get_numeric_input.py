@@ -1,22 +1,25 @@
 print("Chapter 7:")
-print("Exercise 2 - Get Numeric Input")
+print("Exercise 2 - Getting Numeric Input")
 
-# Even if a user enters a number, the result from the input() function is a string.
-# Try the next two lines in the Python terminal
-# age = input("How old are you?\n> ")
-# age
-# age >= 18
+# This would result in a `TypeError`
+# num = input("Enter a number: ")
+# print(num > 10)
 
-# Using int(), we can force that input to be treated as a number
 age = input("How old are you?\n> ")
-# Note: In a real-world scenario, you might want to use a try/except block here
-#       to handle the possibility of the user entering invalid input
 age = int(age)
 print(age >= 18)
 
-# You can include the int() casting function on the same line as the input
 height = int(input("\nHow tall are you in inches?\n> "))
 if height >= 48:
     print("You're tall enough to ride!")
 else:
     print("You'll be able to ride when you're a little older...")
+
+price = 1.75
+paid = float(input("\nEnter the amount paid:\n> "))
+if paid > price:
+    print(f"Your change is ${(paid - price):.2f}")
+elif paid < price:
+    print(f"You still owe ${(price - paid):.2f}")
+else:
+    print("Thank you.")
