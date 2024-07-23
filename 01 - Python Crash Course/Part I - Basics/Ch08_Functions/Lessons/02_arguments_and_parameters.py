@@ -1,9 +1,5 @@
 print("Chapter 8:")
-print("Exercise 2 - Arguments and Parameters")
-
-# It's great to have functions that avoid code redundancy, but they're not really useful
-#   unless we can make them behave differently for different data
-# That's where function arguments come in
+print("Exercise 2 - Function Arguments and Parameters")
 
 # You can define parameters that can be passed to the function
 def greet_named_user(name):
