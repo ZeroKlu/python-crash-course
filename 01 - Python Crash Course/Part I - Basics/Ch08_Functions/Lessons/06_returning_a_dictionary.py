@@ -1,8 +1,5 @@
 print("Chapter 8:")
-print("Exercise 6 - Returning a Dictionary")
-
-# Frequently, a simple string is not a sufficient return value.
-# To provide a more detailed return, one option is to return a dictionary
+print("Exercise 6 - Returning Dictionaries from Functions")
 
 def build_person_simple(first_name, last_name):
     """Return a dictionary of information about a person."""

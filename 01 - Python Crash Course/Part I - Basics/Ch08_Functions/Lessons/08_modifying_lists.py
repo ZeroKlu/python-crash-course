@@ -1,5 +1,5 @@
 print("Chapter 8:")
-print("Exercise 8 - Modifying Lists")
+print("Exercise 8 - Modifying Lists with Functions")
 
 def print_models(unprinted_designs, completed_models):
     """
