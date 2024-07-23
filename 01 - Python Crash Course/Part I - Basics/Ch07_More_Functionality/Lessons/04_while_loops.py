@@ -22,7 +22,6 @@ while message.lower() != "quit":
 
 print()
 
-
 numbers = [1, 2, 3, 4, 5]
 while numbers:
     n = numbers.pop(0)

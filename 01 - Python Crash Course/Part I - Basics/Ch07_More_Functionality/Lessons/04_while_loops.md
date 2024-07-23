@@ -109,7 +109,7 @@ quit
 
 ### Modifying a List While in a Loop
 
-You may recall, way back in Lesson 04.01, we discussed the problem with 
+You may recall, way back in Lesson 4.1, we discussed the problem with 
 modifying an object we're looping across using `for`.
 
 With a while loop, since we are no longer iterating across the list, but 
