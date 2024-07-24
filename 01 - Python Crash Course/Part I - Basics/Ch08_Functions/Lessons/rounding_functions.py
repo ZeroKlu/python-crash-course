@@ -36,6 +36,12 @@ def round_half_away_from_zero(n: float, dec: int=0) -> float:
     return math.copysign(rounded_abs, n)
 
 
+def round_half_toward_zero(n: float, dec: int=0) -> float:
+    """Round a number to a specified number of decimal places (where 5 rounds down and negative 5 rounds down)"""
+    rounded_abs = round_half_down(abs(n), dec)
+    return math.copysign(rounded_abs, n)
+
+
 def round_half_to_even(n: float, dec: int=0) -> float:
     """Round a number to a specified number of decimal places (where 5 rounds up or down to an even number)"""
     return round(n, dec)

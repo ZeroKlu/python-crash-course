@@ -24,7 +24,6 @@ def pause():
 unprinted_designs = ["phone case", "robot pendant", "dodecahedron"]
 completed_models = []
 
-# Lists are passed by reference and can be modified without requiring a return
 print_models(unprinted_designs, completed_models)
 show_completed_models(completed_models)
 print(unprinted_designs)
@@ -34,7 +33,6 @@ pause()
 unprinted_designs = ["phone case", "robot pendant", "dodecahedron"]
 completed_models = []
 
-# to avoid modification of the original list, pass a copy
 print_models(unprinted_designs[:], completed_models)
 show_completed_models(completed_models)
 print(unprinted_designs)

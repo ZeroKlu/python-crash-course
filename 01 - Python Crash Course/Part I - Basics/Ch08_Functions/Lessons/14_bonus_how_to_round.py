@@ -5,38 +5,23 @@ import random
 random.seed(100)
 
 print("Chapter 8:")
-print("Exercise 20 - Bonus Lesson - Understanding Rounding")
+print("Exercise 14 - Bonus Lesson - Understanding Rounding")
 
-# Now that we're looking at libraries and common functions, we need to take a side-trip to discuss rounding.
-
-# Consider these floating-point numbers
 pi = 3.14159265359
 x = 1.5
 y = 2.5
 
-# Python has a built-in function for round()
-# The function accepts a float and an optional integer for the number of decimal places
-# For example:
 clear_terminal()
 print("Using the built-in round() function:")
-print("round(pi)", round(pi)) # If we omit the decimal places argument, round returns an integer
+print("round(pi)", round(pi))
 print("round(pi)", round(pi, 2))
 
 pause()
 clear_terminal()
 
-# So far, so good. But observe the following values:
 print("Using the built-in round() function:")
 print(f"round({x}) =", round(x))
 print(f"round({y}) =", round(y))
-
-# For 1.5, we expected it to round to 2 as it did.
-# But for 2.5, we expected it to round to 3 but received 2 again.
-# What gives?
-
-# This is a design feature of Python's round() function.
-# It uses round-to-even (or "Bankers' Rounding"), where rounding ties always round toward the even number.
-# This is done to reduce the impact of rounding error across large lists of numbers
 
 pause()
 clear_terminal()
@@ -97,6 +82,20 @@ print(f"round_half_away_from_zero(pi, 2) = ", round_half_away_from_zero(pi, 2))
 print(f"round_half_away_from_zero(pi) = ", round_half_away_from_zero(pi))
 print(f"round_half_away_from_zero({x}) = ", round_half_away_from_zero(x))
 print(f"round_half_away_from_zero({y}) = ", round_half_away_from_zero(y))
+print(f"round_half_away_from_zero(-{x}) = ", round_half_away_from_zero(-x))
+print(f"round_half_away_from_zero(-{y}) = ", round_half_away_from_zero(-y))
+
+pause()
+clear_terminal()
+
+# See rounding_functions.py for the definition of the round_half_away_from_zero() function
+print("Rounding Half toward Zero:")
+print(f"round_half_toward_zero(pi, 2) = ", round_half_toward_zero(pi, 2))
+print(f"round_half_toward_zero(pi) = ", round_half_toward_zero(pi))
+print(f"round_half_toward_zero({x}) = ", round_half_toward_zero(x))
+print(f"round_half_toward_zero({y}) = ", round_half_toward_zero(y))
+print(f"round_half_toward_zero(-{x}) = ", round_half_toward_zero(-x))
+print(f"round_half_toward_zero(-{y}) = ", round_half_toward_zero(-y))
 
 pause()
 clear_terminal()
@@ -112,7 +111,7 @@ pause()
 clear_terminal()
 
 # Let's create some data to observe
-# data = [random.uniform(-1.0, 1.01) for _ in range(100_000)]
+# data = [random.uniform(-1.0, 1.01) for _ in range(1_000_000)]
 data = [i + j / 10 for i in range(10) for j in range(10)]
 d = 0
 
@@ -127,4 +126,5 @@ print("Round Down Mean:           ", average([round_down(x, d) for x in data]))
 print("Round Half Up Mean:        ", average([round_half_up(x, d) for x in data]))
 print("Round Half Down Mean:      ", average([round_half_down(x, d) for x in data]))
 print("Round Away from Zero Mean: ", average([round_half_away_from_zero(x, d) for x in data]))
+print("Round Toward Zero Mean:    ", average([round_half_toward_zero(x, d) for x in data]))
 print("Round Half to Even Mean:   ", average([round_half_to_even(x, d) for x in data]))
