@@ -1,5 +1,11 @@
 ## Bonus: Type Hints and Function Documentation
 
+> Note: Even though I am introducing this topic here, the textbook does not
+> cover this material.
+>
+> Because of this, examples in later chapters will (for the most part) not
+> implement type hinting or detailed doc strings.
+
 In VS Code, when you hover over a predefined function name, you are presented
 with a pop-up dialog providing details about how to properly use the function.
 
