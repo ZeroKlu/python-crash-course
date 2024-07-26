@@ -14,6 +14,9 @@ def calculate(operation: str, x: int|float, y: int|float) -> int|float:
 
     **x**: Left numerical operand  
     **y**: Right numerical operand
+
+    **Returns**:  
+    the result of the arithmetic operation
     """
     op = operation[0].lower()
     if op == "a":

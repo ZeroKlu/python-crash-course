@@ -139,7 +139,7 @@ are valid for this function.
 
 ### Adding Parameters to the Doc String
 
-Finally, we can add explanations of the parameters to the doc string.
+Additionally, we can add explanations of the parameters to the doc string.
 
 The doc string is displayed as markdown, so:
 
@@ -167,8 +167,43 @@ def calculate(operation: str, x: int|float, y: int|float) -> int|float:
     """
 ```
 
-Which will result in a fully informative function helper like this:
+Which will result in a very informative function helper like this:
 
 <img src="../../../../00 - Resources/Setup Documents/images/type-hints-05.png" style="width:420px">
+
+---
+
+### Adding the Return to the Doc String
+
+Lastly, we can add a description of the return to the doc string:
+
+The same markdown rules apply as we discussed above in parameter
+documentation.
+
+Here is the function with the return type added:
+
+```python
+def calculate(operation: str, x: int|float, y: int|float) -> int|float:
+    """
+    Perform selected arithmetic calculation
+
+    Parameters:  
+    **operation**: Arithmetic operation to perform
+    * [a]dd
+    * [s]ubtract
+    * [m]ultiply
+    * [d]ivide)  
+    **x**: Left numerical operand  
+    **y**: Right numerical operand
+
+    **Returns**:  
+    the result of the arithmetic operation
+    """
+```
+
+Which will result in a complete function helper like this:
+
+<img src="../../../../00 - Resources/Setup Documents/images/type-hints-06-top.png" style="width:420px">  
+<img src="../../../../00 - Resources/Setup Documents/images/type-hints-06-bottom.png" style="width:420px">
 
 ---
