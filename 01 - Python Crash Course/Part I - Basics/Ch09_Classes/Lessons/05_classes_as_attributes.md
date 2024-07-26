@@ -1,6 +1,22 @@
-print("Chapter 9:")
-print("Exercise 7 - Classes as Attributes")
+## Classes as Attributes
 
+Where the object-oriented programming model really gets powerful is when we 
+use classes as attributes of other classes.
+
+This design mode allows a developer to design highly granular object models
+and combine them to ensure that there is minimal waste data (unused 
+attributes or functions) in any object.
+
+---
+
+### Adding a Class as an Attribute
+
+For this example, we'll continue using our existing `Car` class.
+
+<details>
+<summary>The Car Class</summary>
+
+```python
 class Car:
     """Defines a car"""
 
@@ -9,7 +25,6 @@ class Car:
         self.make = make
         self.model = model
         self.year = year
-        # This attribute is set by default (not included in the constructor call)
         self.odometer_reading = 0
         self.fuel_level = 0
 
@@ -57,38 +72,23 @@ class Car:
         elif self.fuel_level > 0.0:
             fuel_state = "running on fumes"
         print(f"Fuel Status: {fuel_state}\n")
+```
 
+</details>
 
-class ElectricCar(Car):
-    """Defines an Electric Car as a subclass of Car"""
+<br>We'll create a new class to model a `Battery`
 
-    def __init__(self, make, model, year):
-        """Initialize a new instance of the ElectricCar class"""
-        super().__init__(make, model, year)
-
-        # Here, we are making the value on an attribute an instance of another class
-        self.battery = Battery()
-    def fill_gas_tank(self):
-        """Set the gas tank to full"""
-        print("This car doesn't have a gas tank!")
-
-    def check_fuel_level(self):
-        """Check the fuel level"""
-        print("This car doesn't contain any fuel!\n")
-
-
+```python
 class Battery:
     """Defines a battery"""
     def __init__(self, battery_size=75):
         """Initialize a new instance of the Battery class"""
         self.battery_size = battery_size
 
-    # Along with the 'battery_size' attribute, we should move the battery-specific function to the new class
     def describe_battery(self):
         """Describe the battery size"""
         print(f"This car has a {self.battery_size}-kWh battery.")
 
-    # We can add as many functions and attributes as are necessary for describing the new class
     def get_range(self):
         """Get the range of the battery"""
         range = "unknown"
@@ -96,12 +96,57 @@ class Battery:
             range = 260
         elif self.battery_size == 100:
             range = 315
+        else:
+            print(f"Range unknown for battery size: {self.battery_size}-kWh.")
+            return
         print(f"This car can go about {range} miles on a full charge.")
+```
 
-        
-# We create an instance of the child class
-my_nissan = ElectricCar("nissan", "leaf", 2024)
-print(my_nissan.get_descriptive_name())
+And we will modify the `ElectricCar` class `__init__()` function to create a
+new instance property `battery` that takes the `Battery` class instead of the
+existing `battery_size` attribute.
 
-my_nissan.battery.describe_battery()
-my_nissan.battery.get_range()
+```python
+class ElectricCar(Car):
+    """Defines an Electric Car as a subclass of Car"""
+
+    def __init__(self, make, model, year):
+        """Initialize a new instance of the ElectricCar class"""
+        super().__init__(make, model, year)
+        # A class as an attribute
+        self.battery = Battery()
+
+    def fill_gas_tank(self):
+        """Set the gas tank to full"""
+        print("This car doesn't have a gas tank!")
+
+    def check_fuel_level(self):
+        """Check the fuel level"""
+        print("This car doesn't contain any fuel!\n")
+```
+
+---
+
+### Using the Class as an Attribute
+
+When a class attribute is itself an instance of another class, we use the
+same dot-syntax we have been using to access its attributes in turn.
+
+`main_class_object.attribute_that_is_a_class_object.attribute_of_attribute`
+
+```python
+my_e_car = ElectricCar("nissan", "leaf", 2024)
+print(my_e_car.get_descriptive_name())
+my_e_car.battery.describe_battery()
+my_e_car.battery.get_range()
+```
+
+Output:
+
+```
+2024 Nissan Leaf
+This car has a 75-kWh battery.
+This car can go about 260 miles on a full charge.
+```
+
+---
