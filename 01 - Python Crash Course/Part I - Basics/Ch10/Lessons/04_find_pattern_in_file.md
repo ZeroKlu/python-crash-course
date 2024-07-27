@@ -10,6 +10,11 @@ you have `Select-String`.
 For this example, I have provided the following text file:  
 [pi_million_digits.txt](./Files/pi_million_digits.txt)
 
+Pi is an irrational number, meaning its decimal part continues forever without
+repeating. Because of this, every possible pattern of digits eventually
+occurs in pi. Here, we're going to check if a 6-digit pattern (a birthday)
+appears within the first million digits of pi.
+
 > Note: the process to obtain file paths is covered here:  
 > [00_bonus_relative_paths.md](./00_bonus_relative_paths.md)
 
@@ -22,7 +27,7 @@ lesson(s).
 
 ---
 
-<details open>
+<details>
 <summary>2nd Edition Method</summary>
 
 ### Find Pattern in File Data
@@ -66,7 +71,7 @@ Yay! Your birthday appears in the first million digits of pi!
 
 ---
 
-<details open>
+<details>
 <summary>3rd Edition Method</summary>
 
 ### Find Pattern in File Data

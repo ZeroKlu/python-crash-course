@@ -21,7 +21,7 @@ lesson(s).
 
 ---
 
-<details open>
+<details>
 <summary>2nd Edition Method</summary>
 
 ### Looping Lines and Concatenating to a String
@@ -117,7 +117,7 @@ pi_string is 1,000,002 characters long.
 
 ---
 
-<details open>
+<details>
 <summary>3rd Edition Method</summary>
 
 ### Looping Lines and Concatenating to a String

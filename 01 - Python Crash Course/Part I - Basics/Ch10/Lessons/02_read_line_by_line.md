@@ -19,7 +19,7 @@ lesson(s).
 
 ---
 
-<details open>
+<details>
 <summary>2nd Edition Method</summary>
 
 ### Parsing the `open()` File Handler as a List
@@ -82,7 +82,7 @@ Output:
 
 ---
 
-<details open>
+<details>
 <summary>3rd Edition Method</summary>
 
 ### Using `splitlines()`

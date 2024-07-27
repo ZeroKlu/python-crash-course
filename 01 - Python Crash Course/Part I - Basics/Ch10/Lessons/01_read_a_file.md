@@ -18,7 +18,7 @@ lesson(s).
 
 ---
 
-<details open>
+<details>
 <summary>2nd Edition Method</summary>
 
 ### Using the `open()` Method
@@ -88,7 +88,7 @@ Output:
 
 ---
 
-<details open>
+<details>
 <summary>3rd Edition Method</summary>
 
 ### Using `pathlib.Path`
