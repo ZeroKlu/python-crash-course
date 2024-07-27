@@ -114,6 +114,39 @@ I love coding!
 I love creating new applications!
 ```
 
+---
+
+### Appending to a File
+
+Often, we don't want to replace the existing content when we write information
+to a file. Instead, we may want to append data after the already stored text.
+
+A common case for appending would be when your application is writing to a
+log file. You would want to retain all previous log entries in addition to the
+new data being written.
+
+For this, we use the `a` mode.
+
+```python
+# -- SNIP --
+
+with open(file_path, "a") as file_object:
+    file_object.write("I also love finding meaning in large datasets.\n")
+    file_object.write("I love creating apps that can run in a browser.\n")
+
+with open(file_path, "r") as file_object:
+    print(file_object.read())
+```
+
+Output:
+
+```
+I love coding!
+I love creating new applications!
+I also love finding meaning in large datasets.
+I love creating apps that can run in a browser.
+```
+
 </details>
 
 ---
@@ -181,6 +214,45 @@ Output:
 I love programming!
 I love creating new games.
 I also love working with data.
+```
+
+---
+
+### Appending to a File
+
+Often, we don't want to replace the existing content when we write information
+to a file. Instead, we may want to append data after the already stored text.
+
+A common case for appending would be when your application is writing to a
+log file. You would want to retain all previous log entries in addition to the
+new data being written.
+
+The `Path` class does not expose an append method. However, like a file
+handler in the 2nd edition, you can all the `open()` method on a path.
+
+The syntax is a bit different: `with path_object.open(mode)`, but it allows
+opening with the `a` (append) mode.
+
+```python
+# -- SNIP --
+
+content = "I also love finding meaning in large datasets.\n"
+content +="I love creating apps that can run in a browser.\n"
+
+with file.open("a") as f:
+    f.write(content)
+
+print(file.read_text())
+```
+
+Output:
+
+```
+I love programming!
+I love creating new games.
+I also love working with data.
+I also love finding meaning in large datasets.
+I love creating apps that can run in a browser.
 ```
 
 </details>

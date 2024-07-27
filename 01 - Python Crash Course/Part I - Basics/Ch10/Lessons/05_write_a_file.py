@@ -25,6 +25,13 @@ with open(file_path, "w") as file:
 with open(file_path, "r") as file:
     print(file.read())
 
+with open(file_path, "a") as file_object:
+    file_object.write("I also love finding meaning in large datasets.\n")
+    file_object.write("I love creating apps that can run in a browser.\n")
+
+with open(file_path, "r") as file_object:
+    print(file_object.read())
+
 # --- 3rd Edition Method ---
 
 from relative_paths import get_path
@@ -46,5 +53,13 @@ I love creating new games.
 I also love working with data."""
 
 write_line(file, content)
+
+print(file.read_text())
+
+content = "I also love finding meaning in large datasets.\n"
+content +="I love creating apps that can run in a browser.\n"
+
+with file.open("a") as f:
+    f.write(content)
 
 print(file.read_text())
