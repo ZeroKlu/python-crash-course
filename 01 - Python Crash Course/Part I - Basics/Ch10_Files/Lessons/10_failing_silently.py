@@ -20,7 +20,7 @@ def count_words(file_name):
         print(f"The file {file_name} has about {num_words} words.\n")
 
 print("Chapter 10:")
-print("Exercise 12 - Failing Silently\n")
+print("Exercise 10 - Failing Silently\n")
         
 file_names = ["alice.txt", "siddhartha.txt", "moby_dick.txt", "little_women.txt", "missing.txt"]
 for file_name in file_names:
