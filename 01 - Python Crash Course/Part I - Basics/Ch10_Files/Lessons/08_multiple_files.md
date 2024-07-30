@@ -154,9 +154,6 @@ The file moby_dick.txt has about 215830 words.
 The file little_women.txt has about 189079 words.
 ```
 
-
-
-
 </details>
 
 ---
