@@ -27,14 +27,15 @@ guests = [
 ]
 
 print("Oh no! I can only invite two people to dinner!")
-print(f"Uninvited {guests.pop(-1)}")
-print(f"Uninvited {guests.pop(0)}")
-print(f"Uninvited {guests.pop()}")
-print(f"Uninvited {guests.pop()}")
-print(f"Uninvited {guests.pop()}")
-print(f"Uninvited {guests.pop()}")
-print(f"Uninvited {guests.pop()}")
-print(f"I am still inviting {guests}")
+print(f"I'm sorry, {guests.pop(-1)}. I can't invite you to dinner.")
+print(f"I'm sorry, {guests.pop(0)}. I can't invite you to dinner.")
+print(f"I'm sorry, {guests.pop()}. I can't invite you to dinner.")
+print(f"I'm sorry, {guests.pop()}. I can't invite you to dinner.")
+print(f"I'm sorry, {guests.pop()}. I can't invite you to dinner.")
+print(f"I'm sorry, {guests.pop()}. I can't invite you to dinner.")
+print(f"I'm sorry, {guests.pop()}. I can't invite you to dinner.")
+print(f"{guests[0]}, you are still invited.")
+print(f"{guests[1]}, you are still invited.")
 del guests[-1]
 del guests[0]
 print(guests)
