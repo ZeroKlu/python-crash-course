@@ -1,3 +1,6 @@
+print("Chapter 10:")
+print("Exercise 0 - Relative Paths\n")
+
 # -------------------- RELATIVE PATHS - METHOD 1 --------------------
 import os
 
