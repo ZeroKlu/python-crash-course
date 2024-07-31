@@ -8,6 +8,7 @@ print("Assignment 2.6")
 
 name = "count maurice maeterlinck"
 famous_person = name.title()
-quote = "At every crossway on the road that leads to the future stand a thousand men designated to guard the past."
+quote = """At every crossway on the road that leads to the future each \
+progressive spirit is opposed by a thousand men appointed to guard the past."""
 message = f"{famous_person} wrote:\n\"{quote}\"\n"
 print(message)

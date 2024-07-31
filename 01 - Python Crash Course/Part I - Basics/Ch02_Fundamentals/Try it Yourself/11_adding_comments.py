@@ -11,4 +11,5 @@
 print("Try-it-Yourself:")
 print("Assignment 2.11")
 
-print("You will find comments throughout the chapter example files.")
+# Here's a comment...
+print("You will find comments throughout all my chapter example files.")

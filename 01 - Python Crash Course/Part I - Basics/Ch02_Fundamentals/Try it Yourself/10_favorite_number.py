@@ -1,4 +1,4 @@
-# Assignment 2.10 (in 2nd edition, this was 2-9)
+# Assignment 2.10
 # Favorite Number: Use a variable to represent your favorite number. Then, using that variable,
 #                  create a message that reveals your favorite number. Print that message.
 

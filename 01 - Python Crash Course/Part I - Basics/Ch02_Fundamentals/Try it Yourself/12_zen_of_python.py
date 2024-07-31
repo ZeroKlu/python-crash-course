@@ -11,6 +11,7 @@ print("1. Run this command:     > python")
 print("2. Enter:                >>> import this")
 
 input("Press <ENTER> to continue...")
+
 import this
 
 # Result:

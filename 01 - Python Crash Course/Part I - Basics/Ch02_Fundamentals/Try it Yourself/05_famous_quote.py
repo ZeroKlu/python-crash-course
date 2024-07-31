@@ -7,5 +7,6 @@ print("Try-it-Yourself:")
 print("Assignment 2.5")
 
 name = "count maurice maeterlinck"
-quote = "At every crossway on the road that leads to the future stand a thousand men designated to guard the past."
+quote = """At every crossway on the road that leads to the future each \
+progressive spirit is opposed by a thousand men appointed to guard the past."""
 print(f"{name.title()} wrote:\n\"{quote}\"\n")
