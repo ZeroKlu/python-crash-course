@@ -22,7 +22,8 @@ class AnonymousSurvey:
         for response in set(self.responses):
             print(f"- {response.title()} ({self.responses.count(response)})")
 
-def language_survey():
+def language_survey() -> None:
+    """Manually Test Anonymous Surveys"""
     question = "What language did you first learn to speak?"
     my_survey = AnonymousSurvey(question)
 

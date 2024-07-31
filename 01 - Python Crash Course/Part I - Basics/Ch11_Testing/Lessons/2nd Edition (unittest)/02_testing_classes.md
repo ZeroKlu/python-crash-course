@@ -78,6 +78,8 @@ class AnonymousSurveyTestCase(unittest.TestCase):
             self.assertIn(response.lower(), self.my_survey.responses)
 ```
 
+## Testing
+
 Add in a little code to run the tests:
 
 ```python

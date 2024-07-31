@@ -6,7 +6,7 @@
 Let's face it. When you write code, you're going to write bugs. Everyone does.
 Yes, even ChatGPT.
 
-You cna perform extensive manual testing of your code to make sure it's 
+You can perform extensive manual testing of your code to make sure it's 
 bug-free before you release it to the public, and sometimes you will need to
 test manually.
 
@@ -52,6 +52,8 @@ First Last
 ```
 
 This gives me the information to set up tests for two possible cases.
+
+---
 
 ### Test-Driven Development with `unittest`
 
