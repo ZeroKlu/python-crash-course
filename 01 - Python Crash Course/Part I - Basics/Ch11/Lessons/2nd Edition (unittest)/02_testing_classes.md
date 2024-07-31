@@ -1,5 +1,15 @@
-import unittest
+## Testing Classes
 
+We can also use `unittest` to test classes. In order to accomplish this, we'll 
+have to do a couple of extra tasks to ensure that the tests use a shared 
+instance of the class.
+
+Let's imagine that we have the following class:
+
+<details>
+<summary>AnonymousSurvey Class</summary>
+
+```python
 class AnonymousSurvey:
     """Collect anonymous answers to a survey question."""
     
@@ -21,22 +31,29 @@ class AnonymousSurvey:
         print("Survey results:")
         for response in set(self.responses):
             print(f"- {response.title()} ({self.responses.count(response)})")
+```
 
-def language_survey():
-    question = "What language did you first learn to speak?"
-    my_survey = AnonymousSurvey(question)
+</details>
 
-    my_survey.show_question()
-    print("Enter 'q' at any time to quit.\n")
-    while True:
-        response = input("Language: ")
-        if response == "q":
-            break
-        my_survey.store_response(response)
+---
 
-    print("\nThank you to everyone who participated in the survey!")
-    my_survey.show_results()
-    
+## Setting Up the Test
+
+We still construct a test case the same way we did for function testing, by
+creating a `TestCase` class.
+
+However, now we will add a special function to the class: `setup()`.
+
+The `setup()` method allows you to create your test case variables once and
+use them globally in all your unit tests.
+
+In this instance, we're creating an instance of our `AnonymousSurvey` class
+and test data to populate its results.
+
+After that you add unit test as normal, but the unit tests can use the shared
+attributes created in the `setup()` function.
+
+```python
 class AnonymousSurveyTestCase(unittest.TestCase):
     """Tests for the class AnonymousSurvey"""
     
@@ -59,14 +76,31 @@ class AnonymousSurveyTestCase(unittest.TestCase):
             self.my_survey.store_response(response)
         for response in self.responses:
             self.assertIn(response.lower(), self.my_survey.responses)
+```
 
+Add in a little code to run the tests:
+
+```python
 def main():
-    print("Chapter 11:\nExercise 2 - Testing a Class\n")
-    process = input("Test [a]utomatically or [m]anually\n> ")
-    if process[0].lower() == "a":
-        unittest.main()
-    else:
-        language_survey()
+    unittest.main()
     
 if __name__ == "__main__":
     main()
+```
+
+And we have a successful test run.
+
+Output:
+
+```
+..
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+OK
+```
+
+Play around changing the expectations or the class behavior to see different
+test results.
+
+---
