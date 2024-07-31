@@ -1,7 +1,7 @@
 # Assignment 16.06
 # Refactoring: The loop that pulls data from all_eq_dicts uses variables for the magnitude, longitude, latitude,
 #              and title of each earthquake before appending these values to their appropriate lists. This approach
-#              was chosen for clarity in how to pull data from a JSON file, but it’s not necessary in your code.
+#              was chosen for clarity in how to pull data from a JSON file, but it's not necessary in your code.
 #              Instead of using these temporary variables, pull each value from eq_dict and append it to the appropriate
 #              list in one line. Doing so should shorten the body of this loop to just four lines.
 
@@ -37,7 +37,7 @@ fig = px.scatter_geo(
     title=plot_title,
     color=mags,
     color_continuous_scale="Viridis",
-    labels={"color":"Magnitude"},
+    labels={"color": "Magnitude"},
     projection="natural earth",
     hover_name=titles
 )

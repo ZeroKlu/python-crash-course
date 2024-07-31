@@ -6,7 +6,7 @@
 #               random_number = randint(-10, 10)
 #               ----------
 #               This code returns a random integer between –10 and 10. Using your code in Exercise 13-1,
-#               adjust each star’s position by a random amount.
+#               adjust each star's position by a random amount.
 
 import sys
 import os
@@ -14,6 +14,7 @@ import pygame
 from settings import Settings
 from star import Star
 from random import randint
+
 
 class StarField:
     """Overall class to manage game assets and behavior."""
@@ -27,14 +28,14 @@ class StarField:
         self.settings.screen_width = self.screen.get_rect().width
         self.settings.screen_height = self.screen.get_rect().height
         pygame.display.set_caption("Alien Invasion")
-        
+
         self.stars = pygame.sprite.Group()
         self._create_star_field()
 
     def run_game(self):
         while True:
             self._check_events()
-            self._update_screen()            
+            self._update_screen()
 
     def _check_events(self):
         """Respond to keypresses and mouse events."""
@@ -52,7 +53,7 @@ class StarField:
 
     def _check_keydown_events(self, event):
         """Respond to keypresses."""
-        if event.key == pygame.K_q or  event.key == pygame.K_ESCAPE:
+        if event.key == pygame.K_q or event.key == pygame.K_ESCAPE:
             try:
                 pygame.quit()
                 sys.exit()
@@ -67,7 +68,7 @@ class StarField:
         star_num = 0
         while star_num < self.settings.num_stars:
             self._create_star()
-            star_num += 1;
+            star_num += 1
 
     def _create_star(self):
         """Create a star and place it in the row."""
@@ -86,6 +87,7 @@ class StarField:
         self.stars.draw(self.screen)
 
         pygame.display.flip()
+
 
 if __name__ == '__main__':
     # Make a game instance, and run the game.

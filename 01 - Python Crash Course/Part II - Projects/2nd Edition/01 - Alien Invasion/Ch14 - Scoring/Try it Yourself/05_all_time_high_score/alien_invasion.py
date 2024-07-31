@@ -1,5 +1,5 @@
 # Assignment 14.5
-# All-Time High Score: Refactoring: Look for methods that are doing more than one task, and refactor them to organize your code and make it efficient. For example, move some of the code in _check_bullet_alien_collisions(), which starts a new level when the fleet of aliens has been destroyed, to a function called start_new_level(). Also, move the four separate method calls in the __init__() method in Scoreboard to a method called prep_images() to shorten __init__(). The prep_images() method could also help simplify _check_play_button() or start_game() if you’ve already refactored _check_play_button().
+# All-Time High Score: Refactoring: Look for methods that are doing more than one task, and refactor them to organize your code and make it efficient. For example, move some of the code in _check_bullet_alien_collisions(), which starts a new level when the fleet of aliens has been destroyed, to a function called start_new_level(). Also, move the four separate method calls in the __init__() method in Scoreboard to a method called prep_images() to shorten __init__(). The prep_images() method could also help simplify _check_play_button() or start_game() if you've already refactored _check_play_button().
 # NOTE Before attempting to refactor the project, see Appendix D to learn how to restore the project to a working state if you introduce bugs while refactoring.
 
 import sys
@@ -13,6 +13,7 @@ from bullet import Bullet
 from alien import Alien
 from button import Button
 from scoreboard import Scoreboard
+
 
 class AlienInvasion:
     """Overall class to manage game assets and behavior."""
@@ -71,15 +72,15 @@ class AlienInvasion:
             # Decrement ships_left.
             self.stats.ships_left -= 1
             self.sb.prep_ships()
-            
+
             # Get rid of any remaining aliens and bullets.
             self.aliens.empty()
             self.bullets.empty()
-            
+
             # Create a new fleet and center the ship.
             self._create_fleet()
             self.ship.center_ship()
-            
+
             # Pause.
             sleep(0.5)
         else:
@@ -119,11 +120,12 @@ class AlienInvasion:
         alien_width, alien_height = alien.rect.size
         ship_height = self.ship.rect.height
         available_space_x = self.settings.screen_width - (2 * alien_width)
-        available_space_y = self.settings.screen_height - (3 * alien_height) - ship_height
+        available_space_y = self.settings.screen_height - \
+            (3 * alien_height) - ship_height
         # I've removed one column and row so they move more before dropping
         number_rows = available_space_y // (2 * alien_height) - 1
         number_aliens_x = available_space_x // (2 * alien_width) - 1
-        
+
         # Create the full fleet of aliens.
         for row_number in range(number_rows):
             for alien_number in range(number_aliens_x):
@@ -161,9 +163,12 @@ class AlienInvasion:
 
     def _check_play_buttons(self, mouse_pos):
         """Start a new game when the player clicks Play."""
-        easy_button_clicked = self.play_button_easy.rect.collidepoint(mouse_pos)
-        medium_button_clicked = self.play_button_medium.rect.collidepoint(mouse_pos)
-        hard_button_clicked = self.play_button_hard.rect.collidepoint(mouse_pos)
+        easy_button_clicked = self.play_button_easy.rect.collidepoint(
+            mouse_pos)
+        medium_button_clicked = self.play_button_medium.rect.collidepoint(
+            mouse_pos)
+        hard_button_clicked = self.play_button_hard.rect.collidepoint(
+            mouse_pos)
 
         difficulty_level = 1.0
         if easy_button_clicked:
@@ -189,7 +194,7 @@ class AlienInvasion:
         # Get rid of any remaining aliens and bullets.
         self.aliens.empty()
         self.bullets.empty()
-            
+
         # Create a new fleet and center the ship.
         self._create_fleet()
         self.ship.center_ship()
@@ -228,14 +233,15 @@ class AlienInvasion:
         # Get rid of bullets that have disappeared.
         for bullet in self.bullets.copy():
             if bullet.rect.bottom <= 0:
-                 self.bullets.remove(bullet)
+                self.bullets.remove(bullet)
 
         self._check_bullet_alien_collisions()
 
     def _check_bullet_alien_collisions(self):
         """Respond to collisions between bullets and aliens"""
         # Check for bullets that hit aliens, and remove the bullet and the alien when they do
-        collisions = pygame.sprite.groupcollide(self.bullets, self.aliens, True, True)
+        collisions = pygame.sprite.groupcollide(
+            self.bullets, self.aliens, True, True)
 
         if collisions:
             for aliens in collisions.values():
@@ -278,6 +284,7 @@ class AlienInvasion:
             self.play_button_hard.draw_button()
 
         pygame.display.flip()
+
 
 if __name__ == '__main__':
     # Make a game instance, and run the game.

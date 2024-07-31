@@ -111,9 +111,9 @@ Refactoring: There are two places in views.py where we make sure the user associ
              and call this function where appropriate.
 
 Assignment 19.4
-Protecting new_entry: Currently, a user can add a new entry to another user’s learning log by entering a URL
+Protecting new_entry: Currently, a user can add a new entry to another user's learning log by entering a URL
                       with the ID of a topic belonging to another user. Prevent this attack by checking that
-                      the current user owns the entry’s topic before saving the new entry.
+                      the current user owns the entry's topic before saving the new entry.
 
 Assignment 19.5
 Protected Blog: In your Blog project, make sure each blog post is connected to a particular user. Make sure

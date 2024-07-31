@@ -1,12 +1,13 @@
 # Assignment 9.9
 # Battery Upgrade: Use the final version of electric_car.py from this section. Add a method to the Battery class
 #                  called upgrade_battery(). This method should check the battery size and set the capacity to 100
-#                  if it isn’t already. Make an electric car with a default battery size, call get_range() once,
+#                  if it isn't already. Make an electric car with a default battery size, call get_range() once,
 #                  and then call get_range() a second time after upgrading the battery. You should see an increase
-#                  in the car’s range.
+#                  in the car's range.
 
 print("Try-it-Yourself:")
 print("Assignment 9.9")
+
 
 class Car:
     """Defines a car"""
@@ -84,7 +85,7 @@ class ElectricCar(Car):
 class Battery:
     """Define a battery"""
 
-    def __init__(self, battery_size = 75):
+    def __init__(self, battery_size=75):
         """Initialize a new instance of the Battery class"""
         self.battery_size = battery_size
 

@@ -6,10 +6,11 @@
 #       ------------------------------------------------------------------------
 #       car = make_car("subaru", "outback", color = "blue", tow_package = True)
 #       ------------------------------------------------------------------------
-#       Print the dictionary that’s returned to make sure all the information was stored correctly.
+#       Print the dictionary that's returned to make sure all the information was stored correctly.
 
 print("Try-it-Yourself:")
 print("Assignment 8.14")
+
 
 def make_car(make, model, **details):
     """Create a dictionary describing a car"""
@@ -17,5 +18,7 @@ def make_car(make, model, **details):
     details["Model"] = model.title()
     return details
 
-car = make_car("dodge", "challenger", color = "header orange", feature = "shaker", year = 2014)
+
+car = make_car("dodge", "challenger", color="header orange",
+               feature="shaker", year=2014)
 print(car)

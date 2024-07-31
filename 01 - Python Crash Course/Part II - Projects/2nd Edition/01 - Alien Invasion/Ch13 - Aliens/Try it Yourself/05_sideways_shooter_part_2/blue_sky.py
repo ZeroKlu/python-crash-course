@@ -1,9 +1,9 @@
 # Assignment 13.5
-# Sideways Shooter Part 2: We’ve come a long way since Exercise 12-6, Sideways Shooter. For this exercise, try to
-#                          develop Sideways Shooter to the same point we’ve brought Alien Invasion to. Add a fleet
+# Sideways Shooter Part 2: We've come a long way since Exercise 12-6, Sideways Shooter. For this exercise, try to
+#                          develop Sideways Shooter to the same point we've brought Alien Invasion to. Add a fleet
 #                          of aliens, and make them move sideways toward the ship. Or, write code that places aliens
 #                          at random positions along the right side of the screen and then sends them toward the ship.
-#                          Also, write code that makes the aliens disappear when they’re hit.
+#                          Also, write code that makes the aliens disappear when they're hit.
 
 # TODO: Do this assignment!
 
@@ -13,6 +13,7 @@ import pygame
 from settings import Settings
 from rocket import Rocket
 from missile import Missile
+
 
 class BlueSky:
     """ Overall class to manage game assets and behavior. """
@@ -29,7 +30,7 @@ class BlueSky:
 
         self.rocket = Rocket(self)
         self.missiles = pygame.sprite.Group()
-        
+
     def run_game(self):
         """Start the main loop for the game."""
         while True:
@@ -42,11 +43,11 @@ class BlueSky:
         """Respond to keypresses and mouse events."""
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                    try:
-                        pygame.quit()
-                        sys.exit()
-                    except SystemExit as ex:
-                        os._exit(1)
+                try:
+                    pygame.quit()
+                    sys.exit()
+                except SystemExit as ex:
+                    os._exit(1)
             elif event.type == pygame.KEYDOWN:
                 self._check_keydown_events(event)
             elif event.type == pygame.KEYUP:
@@ -81,7 +82,7 @@ class BlueSky:
         # Get rid of missiles that have disappeared.
         for missile in self.missiles.copy():
             if missile.rect.right >= self.settings.screen_width:
-                 self.missiles.remove(missile)
+                self.missiles.remove(missile)
 
     def _check_keyup_events(self, event):
         """Respond to key releases."""
@@ -97,7 +98,8 @@ class BlueSky:
         for missile in self.missiles.sprites():
             missile.draw_missile()
         pygame.display.flip()
-            
+
+
 if __name__ == '__main__':
     # Make a game instance, and run the game.
     bs = BlueSky()

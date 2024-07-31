@@ -1,5 +1,5 @@
 # Assignment 16.09
-# World Fires: In the resources for this chapter, you’ll find a file called world_fires_1_day.csv. This file contains information
+# World Fires: In the resources for this chapter, you'll find a file called world_fires_1_day.csv. This file contains information
 #              about fires burning in different locations around the globe, including the latitude and longitude, and the brightness
 #              of each fire. Using the data processing work from the first part of this chapter and the mapping work from this
 #              section, make a map that shows which parts of the world are affected by fires. You can download more recent versions of
@@ -22,7 +22,7 @@ BRT_LABEL = "bright_ti4"
 download = requests.get(API_URL)
 content = download.content.decode("utf-8")
 
-reader = csv.reader(content.splitlines(), delimiter = ",")
+reader = csv.reader(content.splitlines(), delimiter=",")
 header_row = next(reader)
 lat_pos = header_row.index(LAT_LABEL)
 lon_pos = header_row.index(LON_LABEL)
@@ -48,9 +48,9 @@ data = [{
     },
 }]
 
-my_layout = Layout(title = "Fires - Past 24 Hours")
+my_layout = Layout(title="Fires - Past 24 Hours")
 
 fig = {"data": data, "layout": my_layout}
 html_path = os.path.join(ROOT_DIR, "Data", "global_fires.html")
 
-offline.plot(fig, filename = html_path)
+offline.plot(fig, filename=html_path)

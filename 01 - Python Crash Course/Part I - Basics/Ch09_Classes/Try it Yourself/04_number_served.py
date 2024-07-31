@@ -7,11 +7,12 @@
 #                have been served. Call this method with a new number and print the value again.
 #
 #                Add a method called increment_number_served() that lets you increment the number of customers
-#                who’ve been served. Call this method with any number you like that could represent how many customers
+#                who've been served. Call this method with any number you like that could represent how many customers
 #                were served in, say, a day of business.
 
 print("Try-it-Yourself:")
 print("Assignment 9.4")
+
 
 class Restaurant:
     """Defines a restaurant object"""
@@ -33,7 +34,7 @@ class Restaurant:
     def get_number_served(self):
         """Get the number of people served by the restaurant"""
         print(f"We have served {self.number_served} people today.\n")
-        
+
     def set_number_served(self, num):
         """Set the number of people served by the restaurant"""
         if num >= self.number_served:
@@ -49,6 +50,7 @@ class Restaurant:
             print(f"Incremented number served to {self.number_served}")
         else:
             print("Cannot reduce the number served!")
+
 
 restaurant = Restaurant("burger heaven", "american")
 restaurant.describe()

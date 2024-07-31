@@ -1,5 +1,5 @@
 # Assignment 14.8
-# Sideways Shooter, Final Version: Continue developing Sideways Shooter, using everything we’ve done in this
+# Sideways Shooter, Final Version: Continue developing Sideways Shooter, using everything we've done in this
 #                                  project. Add a Play button, make the game speed up at appropriate points,
 #                                  and develop a scoring system. Be sure to refactor your code as you work,
 #                                  and look for opportunities to customize the game beyond what was shown in
@@ -13,6 +13,7 @@ import pygame
 from settings import Settings
 from rocket import Rocket
 from missile import Missile
+
 
 class BlueSky:
     """ Overall class to manage game assets and behavior. """
@@ -29,7 +30,7 @@ class BlueSky:
 
         self.rocket = Rocket(self)
         self.missiles = pygame.sprite.Group()
-        
+
     def run_game(self):
         """Start the main loop for the game."""
         while True:
@@ -42,11 +43,11 @@ class BlueSky:
         """Respond to keypresses and mouse events."""
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                    try:
-                        pygame.quit()
-                        sys.exit()
-                    except SystemExit as ex:
-                        os._exit(1)
+                try:
+                    pygame.quit()
+                    sys.exit()
+                except SystemExit as ex:
+                    os._exit(1)
             elif event.type == pygame.KEYDOWN:
                 self._check_keydown_events(event)
             elif event.type == pygame.KEYUP:
@@ -81,7 +82,7 @@ class BlueSky:
         # Get rid of missiles that have disappeared.
         for missile in self.missiles.copy():
             if missile.rect.right >= self.settings.screen_width:
-                 self.missiles.remove(missile)
+                self.missiles.remove(missile)
 
     def _check_keyup_events(self, event):
         """Respond to key releases."""
@@ -97,7 +98,8 @@ class BlueSky:
         for missile in self.missiles.sprites():
             missile.draw_missile()
         pygame.display.flip()
-            
+
+
 if __name__ == '__main__':
     # Make a game instance, and run the game.
     bs = BlueSky()

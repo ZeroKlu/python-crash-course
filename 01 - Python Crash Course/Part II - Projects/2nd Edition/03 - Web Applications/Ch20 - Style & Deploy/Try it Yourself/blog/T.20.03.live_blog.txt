@@ -1,5 +1,5 @@
 Assignment 20.3
-Live Blog: Deploy the Blog project you’ve been working on to Heroku. Make sure you set DEBUG to False, so users
-           don’t see the full Django error pages when something goes wrong.
+Live Blog: Deploy the Blog project you've been working on to Heroku. Make sure you set DEBUG to False, so users
+           don't see the full Django error pages when something goes wrong.
 
 Note: I am skipping this, as students would not be able to access my GitHub or Heroku deployments

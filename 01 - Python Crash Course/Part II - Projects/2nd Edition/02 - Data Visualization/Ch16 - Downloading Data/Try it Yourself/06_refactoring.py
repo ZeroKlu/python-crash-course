@@ -1,7 +1,7 @@
 # Assignment 16.06
 # Refactoring: The loop that pulls data from all_eq_dicts uses variables for the magnitude, longitude, latitude,
 #              and title of each earthquake before appending these values to their appropriate lists. This approach
-#              was chosen for clarity in how to pull data from a JSON file, but it’s not necessary in your code.
+#              was chosen for clarity in how to pull data from a JSON file, but it's not necessary in your code.
 #              Instead of using these temporary variables, pull each value from eq_dict and append it to the appropriate
 #              list in one line. Doing so should shorten the body of this loop to just four lines.
 
@@ -13,7 +13,8 @@ import os
 ROOT_DIR = os.path.dirname(__file__)
 file_path = os.path.join(ROOT_DIR, "Data", "eq_data_30_day_m1.json")
 
-with open(file_path) as f: all_eq_data = json.load(f)
+with open(file_path) as f:
+    all_eq_data = json.load(f)
 
 all_eq_dicts = all_eq_data["features"]
 
@@ -36,9 +37,8 @@ data = [{
     },
 }]
 
-my_layout = Layout(title = "Global Earthquakes")
+my_layout = Layout(title="Global Earthquakes")
 fig = {"data": data, "layout": my_layout}
 html_path = os.path.join(ROOT_DIR, "Data", "global_earthquakes.html")
 
-offline.plot(fig, filename = html_path)
-
+offline.plot(fig, filename=html_path)

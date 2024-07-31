@@ -1,5 +1,5 @@
 # Assignment 16.09
-# World Fires: In the resources for this chapter, you’ll find a file called world_fires_1_day.csv.
+# World Fires: In the resources for this chapter, you'll find a file called world_fires_1_day.csv.
 #              This file contains information about fires burning in different locations around the globe,
 #              including the latitude and longitude, and the brightness of each fire.
 #
@@ -50,9 +50,8 @@ fig = px.scatter_geo(
     title=plot_title,
     color=brts,
     color_continuous_scale="Hot",
-    labels={"color":"Magnitude"},
+    labels={"color": "Magnitude"},
     projection="albers usa"
 )
 
 fig.show()
-

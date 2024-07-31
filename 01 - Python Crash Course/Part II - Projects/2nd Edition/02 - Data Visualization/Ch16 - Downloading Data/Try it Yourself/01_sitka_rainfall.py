@@ -2,7 +2,7 @@
 # Sitka Rainfall: Sitka is in a temperate rainforest, so it gets a fair amount of rainfall.
 #                 In the data file sitka_weather_2018_simple.csv is a header called PRCP, which
 #                 represents daily rainfall amounts. Make a visualization focusing on the data
-#                 in this column. You can repeat the exercise for Death Valley if you’re curious
+#                 in this column. You can repeat the exercise for Death Valley if you're curious
 #                 how little rainfall occurs in a desert.
 
 import csv
@@ -36,12 +36,12 @@ with open(data_file) as f:
 
     plt.style.use("seaborn")
     fig, ax = plt.subplots()
-    ax.plot(dates, rainfall, c = "green", alpha = 0.5)
-    ax.set_title("Daily Rainfall - 2018\nSitka, AK", fontsize = 20)
-    ax.set_xlabel("", fontsize = 16)
-    ax.set_ylabel("Rainfall (in)", fontsize = 16)
+    ax.plot(dates, rainfall, c="green", alpha=0.5)
+    ax.set_title("Daily Rainfall - 2018\nSitka, AK", fontsize=20)
+    ax.set_xlabel("", fontsize=16)
+    ax.set_ylabel("Rainfall (in)", fontsize=16)
     fig.autofmt_xdate()
-    ax.tick_params(axis ="both", which ="major", labelsize = 12)
+    ax.tick_params(axis="both", which="major", labelsize=12)
     ax.set_yticks(np.arange(0, max(rainfall) + 1, 0.5))
 
     plt.show()

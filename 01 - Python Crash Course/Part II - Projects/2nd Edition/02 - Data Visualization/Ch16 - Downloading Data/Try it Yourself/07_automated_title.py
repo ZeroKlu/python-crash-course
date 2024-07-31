@@ -2,7 +2,7 @@
 # Automated Title: In this section, we specified the title manually when defining my_layout, which means we have to
 #           remember to update the title every time the source file changes. Instead, you can use the title for the
 #           data set in the metadata part of the JSON file. Pull this value, assign it to a variable, and use this
-#           for the title of the map when you’re defining my_layout.
+#           for the title of the map when you're defining my_layout.
 
 import json
 from matplotlib.pyplot import title
@@ -14,7 +14,8 @@ import os
 ROOT_DIR = os.path.dirname(__file__)
 file_path = os.path.join(ROOT_DIR, "Data", "eq_data_30_day_m1.json")
 
-with open(file_path) as f: all_eq_data = json.load(f)
+with open(file_path) as f:
+    all_eq_data = json.load(f)
 
 all_eq_dicts = all_eq_data["features"]
 
@@ -38,10 +39,11 @@ data = [{
 }]
 
 title_info = all_eq_data["metadata"]["title"].split(",")[0]
-date_info = datetime.fromtimestamp(all_eq_dicts[0]["properties"]["time"] / 1000).strftime("[%b %Y]")
-my_layout = Layout(title = f"{title_info} - {date_info}")
+date_info = datetime.fromtimestamp(
+    all_eq_dicts[0]["properties"]["time"] / 1000).strftime("[%b %Y]")
+my_layout = Layout(title=f"{title_info} - {date_info}")
 
 fig = {"data": data, "layout": my_layout}
 html_path = os.path.join(ROOT_DIR, "Data", "global_earthquakes.html")
 
-offline.plot(fig, filename = html_path)
+offline.plot(fig, filename=html_path)

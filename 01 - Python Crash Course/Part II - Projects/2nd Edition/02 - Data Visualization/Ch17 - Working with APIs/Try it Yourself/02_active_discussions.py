@@ -1,7 +1,7 @@
 # Assignment 17.02
 # Active Discussions: Using the data from hn_submissions.py, make a bar chart showing the most active discussions
 #                     currently happening on Hacker News. The height of each bar should correspond to the number of
-#                     comments each submission has. The label for each bar should include the submission’s title and
+#                     comments each submission has. The label for each bar should include the submission's title and
 #                     should act as a link to the discussion page for that submission.
 
 import requests
@@ -28,11 +28,14 @@ for submission_id in submission_ids[:MAX_RETRIEVE]:
     r = requests.get(url)
     response_dict = r.json()
     titles.append(response_dict["title"].split(")")[-1])
-    links.append(f"<a href='http://news.ycombinator.com/item?id={submission_id}'>{response_dict['title']}")
-    comments.append(response_dict["descendants"] if "descendants" in response_dict.keys() else 0)
+    links.append(
+        f"<a href='http://news.ycombinator.com/item?id={submission_id}'>{response_dict['title']}")
+    comments.append(response_dict["descendants"]
+                    if "descendants" in response_dict.keys() else 0)
 
 # A little sneaky sorting
-comments, titles, links = zip(*sorted(zip(comments, titles, links), reverse = True))
+comments, titles, links = zip(
+    *sorted(zip(comments, titles, links), reverse=True))
 comments, titles, links = comments[:ITEM_COUNT], titles[:ITEM_COUNT], links[:ITEM_COUNT]
 
 # Make visualization.
@@ -70,4 +73,4 @@ fig = {'data': data, 'layout': my_layout}
 
 html_path = os.path.join(ROOT_DIR, "Data", "hacker_news_posts.html")
 
-offline.plot(fig, filename = html_path)
+offline.plot(fig, filename=html_path)
