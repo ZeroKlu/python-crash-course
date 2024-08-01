@@ -23,6 +23,7 @@ for user in new_users:
     if (user.lower() in lower_case_users):
         print(f"Sorry. Username {user} is already in use. Choose another username")
     else:
+        print(f"Username {user} is available.")
         current_users.append(user.title())
         lower_case_users.append(user.lower())
 print("Final list of users:")

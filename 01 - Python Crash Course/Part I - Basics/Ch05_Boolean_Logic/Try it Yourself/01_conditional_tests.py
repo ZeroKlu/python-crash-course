@@ -29,7 +29,7 @@ print(make == "Dodge")
 print("Is case-insensitive make == 'dodge'? I predict True.")
 print(make.lower() == "dodge")
 
-print("\nIs model == 'charger'? I predict False.")
+print("Is model == 'charger'? I predict False.")
 print(model == "charger")
 print("Is model != 'charger'? I predict True.")
 print(model != "charger")
