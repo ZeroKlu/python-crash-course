@@ -5,4 +5,6 @@
 print("Try-it-Yourself:")
 print("Assignment 4.6")
 
-for num in range(1, 21, 2): print(num)
+nums = list(range(1, 21, 2))
+for num in nums:
+    print(num)

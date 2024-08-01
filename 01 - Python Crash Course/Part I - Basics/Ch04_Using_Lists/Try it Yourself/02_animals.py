@@ -8,7 +8,10 @@
 print("Try-it-Yourself:")
 print("Assignment 4.2")
 
+from random import choice
+
 animals = ["octopus", "squid", "cuttlefish"]
+verbs = ["eat", "devour", "dine on"]
 for animal in animals:
-    print(f"I like to eat {animal}.")
+    print(f"I like to {choice(verbs)} {animal}.")
 print("You have to be very careful cooking any of these animals.")

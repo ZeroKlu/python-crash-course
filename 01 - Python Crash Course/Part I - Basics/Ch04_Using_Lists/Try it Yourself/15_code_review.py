@@ -20,3 +20,5 @@
 
 # Note: You can add as many guidelines as you want. e.g.:
 #       "editor.rulers": [80, 120]
+
+# Do this one on your own

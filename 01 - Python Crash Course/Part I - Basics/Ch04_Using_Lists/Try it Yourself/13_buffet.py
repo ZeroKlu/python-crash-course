@@ -13,8 +13,10 @@ print("Assignment 4.13")
 menu = ("sandwich", "pastry", "coffee", "tea", "bagel")
 print("Menu:")
 for food in menu: print(f" - {food}")
+
 # Uncomment this line to see immutability error
 # menu[0] = "toast"
+
 menu = ("toast", "pastry", "coffee", "tea", "yoghurt")
 print("Updated Menu:")
 for food in menu: print(f" - {food}")

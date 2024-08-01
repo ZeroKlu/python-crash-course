@@ -6,5 +6,11 @@ print("Try-it-Yourself:")
 print("Assignment 4.4")
 
 million = list(range(1, 1_000_001))
-# Uncomment the next line to see all the numbers print
-# for num in million: print(num)
+
+# I'm cheating, since we don't cover slices until later in the chapter
+for num in million[:5] + million[-5:]:
+    print(num)
+
+# Uncomment this block to see all the numbers print
+# for num in million:
+#     print(num)

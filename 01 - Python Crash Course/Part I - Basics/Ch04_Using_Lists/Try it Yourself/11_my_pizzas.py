@@ -13,9 +13,12 @@ print("Assignment 4.11")
 
 my_pizzas = ["margherita", "spinach and garlic", "feta and black olive"]
 friend_pizzas = my_pizzas[:]
+
 my_pizzas.append("pepperoni")
 friend_pizzas.append("sausage and green pepper")
+
 print(f"My favorite pizzas are:")
 for pizza in my_pizzas: print(f" - {pizza}")
+
 print(f"\nMy friend's favorite pizzas are:")
 for pizza in friend_pizzas: print(f" - {pizza}")

@@ -11,8 +11,11 @@
 print("Try-it-Yourself:")
 print("Assignment 4.1")
 
+from random import choice
+
 pizzas = ["margherita", "spinach and garlic", "feta and black olive"]
+adjectives = ["delicious", "tasty", "scrumptious"]
 for pizza in pizzas:
     # print(pizza)
-    print(f"I think {pizza} pizza is delicious!")
+    print(f"I think {pizza} pizza is {choice(adjectives)}!")
 print("Pizza is magnificent!")
