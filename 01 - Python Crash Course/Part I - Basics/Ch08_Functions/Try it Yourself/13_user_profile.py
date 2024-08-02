@@ -11,5 +11,8 @@ def build_profile(first, last, **user_info):
     user_info["last_name"] = last
     return user_info
 
-me = build_profile("scott", "mclean", profession="programmer", avocation="musician")
+me = build_profile("scott", "mclean",
+                   profession="programmer",
+                   avocation="musician",
+                   hobby="cobbler")
 print(me)

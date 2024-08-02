@@ -6,7 +6,6 @@
 print("Try-it-Yourself:")
 print("Assignment 8.8")
 
-
 def make_album(artist, album, songs=None):
     """Return a dictionary describing a music album"""
     album = {"Artist": artist.title(), "Title": album.title()}

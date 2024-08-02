@@ -6,13 +6,12 @@
 print("Try-it-Yourself:")
 print("Assignment 8.4")
 
-def make_shirt_def(size="large", message="I ♥ Python"):
+def make_shirt(size="large", message="I ♥ Python"):
     """Print a message describing a shirt order"""
     print(f"You ordered a {size} t-shirt saying '{message}'.")
 
 my_size = "medium"
 my_message = "I ♥ Coding"
-make_shirt_def()
-make_shirt_def(size = my_size)
-make_shirt_def(message = my_message)
-make_shirt_def(message = my_message, size = "small")
+make_shirt()
+make_shirt(size=my_size)
+make_shirt(message=my_message)

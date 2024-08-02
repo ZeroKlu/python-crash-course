@@ -11,13 +11,11 @@
 print("Try-it-Yourself:")
 print("Assignment 8.14")
 
-
 def make_car(make, model, **details):
     """Create a dictionary describing a car"""
     details["Make"] = make.title()
     details["Model"] = model.title()
     return details
-
 
 car = make_car("dodge", "challenger", color="header orange",
                feature="shaker", year=2014)

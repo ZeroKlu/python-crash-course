@@ -11,7 +11,6 @@
 print("Try-it-Yourself:")
 print("Assignment 8.7")
 
-
 def make_album(artist, album, songs=None):
     """Return a dictionary describing a music album"""
     album = {"Artist": artist.title(), "Title": album.title()}
@@ -19,12 +18,11 @@ def make_album(artist, album, songs=None):
         album["Tracks"] = songs
     return album
 
-
 album = make_album("pink floyd", "animals")
 print(album)
 album = make_album("simon & garfunkel", "sounds of silence")
 print(album)
-album = make_album("john prine", "fair & square")
+album = make_album("they might be giants", "flood")
 print(album)
 album = make_album("john prine", "fair & square", 14)
 print(album)

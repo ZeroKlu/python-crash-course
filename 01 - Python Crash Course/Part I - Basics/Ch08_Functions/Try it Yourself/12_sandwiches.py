@@ -7,13 +7,11 @@
 print("Try-it-Yourself:")
 print("Assignment 8.12")
 
-
 def make_sandwich(*toppings):
     """List out the provided sandwich toppings"""
     print("Making a sandwich with the following toppings:")
     for topping in toppings:
         print(f" - {topping}")
-
 
 make_sandwich("corned beef", "sauerkraut")
 make_sandwich("pastrami", "onions", "mustard")
