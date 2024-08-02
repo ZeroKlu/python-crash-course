@@ -8,7 +8,6 @@
 print("Try-it-Yourself:")
 print("Assignment 9.3")
 
-
 class User:
     """Defines a user"""
 

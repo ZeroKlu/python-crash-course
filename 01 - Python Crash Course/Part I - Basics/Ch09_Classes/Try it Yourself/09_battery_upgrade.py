@@ -8,7 +8,6 @@
 print("Try-it-Yourself:")
 print("Assignment 9.9")
 
-
 class Car:
     """Defines a car"""
 

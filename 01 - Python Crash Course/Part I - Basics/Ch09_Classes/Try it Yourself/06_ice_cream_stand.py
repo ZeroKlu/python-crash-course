@@ -45,7 +45,6 @@ class Restaurant:
         else:
             print("Cannot reduce the number served!")
 
-
 class IceCreamStand(Restaurant):
     """Defines an Ice Cream Stand as a subclass of Restaurant"""
 
@@ -69,7 +68,6 @@ class IceCreamStand(Restaurant):
         """Remove an item from the list of the available flavors"""
         if flavor in self.flavors:
             self.flavors.remove(flavor)
-
 
 my_stand = IceCreamStand("Frosty Freeze", "ice cream", ["chocolate", "vanilla", "strawberry", "pistachio"])
 my_stand.list_flavors()

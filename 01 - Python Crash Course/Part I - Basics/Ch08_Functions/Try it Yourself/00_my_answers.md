@@ -25,11 +25,14 @@ display_message()
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 I am learning about Python functions.
 ```
+
+</details>
 
 ---
 
@@ -56,11 +59,14 @@ favorite_book("Snow Crash")
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 One of my favorite books is Snow Crash.
 ```
+
+</details>
 
 ---
 
@@ -91,12 +97,15 @@ make_shirt(message=my_message, size=my_size)
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 You ordered a large t-shirt saying 'I ♥ Python'.
 You ordered a large t-shirt saying 'I ♥ Python'.
 ```
+
+</details>
 
 ---
 
@@ -126,13 +135,16 @@ make_shirt(message=my_message)
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 You ordered a large t-shirt saying 'I ♥ Python'.
 You ordered a medium t-shirt saying 'I ♥ Python'.
 You ordered a large t-shirt saying 'I ♥ Coding'.
 ```
+
+</details>
 
 ---
 
@@ -165,13 +177,16 @@ describe_city("ensenada", "mexico")
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Dallas is in the United States
 Cleveland is in the United States
 Ensenada is in Mexico
 ```
+
+</details>
 
 ---
 
@@ -206,13 +221,16 @@ print(place)
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Ensenada, Mexico
 Dublin, Ireland
 Vienna, Austria
 ```
+
+</details>
 
 ---
 
@@ -256,7 +274,8 @@ print(album)
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 {'Artist': 'Pink Floyd', 'Title': 'Animals'}
@@ -264,6 +283,8 @@ Output:
 {'Artist': 'They Might Be Giants', 'Title': 'Flood'}
 {'Artist': 'John Prine', 'Title': 'Fair & Square', 'Tracks': 14}
 ```
+
+</details>
 
 ---
 
@@ -307,7 +328,8 @@ while True:
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Please tell me about your album:
@@ -328,6 +350,8 @@ Please tell me about your album:
 (enter 'q' at any time to quit)
 Artist: q
 ```
+
+</details>
 
 ---
 
@@ -353,13 +377,16 @@ show_messages(messages)
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Hi there!
 Having fun at code camp!
 Python is great!
 ```
+
+</details>
 
 ---
 
@@ -394,7 +421,8 @@ print("Sent Messages:\n", sent_messages)
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Sending message: Hi there!
@@ -405,6 +433,8 @@ Messages:
 Sent Messages:
  ['Hi there!', 'Having fun at code camp!', 'Python is great!']
 ```
+
+</details>
 
 ---
 
@@ -435,7 +465,8 @@ print("Sent Messages:\n", sent_messages)
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Sending message: Hi there!
@@ -446,6 +477,8 @@ Messages:
 Sent Messages:
  ['Hi there!', 'Having fun at code camp!', 'Python is great!']
 ```
+
+</details>
 
 ---
 
@@ -477,7 +510,8 @@ make_sandwich("salami", "swiss cheese", "lettuce", "tomato", "mayonnaise")
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Making a sandwich with the following toppings:
@@ -494,6 +528,8 @@ Making a sandwich with the following toppings:
  - tomato
  - mayonnaise
 ```
+
+</details>
 
 ---
 
@@ -524,11 +560,14 @@ print(me)
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 {'profession': 'programmer', 'avocation': 'musician', 'hobby': 'cobbler', 'first_name': 'scott', 'last_name': 'mclean'}
 ```
+
+</details>
 
 ---
 
@@ -569,11 +608,14 @@ print(car)
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 {'color': 'header orange', 'feature': 'shaker', 'year': 2014, 'Make': 'Dodge', 'Model': 'Challenger'}
 ```
+
+</details>
 
 ---
 
@@ -623,7 +665,8 @@ printing_functions.show_completed_models(completed_models)
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Printing model: dodecahedron
@@ -635,6 +678,8 @@ dodecahedron
 robot pendant
 phone case
 ```
+
+</details>
 
 ---
 
@@ -691,7 +736,8 @@ print(my_album)
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 {'Artist': 'Pink Floyd', 'Title': 'Dark Side Of The Moon'}
@@ -699,6 +745,8 @@ Output:
 {'Artist': 'David Bowie', 'Title': 'The Rise And Fall Of Ziggy Stardust'}
 {'Artist': 'The Beatles', 'Title': 'Abbey Road'}
 ```
+
+</details>
 
 ---
 
@@ -720,10 +768,13 @@ print("Perform this exercise on your own to check your comprehension")
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Perform this exercise on your own to check your comprehension
 ```
+
+</details>
 
 ---

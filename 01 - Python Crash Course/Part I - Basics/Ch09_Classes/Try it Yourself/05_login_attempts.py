@@ -39,7 +39,7 @@ class User:
 
     def get_login_attempts(self):
         """Get the number of login attempts"""
-        print(f"Login Attempts: {self.login_attempts}\n")
+        print(f"Login Attempts: {self.login_attempts}")
 
 user = User("john", "doe")
 user.describe()

@@ -13,7 +13,6 @@
 print("Try-it-Yourself:")
 print("Assignment 9.4")
 
-
 class Restaurant:
     """Defines a restaurant object"""
 

@@ -8,7 +8,6 @@
 print("Try-it-Yourself:")
 print("Assignment 9.7")
 
-
 class User:
     """Defines a User"""
 
@@ -42,7 +41,6 @@ class User:
         """Get the login attempts counter"""
         print(f"Login Attempts: {self.login_attempts}\n")
 
-
 class Admin(User):
     """Define an Admin as a subclass of User"""
 
@@ -59,7 +57,6 @@ class Admin(User):
         print("\nPrivileges:")
         for privilege in self.privileges:
             print(f" - {privilege}")
-
 
 my_admin = Admin("jane", "smith")
 my_admin.describe()

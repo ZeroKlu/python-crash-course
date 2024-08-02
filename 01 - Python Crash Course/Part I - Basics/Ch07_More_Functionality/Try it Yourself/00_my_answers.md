@@ -24,13 +24,16 @@ print(f"Let me see if I can find you a {car.title()}.")
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 What kind of rental car would you like?
 > Mini Cooper
 Let me see if I can find you a Mini Cooper.
 ```
+
+</details>
 
 ---
 
@@ -57,13 +60,16 @@ else:
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 How many guests in your party?
 > 6
 Your table is ready.
 ```
+
+</details>
 
 ---
 
@@ -87,7 +93,8 @@ print(f"{number} is {condition}a multiple of 10.")
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Enter a number, and I will tell you if it is a multiple of 10:
@@ -96,6 +103,8 @@ Enter a number, and I will tell you if it is a multiple of 10:
 ```
 
 ---
+
+</details>
 
 ### Assignment 7.4 - Pizza Toppings
 
@@ -121,7 +130,8 @@ while message.lower() != "quit":
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Enter a topping or 'quit':
@@ -133,6 +143,8 @@ Enter a topping or 'quit':
 Enter a topping or 'quit':
 > quit
 ```
+
+</details>
 
 ---
 
@@ -174,7 +186,8 @@ while True:
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Please enter your age or 'quit':
@@ -189,6 +202,8 @@ Your ticket costs $0.00
 Please enter your age or 'quit':
 > quit
 ```
+
+</details>
 
 ---
 
@@ -222,7 +237,8 @@ while active:
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Enter a topping or 'quit':
@@ -234,6 +250,8 @@ Enter a topping or 'quit':
 Enter a topping or 'quit':
 > quit
 ```
+
+</details>
 
 ---
 
@@ -256,7 +274,8 @@ while num <= 10:
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 1
@@ -269,6 +288,8 @@ Traceback (most recent call last):
     print(num)
 KeyboardInterrupt
 ```
+
+</details>
 
 ---
 
@@ -294,7 +315,8 @@ print(f"The following sandwich orders were fulfilled:\n{finished_sandwiches}")
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 I made your italian sub sandwich...
@@ -304,6 +326,8 @@ I made your pb&j sandwich...
 The following sandwich orders were fulfilled:
 ['italian sub', 'reuben', 'croque monsieur', 'pb&j']
 ```
+
+</details>
 
 ---
 
@@ -347,7 +371,8 @@ print(f"The following sandwich orders were fulfilled:\n{finished_sandwiches}")
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 We have run out of pastrami!
@@ -358,6 +383,8 @@ I made your pb&j sandwich...
 The following sandwich orders were fulfilled:
 ['italian sub', 'reuben', 'croque monsieur', 'pb&j']
 ```
+
+</details>
 
 ---
 
@@ -393,7 +420,8 @@ for name, response in responses.items():
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 What is your name?
@@ -414,5 +442,7 @@ Would you like to let another person respond? (yes/no)
 Scott's dream vacation is to Japan.
 Jane's dream vacation is to France.
 ```
+
+</details>
 
 ---

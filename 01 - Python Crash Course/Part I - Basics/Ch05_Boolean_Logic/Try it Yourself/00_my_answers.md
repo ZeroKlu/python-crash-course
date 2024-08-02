@@ -58,7 +58,8 @@ print(model.lower() == "challenger")
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Is make == 'fiat'? I predict False.
@@ -82,6 +83,8 @@ False
 Is case-insensitive model == 'challenger'? I predict True.
 True
 ```
+
+</details>
 
 ---
 
@@ -159,7 +162,8 @@ print("challenger" in stats)
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Is make == 'fiat'? I predict False.
@@ -210,6 +214,8 @@ Does stats not contain 'challenger'? I predict False.
 True
 ```
 
+</details>
+
 ---
 
 ### Assignment 5.3- Alien Colors #1
@@ -236,11 +242,14 @@ if alien_color == "green":
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 You earned 10 points!
 ```
+
+</details>
 
 ---
 
@@ -277,12 +286,15 @@ else:
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 You earned 10 points!
 You earned 5 points!
 ```
+
+</details>
 
 ---
 
@@ -318,13 +330,16 @@ for alien_color in alien_colors:
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 You earned 5 points!
 You earned 10 points!
 You earned 15 points!
 ```
+
+</details>
 
 ---
 
@@ -370,12 +385,15 @@ else:
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Enter your age: 54
 You are a adult!
 ```
+
+</details>
 
 ---
 
@@ -416,6 +434,8 @@ if fruit in favorite_fruits:
 </details>
 <br>
 
+<details>
+<summary>Output</summary>
 Output:
 
 ```
@@ -423,6 +443,8 @@ apple is one of your favorites
 blackberry is one of your favorites
 grapefruit is one of your favorites
 ```
+
+</details>
 
 ---
 
@@ -455,7 +477,8 @@ for user in usernames:
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Hello Anna, thank you for logging in again.
@@ -464,6 +487,8 @@ Hello Charlie, thank you for logging in again.
 Hello Diana, thank you for logging in again.
 Hello admin, would you like to see a status report?
 ```
+
+</details>
 
 ---
 
@@ -494,11 +519,14 @@ else:
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 We need to find some users!
 ```
+
+</details>
 
 ---
 
@@ -542,7 +570,8 @@ print(current_users)
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Username abigail is available.
@@ -553,6 +582,8 @@ Username edward is available.
 Final list of users:
 ['Anna', 'Bob', 'Charlie', 'Diana', 'Admin', 'Abigail', 'Curtis', 'Edward']
 ```
+
+</details>
 
 ---
 
@@ -590,7 +621,8 @@ for numeral in numerals:
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 1st
@@ -603,6 +635,8 @@ Output:
 8th
 9th
 ```
+
+</details>
 
 ---
 
@@ -626,11 +660,14 @@ print("Complete this exercise in your other files.")
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Complete this exercise in your other files.
 ```
+
+</details>
 
 ---
 
@@ -660,10 +697,13 @@ print("Complete this exercise on your own.")
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Complete this exercise on your own.
 ```
+
+</details>
 
 ---

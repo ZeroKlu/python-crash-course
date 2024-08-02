@@ -21,11 +21,14 @@ print(message)
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 I love programming!
 ```
+
+</details>
 
 ---
 
@@ -49,12 +52,15 @@ print(message)
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Programming is hard...
 No way! Programming is fun!
 ```
+
+</details>
 
 ---
 
@@ -77,11 +83,14 @@ print(f"Hello there, {name.title()}.")
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Hello there, Count Maurice Maeterlinck.
 ```
+
+</details>
 
 ---
 
@@ -105,13 +114,16 @@ print(name.title())
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 count maurice maeterlinck
 COUNT MAURICE MAETERLINCK
 Count Maurice Maeterlinck
 ```
+
+</details>
 
 ---
 
@@ -141,13 +153,16 @@ print(f"{name.title()} wrote:\n\"{quote}\"\n")
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Count Maurice Maeterlinck wrote:
 "At every crossway on the road that leads to the future each progressive 
 spirit is opposed by a thousand men appointed to guard the past."
 ```
+
+</details>
 
 ---
 
@@ -174,13 +189,16 @@ print(message)
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Count Maurice Maeterlinck wrote:
 "At every crossway on the road that leads to the future each progressive 
 spirit is opposed by a thousand men appointed to guard the past."
 ```
+
+</details>
 
 ---
 
@@ -209,7 +227,8 @@ print(f"[{me.strip()}]\n")
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 [
@@ -224,6 +243,8 @@ Output:
 
 [Scott McLean]
 ```
+
+</details>
 
 ---
 
@@ -249,11 +270,14 @@ print(f"Filename without extension: {filename.removesuffix('.txt')}")
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Filename without extension: python_notes
 ```
+
+</details>
 
 ---
 
@@ -285,7 +309,8 @@ print(16 // 2)
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 8
@@ -293,6 +318,8 @@ Output:
 8
 8
 ```
+
+</details>
 
 ---
 
@@ -317,11 +344,14 @@ print(f"My favorite number is {favorite_number}!")
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 My favorite number is 42!
 ```
+
+</details>
 
 ---
 
@@ -347,11 +377,14 @@ print("You will find comments throughout all my chapter example files.")
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 You will find comments throughout all my chapter example files.
 ```
+
+</details>
 
 ---
 
@@ -374,7 +407,8 @@ import this
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 The Zen of Python, by Tim Peters
@@ -399,5 +433,7 @@ If the implementation is hard to explain, it's a bad idea.
 If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those!
 ```
+
+</details>
 
 ---

@@ -24,7 +24,8 @@ print(f"City:       {person['city']}")
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 First Name: Scott     
@@ -32,6 +33,8 @@ Last Name:  McLean
 Age:        54        
 City:       Lewisville
 ```
+
+</details>
 
 ---
 
@@ -67,7 +70,8 @@ print(f"John's favorite number is {favorite_numbers['John']}")
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Scott's favorite number is 42
@@ -76,6 +80,8 @@ René's favorite number is 343
 Matt's favorite number is 12
 John's favorite number is √-1
 ```
+
+</details>
 
 ---
 
@@ -117,7 +123,8 @@ print(f"\nCode:\n{coding_terms['Code']}")
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Program:
@@ -135,6 +142,8 @@ A combination of related variables, which can be selected and manipulated togeth
 Code:
 A written set of instructions, written using the protocols of a particular language
 ```
+
+</details>
 
 ---
 
@@ -182,7 +191,8 @@ for term, definition in coding_terms.items():
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Program:
@@ -232,6 +242,8 @@ Module:
 A module is a file consisting of Python code that can be imported and reused in a program
 ```
 
+</details>
+
 ---
 
 ### Assignment 6.5 - Rivers
@@ -272,7 +284,8 @@ for country in rivers.values():
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 The Nile runs through Egypt
@@ -287,6 +300,8 @@ Egypt
 Brazil
 United States
 ```
+
+</details>
 
 ---
 
@@ -324,7 +339,8 @@ for name in people:
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Hi Jen! Thanks for taking the poll.
@@ -334,6 +350,8 @@ Hi Edward! Thanks for taking the poll.
 Hi Eleanor, please take the poll.
 Hi Phil! Thanks for taking the poll.
 ```
+
+</details>
 
 ---
 
@@ -363,7 +381,8 @@ for person in people:
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 first_name = Scott
@@ -381,6 +400,8 @@ last_name = Taylor
 age = 50
 city = Twinsburg
 ```
+
+</details>
 
 ---
 
@@ -420,13 +441,16 @@ for pet in pets:
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Talia owns a dog
 Scott owns a guinea pig
 Melissa owns a cat
 ```
+
+</details>
 
 ---
 

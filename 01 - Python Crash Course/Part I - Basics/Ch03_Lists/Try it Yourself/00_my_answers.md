@@ -25,7 +25,8 @@ print(friends[-1])
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Matt
@@ -33,6 +34,8 @@ Danica
 Becky
 Alex
 ```
+
+</details>
 
 ---
 
@@ -57,7 +60,8 @@ print(f"Hi there, {friends[-1]}. You're my friend.")
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Hi there, Matt. You're my friend.
@@ -65,6 +69,8 @@ Hi there, Danica. You're my friend.
 Hi there, Becky. You're my friend.
 Hi there, Alex. You're my friend.
 ```
+
+</details>
 
 ---
 
@@ -91,7 +97,8 @@ print(f"I don't like the {cars[2]}.")
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 These are some common muscle cars: ['challenger', 'mustang', 'camaro']
@@ -99,6 +106,8 @@ The challenger is my favorite.
 I like the look of older mustangs from the 60s and 70s.
 I don't like the camaro.
 ```
+
+</details>
 
 ---
 
@@ -134,7 +143,8 @@ print(f"{guests[5]}, would you like to join me for dinner?")
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Charles Babbage, would you like to join me for dinner?
@@ -144,6 +154,8 @@ Grace Hopper, would you like to join me for dinner?
 Alan Turing, would you like to join me for dinner?
 Tim Berners-Lee, would you like to join me for dinner?
 ```
+
+</details>
 
 ---
 
@@ -185,7 +197,8 @@ print(f"{guests[5]}, would you like to join me for dinner?")
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Tim Berners-Lee can't join us for dinner.
@@ -196,6 +209,8 @@ Grace Hopper, would you like to join me for dinner?
 Alan Turing, would you like to join me for dinner?
 Linus Torvalds, would you like to join me for dinner?
 ```
+
+</details>
 
 ---
 
@@ -246,7 +261,8 @@ print(f"{guests[8]}, would you like to join me for dinner?")
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 ['Barbara Liskov', 'Charles Babbage', 'Ada Lovelace', 'Donald Knuth', 'George Boole', 'Grace Hopper', 'Alan Turing', 'Tim Berners-Lee', 'Margaret Hamilton']     
@@ -260,6 +276,8 @@ Alan Turing, would you like to join me for dinner?
 Tim Berners-Lee, would you like to join me for dinner?
 Margaret Hamilton, would you like to join me for dinner?
 ```
+
+</details>
 
 ---
 
@@ -316,7 +334,8 @@ print(guests)
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Oh no! I can only invite two people to dinner!
@@ -331,6 +350,8 @@ Charles Babbage, you are still invited.
 Ada Lovelace, you are still invited.
 []
 ```
+
+</details>
 
 ---
 
@@ -395,7 +416,8 @@ print(places)
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 ['cairo', 'tokyo', 'antarctica', 'beijing', 'australia']
@@ -414,6 +436,8 @@ Output:
 ---
 ['tokyo', 'cairo', 'beijing', 'australia', 'antarctica']
 ```
+
+</details>
 
 ---
 
@@ -442,11 +466,15 @@ print(f"I am inviting {len(guests)} people to dinner.")
 </details>
 <br>
 
+<details>
+<summary>Output</summary>
 Output:
 
 ```
 I am inviting 6 people to dinner.
 ```
+
+</details>
 
 ---
 
@@ -470,11 +498,14 @@ print("You're encouraged to do this one on your own.")
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 You're encouraged to do this one on your own.
 ```
+
+</details>
 
 ---
 
@@ -504,7 +535,8 @@ print(guests[6])
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Traceback (most recent call last):
@@ -513,5 +545,7 @@ Traceback (most recent call last):
           ~~~~~~^^^
 IndexError: list index out of range
 ```
+
+</details>
 
 ---

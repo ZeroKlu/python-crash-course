@@ -36,7 +36,8 @@ print("Pizza is magnificent!")
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 I think margherita pizza is tasty!
@@ -44,6 +45,8 @@ I think spinach and garlic pizza is scrumptious!
 I think feta and black olive pizza is delicious!
 Pizza is magnificent!
 ```
+
+</details>
 
 ---
 
@@ -72,7 +75,8 @@ print("You have to be very careful cooking any of these animals.")
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 I like to devour octopus.
@@ -80,6 +84,8 @@ I like to dine on squid.
 I like to eat cuttlefish.
 You have to be very careful cooking any of these animals.
 ```
+
+</details>
 
 ---
 
@@ -100,7 +106,8 @@ for num in range(1, 21):
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 1
@@ -109,6 +116,8 @@ Output:
 19
 20
 ```
+
+</details>
 
 ---
 
@@ -133,7 +142,8 @@ for num in million:
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 1
@@ -148,6 +158,8 @@ Output:
 999999
 1000000
 ```
+
+</details>
 
 ---
 
@@ -173,13 +185,16 @@ print(sum(million))
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 1
 1000000
 500000500000
 ```
+
+</details>
 
 ---
 
@@ -202,7 +217,8 @@ for num in nums:
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 1
@@ -216,6 +232,8 @@ Output:
 17
 19
 ```
+
+</details>
 
 ---
 
@@ -238,7 +256,8 @@ for num in nums:
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 3
@@ -252,6 +271,8 @@ Output:
 27
 30
 ```
+
+</details>
 
 ---
 
@@ -278,7 +299,8 @@ for num in cubes:
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 1
@@ -292,6 +314,8 @@ Output:
 729
 1000
 ```
+
+</details>
 
 ---
 
@@ -312,11 +336,14 @@ print(cubes)
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 [1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]
 ```
+
+</details>
 
 ---
 
@@ -347,13 +374,16 @@ print(f"The last three odd numbers are: {odd_numbers[-3:]}")
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 The first three odd numbers are: [1, 3, 5]
 The next three odd numbers are: [7, 9, 11]
 The last three odd numbers are: [15, 17, 19]
 ```
+
+</details>
 
 ---
 
@@ -394,7 +424,8 @@ for pizza in friend_pizzas: print(f" - {pizza}")
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 My favorite pizzas are:
@@ -409,6 +440,8 @@ My friend's favorite pizzas are:
  - feta and black olive
  - sausage and green pepper
 ```
+
+</details>
 
 ---
 
@@ -437,7 +470,8 @@ for food in friend_foods: print(f" - {food}")
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 My favorite foods are:
@@ -452,6 +486,8 @@ My friend's favorite foods are:
  - carrot cake
  - ice cream
 ```
+
+</details>
 
 ---
 
@@ -470,6 +506,8 @@ the items on the revised menu.
 
 Solution:
 
+#### Create Tuple
+
 <details>
 <summary>Spoiler Code</summary>
 
@@ -484,7 +522,8 @@ for food in menu: print(f" - {food}")
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Menu:
@@ -495,7 +534,13 @@ Menu:
  - bagel
 ```
 
-**Try to Edit Tuple**
+</details>
+<br>
+
+#### Try to Edit Tuple
+
+<details>
+<summary>Spoiler Code</summary>
 
 ```python
 Uncomment this line to see immutability error
@@ -505,7 +550,8 @@ menu[0] = "toast"
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Traceback (most recent call last):
@@ -515,7 +561,13 @@ Traceback (most recent call last):
 TypeError: 'tuple' object does not support item assignment
 ```
 
-**Replace Tuple**
+</details>
+<br>
+
+#### Replace Tuple
+
+<details>
+<summary>Spoiler Code</summary>
 
 ```python
 menu = ("toast", "pastry", "coffee", "tea", "yoghurt")
@@ -526,7 +578,8 @@ for food in menu: print(f" - {food}")
 </details>
 <br>
 
-Output:
+<details>
+<summary>Output</summary>
 
 ```
 Updated Menu:
@@ -536,6 +589,8 @@ Updated Menu:
  - tea
  - yoghurt
 ```
+
+</details>
 
 ---
 
@@ -548,7 +603,7 @@ You won't use much of it now, but it might be interesting to skim through it.
 Solution:
 
 <details open>
-<summary>Code</summary>
+<summary>Spoiler Code</summary>
 
 ```python
 # This is a research task - No code needed
@@ -593,7 +648,7 @@ Note: You can add as many guidelines as you want. e.g.:
 Solution:
 
 <details open>
-<summary>Code</summary>
+<summary>Spoiler Code</summary>
 
 ```python
 # Do this one on your own
