@@ -7,7 +7,7 @@ print("Assignment 7.4")
 
 message = ""
 prompt = "Enter a topping or 'quit':\n> "
-while message.lower() != 'quit':
+while message.lower() != "quit":
     message = input(prompt)
-    if message.lower() != 'quit':
+    if message.lower() != "quit":
         print(f" - Added {message}")

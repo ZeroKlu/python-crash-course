@@ -12,8 +12,8 @@ active = True
 prompt = "Enter a topping or 'quit':\n> "
 while active:
     message = input(prompt)
-    if message.lower() == 'quit':
-        # Only one of these is needed (asterisks 2 and 3)
+    if message.lower() == "quit":
+        # Only one of these is needed (bullets 2 and 3)
         active = False
         break
     print(f" - Added {message}")
