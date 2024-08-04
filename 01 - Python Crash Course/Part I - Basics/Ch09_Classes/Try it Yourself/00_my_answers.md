@@ -741,3 +741,718 @@ Privileges:
 
 ---
 
+### Assignment 9.9 - Battery Upgrade
+
+Use the final version of electric_car.py from this section. Add a method to the `Battery` class called `upgrade_battery()`. This method should check the battery size and set the capacity to 100 if it isn't already. Make an electric car with a default battery size, call `get_range()` once, and then call `get_range()` a second time after upgrading the battery. You should see an increase in the car's range.
+
+Solution:
+
+<details>
+<summary>Spoiler Code</summary>
+</br>
+
+<details>
+<summary>Car Class</summary>
+
+```python
+class Car:
+    """Defines a car"""
+
+    def __init__(self, make, model, year):
+        """Initialize a new instance of the Car class"""
+        self.make = make
+        self.model = model
+        self.year = year
+        self.odometer_reading = 0
+        self.fuel_level = 0
+
+    def get_descriptive_name(self):
+        """Describe the car"""
+        long_name = f"{self.year} {self.make} {self.model}"
+        return long_name.title()
+
+    def read_odometer(self):
+        """Get the odometer mileage"""
+        print(f"This car has {self.odometer_reading} miles on it.\n")
+
+    def set_odometer(self, mileage):
+        """Set the odometer mileage"""
+        if mileage >= self.odometer_reading:
+            print(f"Setting odometer to {mileage}")
+            self.odometer_reading = mileage
+        else:
+            print("You can't roll back an odometer!")
+
+    def increment_odometer(self, miles=1):
+        """Increment the odometer mileage"""
+        if miles > 0:
+            self.odometer_reading += miles
+            print(f"Updated odometer to {self.odometer_reading}")
+        else:
+            print("You can't add negative miles!")
+
+    def fill_gas_tank(self):
+        """Set the fuel level to full"""
+        self.fuel_level = 1
+
+    def check_fuel_level(self):
+        """Get the fuel level"""
+        fuel_state = "empty"
+        if self.fuel_level == 1.0:
+            fuel_state = "full"
+        elif self.fuel_level >= 0.75:
+            fuel_state = "three quarters full"
+        elif self.fuel_level >= 0.5:
+            fuel_state = "half full"
+        elif self.fuel_level >= 0.25:
+            fuel_state = "one quarter full"
+        elif self.fuel_level > 0.0:
+            fuel_state = "running on fumes"
+        print(f"Fuel Status: {fuel_state}\n")
+```
+
+</details>
+<br>
+
+<details>
+<summary>ElectricCar Class</summary>
+
+```python
+class ElectricCar(Car):
+    """Define an electric car as a subclass of Car"""
+
+    def __init__(self, make, model, year):
+        """Initialize a new instance of the ElectricCar class"""
+        super().__init__(make, model, year)
+        self.battery = Battery()
+
+    def fill_gas_tank(self):
+        """Set the fuel level to full"""
+        print("This car doesn't have a gas tank!")
+
+    def check_fuel_level(self):
+        """Get the fuel level"""
+        print("This car doesn't contain any fuel!\n")
+```
+
+</details>
+<br>
+
+<details>
+<summary>Battery Class</summary>
+
+```python
+class Battery:
+    """Define a battery"""
+
+    def __init__(self, battery_size=75):
+        """Initialize a new instance of the Battery class"""
+        self.battery_size = battery_size
+
+    def describe_battery(self):
+        """Describe the battery"""
+        print(f"This car has a {self.battery_size}-kWh battery.")
+
+    def get_range(self):
+        """Get the battery range"""
+        range = "unknown"
+        if self.battery_size == 75:
+            range = 260
+        elif self.battery_size == 100:
+            range = 315
+        print(f"This car can go about {range} miles on a full charge.\n")
+
+    def upgrade_battery(self):
+        """Upgrade the battery"""
+        if self.battery_size < 100:
+            self.battery_size = 100
+            print("Upgraded battery.")
+```
+
+</details>
+<br>
+
+<details>
+<summary>Calling Code</summary>
+
+```python
+my_nissan = ElectricCar("nissan", "leaf", 2024)
+print(my_nissan.get_descriptive_name())
+
+my_nissan.battery.describe_battery()
+my_nissan.battery.get_range()
+
+my_nissan.battery.upgrade_battery()
+my_nissan.battery.describe_battery()
+my_nissan.battery.get_range()
+```
+
+</details>
+
+</details>
+<br>
+
+<details>
+<summary>Output</summary>
+
+```
+2024 Nissan Leaf
+This car has a 75-kWh battery.
+This car can go about 260 miles on a full charge.
+
+Upgraded battery.
+This car has a 100-kWh battery.
+This car can go about 315 miles on a full charge.
+```
+
+</details>
+
+---
+
+### Assignment 9.10 - Imported Restaurant
+
+Using your latest Restaurant class, store it in a module. Make a separate 
+file that imports Restaurant. Make a Restaurant instance, and call one of 
+Restaurant's methods to show that the import statement is working properly.
+
+Solution:
+
+<details>
+<summary>Spoiler Code</summary>
+<br>
+
+<details>
+<summary>Restaurant Class</summary>
+
+In [restaurant.py](./restaurant.py)
+
+```python
+class Restaurant:
+    """Defines a restaurant object"""
+
+    def __init__(self, name, cuisine):
+        """Initialize a new instance of the Restaurant class"""
+        self.name = name
+        self.cuisine = cuisine
+        self.number_served = 0
+
+    def describe(self):
+        """Print a description of the restaurant"""
+        print(f"\n{self.name.title()} proudly serves {self.cuisine.title()}!")
+
+    def open(self):
+        """Open the restaurant"""
+        print(f"{self.name.title()} is open for business!")
+
+    def get_number_served(self):
+        """Get the number of people served by the restaurant"""
+        print(f"We have served {self.number_served} people today.\n")
+        
+    def set_number_served(self, num):
+        """Set the number of people served by the restaurant"""
+        if num >= self.number_served:
+            self.number_served = num
+            print(f"Set number served to {self.number_served}")
+        else:
+            print("Cannot reduce the number served!")
+
+    def increment_number_served(self, num=1):
+        """Increment the number of people served by the restaurant"""
+        if num >= 0:
+            self.number_served += num
+            print(f"Incremented number served to {self.number_served}")
+        else:
+            print("Cannot reduce the number served!")
+
+```
+
+</details>
+<br>
+
+<details>
+<summary>Calling Code</summary>
+
+```python
+from restaurant import Restaurant
+
+my_restaurant = Restaurant("my place", "scottish food")
+my_restaurant.describe()
+```
+
+</details>
+
+</details>
+<br>
+
+<details>
+<summary>Output</summary>
+
+```
+My Place proudly serves Scottish Food!
+```
+
+</details>
+
+---
+
+### Assignment 9.11 - Imported Admin
+
+Start with your work from Exercise 9.8. Store the classes `User`, 
+`Privileges`, and `Admin` in one module. Create a separate file, make an 
+`Admin` instance, and call `show_privileges()` to show that everything is 
+working correctly.
+
+Solution:
+
+<details>
+<summary>Spoiler Code</summary>
+<br>
+
+<details>
+<summary>User, Privileges, and Admin Classes</summary>
+
+In [full_user.py](./full_user.py)
+
+```python
+"""A class module to allow modeling users and admins"""
+
+class User:
+    """Defines a user"""
+
+    def __init__(self, first_name, last_name):
+        """Initialize a new instance of the User class"""
+        self.first_name = first_name
+        self.last_name = last_name
+        self.username = f"{self.first_name[0]}{self.last_name}"
+        self.login_attempts = 0
+
+    def greet(self):
+        """Greet the user"""
+        print(f"Hello there, {self.first_name.title()} {self.last_name.title()}")
+
+    def describe(self):
+        """Describe the user"""
+        print(f"\nName:       {self.first_name.title()} {self.last_name.title()}")
+        print(f"Username:   {self.username.upper()}")
+
+    def increment_login_attempts(self):
+        """Increment the login attempt counter"""
+        self.login_attempts += 1
+
+    def reset_login_attempts(self):
+        """Reset the login attempt counter"""
+        self.login_attempts = 0
+
+    def get_login_attempts(self):
+        """Read the login attempt counter"""
+        print(f"Login Attempts: {self.login_attempts}\n")
+
+
+class Admin(User):
+    """Define an admin ad a subclass of User"""
+
+    def __init__(self, first_name, last_name, privileges = None):
+        """Initialize a new instance of the Admin class"""
+        super().__init__(first_name, last_name)
+        self.privileges = Privileges(privileges)
+
+
+class Privileges:
+    """Define a collection of user privileges"""
+
+    def __init__(self, privileges = None):
+        """Initialize a new instance of the Privileges class"""
+        if privileges == None:
+            self.privileges = ["create", "delete", "modify", "ban"]
+        else:
+            self.privileges = privileges
+
+    def show_privileges(self):
+        """Print out the list of user privileges"""
+        print("\nPrivileges:")
+        for privilege in self.privileges:
+            print(f" - {privilege}")
+```
+
+</details>
+<br>
+
+<details>
+<summary>Calling Code</summary>
+
+```python
+from full_user import Admin
+
+my_admin = Admin("Sue", "Smith")
+my_admin.describe()
+my_admin.privileges.show_privileges()
+```
+
+</details>
+
+</details>
+<br>
+
+<details>
+<summary>Output</summary>
+
+```
+Name:       Sue Smith
+Username:   SSMITH
+
+Privileges:
+ - create
+ - delete
+ - modify
+ - ban
+```
+
+</details>
+
+---
+
+### Assignment 9.12 - Multiple Modules
+
+Store the `User` class in one module, and store the `Privileges` and `Admin` 
+classes in a separate module. In a separate file, create an `Admin` instance 
+and call `show_privileges()` to show that everything is still working 
+correctly.
+
+Solution:
+
+<details>
+<summary>Spoiler Code</summary>
+<br>
+
+<details>
+<summary>User Class</summary>
+
+In [user.py](./user.py)
+
+```python
+"""A class module to allow modeling users"""
+
+class User:
+    """Defines a user"""
+
+    def __init__(self, first_name, last_name):
+        """Initialize a new instance of the User class"""
+        self.first_name = first_name
+        self.last_name = last_name
+        self.username = f"{self.first_name[0]}{self.last_name}"
+        self.login_attempts = 0
+
+    def greet(self):
+        """Greet the user"""
+        print(f"Hello there, {self.first_name.title()} {self.last_name.title()}")
+
+    def describe(self):
+        """Describe the user"""
+        print(f"\nName:       {self.first_name.title()} {self.last_name.title()}")
+        print(f"Username:   {self.username.upper()}")
+
+    def increment_login_attempts(self):
+        """Increment the login attempt counter"""
+        self.login_attempts += 1
+
+    def reset_login_attempts(self):
+        """Reset the login attempt counter"""
+        self.login_attempts = 0
+
+    def get_login_attempts(self):
+        """Read the login attempt counter"""
+        print(f"Login Attempts: {self.login_attempts}\n")
+```
+
+</details>
+<br>
+
+<details>
+<summary>Admin and Privileges Classes</summary>
+
+In [admin.py](./admin.py)
+
+```python
+"""A class module allowing modeling of admins"""
+
+from user import User
+
+class Admin(User):
+    """Define an admin ad a subclass of User"""
+
+    def __init__(self, first_name, last_name, privileges = None):
+        """Initialize a new instance of the Admin class"""
+        super().__init__(first_name, last_name)
+        self.privileges = Privileges(privileges)
+
+
+class Privileges:
+    """Define a collection of user privileges"""
+
+    def __init__(self, privileges = None):
+        """Initialize a new instance of the Privileges class"""
+        if privileges == None:
+            self.privileges = ["create", "delete", "modify", "ban"]
+        else:
+            self.privileges = privileges
+
+    def show_privileges(self):
+        """Print out the list of user privileges"""
+        print("\nPrivileges:")
+        for privilege in self.privileges:
+            print(f" - {privilege}")
+```
+
+</details>
+<br>
+
+<details>
+<summary>Calling Code</summary>
+
+```python
+from admin import Admin
+
+my_admin = Admin("Sue", "Smith")
+my_admin.describe()
+my_admin.privileges.show_privileges()
+```
+
+</details>
+
+</details>
+<br>
+
+<details>
+<summary>Output</summary>
+
+```
+Name:       Sue Smith
+Username:   SSMITH
+
+Privileges:
+ - create
+ - delete
+ - modify
+ - ban
+```
+
+</details>
+
+---
+
+### Assignment 9.13 - Dice
+
+Make a class `Die` with one attribute called `sides`, which has a default value of 6. Write a method called `roll_die()` that prints a random number between 1 and the number of sides the die has. Make a 6-sided die and roll it 10 times. Make a 10-sided die and a 20-sided die. Roll each die 10 times.
+
+Solution:
+
+<details>
+<summary>Spoiler Code</summary>
+<br>
+
+<details>
+<summary>Die Class</summary>
+
+In [die.py](./die.py)
+
+```python
+"""A class module for modeling a fair die"""
+
+from random import randint
+
+class Die:
+    """Defines an n-sided die"""
+
+    def __init__(self, sides = 6):
+        """Initialize a new instance of the Die class"""
+        self.sides = sides
+
+    def roll(self):
+        """Roll the die"""
+        return randint(1, self.sides)
+```
+
+</details>
+<br>
+
+<details>
+<summary>Calling Code</summary>
+
+```python
+from die import Die
+
+die = Die()
+for i in range(1, 11):
+    print(f"[{die.sides}-sided die] Roll {i}: {die.roll()}")
+print("-----")
+
+dice = [Die(10), Die(20)]
+for die in dice:
+    for i in range(1, 11):
+        print(f"[{die.sides}-sided die] Roll {i}: {die.roll()}")
+    print("-----")
+```
+
+</details>
+
+</details>
+<br>
+
+<details>
+<summary>Output</summary>
+
+```
+[6-sided die] Roll 1: 2
+[6-sided die] Roll 2: 3
+[6-sided die] Roll 3: 2
+[6-sided die] Roll 4: 5
+[6-sided die] Roll 5: 1
+[6-sided die] Roll 6: 3
+[6-sided die] Roll 7: 1
+[6-sided die] Roll 8: 5
+[6-sided die] Roll 9: 3
+[6-sided die] Roll 10: 3
+-----
+[10-sided die] Roll 1: 1
+[10-sided die] Roll 2: 1
+[10-sided die] Roll 3: 6
+[10-sided die] Roll 4: 8
+[10-sided die] Roll 5: 4
+[10-sided die] Roll 6: 7
+[10-sided die] Roll 7: 2
+[10-sided die] Roll 8: 7
+[10-sided die] Roll 9: 6
+[10-sided die] Roll 10: 10
+-----
+[20-sided die] Roll 1: 4
+[20-sided die] Roll 2: 9
+[20-sided die] Roll 3: 4
+[20-sided die] Roll 4: 20
+[20-sided die] Roll 5: 10
+[20-sided die] Roll 6: 17
+[20-sided die] Roll 7: 18
+[20-sided die] Roll 8: 2
+[20-sided die] Roll 9: 17
+[20-sided die] Roll 10: 4
+-----
+```
+
+</details>
+
+---
+
+### Assignment 9.14 - Lottery
+
+Make a list or tuple containing a series of 10 numbers and five letters. 
+Randomly select four numbers or letters from the list and print a message 
+saying that any ticket matching these four numbers or letters wins a prize.
+
+Solution:
+
+<details>
+<summary>Spoiler Code</summary>
+
+```python
+from random import choice
+
+numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E"]
+selected = []
+
+while len(selected) < 4:
+    val = choice(numbers)
+    if val not in selected:
+        selected.append(val)
+
+print(f"The winning numbers are: {selected}\n")
+```
+
+</details>
+<br>
+
+<details>
+<summary>Output</summary>
+
+```
+The winning numbers are: [9, 'D', 'B', 0]
+```
+
+</details>
+
+---
+
+### Assignment 9.15 - Lottery Analysis
+
+You can use a loop to see how hard it might be to win the kind of lottery 
+you just modeled. Make a list or tuple called my_ticket. Write a loop that 
+keeps pulling numbers until your ticket wins. Print a message reporting how 
+many times the loop had to run to give you a winning ticket.
+
+Solution:
+
+<details>
+<summary>Spoiler Code</summary>
+
+```python
+from random import choice
+
+numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E"]
+my_ticket = ["1", "2", "3", "4"]
+i_won = False
+attempts = 0
+
+while not i_won:
+    attempts += 1
+    selected = []
+    while len(selected) < 4:
+        val = choice(numbers)
+        if val not in selected:
+            selected.append(val)
+    print(selected)
+    if sorted(selected) == sorted(my_ticket):
+        i_won = True
+
+print(f"\nMy ticket {my_ticket} won after {attempts} attempts!\n")
+```
+
+</details>
+<br>
+
+<details>
+<summary>Output</summary>
+
+```
+My ticket ['1', '2', '3', '4'] won after 646 attempts!
+```
+
+</details>
+
+---
+
+### Assignment 9.16 - Python Module of the Week
+
+One excellent resource for exploring the Python standard library is a site called Python Module of the Week. Go to 
+[https://pymotw.com/](https://pymotw.com/) and look at the table of contents. Find a module that looks interesting to you and read about it, perhaps starting with the random module.
+
+Solution:
+
+<details>
+<summary>Spoiler Code</summary>
+
+```python
+print("Complete this task as independent study.")
+```
+
+</details>
+<br>
+
+<details>
+<summary>Output</summary>
+
+```
+Complete this task as independent study.
+```
+
+</details>
+
+---
+

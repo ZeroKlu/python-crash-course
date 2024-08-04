@@ -12,7 +12,7 @@
 import os
 
 ROOT_DIR = os.path.dirname(__file__)
-file_path = os.path.join(ROOT_DIR, "Files", "T.10.01.learning_python.txt")
+file_path = os.path.join(ROOT_DIR, "Files", "learning_python.txt")
 
 print("Try-it-Yourself:")
 print("Assignment 10.2\n")

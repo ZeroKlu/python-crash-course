@@ -19,7 +19,6 @@
 from relative_paths import get_path
 from pathlib import Path
 
-
 def examine_file(file_name, search_words):
     """Count word occurrences in file passed"""
     file_path = get_path(file_name, "Files")
@@ -38,7 +37,6 @@ def examine_file(file_name, search_words):
                 for end_term in terminators:
                     num += content.count(f"{start_term}{word}{end_term}")
             print(f"{word}: {num}")
-
 
 print("Try-it-Yourself:")
 print("Assignment 10.10")

@@ -20,7 +20,6 @@ import os
 
 ROOT_DIR = os.path.dirname(__file__)
 
-
 def examine_file(file_name, search_words):
     """Count word occurrences in file passed"""
     file_path = os.path.join(ROOT_DIR, "Files", file_name)
@@ -37,8 +36,7 @@ def examine_file(file_name, search_words):
             for start_term in terminators:
                 for end_term in terminators:
                     num += content.count(f"{start_term}{word}{end_term}")
-            print(f"{word}: {num}")
-
+            print(f"'{word}': {num}")
 
 print("Try-it-Yourself:")
 print("Assignment 10.10")

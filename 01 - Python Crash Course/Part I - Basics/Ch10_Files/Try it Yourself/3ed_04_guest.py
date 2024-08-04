@@ -5,7 +5,7 @@
 from relative_paths import get_path
 from pathlib import Path
 
-file_path = get_path("T.10.03.guest.txt", "Files")
+file_path = get_path("guest.txt", "Files")
 
 print("Try-it-Yourself:")
 print("Assignment 10.4\n")

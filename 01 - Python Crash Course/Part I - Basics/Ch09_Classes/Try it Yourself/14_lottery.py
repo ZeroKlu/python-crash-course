@@ -16,4 +16,4 @@ while len(selected) < 4:
     if val not in selected:
         selected.append(val)
 
-print(f"The winning numbers are:\n\t{selected}\n")
+print(f"The winning numbers are: {selected}\n")

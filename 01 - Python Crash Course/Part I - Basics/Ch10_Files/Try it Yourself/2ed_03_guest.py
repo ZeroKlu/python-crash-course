@@ -5,7 +5,7 @@
 import os
 
 ROOT_DIR = os.path.dirname(__file__)
-file_path = os.path.join(ROOT_DIR, "Files", "T.10.03.guest.txt")
+file_path = os.path.join(ROOT_DIR, "Files", "guest.txt")
 
 print("Try-it-Yourself:")
 print("Assignment 10.3\n")

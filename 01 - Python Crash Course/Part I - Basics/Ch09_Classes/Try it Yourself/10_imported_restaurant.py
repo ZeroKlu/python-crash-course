@@ -9,4 +9,4 @@ print("Try-it-Yourself:")
 print("Assignment 9.10")
 
 my_restaurant = Restaurant("my place", "scottish food")
-print(my_restaurant.describe())
+my_restaurant.describe()

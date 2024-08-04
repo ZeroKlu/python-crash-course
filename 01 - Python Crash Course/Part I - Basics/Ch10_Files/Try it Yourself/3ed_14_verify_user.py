@@ -39,13 +39,14 @@ def greet_user(file_path):
     if username:
         answer = input(f"Are you {username.upper()}? (Y|N)\n> ")
         matched = answer[0].lower() == "y"
+        if not matched:
+            username = store_user(file_path)
     else:
         username = store_user(file_path)
 
     if matched:
         print(f"\nWelcome back, {username.upper()}\n")
     else:
-        username = store_user(file_path)
         print(f"\nWe'll remember you when you come back, {username.upper()}\n")
 
 print("Try-it-Yourself:")

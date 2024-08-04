@@ -9,19 +9,17 @@
 from relative_paths import get_path
 from pathlib import Path
 
-file_path = get_path("T.10.01.learning_python.txt", "Files")
+file_path = get_path("learning_python.txt", "Files")
 
 print("Try-it-Yourself:")
 print("Assignment 10.1\n")
 
-# Read and print entire file
 path_object = Path(file_path)
 text = path_object.read_text()
 print(text.rstrip())
 
 print()
 
-# Store as a list
 lines = text.splitlines()
 for line in lines:
     print(line.rstrip())

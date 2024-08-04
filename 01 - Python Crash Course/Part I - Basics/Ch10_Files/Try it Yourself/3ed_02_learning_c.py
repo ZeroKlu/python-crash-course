@@ -12,7 +12,7 @@
 from relative_paths import get_path
 from pathlib import Path
 
-file_path = get_path("T.10.01.learning_python.txt", "Files")
+file_path = get_path("learning_python.txt", "Files")
 
 print("Try-it-Yourself:")
 print("Assignment 10.2\n")
