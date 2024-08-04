@@ -9,10 +9,7 @@
 #                results in the correct string. Run test_cities.py, and make sure test_city_country() passes.
 
 import unittest
-
-def city_country(city, country):
-    """Return formatted city and country string"""
-    return f"{city}, {country}".title()
+from city_functions import city_country
 
 def main():
     print("Try-it-Yourself:n\Assignment 11.1\n")

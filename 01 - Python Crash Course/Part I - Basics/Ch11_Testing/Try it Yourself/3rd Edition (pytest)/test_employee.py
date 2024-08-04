@@ -8,16 +8,33 @@
 #           Then write a fixture so you don’t have to create a new employee instance in each test function.
 #           Run the tests again, and make sure both tests still pass.
 
-from employee_class import Employee
+import pytest
+from employee import Employee
 
-def test_give_default_raise():
-    """Test that a default raise works correctly."""
+# def test_give_default_raise():
+#     """Test that a default raise works correctly."""
+#     employee = Employee("scott", "mclean", 65_000)
+#     employee.give_raise()
+#     assert employee.annual_salary == 70_000
+
+# def test_give_custom_raise():
+#     """Test that a custom raise works correctly."""
+#     employee = Employee("scott", "mclean", 65_000)
+#     employee.give_raise(10000)
+#     assert employee.annual_salary == 75_000
+
+@pytest.fixture
+def employee():
+    """An Employee object that will be available to all test functions."""
     employee = Employee("scott", "mclean", 65_000)
+    return employee
+
+def test_give_default_raise(employee: Employee):
+    """Test that a default raise works correctly."""
     employee.give_raise()
     assert employee.annual_salary == 70_000
 
-def test_give_custom_raise():
+def test_give_custom_raise(employee: Employee):
     """Test that a custom raise works correctly."""
-    employee = Employee("scott", "mclean", 65_000)
     employee.give_raise(10000)
     assert employee.annual_salary == 75_000

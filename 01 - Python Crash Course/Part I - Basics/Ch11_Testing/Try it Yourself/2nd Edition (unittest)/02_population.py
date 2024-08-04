@@ -11,14 +11,7 @@
 #             and make sure this new test passes.
 
 import unittest
-
-def city_country_pop(city, country, population = None):
-    if population:
-        return f"{city}, {country} - population {population}".title()
-    return f"{city}, {country}".title()
-
-def city_country_pop_broken(city, country, population):
-    return f"{city}, {country} - population {population}".title()
+from city_functions import city_country_pop, city_country_pop_broken
 
 def main():
     print("Try-it-Yourself:n\Assignment 11.2\n")
@@ -32,7 +25,6 @@ class CityCountryPopTestCase(unittest.TestCase):
         
     def test_city_country_pop(self):
         location = city_country_pop("dublin", "ireland", 544_107)
-        # location = city_country_pop_broken("dublin", "ireland", 544_107)
         self.assertEqual(location, "Dublin, Ireland - Population 544107")
 
 if __name__ == "__main__":

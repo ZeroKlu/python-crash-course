@@ -38,12 +38,12 @@ def test_city_country_pop():
     result = city_country_population("santiago", "chile", population=5_000_000)
     assert result == "Santiago, Chile - Pop: 5000000"
 
-def test_city_country_no_pop_broken():
-    """Does the function return the expected data"""
-    result = city_country_population_broken("santiago", "chile")
-    assert result == "Santiago, Chile"
+# def test_city_country_no_pop_broken():
+#     """Does the function return the expected data"""
+#     result = city_country_population_broken("santiago", "chile")
+#     assert result == "Santiago, Chile"
 
-def test_city_country_pop_broken():
-    """Does the function return the expected data"""
-    result = city_country_population_broken("santiago", "chile", population=5_000_000)
-    assert result == "Santiago, Chile - Pop: 5000000"
+# def test_city_country_pop_broken():
+#     """Does the function return the expected data"""
+#     result = city_country_population_broken("santiago", "chile", population=5_000_000)
+#     assert result == "Santiago, Chile - Pop: 5000000"

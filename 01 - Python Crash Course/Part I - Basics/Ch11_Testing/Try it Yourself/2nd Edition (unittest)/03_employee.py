@@ -8,18 +8,7 @@
 #           instance in each test method. Run your test case, and make sure both tests pass.
 
 import unittest
-
-class Employee():
-    def __init__(self, first_name, last_name, annual_salary):
-        self.first_name = first_name
-        self.last_name = last_name
-        self.annual_salary = annual_salary
-
-    def show_details(self):
-        print(f"{self.first_name} {self.last_name} - Salary : ${self.annual_salary}".title())
-
-    def give_raise(self, amount = 5000):
-        self.annual_salary += amount
+from employee import Employee
 
 class EmployeeTestCase(unittest.TestCase):
     def setUp(self):
