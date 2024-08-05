@@ -1,11 +1,51 @@
-## Ch 2 - Lesson 8: Arithmetic Operators
+## Ch 2 - Lesson 8: Numbers
 
-Python provides the standard set of arithmetic operators you find in most
-programming languages, as well as a couple that are less common.
+So far, we've been looking at strings and displaying output to the user.
+While this is important, the main feature of a computer is that is, well,
+***computes***.
+
+Computations require us to have the ability to work with numbers instead of 
+strings.
+
+---
+
+### Numeric Data Types
+
+Python provides three types of numbers:
+
+* integer (`int`)
+* floating-point decimal (`float`)
+* complex numbers (`complex`)
+
+The language also provides three constructor (casting) functions to convert
+to numeric types (typically from strings).
+
+* `int(x)` converts `x` to an integer
+* `float(x)` converts `x` to a floating-point decimal
+* `complex(r, i)` converts `r` and `i` to a complex number where
+    * `r` is the real number part
+    * `i` is the imaginary part (default value is `0`)
+
+---
+
+### Built-In Numeric Functions
+
+Additionally, Python includes several built-in functions for working with 
+numbers:
+
+* `abs(x)` calculates the absolute value of `x`
+* `divmod(x, y)` calculates:
+    * The integer division of `x / y` and
+    * The remainder `x % y`
+* `pow(x, x)` calculates `x` to the power of `y`
+* `c.conjugate()` calculates the conjugate of a complex number `c`
 
 ---
 
 ### Supported Arithmetic Operators
+
+Python provides the standard set of arithmetic operators you find in most
+programming languages, as well as a couple that are less common.
 
 |||||
 |-|-|-|-|
@@ -19,6 +59,8 @@ programming languages, as well as a couple that are less common.
 |//|integer division|`3 // 2` -> `1`|Drops the decimal part after dividing|
 |%|modulo|`3 % 2` -> `1`|Remainder|
 |||||
+
+---
 
 ### Operator Precedence
 

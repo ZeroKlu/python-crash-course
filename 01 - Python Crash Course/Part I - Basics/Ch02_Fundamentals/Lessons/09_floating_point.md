@@ -1,6 +1,6 @@
 ## Ch 2 - Lesson 9: Floating-Point Decimals
 
-Floating point numbers are used for all non-integer numerical values in
+Floating point (`float`) numbers are used for all non-integer numerical values (except for `complex`, which is beyond the scope of our course) in
 Python. The term "floating point" refers to the fact that the number of
 decimal places to the right of the decimal point is not a fixed value.
 

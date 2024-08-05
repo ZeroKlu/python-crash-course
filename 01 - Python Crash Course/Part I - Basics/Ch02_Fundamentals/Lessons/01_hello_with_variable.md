@@ -60,6 +60,32 @@ exit()
 
 ---
 
+### Interpreted, Not Compiled
+
+Many programming languages are compiled to machine language (the 
+non-human-readable CPU instructions for a given architecture) before they are 
+executed.
+
+Python, by contrast, is interpreted, not compiled*. This means that a 
+separate program (the Python interpreter) reads your code line-by-line and 
+creates the machine instructions on-the-fly while executing.
+
+> *Note: As we'll see later (when we create and import our own modules),
+> there are times where Python is partially compiled (to bytecode) before
+> being used.
+
+This has advantages, in that your code will run until it encounters a runtime
+error, so it can be easy to tell where something when awry.
+
+However, there are also limitations. For example, because the code has to 
+run on the interpreter and be compiled on-the-go, Python can be slower than
+some compiled languages. Additionally, with a compiled language, you might
+identify errors earlier than you can with Python, since those languages
+separate runtime errors from compile-time errors. Other than errors in your
+syntax, Python only has errors during runtime.
+
+---
+
 ### Some Code Conventions
 
 #### Comments
@@ -116,6 +142,16 @@ Conventions:
 Instead of just passing the string value "Hello World" to the `print()`
 function, we can store the value in a variable.
 
+A variable is just a name for some place in memory where you have stored a
+value*. It is much more convenient for the programmer to be able to access
+values by name rather than trying to keep track of the various memory 
+locations where the actual data is stored.
+
+> *Note: This is an over-simplification. There's a lot more going on under
+> the covers in variables, and eventually you'll need to understand ideas
+> like the `stack` and the `heap`, `pointers`, `mutability`, etc. For now,
+> though, it's accurate enough, and it explains how a coder uses variables.
+
 In Python, the syntax for declaring a variable is `name = value`
 
 ```python
@@ -134,6 +170,8 @@ Hello World
 
 ---
 
+### Changing the Value of a Variable
+
 We can modify a variable by assigning a different value to it
 
 ```python
@@ -150,6 +188,30 @@ Result:
 ```
 Hello World
 Goodbye World
+```
+
+---
+
+### Variables and the `NameError`
+
+In Python, like most languages, both the spelling and capitalization of
+variable names matters.
+
+This code will result in an error:
+
+```python
+message = "Hello Python Crash Course reader!"
+print(mesage)
+```
+
+Output:
+
+```
+Traceback (most recent call last):
+  File "...\hello.py", line 20, in <module>
+    print(mesage)
+          ^^^^^^
+NameError: name 'mesage' is not defined. Did you mean: 'message'?
 ```
 
 ---

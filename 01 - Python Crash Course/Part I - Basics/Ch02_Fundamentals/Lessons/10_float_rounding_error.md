@@ -19,8 +19,8 @@ expressed as an integer multiplied by an integer power of two thus:
 This means that:
 
 1.	There are no real floating-point decimals inside the computer.
-2.	The majority of floating-point value approximations are inexact.<br>
-    We just select the nearest value that the computer can express.<br>
+2.	The majority of floating-point value approximations are inexact.  
+    We just select the nearest value that the computer can express.  
     For example:
     ```
     0.1	≅ 7205759403792794 * 2⁻⁵⁶ ≅ 0.10000000000000000555

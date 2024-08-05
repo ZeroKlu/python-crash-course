@@ -18,7 +18,7 @@ they are escaping in the resulting string.
 | \n | newline |
 | \r | carriage return |
 | \\" | double-quote |
-| \\ | backslash |
+| \\\\ | backslash |
 | \\' | single-quote |
 | \b | backspace |
 | \f | form-feed |
