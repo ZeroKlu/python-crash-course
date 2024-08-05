@@ -66,6 +66,6 @@ Output:
 ['dog', 'dog', 'goldfish', 'rabbit']
 ```
 
-> Question: Why can't we use the `set()` trick and not need the loop?
+> Think About It: Why can't we use the `set()` trick and not need the loop?
 
 ---
