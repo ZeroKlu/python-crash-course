@@ -16,3 +16,9 @@ Some specific rules to which our team subscribes include:
   (but not to excess)
 
 ---
+
+> See
+> ["Try it Yourself" assignment 4.15](../Try%20it%20Yourself/00_my_answers.md)
+> for instructions on how to set indents and/or guide-lines.
+
+---

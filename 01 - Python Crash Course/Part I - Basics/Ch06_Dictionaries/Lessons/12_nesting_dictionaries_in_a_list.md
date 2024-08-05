@@ -42,7 +42,7 @@ Take an example where you require a certain number of objects:
 ```python
 num_aliens = 30
 aliens = []
-for alien_number in range(num_aliens):
+for _ in range(num_aliens):
     new_alien = {"color": "green", "points": 5, "speed": "slow"}
     aliens.append(new_alien)
 print(len(aliens), aliens[0])

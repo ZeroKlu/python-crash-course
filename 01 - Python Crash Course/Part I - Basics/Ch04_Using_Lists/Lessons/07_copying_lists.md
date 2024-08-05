@@ -11,6 +11,12 @@ This can be very useful when you don't want to modify the original.
 If we create a list and then assign it to a new variable, both variables are
 pointing to the same list in memory.
 
+This happens because the variable only contains the pointer to the memory 
+location where the list data is stored. It takes both more memory and more
+CPU time to create a copy, so the default behavior is just to copy the 
+address (or *reference*), which means that both variables point to the same 
+data.
+
 ```python
 my_foods = ["pizza", "falafel", "carrot cake"]
 print(my_foods)
@@ -40,7 +46,7 @@ But if we assign to a slice, we're creating the copy as a new list in memory.
 ```python
 my_foods = ["pizza", "falafel", "carrot cake"]
 print(my_foods)
-other_foods = my_foods[:] # Unbounded slice makes a copy
+other_foods = my_foods[:] # Unbounded slice makes a copy/clone
 other_foods.append("gyros")
 print(other_foods)
 print(my_foods)

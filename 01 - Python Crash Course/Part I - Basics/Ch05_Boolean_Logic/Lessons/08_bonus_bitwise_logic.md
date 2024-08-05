@@ -173,8 +173,9 @@ Output:
 
 ### Bitwise XOR `^`
 
-For bitwise operations, Python provides an XOR (^) operator that only sets a 
-place to 1 if exactly one number has a 1 in that place.
+For bitwise operations, Python provides an XOR (`^`) or "Exclusive OR"
+operator that only sets a place to 1 if exactly one number has a 1 in
+that place.
 
 |b₁|`^`|b₂|
 |:-:|:-:|:-:|

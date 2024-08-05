@@ -5,7 +5,7 @@ of key/value pairs instead of just values.
 
 You can think of this as an object with properties but without a defined class.
 
-The syntax is very similar to JavaScript/JSON objects using key : value 
+The syntax is very similar to JavaScript/JSON objects using `key : value` 
 throughout.
 
 ### Declaring and Accessing a Dictionary

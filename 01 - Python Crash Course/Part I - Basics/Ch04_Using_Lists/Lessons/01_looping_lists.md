@@ -88,3 +88,92 @@ That was a great magic show!
 ```
 
 ---
+
+### Be Careful Indenting
+
+One logic error that you absolutely ***will*** make is incorrectly indenting a block in a loop.
+
+#### Indenting a Line that Should Not Be indented
+
+If you indent a line in a loop's block, that line will be repeated on each
+iteration, whether or not you want it to be:
+
+```python
+for i in range(3, 0, -1):
+    print(i)
+    print("Blast off!")
+```
+
+Output:
+
+```
+3
+Blast off!
+2
+Blast off!
+1
+Blast off!
+```
+
+We indented the third line, so the second `print()` statement ran on each
+iteration.
+
+What we meant to do was this:
+
+```python
+for i in range(3, 0, -1):
+    print(i)
+print("Blast off!")
+```
+
+Output:
+
+```
+3
+2
+1
+Blast off!
+```
+
+---
+
+#### Not Indenting a Line That Should Be Indented
+
+Failing to indent a line that should be indented is also a problem. The
+opposite issue occurs. We have an action that should be taken on each
+iteration, but it only occurs at the end of the loop.
+
+```python
+for i in range(3, 0, -1):
+    message = f"{i}..."
+print(message)
+print("Blast off!")
+```
+Output:
+
+```
+1...
+Blast off!
+```
+
+We failed to indent the third line, so the message is only printed once:
+after the loop terminates.
+
+What we meant to do was this:
+
+```python
+for i in range(3, 0, -1):
+    message = f"{i}..."
+    print(message)
+print("Blast off!")
+```
+Output:
+
+```
+3...
+2...
+1...
+Blast off!
+```
+
+---

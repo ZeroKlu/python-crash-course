@@ -108,6 +108,6 @@ We've sacrificed readability in order to force-fit a list comprehension.
 Even though comprehensions are considered Pythonic, the tendency to use them
 should be balanced with keeping your code readable.
 
-In this instance, we might be better off at least one of the loops.
+In this instance, we might be better off keeping at least one of the loops.
 
 ---

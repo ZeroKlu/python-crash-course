@@ -7,7 +7,7 @@ things...
 
 ---
 
-Consider this example:
+Consider this example where we're trying to `pop()` each item as we iterate:
 
 ```python
 numbers = [1, 2, 3, 4, 5]
@@ -21,6 +21,10 @@ print(numbers)
 
 ### Surprise!
 
+<details>
+<summary>Open after you make your prediction...</summary>
+<br>
+
 You might be surprised that the output is:
 
 ```
@@ -30,10 +34,13 @@ You might be surprised that the output is:
 [2, 4]
 ```
 
+</details>
+<br>
+
 ---
 
-If you predicted that all five numbers would be printed and that the list would
-be empty after the loop, here's why that didn't happen:
+If you predicted that all five numbers would be printed and that the list 
+would be empty after the loop, here's why that didn't happen:
 
 * On the first iteration, we pop `numbers[0]`, which re-indexes the remainder 
   of the list `[2, 3, 4, 5]`

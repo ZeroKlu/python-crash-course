@@ -185,6 +185,21 @@ Output:
 
 ---
 
+### List Length
 
+Although not a sorting function, now is a good time to point out that
+python provides us a function `len()` that gets the length of the list
+in number of elements.
 
+```python
+my_list = [1, 2, 3]
+print(len(my_list))
+```
 
+Output:
+
+```
+3
+```
+
+---

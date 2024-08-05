@@ -64,7 +64,7 @@ The `and` operator will return `True` only if the conditions on both sides are
 
 |p|`and`|q|
 |:-:|:-:|:-:|
-|T|**T**|T|
+|T|<span style="color:green">**T**</span>|T|
 |T|F|F|
 |F|F|T|
 |F|F|F|
@@ -113,9 +113,9 @@ We can think of this as the inverse of `and` in that `or` will only return
 
 |p|`or`|q|
 |:-:|:-:|:-:|
-|T|**T**|T|
-|T|**T**|F|
-|F|**T**|T|
+|T|<span style="color:green">**T**</span>|T|
+|T|<span style="color:green">**T**</span>|F|
+|F|<span style="color:green">**T**</span>|T|
 |F|F|F|
 
 ---
@@ -291,8 +291,8 @@ same as `or` if we make sure that we set the condition `False` when
 |p|XOR|q|
 |:-:|:-:|:-:|
 |T|F|T|
-|T|**T**|F|
-|F|**T**|T|
+|T|<span style="color:green">**T**</span>|F|
+|F|<span style="color:green">**T**</span>|T|
 |F|F|F|
 
 That reflects more closely what human language means when we say "either

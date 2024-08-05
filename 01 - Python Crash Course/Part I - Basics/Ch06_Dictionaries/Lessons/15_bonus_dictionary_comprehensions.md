@@ -11,7 +11,7 @@ Consider the case where we have two lists and want to combine them into one
 dictionary such that for each index `n`, the key is `list1[n]` and the value
 is `list2[n]`.
 
-We can use a loop the want we've done thus far:
+We can use a loop the way we've done thus far:
 
 ```python
 keys = ["a", "b", "c", "d", "e"]
