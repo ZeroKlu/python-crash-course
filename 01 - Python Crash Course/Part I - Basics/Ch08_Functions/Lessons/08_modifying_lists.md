@@ -55,8 +55,8 @@ variable itself.
 
 ### Lists are Mutable
 
-Because lists are mutable, if we pass them to functions, work performed inside 
-the function modified the original variable in the calling location.
+Because lists are mutable, if we pass them to functions, work performed 
+inside the function modified the original variable in the calling location.
 
 Note how the `print_models()` function below does not include a `return`.
 

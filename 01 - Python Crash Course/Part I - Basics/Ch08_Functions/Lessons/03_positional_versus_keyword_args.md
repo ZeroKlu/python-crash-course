@@ -80,7 +80,7 @@ My dog's name is Fido.
 ### All Argument Are Required
 
 By default, every argument is required. If we omit an argument when calling
-a function, we will receive an error.
+a function, we will receive a `TypeError`.
 
 ```python
 describe_pet("fido")

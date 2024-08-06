@@ -3,11 +3,11 @@
 In development, there are three different overall design philosophies:
 
 * **Procedural Programming**:
-    * In the *procedural* design pattern, data is decoupled from the functions 
-      that operate on it.
+    * In the *procedural* design pattern, data is decoupled from the 
+      functions that operate on it.
     * Functions are agnostic to the source of the data and are not modeled for
       specific use cases.
-    * Functions are typically implemented using iterative patters like loops.
+    * Functions are typically implemented using iterative patterns like loops.
 * **Functional Programming**:
     * In the *functional* design pattern, data and its structure is taken into
       account when the functions are designed.
@@ -15,7 +15,7 @@ In development, there are three different overall design philosophies:
     * Functions are often designed using recursion and/or composition patterns
 * **Object-Oriented Programming**:
     * In *object-oriented* programming, data is modeled into logically
-      constructed objects that group related data together.
+      constructed objects that group related data and functionality together.
     * Functions are developed within the data model and exist as part of the
       object.
     * So the actual data is coupled directly to the functions that perform

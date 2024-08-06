@@ -27,15 +27,16 @@ Here's how we do that.
 
 1. Open the project folder in VS Code
 2. Launch a terminal if one is not already open
-3. Create the venv by running the following command in your terminal  
+3. Create the virtual environment (venv) by running the following command in 
+   your terminal:  
    `python -m venv .venv`
    * This will create a virtual environment called `.venv` in your project 
      folder.
    * It's not necessary to call it .venv (you can name it whatever you want), 
      but it's customary
 
-The newly created virtual environment contains its own complete installation of
-Python.
+The newly created virtual environment contains its own complete installation 
+of Python.
 
 ---
 

@@ -6,7 +6,7 @@ This can be very useful when you don't want to modify the original.
 
 ---
 
-### Lists Assign by Reference
+### Lists Assign as the Same Item in Memory
 
 If we create a list and then assign it to a new variable, both variables are
 pointing to the same list in memory.
@@ -16,6 +16,12 @@ location where the list data is stored. It takes both more memory and more
 CPU time to create a copy, so the default behavior is just to copy the 
 address (or *reference*), which means that both variables point to the same 
 data.
+
+In Python:
+
+* All variables are passed and assigned by reference, but
+    * All *mutable* data types assign as the same item in memory
+    * All *immutable* data types are assigned as copies
 
 ```python
 my_foods = ["pizza", "falafel", "carrot cake"]

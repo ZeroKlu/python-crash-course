@@ -64,6 +64,7 @@ def average(numbers: list[float]) -> float:
 ```
 
 </details>
+<br>
 
 In order to use the code samples below, you'll need to import a few modules 
 into your Python file:

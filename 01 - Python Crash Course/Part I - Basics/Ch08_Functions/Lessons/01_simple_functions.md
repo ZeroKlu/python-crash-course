@@ -4,7 +4,7 @@ Up to this point, we have written code line-by-line whenever it was needed, and
 when we executed a Python file, our code just ran from top to bottom.
 
 In the real world, we will almost always want to create our code using 
-functions.
+functions. A function is a named block of code that does a specific task.
 
 Functions allow us to write reusable code, which:
 
