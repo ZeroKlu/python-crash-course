@@ -58,6 +58,20 @@ Here's how:
 
 ---
 
+### Make Sure the Virtual Environment Interpreter is Selected
+
+In Visual Studio Code, you need to ensure that the Python interpreter used
+for code testing is the one in the virtual environment.
+
+1. Open the VS Code Command Palette by doing one of the following:
+    * Click the cog icon in the lower left and select "Command Palette"  
+      or
+    * Press `CTRL`+`SHIFT`+`P`
+2. Select "Python: Select Interpreter" from the menu
+3. Select the interpreter associated with your virtual environment
+
+---
+
 ### Update the Virtual Environment and Install Libraries
 
 The PIP installer will likely be out of date in your virtual environment, so
@@ -71,6 +85,35 @@ After that, you can install whatever libraries you need to the virtual environme
 
 ```
 python.exe -m pip install library_name
+```
+
+---
+
+### Creating a Requirements File
+
+After you have developed an application, you will need to deploy it,
+typically to a server other than where you wrote the code.
+
+This means that the server will automatically need to have the same modules
+installed that you used for testing.
+
+To make this easier, you can create a requirements file using the following
+command:
+
+```pwsh
+python -m pip freeze > requirements.txt
+```
+
+... which will create a file called `requirements.txt` in which all of the
+installed module dependencies are listed, like this:
+
+```
+colorama==0.4.6
+iniconfig==2.0.0
+packaging==24.1
+pluggy==1.5.0
+pygame==2.6.0
+pytest==8.3.2
 ```
 
 ---
