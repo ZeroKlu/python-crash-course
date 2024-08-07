@@ -114,6 +114,8 @@ We can approach this naively and just directly translate the Fibonacci formula
 to code:
 
 ```python
+from count_calls import CountCalls
+
 @CountCalls
 def fibonacci(n: int) -> int:
     """Return the nth Fibonacci number (naive algorithm)"""
@@ -219,6 +221,8 @@ Let's come up with a way to store the computed values as we go and improve our
 function.
 
 ```python
+from count_calls import CountCalls
+
 @CountCalls
 def fibonacci(n: int, memo: dict[int, int]={0: 0, 1: 1}) -> int:
     """Return the nth Fibonacci number (memoized algorithm)"""
@@ -266,6 +270,8 @@ That's not the case with the Fibonacci Sequence, so here is an iterative
 solution (in the interest of completeness):
 
 ```python
+from count_calls import CountCalls
+
 @CountCalls
 def fibonacci_iterative(n: int) -> int:
     """Return the nth Fibonacci number (iterative algorithm)"""
@@ -304,10 +310,12 @@ calculations, where the number of computations doesn't increase at all as
 > values of *n*.
 
 Formulae:  
-`φ = (1 + √5) / 2`  
-`F(n) = (φⁿ - (1-φ)ⁿ) / (φ - (1-φ))`
+`φ = (1 + √5) / 2` (φ is the golden ratio)  
+`F(n) = (φⁿ - (1-φ)ⁿ) / (φ - (1-φ))`  (φ is used in calculating F(n))
 
 ```python
+from count_calls import CountCalls
+
 @CountCalls
 def fibonacci(n):
     """Return the nth Fibonacci number approximation (formulaic algorithm)"""
