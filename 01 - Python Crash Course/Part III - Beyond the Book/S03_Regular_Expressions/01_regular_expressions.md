@@ -384,7 +384,8 @@ Output:
 • (713) 483-3111 ext: 42
 ```
 
-We've done it! We matched all of our patterns.
+We've done it! We matched all of our patterns ans managed to avoid matching
+the bad pattern.
 
 ---
 
@@ -392,8 +393,11 @@ We've done it! We matched all of our patterns.
 
 Not really...
 
-This isn't a comprehensive regular expressions for all possible phone number 
-patterns. You might have to modify a RegEx many times during its lifetime to
-match additional patterns.
+This isn't a comprehensive regular expression for all possible phone number 
+patterns. For example, we haven't dealt with country codes, short code
+cell numbers, etc.
+
+In the real world, you might have to modify a RegEx many times during its 
+lifetime to match changing patterns.
 
 ---
