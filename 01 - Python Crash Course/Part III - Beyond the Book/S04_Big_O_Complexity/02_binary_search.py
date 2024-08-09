@@ -15,7 +15,7 @@ from random import randint
 #         Else
 #             Remove the upper half of the current array
 #             Move to the next iteration of the loop
-# If target element not found
+# If target element not found by end of loop
 #     Quit (Return failure state)
 # ----------------------------------------------------------------------
 
