@@ -24,13 +24,13 @@ def linear_search(array: list[int], target: int) -> tuple[int, int]:
 
 def main() -> None:
     numbers = file_to_list(file_name, folder)
-    seek = randint(1, max(numbers))
+    seek = randint(min(numbers), max(numbers))
     result = linear_search(numbers, seek)
     if result[0] < 0:
         print(f"Did not find value: {seek}")
         exit()
     print(f"Index of target [{seek}]: i = [{result[0]}]\n")
-    efficiency_report("Linear search", len(numbers), result[1])
+    efficiency_report("Linear Search", len(numbers), result[1])
 
 if __name__ == "__main__":
     main()

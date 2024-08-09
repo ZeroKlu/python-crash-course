@@ -235,4 +235,10 @@ have on performance.  ![](./images/big_o_chart.png)
 We'll explore the idea of complexity by reviewing several search and sort 
 algorithms.
 
+* Search Algorithms
+    * [Linear Search](./01_linear_search.md)
+    * [Binary Search](./02_binary_search.md)
+
+* Sort Algorithms
+
 ---

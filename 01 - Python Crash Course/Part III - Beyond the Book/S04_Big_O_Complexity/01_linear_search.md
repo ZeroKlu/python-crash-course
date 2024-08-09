@@ -116,7 +116,7 @@ Here is an example of its output:
 ```
 Index of target [3306]: i = [8960]
 
-Linear search performed 8,961 comparisons to search 10,000 numbers.
+Linear Search performed 8,961 comparisons to search 10,000 numbers.
 
 Computed complexity: O(n) - linear
 

@@ -1,6 +1,6 @@
 from relative_paths import get_path
 from pathlib import Path
-from math import log2
+from math import log2, ceil
 
 def file_to_list(file_name: str, folder: str=None) -> list[int]:
     """Read a space-delimited file into a list of integers"""
@@ -12,7 +12,7 @@ def file_to_list(file_name: str, folder: str=None) -> list[int]:
 
 def complexities(n: int) -> dict[dict[str, any]]:
     """Calculate predicted operations by complexity"""
-    log = int(log2(n))
+    log = int(ceil(log2(n)))
     return {
         "exp": {
             "name": "exponential",
