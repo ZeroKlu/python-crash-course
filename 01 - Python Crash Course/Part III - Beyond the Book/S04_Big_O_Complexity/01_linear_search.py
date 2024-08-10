@@ -1,5 +1,6 @@
 from common_functions import file_to_list, efficiency_report
 from random import randint
+from sm_utils import timer
 
 # Pseudocode Algorithm:
 # ----------------------------------------------
@@ -13,6 +14,7 @@ from random import randint
 folder = "data"
 file_name = "unordered_integers.txt"
 
+@timer
 def linear_search(array: list[int], target: int) -> tuple[int, int]:
     """Find the index where the target value is stored"""
     count = 0
@@ -27,9 +29,9 @@ def main() -> None:
     seek = randint(min(numbers), max(numbers))
     result = linear_search(numbers, seek)
     if result[0] < 0:
-        print(f"Did not find value: {seek}")
+        print(f"\nDid not find value: {seek}")
         exit()
-    print(f"Index of target [{seek}]: i = [{result[0]}]\n")
+    print(f"\nIndex of target [{seek}]: i = [{result[0]}]")
     efficiency_report("Linear Search", len(numbers), result[1])
 
 if __name__ == "__main__":

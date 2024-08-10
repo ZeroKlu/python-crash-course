@@ -14,6 +14,14 @@ against the cost of sorting.
 
 ### Binary Search Algorithm Pseudocode
 
+A binary search algorithm checks the middle element of a sorted list. If the
+target value is greater than the middle element, discard the lower half of
+the array, and if the target value is less than the middle element, discard 
+the upper half. Repeat this process until the target value is found.
+
+If the target value is never found, the algorithm will have checked log₂*n*
+(rounded up) elements.
+
 ```pseudocode
 # Assume an already ordered array
 
@@ -159,9 +167,9 @@ Approximate values for reference:
  · n!       = Value omitted - too large to calculate!
  · 2ⁿ       = Value omitted - too large to calculate!
  · n²       = 100,000,000
- · n log(n) = 130,000
+ · n log(n) = 132,878
  · n        = 10,000
- · log(n)   = 13
+ · log(n)   = 14
  ```
 
 Run the program a few times and see what output you get.

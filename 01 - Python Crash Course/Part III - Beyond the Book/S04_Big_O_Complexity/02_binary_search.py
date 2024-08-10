@@ -1,5 +1,6 @@
 from common_functions import file_to_list, efficiency_report
 from random import randint
+from sm_utils import timer
 
 # Pseudocode Algorithm:
 # ----------------------------------------------------------------------
@@ -38,14 +39,19 @@ def binary_search(array: list[int], target: int, low: int=-1, high: int=-1, coun
     else:
         return (-1, count)
 
+@timer
+def search_runner(array: list[int], target: int) -> tuple[int, int]:
+    """Wraps timer around recursive series"""
+    return binary_search(array, target)
+
 def main() -> None:
     numbers = file_to_list(file_name, folder)
     seek = randint(min(numbers), max(numbers))
-    result = binary_search(numbers, seek)
+    result = search_runner(numbers, seek)
     if result[0] < 0:
-        print(f"Did not find value: {seek}")
+        print(f"\nDid not find value: {seek}")
         exit()
-    print(f"Index of target [{seek}]: i = [{result[0]}]\n")
+    print(f"\nIndex of target [{seek}]: i = [{result[0]}]")
     efficiency_report("Binary Search", len(numbers), result[1])
 
 if __name__ == "__main__":

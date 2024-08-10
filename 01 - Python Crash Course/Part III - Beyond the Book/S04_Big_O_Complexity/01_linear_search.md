@@ -6,6 +6,12 @@ Let's have a look at the algorithm for the O(*n*) **Linear Search** algorithm we
 
 ### Linear Search Algorithm Pseudocode
 
+A linear search checks each element in the array until it finds the target 
+value.
+
+If the target value is never found, the algorithm will have checked each 
+element once.
+
 The steps in this algorithm are pretty straightforward.
 
 ```pseudocode
@@ -124,9 +130,9 @@ Approximate values for reference:
  · n!       = Value omitted - too large to calculate!
  · 2ⁿ       = Value omitted - too large to calculate!
  · n²       = 100,000,000
- · n log(n) = 130,000
+ · n log(n) = 132,878
  · n        = 10,000
- · log(n)   = 13
+ · log(n)   = 14
 ```
 
 Run the program a few times and see what output you get.

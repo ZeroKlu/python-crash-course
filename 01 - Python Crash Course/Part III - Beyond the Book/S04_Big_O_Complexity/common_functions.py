@@ -10,9 +10,13 @@ def file_to_list(file_name: str, folder: str=None) -> list[int]:
         numbers += [int(n) for n in line.split()]
     return numbers
 
+def list_to_file(array: list[int], file_name: str, folder: str=None) -> None:
+    """Write a list of integers a space-delimited file"""
+    path = Path(get_path(file_name, folder))
+    path.write_text(" ".join(str(n) for n in array))
+
 def complexities(n: int) -> dict[dict[str, any]]:
     """Calculate predicted operations by complexity"""
-    log = int(ceil(log2(n)))
     return {
         "exp": {
             "name": "exponential",
@@ -26,8 +30,8 @@ def complexities(n: int) -> dict[dict[str, any]]:
         },
         "n_log_n": {
             "name": "loglinear",
-            "big_o": "n log(n)",
-            "count": n * log
+            "big_o": "n log n",
+            "count": int(ceil(n * log2(n)))
         },
         "n": {
             "name": "linear",
@@ -36,8 +40,8 @@ def complexities(n: int) -> dict[dict[str, any]]:
         },
         "log_n": {
             "name": "logarithmic",
-            "big_o": "log(n)",
-            "count": log
+            "big_o": "log n",
+            "count": int(ceil(log2(n)))
         },
         "const": {
             "name": "constant",
@@ -48,23 +52,27 @@ def complexities(n: int) -> dict[dict[str, any]]:
 
 def efficiency_report(algorithm: str, size: int, count: int) -> None:
     """Print out a report of the Big-O efficiency of the algorithm"""
-    print(f"{algorithm} performed {count:,}", end=" ")
-    print(f"comparisons to search {size:,} numbers.\n")
+    print(f"\n{algorithm} performed {count:,}", end=" ")
+
+    if "search" in algorithm.lower():
+        print(f"comparisons to search {size:,} numbers.\n")
+    else:
+        print(f"operations to sort {size:,} numbers\n")
 
     big_o = complexities(size)
 
-    o = "const"
-    if count > big_o["n_squared"]["count"]:
+    o = big_o["const"]
+    if count > big_o["n_squared"]["count"] * 2:
         o = big_o["exp"]
-    elif count > big_o["n_log_n"]["count"]:
+    elif count > big_o["n_log_n"]["count"] * 2:
         o = big_o["n_squared"]
-    elif count > big_o["n"]["count"]:
+    elif count > big_o["n"]["count"] * 2:
         o = big_o["n_log_n"]
-    elif count > big_o["log_n"]["count"]:
+    elif count > big_o["log_n"]["count"] * 2:
         o = big_o["n"]
-    elif count > 1:
+    elif count > 2:
         o = big_o["log_n"]
-
+        
     print(f"Computed complexity: O({o['big_o']}) - {o['name']}\n")
     print("Approximate values for reference:")
     print(" · n!       = Value omitted - too large to calculate!")

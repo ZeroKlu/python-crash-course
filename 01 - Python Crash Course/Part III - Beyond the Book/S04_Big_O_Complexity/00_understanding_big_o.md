@@ -1,7 +1,5 @@
 ## Understanding Big-O Complexity in Programming
 
----
-
 > Measuring programming progress by lines of code is like measuring aircraft 
 > building progress by weight.  
 > ~ Bill Gates
@@ -20,17 +18,17 @@ An algorithm is a process that performs some specific task.
 * First of all, it's important to remember where an algorithm falls into 
   problem solving.
     * The solution to a problem consists of three parts
-        * Input:  
+        * **Input**  
           This is the incoming, unprocessed data
             * The size of this input can vary
             * We'll refer to the input size as ***n***
-        * Process  
+        * **Process**  
           This is how we transform the input into the output
             * Typically, we describe this in terms of an algorithm (a process 
               with defined steps that takes us from the input to the output)
             * This algorithm is where we need to focus on complexity in 
               relation to the size of ***n***
-        * Output  
+        * **Output**  
           This is the processed result of the program
 
 ---
@@ -240,5 +238,6 @@ algorithms.
     * [Binary Search](./02_binary_search.md)
 
 * Sort Algorithms
+    * [Selection Sort](./03_selection_sort.md)
 
 ---
