@@ -1,6 +1,6 @@
 ## Binary Search - O(log *n*)
 
-Let's have a look at the algorithm for the O(log *n*) **Binary Search** algorithm we talked about previously.
+Let's have a look at the algorithm for the O(log *n*) **Binary Search**.
 
 We can improve performance tremendously by implementing a better algorithm for
 searching our data.
@@ -61,28 +61,28 @@ Here is an example of how we might code a simple binary search...
 > Consider constructing that version of the function as a study assignment.
 
 ```python
-def binary_search(array: list[int], target: int, low: int=-1, high: int=-1, count: int=0) -> tuple[int, int]:
+def binary_search(array: list[int], target: int, low: int=-1, high: int=-1) -> int:
     """Find the index where the target value is stored"""
     if low == -1: low = 0
     if high == -1: high = len(array) - 1
-    count += 1
     
     if high >= low:
         mid = (high + low) // 2
         if array[mid] == target:
-            return (mid, count)
+            return mid
         if array[mid] < target:
-            return binary_search(array, target, mid + 1, high, count)
-        return binary_search(array, target, low, mid - 1, count)
+            return binary_search(array, target, mid + 1, high)
+        return binary_search(array, target, low, mid - 1)
     else:
-        return (-1, count)
+        return -1
 ```
 
 ---
 
 ### Some Sample Data
 
-For this example, we will just use a simple example with a sorted array including the numbers 0 through 7
+We will just use a simple example with a sorted array including the
+numbers 0 through 7
 
 ---
 

@@ -1,4 +1,4 @@
-from common_functions import file_to_list, efficiency_report, list_to_file
+from common_functions import file_to_list, efficiency_report, list_to_file, is_sorted
 from sm_utils import timer
 
 # Pseudocode Algorithm:
@@ -16,21 +16,29 @@ output_file_name = "sorted_integers.txt"
 def selection_sort(array: list[int]) -> tuple[list[int], int]:
     """Sort a list using the selection sort algorithm"""
     count = 0
-    for i in range(len(array)):
-        least = array[i]
-        p = i + 1
-        for j in range(p, len(array)):
+    
+    n = len(array)
+    i = 0
+
+    while i < n - 1:
+        count + 1
+        pos = i
+        for j in range(i + 1, n):
             count += 1
-            if array[j] < least:
-                p = j
-                least = array[j]
-        if least < array[i]:
-            array[i], array[p] = array[p], array[i]
+            if array[j] < array[pos]:
+                pos = j
+        if pos != i:
+            array[i], array[pos] = array[pos], array[i]
+        i += 1
+
     return (array, count)
 
 def main() -> None:
     numbers = file_to_list(input_file_name, folder)
     result = selection_sort(numbers)
+    if not is_sorted(result[0]):
+        print("Failed to sort array!")
+        exit()
     list_to_file(result[0], output_file_name, folder)
     efficiency_report("Selection Sort", len(numbers), result[1])
     print(f"Check file: ./{folder}/{output_file_name} to validate results")

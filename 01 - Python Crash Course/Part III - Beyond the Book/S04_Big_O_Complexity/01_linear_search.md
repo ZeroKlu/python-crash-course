@@ -1,6 +1,6 @@
 ## Linear Search - O(*n*)
 
-Let's have a look at the algorithm for the O(*n*) **Linear Search** algorithm we talked about previously.
+Let's have a look at the algorithm for the O(*n*) **Linear Search**.
 
 ---
 
@@ -40,21 +40,18 @@ Here is an example of how we might code a simple linear search...
 ```python
 def linear_search(array: list[int], target: int) -> int:
     """Find the index where the target value is stored"""
-    # For every element from 0 to (n - 1)
     for i in range(len(array)):
-        # If the element contains the target value
         if array[i] == target:
-            # Quit and return the index of the element
             return i
-    # If the target value was not found, Quit and return some failure state
-    return (-1, count)
+    return -1
 ```
 
 ---
 
 ### Some Sample Data
 
-For this example, we will just use a simple example with an unsorted array including the numbers 0 through 7:
+We will just use a simple example with an unsorted array including the 
+numbers 0 through 7:
 
 ## <center>[ 7  2  5  4  1  6  0  3 ]</center>
 

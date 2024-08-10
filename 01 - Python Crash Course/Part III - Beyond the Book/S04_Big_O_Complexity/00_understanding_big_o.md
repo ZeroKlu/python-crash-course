@@ -234,10 +234,24 @@ We'll explore the idea of complexity by reviewing several search and sort
 algorithms.
 
 * Search Algorithms
-    * [Linear Search](./01_linear_search.md)
-    * [Binary Search](./02_binary_search.md)
+    * O(*n*)
+        * [Linear Search](./01_linear_search.md)
+    * O(log *n*)
+        * [Binary Search](./02_binary_search.md)
 
 * Sort Algorithms
-    * [Selection Sort](./03_selection_sort.md)
+    * O(*n*²)
+        * [Bubble Sort](./03_bubble_sort.md)
+        * [Selection Sort](./04_selection_sort.md)
+        * [Insertion Sort](./05_insertion_sort.md)
+    * O(*n* log *n*)
+        * [Quick Sort](./06_quick_sort.md)
+        * [Merge Sort](./07_merge_sort.md)
+        * [Heap Sort](./08_heap_sort.md)
+        * [Shell Sort](./09_shell_sort.md)
+
+These are by no means an exhaustive list of algorithms. There are literally
+thousands of sorting algorithms to explore, but this list gives a good
+overview of the types of approaches taken to solve these problems.
 
 ---

@@ -1,6 +1,6 @@
 from relative_paths import get_path
 from pathlib import Path
-from math import log2, ceil
+from math import log2, ceil, factorial
 
 def file_to_list(file_name: str, folder: str=None) -> list[int]:
     """Read a space-delimited file into a list of integers"""
@@ -15,13 +15,25 @@ def list_to_file(array: list[int], file_name: str, folder: str=None) -> None:
     path = Path(get_path(file_name, folder))
     path.write_text(" ".join(str(n) for n in array))
 
+def is_sorted(array: list[int]) -> bool:
+    """Verify that all values in the array are in the sorted order"""
+    for i in range(1, len(array)):
+        if array[i] < array[i - 1]:
+            return False
+    return True
+
 def complexities(n: int) -> dict[dict[str, any]]:
     """Calculate predicted operations by complexity"""
     return {
+        "fac": {
+            "name": "factorial",
+            "big_o": "n!",
+            "count": factorial(n)
+        },
         "exp": {
             "name": "exponential",
             "big_o": "2ⁿ",
-            "count": 0
+            "count": 2 ** n
         },
         "n_squared": {
             "name": "quadratic (polynomial)",
@@ -45,7 +57,7 @@ def complexities(n: int) -> dict[dict[str, any]]:
         },
         "const": {
             "name": "constant",
-            "big_o": "1",
+            "big_o": "const",
             "count": 1
         }
     }
@@ -62,7 +74,9 @@ def efficiency_report(algorithm: str, size: int, count: int) -> None:
     big_o = complexities(size)
 
     o = big_o["const"]
-    if count > big_o["n_squared"]["count"] * 2:
+    if count > big_o["exp"]["count"] * 2:
+        o = big_o["fac"]
+    elif count > big_o["n_squared"]["count"] * 2:
         o = big_o["exp"]
     elif count > big_o["n_log_n"]["count"] * 2:
         o = big_o["n_squared"]
@@ -75,9 +89,17 @@ def efficiency_report(algorithm: str, size: int, count: int) -> None:
         
     print(f"Computed complexity: O({o['big_o']}) - {o['name']}\n")
     print("Approximate values for reference:")
-    print(" · n!       = Value omitted - too large to calculate!")
-    print(" · 2ⁿ       = Value omitted - too large to calculate!")
-    print(f" · n²       = {big_o['n_squared']['count']:,}")
-    print(f" · n log(n) = {big_o['n_log_n']['count']:,}")
-    print(f" · n        = {big_o['n']['count']:,}")
-    print(f" · log(n)   = {big_o['log_n']['count']:,}\n")
+    for item in big_o.values():
+        try:
+            s = str(item["count"])
+            if len(s) > 20:
+                val = f"{s[0]}.{s[1:3]} * 10^{len(s) - 2}"
+            else:
+                val = f"{item['count']:,}"
+            print(f" • {item['big_o']: <8} = {val}")
+        except ValueError:
+            try:
+                print(f" • {item['big_o']: <8} = {item['count']:.2E}")
+            except OverflowError:
+                print(f" • {item['big_o']: <8} = Value omitted - too large to calculate!")
+    print()

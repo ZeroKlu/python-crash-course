@@ -1,4 +1,4 @@
-from common_functions import file_to_list, efficiency_report, list_to_file
+from common_functions import file_to_list, efficiency_report, list_to_file, is_sorted
 from sm_utils import timer
 
 # Pseudocode Algorithm:
@@ -40,6 +40,9 @@ def sort_runner(array: list[int]) -> tuple[int, int]:
 def main() -> None:
     numbers = file_to_list(input_file_name, folder)
     result = sort_runner(numbers[:])
+    if not is_sorted(result[0]):
+        print("Failed to sort array!")
+        exit()
     list_to_file(result[0], output_file_name, folder)
     efficiency_report("Quick Sort", len(numbers), result[1])
     print(f"Check file: ./{folder}/{output_file_name} to validate results")

@@ -1,4 +1,4 @@
-from common_functions import file_to_list, efficiency_report, list_to_file
+from common_functions import file_to_list, efficiency_report, list_to_file, is_sorted
 from math import log2, ceil
 from sm_utils import timer
 
@@ -37,6 +37,9 @@ def shell_sort(array: list[int]) -> tuple[list[int], int]:
 def main() -> None:
     numbers = file_to_list(input_file_name, folder)
     result = shell_sort(numbers)
+    if not is_sorted(result[0]):
+        print("Failed to sort array!")
+        exit()
     list_to_file(result[0], output_file_name, folder)
     efficiency_report("Shell Sort", len(numbers), result[1])
     print(f"Check file: ./{folder}/{output_file_name} to validate results")
