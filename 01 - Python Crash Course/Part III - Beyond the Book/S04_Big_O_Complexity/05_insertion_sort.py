@@ -2,10 +2,15 @@ from common_functions import file_to_list, efficiency_report, list_to_file, is_s
 from sm_utils import timer
 
 # Pseudocode Algorithm:
-# --------------------------------------------------------------
-# Split the array into two parts: sorted and unsorted
-# TODO n²
-# --------------------------------------------------------------
+# ------------------------------------------------------------------
+# For element indices `i` 1 to n-1
+#     Select element `j` = i+1
+#     Compare current element with each element j-1 to 0
+#         Swap it with the lowest index element whose value is
+#           greater than the current element
+#         Re-index remaining compared elements
+#     Increment i and repeat
+# ------------------------------------------------------------------
 
 folder = "data"
 input_file_name = "unordered_integers.txt"
@@ -17,6 +22,7 @@ def insertion_sort(array: list[int]) -> tuple[list[int], int]:
     count = 0
 
     for i in range(1, len(array)):
+        count += 1
         key = array[i]
         j = i - 1
 
@@ -25,6 +31,7 @@ def insertion_sort(array: list[int]) -> tuple[list[int], int]:
             array[j + 1] = array[j]
             j -= 1
 
+        count += 1
         array[j + 1] = key
 
     return (array, count)

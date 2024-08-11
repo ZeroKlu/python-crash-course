@@ -26,16 +26,14 @@ def bubble_sort(array: list[int]) -> list[int]:
             break
     return array
 
-def insertion_sort(array: list[int]) -> tuple[list[int], int]:
+def insertion_sort(array: list[int]) -> list[int]:
     """Sort a list using the insertion sort algorithm"""
     for i in range(1, len(array)):
         key = array[i]
         j = i - 1
-
         while j >= 0 and key < array[j]:
             array[j + 1] = array[j]
             j -= 1
-
         array[j + 1] = key
     return array
 

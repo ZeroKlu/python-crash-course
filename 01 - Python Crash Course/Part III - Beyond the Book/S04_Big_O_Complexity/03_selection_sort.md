@@ -102,31 +102,32 @@ With our array, the process would look like this:
         
     ...
 
-We repeat those three step for each position in the array, each time checking all the elements above the one we're comparing.
+We repeat those three step for each position in the array, each time
+checking all the elements above the one we're comparing.
 
 The sort process will look like this:
 
 [ 7 2 5 4 1 6 0 3 ] (start)  
-[ <span style="color:cornflowerblue">***0***</span></span> 2 5 4 1 6 
-  <span style="color:cornflowerblue">***7***</span></span> 3 ] (after 8 
+[ <span style="color:cornflowerblue">***0***</span> 2 5 4 1 6 
+  <span style="color:cornflowerblue">***7***</span> 3 ] (after 8 
   comparisons)  
-[ 0 <span style="color:cornflowerblue">***1***</span></span> 5 4 
-  <span style="color:cornflowerblue">***2***</span></span> 6 7 3 ] (after 7 
+[ 0 <span style="color:cornflowerblue">***1***</span> 5 4 
+  <span style="color:cornflowerblue">***2***</span> 6 7 3 ] (after 7 
   more comparisons)  
-[ 0 1 <span style="color:cornflowerblue">***2***</span></span> 4
-  <span style="color:cornflowerblue">***5***</span></span> 6 7 3 ] (after 6 
+[ 0 1 <span style="color:cornflowerblue">***2***</span> 4
+  <span style="color:cornflowerblue">***5***</span> 6 7 3 ] (after 6 
   more comparisons)  
-[ 0 1 2 <span style="color:cornflowerblue">***3***</span></span> 5 6 7
-  <span style="color:cornflowerblue">***4***</span></span> ] (after 5 more 
+[ 0 1 2 <span style="color:cornflowerblue">***3***</span> 5 6 7
+  <span style="color:cornflowerblue">***4***</span> ] (after 5 more 
   comparisons)  
-[ 0 1 2 3 <span style="color:cornflowerblue">***4***</span></span> 6 7
-  <span style="color:cornflowerblue">***5***</span></span> ] (after 4 more 
+[ 0 1 2 3 <span style="color:cornflowerblue">***4***</span> 6 7
+  <span style="color:cornflowerblue">***5***</span> ] (after 4 more 
   comparisons)  
-[ 0 1 2 3 4 <span style="color:cornflowerblue">***5***</span></span> 7
-  <span style="color:cornflowerblue">***6***</span></span> ] (after 3 more 
+[ 0 1 2 3 4 <span style="color:cornflowerblue">***5***</span> 7
+  <span style="color:cornflowerblue">***6***</span> ] (after 3 more 
   comparisons)  
 [ 0 1 2 3 4 5 <span style="color:cornflowerblue">***6***</span>
-  <span style="color:cornflowerblue">***7***</span></span> ] (after 2 more 
+  <span style="color:cornflowerblue">***7***</span> ] (after 2 more 
   comparisons)  
 [ 0 1 2 3 4 5 6 7 ] (after 1 final verification comparison - done)
     
