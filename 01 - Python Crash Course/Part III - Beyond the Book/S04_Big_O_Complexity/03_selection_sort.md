@@ -10,7 +10,9 @@ algorithm*.
 
 ### Selection Sort Algorithm Pseudocode
 
-In a selection sort, we start with the beginning of the array `array[0]` and find the smallest value in the rest of the array. Then we swap those two values, move to `array[1]`, and repeat until we reach the end of the array.
+In a selection sort, we start with the beginning of the array `array[0]` and
+find the smallest value in the rest of the array. Then we swap those two values,
+move to `array[1]`, and repeat until we reach the end of the array.
 
 ```pseudocode
 For i from 0 to n-1
@@ -56,7 +58,7 @@ supports the conclusion that this algorithm is O(*n*²)
 
 ### Programming a Selection Sort
 
-Here is an example of how we might code a simple binary search...
+Here is an example of how we might code a simple selection sort...
 
 ```python
 def selection_sort(array: list[int]) -> list[int]:
