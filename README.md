@@ -40,6 +40,9 @@
         * Plotly Express (3rd ed): ```python.exe -m pip install plotly.express```
     * (Chapter 18-20 - Web Portal)
         * Django: ```python.exe -m pip install django```
+* Some of the examples I provide include languages other than Python.  
+  For these, you may need to install this extension in VS Code:
+    * [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner)
 
 ### Documentation ###
 
