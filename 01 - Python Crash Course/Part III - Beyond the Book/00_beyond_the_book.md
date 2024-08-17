@@ -19,6 +19,7 @@ beginning developer.
 * [Regular Expressions](./S03_Regular_Expressions/01_regular_expressions.md)
 * [Big-O Code Complexity](./S04_Big_O_Complexity/00_understanding_big_o.md)
 * [Bitwise Operations](./S05_Bitwise_Operations/00_warning.md)
+* [DataClasses](./S06_DataClasses/00_intro.md)
 
 ---
 
