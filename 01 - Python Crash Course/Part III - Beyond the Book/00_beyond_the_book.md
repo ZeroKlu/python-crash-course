@@ -20,6 +20,7 @@ beginning developer.
 * [Big-O Code Complexity](./S04_Big_O_Complexity/00_understanding_big_o.md)
 * [Bitwise Operations](./S05_Bitwise_Operations/00_warning.md)
 * [DataClasses](./S06_DataClasses/00_intro.md)
+* [String Formatting](./S07_String_Formatting/00_string_formatting.md)
 
 ---
 
