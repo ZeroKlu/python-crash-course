@@ -125,7 +125,7 @@ Now, calling `run_fibonacci()` ...
 
 ```python
 n = 50
-print(f"F({n}) = {run_fibonacci(n)}")
+print(f"F({n}) = {run_fibonacci(n):,}")
 ```
 
 ... gives us this:
@@ -134,9 +134,35 @@ Output:
 
 ```
 Execution Time: 30.3 µs
-F(50) = 12586269025
+F(50) = 12,586,269,025
 ```
 
 Pretty cool...
+
+---
+
+### Chaining Decorators
+
+You can stack two decorators on a single function to chain their results,
+with the decorators executing in the reverse order in which they are applied.
+
+```python
+@timer
+@debug
+def run_fibonacci(n: int) -> int:
+    """ Wrap the fibonacci call with a timer"""
+    return fibonacci(n)
+
+n = 50
+print(f"F({n}) = {run_fibonacci(n):,}")
+```
+
+Output:
+
+```
+run_fibonacci(args: (50,), kwargs: {}) -> 12586269025
+Execution Time: 347.8 µs
+F(50) = 12,586,269,025
+```
 
 ---

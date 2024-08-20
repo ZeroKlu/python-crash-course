@@ -45,6 +45,7 @@ def fibonacci(n: int, cache: dict[int, int]={0: 0, 1: 1}) -> int:
     return cache[n]
 
 @timer
+@debug
 def run_fibonacci(n: int) -> int:
     """ Wrap the fibonacci call with a timer"""
     return fibonacci(n)
@@ -54,7 +55,7 @@ def main() -> None:
     add(7, b=8)
     print()
     n = 50
-    print(f"F({n}) = {run_fibonacci(n)}")
+    print(f"F({n}) = {run_fibonacci(n):,}")
 
 if __name__ == "__main__":
     main()
