@@ -21,6 +21,7 @@ beginning developer.
 * [Bitwise Operations](./S05_Bitwise_Operations/00_warning.md)
 * [DataClasses](./S06_DataClasses/00_intro.md)
 * [String Formatting](./S07_String_Formatting/00_string_formatting.md)
+* [Nested Functions and Closures](./S08_Closures/01_nested_functions.md)
 
 ---
 
