@@ -22,6 +22,7 @@ beginning developer.
 * [DataClasses](./S06_DataClasses/00_intro.md)
 * [String Formatting](./S07_String_Formatting/00_string_formatting.md)
 * [Nested Functions and Closures](./S08_Closures/01_nested_functions.md)
+* [Enumerations](./S09_Enumerations/01_enums.md)
 
 ---
 
