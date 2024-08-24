@@ -1,15 +1,18 @@
 ## Closures
 
-Closures are a powerful but underused feature of many programming languages
-including Python.
+Closures are a powerful but underused feature of many programming 
+languages including Python.
 
-A closure is a dynamically generated function created and returned by another
-function.
+A closure is a dynamically generated function created and returned by 
+another function.
 
-What makes a closure particularly powerful is that it captures the environment
-in which it was generated. This means that a closure has full access to 
-locally scoped variables from its outer function even after that function has
-finished executing.
+What makes a closure particularly powerful is that it captures the 
+environment in which it was generated. This means that a closure has full 
+access to locally scoped free variables* from its outer function even 
+after that function has finished executing.
+
+\* A *free* variable is any locally scoped variable that is not bound to
+a parameter.
 
 > Formal Definition:  
 > A closure is a persistent local variable scope (the combination of a 
