@@ -25,6 +25,7 @@ beginning developer.
 * [Enumerations](./S09_Enumerations/01_enums.md)
 * [Web Scraping](./S10_Web_Scraping/00_web_scraping.md)
 * [Lambda Functions](./S11_Lambdas/01_lambda_functions.md)
+* [MySQL Databases](./S12_MySQL_Databases/00_mysql_setup.md)
 
 ---
 
