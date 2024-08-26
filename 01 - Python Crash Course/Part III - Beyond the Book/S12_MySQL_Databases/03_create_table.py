@@ -27,6 +27,7 @@ def create_table(conn: mysql.connector.connection) -> None:
     sql = "CREATE TABLE IF NOT EXISTS customers " + \
           "(name VARCHAR(255), address VARCHAR(255))"
     cursor.execute(sql)
+    conn.commit()
     print("Table `customers` created successfully!\n")
 
 def add_primary_key(conn: mysql.connector.connection) -> None:
@@ -38,6 +39,7 @@ def add_primary_key(conn: mysql.connector.connection) -> None:
           "ADD COLUMN id INT AUTO_INCREMENT PRIMARY KEY"
     cursor = conn.cursor()
     cursor.execute(sql)
+    conn.commit()
     print("Column `id` added successfully!\n")
 
 def list_columns(conn: mysql.connector.connection) -> None:
