@@ -87,6 +87,8 @@ For an integer array initialized without specifying the data type, the
 default type will be `int64` (64-bit integer).
 
 ```python
+import numpy as np
+
 arr = np.array([1, 2, 3, 4])
 print(arr, "type =", arr.dtype)
 ```
@@ -105,6 +107,8 @@ For a string array initialized without specifying the data type, the
 default type will be `Un` (where `n` is the largest string's byte size).
 
 ```python
+import numpy as np
+
 arr = np.array(["apple", "banana", "cherry"])
 print(arr, "type =", arr.dtype)
 ```
@@ -131,6 +135,8 @@ For example, with these values, a single byte (int8) is sufficient. There
 is no reason to use 8-byte integers, like the default did.
 
 ```python
+import numpy as np
+
 arr = np.array([1, 2, 3, 4], dtype="i1")
 print(arr, "type =", arr.dtype)
 ```
@@ -149,6 +155,8 @@ Even when we initialize an array with integer values, we can include the
 `dtype` keyword argument to convert the data type to a float 
 
 ```python
+import numpy as np
+
 arr = np.array(["apple", "banana", "cherry"], dtype="f")
 print(arr, "type =", arr.dtype)
 ```
@@ -167,6 +175,8 @@ If any value(s) in the array cannot be converted to the explicit type,
 NumPy will raise a ValueError.
 
 ```python
+import numpy as np
+
 arr = np.array(["a", "2", "3"], dtype="i")
 print(arr, "type =", arr.dtype, "\n")
 ```
@@ -196,18 +206,28 @@ Here, we'll state with a `float64` array and:
 * Obtain a second array with the values converted to `int64`
 * Obtain a third array with the second array's values converted to `bool`
 
-Note: We can use the NumPy abbreviations or Python type names for the
-type argument.
+Note: We can use the NumPy abbreviations (like `"i32"`) Python type names 
+(like `bool`), or NumPy type names (like `np.int16`) for the type 
+argument.
 
 ```python
+import numpy as np
+
 arr = np.array([0.1, 2.1, 3.1])
 print("Original:", arr, "type =", arr.dtype, "\n")
+
 new_arr = arr.astype("i1")
-print("New (i1):", new_arr, "type =", new_arr.dtype)
+print("New ('i1'):", new_arr, "type =", new_arr.dtype)
+
 new_arr = arr.astype(int)
 print("New (int):", new_arr, "type =", new_arr.dtype)
+
+new_arr = arr.astype(np.int16)
+print("New (np.int16):", new_arr, "type =", new_arr.dtype)
+
 new_arr = new_arr.astype(bool)
 print("New from new (bool):", new_arr, "type =", new_arr.dtype)
+
 print("\nOriginal:", arr, "type =", arr.dtype, "\n")
 ```
 
@@ -216,14 +236,15 @@ Output:
 ```
 Original: [0.1 2.1 3.1] type = float64 
 
-New (i1): [0 2 3] type = int8
+New ('i1'): [0 2 3] type = int8
 New (int): [0 2 3] type = int64
+New (np.int16): [0 2 3] type = int16
 New from new (bool): [False  True  True] type = bool
 
 Original: [0.1 2.1 3.1] type = float64
 ```
 
-Note: After creating the typed array copies, the original array is 
+Note: After creating the re-typed array copies, the original array is 
 unchanged.
 
 ---
