@@ -26,6 +26,7 @@ beginning developer.
 * [Web Scraping](./S10_Web_Scraping/00_web_scraping.md)
 * [Lambda Functions](./S11_Lambdas/01_lambda_functions.md)
 * [MySQL Databases](./S12_MySQL_Databases/00_mysql_setup.md)
+* [NumPy](./S14_Numpy/00_intro.md)
 
 ---
 
