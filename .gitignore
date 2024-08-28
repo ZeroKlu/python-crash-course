@@ -162,3 +162,4 @@ cython_debug/
 .vscode/
 .vscode/settings.json
 secret.txt
+secret/
