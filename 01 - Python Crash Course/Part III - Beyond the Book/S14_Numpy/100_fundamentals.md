@@ -1,3 +1,5 @@
+# NumPy Fundamentals
+
 ## What is NumPy?
 
 NumPy is a Python library used for working with arrays of numbers.
