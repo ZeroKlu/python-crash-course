@@ -3,6 +3,10 @@
 The fundamental type in NumPy is is the `ndarray`. There are a number of
 methods to create a NumPy array.
 
+One fundamental difference between an `ndarray` and a `list` is that the
+`ndarray` can only contain a single data type (or nested arrays of that
+data type).
+
 ---
 
 ### Create from a List

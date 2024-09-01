@@ -58,3 +58,23 @@ python -m pip install numpy
 > installed in your virtual environment.
 
 ---
+
+### Topics
+
+We'll cover the following topics in **NumPy Fundamentals**:
+
+* [NumPy Arrays](./101_arrays.md)
+* [Array Dimensions](./102_dimensions.md)
+* [Array Indexing](./103_indices.md)
+* [Array Slicing](./104_slices.md)
+* [NumPy Data Types](./105_types.md)
+* [Copy and View](./106_copy_view.md)
+* [Array Shapes](./107_shape.md)
+* [Reshaping Arrays](./108_reshaping.md)
+* [Iterating Arrays with `for` Loops](./109_loop.md)
+* [Iterating Arrays with `nditer`](./110_nditer.md)
+* [Joining Arrays](./111_join.md)
+* [Splitting Arrays](./112_split.md)
+* [Sorting Arrays](./113_sort.md)
+* [Searching Arrays](./114_search.md)
+* [Filtering Arrays](./115_filtering.md)
