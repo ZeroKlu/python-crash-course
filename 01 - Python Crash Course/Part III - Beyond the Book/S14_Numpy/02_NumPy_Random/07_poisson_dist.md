@@ -39,6 +39,7 @@ Poisson distribution based on performing the experiment 1000 times:
 Here, we're returning the KDE curve for the Poisson distribution:
 
 ```python
+from numpy import random
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -54,11 +55,12 @@ Output:
 
 ---
 
-### Poisson Histogram#
+#### Poisson Histogram#
 
 Here, we're returning the histogram for the Poisson distribution:
 
 ```python
+from numpy import random
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -83,6 +85,7 @@ distribution with its mean equivalent to λ.
 > understand how a Poisson plot compares to a normal distribution plot.
 
 ```python
+from numpy import random
 import matplotlib.pyplot as plt
 import seaborn as sns
 
