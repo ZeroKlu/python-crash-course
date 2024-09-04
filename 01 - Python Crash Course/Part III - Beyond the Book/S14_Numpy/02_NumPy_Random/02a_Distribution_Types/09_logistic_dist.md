@@ -10,11 +10,11 @@ where it is more consistent with the data at extreme values.
 
 The formula for the logistic distribution is:
 
-<img src="./images/logistic_formula.png" style="width:200px">
+<img src="../images/logistic_formula.png" style="width:200px">
 
 A graph of a logistic distribution looks like this:
 
-<img src="./images/logistic_dist.png" style="width:260px">
+<img src="../images/logistic_dist.png" style="width:260px">
 
 The NumPy `random.logistic()` function accepts the same three arguments
 as `normal()`:
@@ -52,7 +52,7 @@ plt.show()
 
 Output:
 
-<img src="./images/logistic_kde.png" style="width:300px">
+<img src="../images/logistic_kde.png" style="width:300px">
 
 ---
 
@@ -73,7 +73,7 @@ plt.show()
 
 Output:
 
-<img src="./images/logistic_hist.png" style="width:300px">
+<img src="../images/logistic_hist.png" style="width:300px">
 
 Note how the tails extend wider (don't collapse to zero as soon).
 
@@ -102,7 +102,7 @@ plt.show()
 
 Output:
 
-<img src="./images/logistic_compare.png" style="width:300px">
+<img src="../images/logistic_compare.png" style="width:300px">
 
 Note how the tails extend wider (don't collapse to zero as soon).
 

@@ -12,14 +12,14 @@ like:
 
 The formula for the binomial distribution is:
 
-<img src="./images/binomial_formula.png" style="width:200px">
+<img src="../images/binomial_formula.png" style="width:200px">
 
 A simple binomial distribution (say for a probability of ½) can look very
 similar to a normal distribution, but it uses a very different formula.
 
 Its graph looks like this:
 
-<img src="./images/binomial_dist.png" style="width:300px">
+<img src="../images/binomial_dist.png" style="width:300px">
 
 NumPy's `random.binomial()` function takes three arguments:
 
@@ -59,7 +59,7 @@ plt.show()
 
 Output:
 
-<img src="./images/binomial_kde.png" style="width:300px">
+<img src="../images/binomial_kde.png" style="width:300px">
 
 One characteristic of a binomial distribution is that because all of the data is discrete, the KDE curve may have multiple peaks.
 
@@ -82,7 +82,7 @@ plt.show()
 
 Output:
 
-<img src="./images/binomial_hist.png" style="width:300px">
+<img src="../images/binomial_hist.png" style="width:300px">
 
 One characteristic of a binomial distribution is that because all of the data is discrete, the KDE curve may have multiple peaks.
 
@@ -113,7 +113,7 @@ plt.show()
 
 Output:
 
-<img src="./images/binomial_v_normal.png" style="width:300px">
+<img src="../images/binomial_v_normal.png" style="width:300px">
 
 You can see how the normal distribution (red) is a more continuous curve 
 across the possible values.

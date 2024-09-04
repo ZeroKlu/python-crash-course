@@ -9,14 +9,14 @@ distribution.
 
 The formula for the Poisson distribution is:
 
-<img src="./images/poisson_formula.png" style="width:200px">
+<img src="../images/poisson_formula.png" style="width:200px">
 
 Where ***k; λ*** is the observed interval and ***k*** is the number of
 occurrences.
 
 The graph of a Poisson distribution looks like this:
 
-<img src="./images/poisson_dist.png" style="width:260px">
+<img src="../images/poisson_dist.png" style="width:260px">
 
 The `random.poisson()` function expects two arguments:
 
@@ -51,7 +51,7 @@ plt.show()
 
 Output:
 
-<img src="./images/poisson_kde.png" style="width:300px">
+<img src="../images/poisson_kde.png" style="width:300px">
 
 ---
 
@@ -72,7 +72,7 @@ plt.show()
 
 Output:
 
-<img src="./images/poisson_hist.png" style="width:300px">
+<img src="../images/poisson_hist.png" style="width:300px">
 
 ---
 
@@ -99,6 +99,6 @@ plt.show()
 
 Output:
 
-<img src="./images/poisson_compare.png" style="width:300px">
+<img src="../images/poisson_compare.png" style="width:300px">
 
 ---

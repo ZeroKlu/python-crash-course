@@ -5,11 +5,11 @@ to occur.
 
 The formula for a uniform distribution is:
 
-<img src="./images/uniform_formula.png" style="width:120px">
+<img src="../images/uniform_formula.png" style="width:120px">
 
 A graph of the distribution looks like this:
 
-<img src="./images/uniform_dist.png" style="width:260px">
+<img src="../images/uniform_dist.png" style="width:260px">
 
 NumPy's `random.uniform()` function takes three arguments:
 
@@ -44,7 +44,7 @@ plt.show()
 
 Output:
 
-<img src="./images/uniform_kde.png" style="width:300px">
+<img src="../images/uniform_kde.png" style="width:300px">
 
 It's no surprise that the curve immediately leaps to a nearly flat peak
 at zero and remains there util the upper limit of one.
@@ -68,7 +68,7 @@ plt.show()
 
 Output:
 
-<img src="./images/uniform_hist.png" style="width:300px">
+<img src="../images/uniform_hist.png" style="width:300px">
 
 We can see the uniformity even better in the histogram.
 
@@ -101,6 +101,6 @@ plt.show()
 
 Output:
 
-<img src="./images/uniform_compare.png" style="width:300px">
+<img src="../images/uniform_compare.png" style="width:300px">
 
 ---

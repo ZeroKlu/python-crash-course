@@ -4,14 +4,14 @@ The *Normal Distribution*, also called the *Gaussian distribution* after
 German mathematician Carl Friedrich Gauss, is the common distribution that
 we think of as the *bell curve*.
 
-<img src="./images/normal_dist.png" style="width:300px">
+<img src="../images/normal_dist.png" style="width:300px">
 
 The numbers across the bottom are *standard deviations* and the peak is the
 arithmetic mean.
 
 For the mathematically inclined, the formula for the normal distribution is
 
-<img src="./images/normal_formula.png" style="width:200px">
+<img src="../images/normal_formula.png" style="width:200px">
 
 Where ***μ*** is the mean and ***σ*** is the standard deviation.
 
@@ -68,7 +68,7 @@ Output:
 
 Graph:
 
-<img src="./images/normal_small.png" style="width:300px">
+<img src="../images/normal_small.png" style="width:300px">
 
 Note: Due to the small sample size, the approximation of the bell curve is
 not very close.
@@ -93,7 +93,7 @@ plt.show()
 
 Graph:
 
-<img src="./images/normal_1k.png" style="width:300px">
+<img src="../images/normal_1k.png" style="width:300px">
 
 ---
 
@@ -114,7 +114,7 @@ plt.show()
 
 Graph:
 
-<img src="./images/normal_spec.png" style="width:300px">
+<img src="../images/normal_spec.png" style="width:300px">
 
 Note how the peak is near 1 instead of 0 as in the prior examples
 
