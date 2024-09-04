@@ -4,31 +4,35 @@ import seaborn as sns
 
 def normal_small() -> None:
     """Generate a normal distribution with 20 values (σ = 1)"""
-    # New Method: TODO - Update examples
-    # rng = random.default_rng()
-    # arr = rng.normal(size=20)
-    arr = random.normal(scale=1, size=20)
+    # Old way - using NumPy's `random.normal()` function
+    # arr = random.normal(scale=1, size=20)
+    rng = random.default_rng()
+    arr = rng.normal(size=20)
     print(arr)
     sns.displot(arr, kde=True)
     plt.show()
 
 def normal_1d() -> None:
-    arr = random.normal(size=1000)
+    rng = random.default_rng()
+    arr = rng.normal(size=1000)
     sns.displot(arr, kde=True)
     plt.show()
 
 def normal_1d_ms() -> None:
-    arr = random.normal(loc=1, scale=2, size=1000)
+    rng = random.default_rng()
+    arr = rng.normal(loc=1, scale=2, size=1000)
     sns.displot(arr, kde=True)
     plt.show()
 
 def normal_2d() -> None:
-    arr = random.normal(size=(20, 20))
+    rng = random.default_rng()
+    arr = rng.normal(size=(20, 20))
     sns.displot(arr, kde=True)
     plt.show()
 
 def normal_2d_ms() -> None:
-    arr = random.normal(loc=1, scale=2, size=(20, 20))
+    rng = random.default_rng()
+    arr = rng.normal(loc=1, scale=2, size=(20, 20))
     sns.displot(arr, kde=True)
     plt.show()
 

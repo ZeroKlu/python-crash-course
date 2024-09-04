@@ -23,6 +23,10 @@ The `random.poisson()` function expects two arguments:
 * `lam`: Expected number of events (can be a float or array of floats)
 * `size`: Output array shape
 
+When we generate a distribution, we should use a NumPy generator instance
+rather than calling the function off of `random` itself. In the code
+examples, I will use the `random.default_rng()` random number generator.
+
 ---
 
 ### An Example with `λ=2`
@@ -38,7 +42,8 @@ Here, we're returning the KDE curve for the Poisson distribution:
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-poi = random.poisson(lam=2, size=1000)
+rng = random.default_rng()
+poi = rng.poisson(lam=2, size=1000)
 sns.kdeplot(poi)
 plt.show()
 ```
@@ -57,7 +62,8 @@ Here, we're returning the histogram for the Poisson distribution:
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-poi = random.poisson(lam=2, size=1000)
+rng = random.default_rng()
+poi = rng.poisson(lam=2, size=1000)
 sns.histplot(poi)
 plt.show()
 ```
@@ -80,8 +86,9 @@ distribution with its mean equivalent to λ.
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-poi = random.poisson(lam=2, size=1000)
-norm = random.normal(loc=2, scale=1, size=1000)
+rng = random.default_rng()
+poi = rng.poisson(lam=2, size=1000)
+norm = rng.normal(loc=2, scale=1, size=1000)
 sns.kdeplot(poi, fill=True, color="blue", label="Poisson")
 sns.kdeplot(norm, fill=True, color="red", label="Normal")
 plt.show()

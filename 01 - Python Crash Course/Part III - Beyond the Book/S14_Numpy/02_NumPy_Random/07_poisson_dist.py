@@ -20,10 +20,11 @@ def poisson_compare(poi: ndarray[long], norm: ndarray[long]) -> None:
     plt.show()
 
 def main() -> None:
-    poi = random.poisson(lam=2, size=1000)
+    rng = random.default_rng()
+    poi = rng.poisson(lam=2, size=1000)
     poisson_kde(poi)
     poisson_hist(poi)
-    norm = random.normal(loc=2, scale=1, size=1000)
+    norm = rng.normal(loc=2, scale=1, size=1000)
     poisson_compare(poi, norm)
 
 if __name__ == "__main__":

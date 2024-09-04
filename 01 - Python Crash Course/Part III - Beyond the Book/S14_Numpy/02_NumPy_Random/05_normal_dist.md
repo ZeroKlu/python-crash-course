@@ -35,6 +35,10 @@ The function accepts the following parameters:
 
 Almost all values in the distribution should fall between -3σ and 3σ.
 
+When we generate a distribution, we should use a NumPy generator instance
+rather than calling the function off of `random` itself. In the code
+examples, I will use the `random.default_rng()` random number generator.
+
 ---
 
 ### A Small Sample
@@ -46,26 +50,12 @@ from numpy import random
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-arr = random.normal(scale=1, size=20)
+rng = random.default_rng()
+arr = rng.normal(scale=1, size=20)
 print(arr)
 sns.displot(arr, kde=True)
 plt.show()
 ```
-
-> Note: In the most recent version of NumPy, the `random.normal()` function
-> (as well as the other distribution functions covered in following topics)
-> is marked as a *legacy function*.
->
-> I will eventually update all the lessons in this section, but for now,
-> just be aware that the structure of calls in new code should use the
-> generator method, like this:
->
-> ```python
-> from numpy import random
->
-> rng = random.default_generator()
-> arr = rng.normal(scale=1, size=20)
-> ```
 
 Output:
 
@@ -95,7 +85,8 @@ from numpy import random
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-arr = random.normal(size=1000)
+rng = random.default_rng()
+arr = rnf.normal(size=1000)
 sns.displot(arr, kde=True)
 plt.show()
 ```
@@ -115,7 +106,8 @@ from numpy import random
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-arr = random.normal(loc=1, scale=2, size=1000)
+rng = random.default_rng()
+arr = rng.normal(loc=1, scale=2, size=1000)
 sns.displot(arr, kde=True)
 plt.show()
 ```

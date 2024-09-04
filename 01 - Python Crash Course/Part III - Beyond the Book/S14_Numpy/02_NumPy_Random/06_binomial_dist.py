@@ -21,10 +21,11 @@ def binomial_vs_normal(bin: ndarray[long], norm: ndarray[long]) -> None:
     plt.show()
 
 def main() -> None:
-    bin = random.binomial(n=10, p=0.5, size=1000)
+    rng = random.default_rng()
+    bin = rng.binomial(n=10, p=0.5, size=1000)
     binomial_kde(bin)
     binomial_hist(bin)
-    norm = random.normal(loc=5, scale=1, size=1000)
+    norm = rng.normal(loc=5, scale=1, size=1000)
     binomial_vs_normal(bin, norm)
 
 if __name__ == "__main__":

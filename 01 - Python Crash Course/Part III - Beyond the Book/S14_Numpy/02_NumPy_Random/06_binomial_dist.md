@@ -27,6 +27,10 @@ NumPy's `random.binomial()` function takes three arguments:
 `p`: probability of desired outcome
 `size`: shape of the resulting array (`int` or `tuple`)
 
+When we generate a distribution, we should use a NumPy generator instance
+rather than calling the function off of `random` itself. In the code
+examples, I will use the `random.default_rng()` random number generator.
+
 ---
 
 ### The Coin Flip
@@ -47,7 +51,8 @@ from numpy import random
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-bin = random.binomial(n=10, p=0.5, size=1000)
+rng = random.default_rng()
+bin = rng.binomial(n=10, p=0.5, size=1000)
 sns.kdeplot(bin, fill=True, color="blue")
 plt.show()
 ```
@@ -69,7 +74,8 @@ from numpy import random
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-bin = random.binomial(n=10, p=0.5, size=1000)
+rng = random.default_rng()
+bin = rng.binomial(n=10, p=0.5, size=1000)
 sns.histplot(bin)
 plt.show()
 ```
@@ -97,8 +103,9 @@ from numpy import random
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-bin = random.binomial(n=10, p=0.5, size=1000)
-norm = random.normal(loc=5, scale=1, size=1000)
+rng = random.default_rng()
+bin = rng.binomial(n=10, p=0.5, size=1000)
+norm = rng.normal(loc=5, scale=1, size=1000)
 sns.kdeplot(bin, fill=True, color="blue")
 sns.kdeplot(norm, fill=True, color="red")
 plt.show()
