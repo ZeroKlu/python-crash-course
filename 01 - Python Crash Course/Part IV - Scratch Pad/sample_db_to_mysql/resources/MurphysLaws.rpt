@@ -1,0 +1,426 @@
+﻿LawID  LawName                                            LawText
+------ -------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1      Murphy's Law                                       If anything can go wrong, it will.
+2      O'Toole's Commentary                               Murphy was an optimist.
+3      Murphy's First Corollary                           Nothing is as easy as it looks.
+4      Murphy's Second Corollary                          Everything takes longer than you think.
+5      Murphy's Third Corollary                           If there is a possibility of several things going wrong, the one that will cause the most damage will be the one to go wrong.
+6      Murphy's Fourth Corollary                          Whenever you set out to do something, something else must be done first.
+7      Murphy's Fifth Corollary                           Every solution breeds new problems.
+8      Murphy's Sixth Corollary                           It is impossible to make anything foolproof because fools are so ingenious.
+9      Murphy's Seventh Corollary                         Nature always sides with the hidden flaw.
+10     Murphy's Eighth Corollary                          Left to themselves, things tend to go from bad to worse.
+11     Murphy's Constant                                  Matter will be damaged in direct proportion to its value.
+12     Hill's First Commentary                            If we have much to lose by having things go wrong, take all possible care.
+13     Hill's Second Commentary                           If we have nothing to lose, relax.
+14     Hill's Third Commentary                            If we have everything to gain, relax.
+15     Hill's Fourth Commentary                           If it doesn't matter, it doesn't matter.
+16     Boling's Postulate                                 If you're feeling good, don't worry. You'll get over it.
+17     Murphy's Law of Multiples                          If you perceive that there are four possible ways in which a procedure can go wrong, and circumvent these, then a fifth way will promptly develop.
+18     The Ordering Principle                             The supplies necessary for yesterday's work must be ordered no later than noon tomorrow.
+19     Chisolm's Law                                      When things just can't get any worse, they will.
+20     Chisolm's Commentary                               Anytime things appear to be going better, you have overlooked something.
+21     Scott's First Law                                  No matter what goes wrong, it will probably look right.
+22     Scott's Second Law                                 When an error has been detected and corrected, it will be found to have been correct in the first place.
+23     Finagle's First Law                                If an experiment works, something has gone wrong.
+24     Finagle's Second Law                               No matter what the anticipated result, there will always be someone eager to (a) misinterpret it, (b) fake it, or	(c) believe it happened to his own pet theory.
+25     Finagle's Third Law                                In any collection of data, the figure most obviously correct, beyond all need of checking, is the mistake.
+26     Finagle's Third Law - First Corollary              No one whom you ask for help will see it.
+27     Finagle's Third Law - Second Corollary             Everyone who stops by with unsought advice will see it immediately.
+28     Finagle's Fourth Law                               Once a job is fouled up, anything done to improve it only makes it worse.
+29     Wingo's Axiom                                      All Finagle's Laws may be bypassed by learning the simple art of doing without thinking.
+30     Simon's Law                                        Everything put together falls apart sooner or later.
+31     Gumperson's Law                                    The probability of anything happening is in inverse ratio to its desirability.
+32     Issawi's Laws of Progress (Course)                 Most things get steadily worse.
+33     Issawi's Laws of Progress (Path)                   A shortcut is the longest distance between two points.
+34     Murphy's Law of Thermodynamics                     Things get worse under pressure.
+35     The Unspeakable Law                                As soon as you mention something, if it's good, it goes away; if it's bad, it happens.
+36     Sturgeon's Law                                     90% of everything is crud.
+37     Stockmayer's Theorem                               If it looks easy, it's tough. If it looks tough, it's impossible.
+38     Commoner's Second Law of Ecology                   Nothing ever goes away.
+39     Howe's Law                                         Everyone has a scheme that will not work.
+40     Ginsberg's Theorem                                 You can't win. You can't break even. You can't even quit the game.
+41     Rudin's Law                                        In crises that force people to choose among alternative courses of action, most people will choose the worst one possible.
+42     Zymurgy's First Law of Evolving                    Once you open a can of worms, the only way to recan them is to use a larger can.
+43     Non-Reciprocal Laws of Expectations                Negative expectations yield negative results. Positive expectations yield negative results.
+44     Harper's Magazine Law                              You never find an article until you replace it.
+45     Richard's Complementary Rules of Ownership         If you keep anything long enough, you can throw it away. If you throw it away, you will need it the next day.
+46     Lewis' First Law                                   No matter how long or how hard you shop for an item, after you've bought it, it will be on sale somewhere cheaper
+47     Perlsweig's Law                                    People who can least afford to pay rent, pay rent. People who can most afford to pay rent, build up equity.
+48     McClaughry's Law of Zoning                         Where zoning is not needed,it will work perfectly. Where it is desperately needed, it will always break down.
+49     First Law of Bicycling                             No matter which way you ride, it's uphill and against the wind.
+50     The Airplane Law                                   When the plane you are on is late, the plane you want to transfer to is on time.
+51     Glyme's Formula                                    The secret of success is sincerity. Once you can fake that, you've got it made.
+52     First Law of Bridge                                It's always the partner's fault.
+53     Hartley's Law for Lovers                           Never sleep with anyone crazier than yourself.
+54     Rule of Feline Frustration                         When your cat has fallen asleep on your lap and looks utterly content and adorable you will suddenly have to go to the bathroom.
+55     Lieberman's Law                                    Everybody lies; but it doesn't matter since nobody listens.
+56     Boob's Law                                         You always find something the last place you look.
+57     Osborn's Law                                       Variables won't; constants aren't.
+58     Pudder's Law                                       Anything that begins well, ends badly. Anything that begins badly, ends worse.
+59     Iles's Law                                         There is always an easier way to do it.
+60     Corollary to Iles's Law                            You will not see the easier way until you're done.
+61     Law of Selective Gravity                           An object will always fall so as to do the most damage.
+62     Jenning's Corollary to Selective Gravity           The chance of the bread falling with the buttered side down is directly proportional to the cost of the carpet.
+63     Sattinger's Law                                    It works better if you plug it in.
+64     First Law of Revision                              Information necessitating a change of design will be conveyed to the designer after and only after the plans are complete. (Often called the "Now they tell us!" Law)
+65     First Law of Applied Confusion                     The piece that the plant forgot to ship is the one that supports 75% of the balance of the shipment.
+66     Corollary to the Law of Applied Confusion          Not only did the plant forget to ship it, 50% of the time they haven't even made it.
+67     Second Law of Applied Confusion                    Truck  deliveries that normally take one day will take five when you are waiting for the truck.
+68     Johnson's First Law                                When any mechanical contrivance fails, it will do so at the most inconvenient possible time.
+69     Law of the Lost Inch                               In designing any type of construction, no overall dimension can be totalled correctly after 4:40 PM Friday.
+70     Corollary to the Law of the Lost Inch              The correct total will become self-evident at 9:01 AM on Monday.
+71     Lowery's Law                                       If it jams, force it. If it breaks, it needed replacing anyway.
+72     Ehrman's Commentary                                Things get worse before they get better. Who said things would get better?
+73     Shaw's Principle                                   Build a system that even a fool can use, and only a fool will want to use it.
+74     Lubarsky's Law of Cybernetic Entomology            There is always one more bug.
+75     Anthony's Law of the Workshop                      Any tool, when dropped, will roll into the least accessible corner of the workshop.
+76     Law of Annoyance                                   When working on a project, if you put away a tool that you're certain you're finished with, you will need it immediately.
+77     Schmidt's Law                                      If you mess with a thing enough, it'll break.
+78     Horner's Five Thumb Postulate                      Experience varies directly with the equipment ruined.
+79     Cahn's Axiom                                       When all else fails, read the instructions.
+80     Anthony's Law of Force                             Don't force it; get a larger hammer.
+81     Murphy's Law of Research                           Enough research will tend to support your theory.
+82     Maier's Law                                        If the facts do not conform to the theory, they must be disposed of.
+83     Williams and Holland's Law                         If enough data is collected, anything can be proven by statistical methods.
+84     Young's Law                                        All great discoveries are made by mistake.
+85     Corollary to Young's Law                           The greater the funding, the longer it takes to make the mistake.
+86     Rule of Accuracy                                   When working toward the solution of a problem, it always helps if you know the answer.
+87     Hoare's Law of Large Problems                      Inside every large problem is a small problem struggling to get out.
+88     Mr. Cooper's Law                                   If you do not understand a particular word in a piece of technical writing, ignore it. The piece will make perfect sense without it.
+89     Steele's Philosophy                                Everybody should believe in something--I believe I'll have another drink.
+90     Stewart's Law of Retroaction                       It is easier to get forgiveness than permission.
+91     Harris' Lament                                     All the good ones are taken.
+92     First Law of Gardening                             Other people's tools work only in other people's gardens.
+93     Second Law of Gardening                            Fancy gizmos don't work.
+94     Third Law of Gardening                             If nobody uses it, there's a reason.
+95     Jones' Law                                         The man who can smile when things go wrong has thought of someone he can blame it on.
+96     Truman's Law                                       If you cannot convince them, confuse them.
+97     First Law of Debate                                Never argue with a fool--people might not know the difference.
+98     First Worker's Dilemma                             No matter how much you do, you'll never do enough.
+99     Second Worker's Dilemma                            What you don't do is always more important than what you do.
+100    Second Law of Committo-Dynamics                    The less you enjoy serving on committees, the more likely you are to be pressed to do so.
+101    Shannahan's Law                                    The length of a meeting rises with the square of the number of people present.
+102    Old and Kahn's Law                                 The efficiency of a committee meeting is inversely proportional to the number of participants and the time spent on deliberations.
+103    Rule of the Great                                  When somebody you greatly admire and respect appears to be thinking deep thoughts, he or she is probably thinking about lunch.
+104    Miller's Law                                       You can't tell how deep a puddle is until you step in it.
+105    Wellington's Law of Command                        The cream rises to the top. So does the scum.
+106    Boren's First Law                                  When in doubt, mumble.
+107    Boren's Second Law                                 When in trouble, delegate.
+108    Boren's Third Law                                  When in charge, ponder.
+109    Cole's Law                                         Thinly sliced cabbage.
+110    Patton's Law                                       A good plan today is better than a perfect plan tomorrow.
+111    Weinberg's First Law                               Progress is made on alternate fridays.
+112    Paulg's Law                                        In America, it's not how much an item costs; it's how much you save.
+113    The Golden Rule of Arts and Sciences               Whoever has the gold makes the rules.
+114    Westheimer's Law                                   To estimate the time it takes to do a task, estimate the time you think it should take, multiply by 2, and change the unit of measure to the next highest unit. Thus we allocate 2 days for a one-hour task.
+115    Parkinson's Second Law                             Expenditures rise to meet income.
+116    Wiker's Law                                        Government expands to absorb revenue--and then some.
+117    Parkinson's Law of Delay                           Delay is the deadliest form of denial.
+118    Cheop's Law                                        Nothing ever gets built on schedule or within budget.
+119    Ninety-Ninety Rule of Project Schedules            The first ninety percent of the task takes ninety percent of the time, and the last ten percent takes the other ninety percent.
+120    Witzling's Law of Progeny Performance              Any child who chatters non-stop at home will refuse to utter a sound when asked to demonstrate for a visitor.
+121    Levy's Ninth Law                                   Only God can make a random selection.
+122    Gersham's Law                                      Trivial matters are handled promptly; important matters are never solved.
+123    The Murphy Philosophy                              Smile... tomorrow will be worse.
+124    Marks' Law                                         A fool and your money are soon partners.
+125    Law of institutions                                The opulence of the front office decor varies inversely with the fundamental solvency of the firm.
+126    Juhani's Law                                       The compromise will always be more expensive than either of the suggestions it is compromising.
+127    John's Collateral Corollary                        In order to get a loan you must first prove you don't need it.
+128    Reverend Chichester's First Law                    If the weather is extremely bad, church attendance will be down.
+129    Reverend Chichester's Second Law                   If the weather is extremely good, church attendance will be down.
+130    Reverend Chichester's Third Law                    If the bulletin covers are in short supply, church attendance will exceed all expectations.
+131    Malek's Law                                        Any simple idea will be worded in the most complicated way.
+132    O'Brien's Principle (The $357.73 Theory)           Auditors always reject any expense account with a bottom line divisible by 5 or 10.
+133    Weiler's Law                                       Nothing is impossible for the man who doesn't have to do it himself.
+134    Weinberg's Second Law                              If builders built buildings the way programmers wrote programs, then the first woodpecker that came along would destroy civilization.
+135    Theory of Selective Supervision                    The one time in the day that you lean back and relax is the one time the Boss walks through the office.
+136    Barth's Distinction                                There are two types of people: those who divide people into two types, and those who don't.
+137    The Geek's Law                                     There are 10 types of people: those who understand binary, and those who don't.
+138    First Law of Socio-Genetics                        Celibacy is not hereditary.
+139    Mr. Cole's Axiom                                   The sum of the intelligence on the planet is a constant; the population is growing.
+140    Canada Bill Jones' Motto                           It's morally wrong to allow suckers to keep their money.
+141    Jones' Motto                                       Friends come and go, but enemies accumulate.
+142    McClaughry's Codicil to Jones' Motto               To make an enemy, do someone a favor.
+143    Newton's Little-Known Seventh Law                  A bird in the hand is safer than one overhead.
+144    O'Rielly's Law of the Kitchen                      Cleanliness is next to impossible.
+145    Jenkinson's Law                                    It won't work.
+146    Hamilton's Rule for Cleaning Glassware             The spot you are scrubbing is always on the other side.
+147    Walker's Law of the Household                      There is always more dirty laundry than clean laundry.
+148    Clive's Rebuttal to Walker's Law of Laundry        If it's clean, it isn't laundry.
+149    Skoff's Law                                        A child will not spill on a dirty floor.
+150    First Law of Kitchen Confusion                     In a family recipe you just discovered in an old book, the most vital measurement will be illegible.
+151    Second Law of Kitchen Confusion                    Once a dish is fouled up, anything added to save it only makes it worse.
+152    Third Law of Kitchen Confusion                     You are always complimented on the item which took the least effort to prepare.
+153    Fourth Law of Kitchen Confusion                    The one ingredient you make a special trip to the store to get will be the one your guest is allergic to.
+154    Captain Penny's Law                                You can fool all of the people some of the time, and some of the people all of the time, but you can't fool MOM.
+155    Beifeld's Principle                                The probability of a young man meeting a desirable and receptive young female increases by pyramidal progression when he is already in the company of (1) a date, (2) his wife, (3) a better looking and richer male friend.
+156    Lynch's Law                                        When the going gets tough, everybody leaves.
+157    Evan and Bjorn's Law                               No matter what goes wrong, there is always somebody who knew it would.
+158    Hellrung's Law                                     If you wait, it will go away.
+159    Shavelson's Extension to Hellrung' Law             ... having done its damage.
+160    Grelb's Addition to Hellrung's Law                 If it was bad, it'll be back.
+161    Ducharme's Precept                                 Opportunity always knocks at the least opportune moment.
+162    Flugg's Law                                        When you need to knock on wood is when you realize the world is composed of aluminum and vinyl.
+163    Law of the Search                                  The first place to look for anything is the last place you would expect to find it.
+164    Maryann's Law                                      You can always find what you're not looking for.
+165    Rune's Rule                                        If you don't care where you are, you ain't lost.
+166    Ferguson's Precept                                 A crisis is when you can't say let's forget the whole thing.
+167    Naeser's Law                                       You can make it foolproof, but you can't make it damn-foolproof.
+168    Imbesi's Law of the Conservation of Filth          In order for something to become clean, something else must become dirty.
+169    Freeman's Extension to Imbesi's law of Filth       ... but you can get everything dirty without getting anything clean.
+170    Grossman's Misquote of H. L. Mencken               Complex problems have simple, easy-to-understand wrong answers.
+171    Edelstein's Advice                                 Don't worry over what other people are thinking about you. They're too busy worrying over what you are thinking about them.
+172    First Law of Travel                                It always takes longer to get there than to get back.
+173    Cafeteria Law                                      The item you had your eye on the minute you walked in will be taken by the person in front of you.
+174    Etorre's Observation                               The other line is always faster.
+175    O'Brien's Variant of Etorre's Observation          If you change lines, the one you just left will start to move faster than the one you are now in.
+176    Kenton's Corollary to O'Brien's Variant of Etorre  Switching back screws up both lines and makes everybody angry.
+177    The Queue Principle                                The longer you wait in line, the greater the likelihood that you are standing in the wrong line.
+178    Flugg's Rule                                       The slowest checker is always at the express lane.
+179    Witten's Law                                       Whenever you cut your fingernails you will find a need for them an hour later.
+180    Thom's Law of MArital Bliss                        The length of a marriage is inversely proportional to the amount spent on the wedding.
+181    Murray's First Rule of the Arena                   Nothing is ever so bad it can't be made worse by firing the coach.
+182    Murray's Second Rule of the Arena                  A free agent is anything but.
+183    Murray's Third Rule of the Arena                   Whatever can go to New York will.
+184    Knox's Principle of Star Quality                   Whenever a superstar is traded to your favorite team, he fades. Whenever your team trades away a useless no-name, he immediately rises to stardom.
+185    Lavia's Law of Tennis                              A mediocre player will sink to the level of his or her opposition.
+186    The Rule of the Rally                              The only way to make up for being lost is to make record time while you are lost.
+187    Hutchinson's Law                                   If a situation requires undivided attention, it will occur simultaneously with a compelling distraction.
+188    Jones' Law of Zoos and Museums                     The most interesting specimen will not be labeled.
+189    Harrison's Postulate                               For every action, there is an equal and opposite criticism.
+190    Perkins' Postulate                                 The bigger they are, the harder they hit.
+191    Loftus' Fifth Law of Management                    Some people manage by the book even though they don't know who wrote the book or even what book.
+192    Hecht's Fourth Law                                 There's no time like the present for postponing what you don't want to do.
+193    Parkinson's Fifth Law                              If there is a way to delay an important decision, the good bureaucracy, public or private, will find it.
+194    Roger's Rule                                       Authorization for a project will be granted only when none of the authorizers can be blamed if the project fails but when all of the authorizers can claim credit if it succeeds.
+195    Mollosomn's Bureaucracy Hypothesis                 If an idea can survive a bureaucratic review and be implemented, it wasn't worth doing.
+196    Gourd's Axiom                                      A meeting is an event at which the minutes are kept and the hours are lost.
+197    Whistler's Law                                     You never know who's right, but you always know who's in charge.
+198    Loftus' Theory on Personnel Recruitment            Far away talent always seems better then home-developed talent.
+199    First Rule of Negative Anticipation                You will save yourself a lot of needless worry if you don't burn your bridges until you come to them.
+200    Porkingham's First Law of Sport Fishing            The worse your line is tangled, the better is the fishing around you.
+201    Porkingham's Second Law of Sport Fishing           The time available to go fishing shrinks as the fishing season draws nearer.
+202    Porkingham's Third Law of Sport Fishing            The least experienced fisherman always catches the biggest fish.
+203    Porkingham's Fourth Law of Sport Fishing           The more elaborate and costly the equipment, the greater chance of having to stop at the fish market on the way home.
+204    Spencer's First Law of Data                        Anyone can make a decision given enough facts.
+205    Spencer's Second Law of Data                       A good manager can make a decision without enough facts.
+206    Spencer's Third Law of Data                        A perfect manager can operate in perfect ignorance.
+207    Drew's Law of Professional Practice                The client who pays the least complains the most.
+208    Thal's Law                                         For every vision, there is an equal and opposite revision.
+209    Dingle's Law                                       When somebody drops something, everybody will kick it around instead of picking it up.
+210    Law of Probable Dispersal                          Whatever hits the fan will not be evenly distributed.
+211    Joe's Law                                          The inside contact that you have developed at great expense is the first person to be let go in any reorganization.
+212    Pfeifer's Principle                                Never make a decision you can get someone else to make.
+213    Law of Reruns                                      If you have watched a TV series only once, and you watch it again, it will be a rerun of the same episode.
+214    Kitman's Law                                       Pure drivel tends to drive ordinary drivel off the TV screen.
+215    Swipple's Rule of Order                            He who shouts loudest has the floor.
+216    Matilda's Law of Subcommittee Formation            If you leave the room, you're elected.
+217    Hardin's Law                                       You can never do just one thing.
+218    Knagg's Derivative                                 The more complicated and grandiose the plan, the greater the chance of failure.
+219    Grossman's Lemma                                   Any task worth doing was worth doing yesterday.
+220    Wethern's Law of Suspended Judgment                Assumption is the mother of all screw-ups.
+221    First Workshop Principle                           The one wrench or drill bit you need will be the one missing from the tool chest.
+222    Second Workshop Principle                          Most projects require three hands.
+223    Third Workshop Principle                           Leftover nuts never match leftover bolts.
+224    Fourth Workshop Principle                          The more carefully you plan a project, the more confusion there is when something goes wrong.
+225    Jaruk's Second Law                                 If it would be cheaper to buy a new unit, the company will insist upon repairing the old one.
+226    Corollary to Jaruk's Second Law                    If it would be cheaper to repair the old one, the company will insist on the latest model.
+227    Robert's Axiom                                     Only errors exist.
+228    Berman's Corollary to Robert's Axiom               One man's error is another man's data.
+229    Fifth Law of Unreliability                         To err is human, but to really foul things up requires a computer.
+230    First Law of Office Murphology                     Important letters which contain no errors will develope errors in the mail.
+231    Corollary to the First Law of Office Murphology    Corresponding errors will show up in the duplicate while the boss is reading it.
+232    Second Law of Office Murphology                    Office machines which function perfectly during normal business hours will break down when you return to the office at night to use them for personal business.
+233    Third Law of Office Murphology                     Machines that have broken down will work perfectly when the repairman arrives.
+234    Fourth Law of Office Murphology                    Envelopes and stamps which don't stick when you lick them will stick to other things when you don't want them to.
+235    Fifth Law of Office Murphology                     Vital papers will demonstrate their vitality by spontaneously moving from where you left them to where you can't find them.
+236    Sixth Law of Office Murphology                     The last person who quit or was fired will be held responsible for everything that goes wrong--until the next person quits or is fired.
+237    DeVries' Dilemma                                   If you hit two keys on the typewriter, the one you don't want hits the paper.
+238    Deal's First Law of Sailing                        The amount of wind will vary inversely with the number and experience of the people you take on board.
+239    Deal's Second Law of Sailing                       No matter how strong the breeze when you leave the dock, once you have reached the furthest point from port the wind will die.
+240    Shedenhelm's Law of Backpacking                    All trails have more uphill sections than they have level or downhill sections.
+241    Yeager's Law                                       Washing machines only break down during the wash cycle.
+242    Corollary to Yeager's Law                          All washer breakdowns occur on the plumber's day off.
+243    Finagle's Eighth Rule                              Teamwork is essential. It allows you to blame someone else.
+244    Murphy's Guide to Modern Science                   If it's green or wriggles, it's biology. If it stinks, it's chemistry. If it doesn't work, it's physics.
+245    Lerman's Law of Technology                         Any technical problem can be overcome given enough time and money.
+246    Lerman's Corollary                                 You are never given enough time or money.
+247    The Ruler Rule                                     There is no such thing as a straight line.
+248    Grelb's Law of Erroring                            In any series of calculations, errors tend to occur at the opposite end from the end at which you begin checking for errors.
+249    Breda's Rule                                       At any event, the people whose seats are furthest from the aisle arrive last.
+250    Michel's Rule for Prospective Mountain Climbers    The mountain gets steeper as you get closer.
+251    Frothingham's Corollary to Michel's Rule           The mountain looks closer than it is.
+252    Todd's First Law                                   All things being equal, you lose.
+253    Corollary to Todd's First Law                      All things being in your favor, you still lose.
+254    Law of Life's Highway                              If everything is coming your way, you're in the wrong lane.
+255    Athena's Rule of Driving Courtesy                  If you allow someone to get in front of you, you both will have the same destination, and the other car will get the last parking space.
+256    McKee's Law                                        When you're not in a hurry, the traffic light will turn green as soon as your vehicle comes to a complete stop.
+257    Drew's Law of Highway Biology                      The first bug to hit a clean windshield lands directly in front of your eyes.
+258    Campbell's First Law of Automotive Repair          If you can get to the faulty part, you don't have the tool to get it off.
+259    Campbell's Second Law of Automotive Repair         If you can get the part off, the parts house will have it back-ordered.
+260    Campbell's Third Law of Automotive Repair          If it's in stock, it didn't need replacing in the first place.
+261    LeMar's Parking Postulate                          If you have to park six blocks away, you will find two new parking spaces right in front of the building.
+262    Bromberg's First Law of Auto Repair                When the need arises, any tool or object closest to you becomes a hammer.
+263    Bromberg's Second Law of Auto Repair               No matter how minor the task, you will inevitably end up covered with grease and motor oil.
+264    Femo's Law of Automotive Engine Repair             If you drop something, it will never reach the ground.
+265    Johnson's Third Law                                If you miss one issue of any magazine, it will be the issue which contained the article, story or installment you were most anxious to read.
+266    Corollary to Johnson's Third Law                   All of your friends either missed it, lost it, or threw it out.
+267    Atwood's Fourteenth Corollary                      No books are lost by lending except those you particularly wanted to keep.
+268    Bess' First Universal Principle                    The telephone will ring when you are outside the door, fumbling for your keys.
+269    Bess' Second Universal Principle                   You will reach the telephone just in time to hear the click of the caller hanging up.
+270    Kovac's Conundrum                                  When you dial a wrong number, you never get a busy signal.
+271    Shirley's Law                                      Most people deserve each other.
+272    Arthur's First Law of Love                         People to whom you are attracted invariably think you remind them of someone else.
+273    Arthur's Second Law of Love                        The love letter you finally got the courage to send will be delayed in the mail long enough for you to make a fool of yourself in person.
+274    Bedfellow's Rule                                   The one who snores will fall asleep first.
+275    Gillenson's Law of Expectation                     Never get excited about a blind date because of how he or she sounds over the phone.
+276    Cheit's Lament                                     If you help a friend in need, he is sure to remember you--the next time he's in need.
+277    Denniston's Law                                    Virtue is its own punishment.
+278    Denniston's Corollary                              If you do something right once, someone will ask you to do it again.
+279    Ruby's Principle of Encounters                     The probability of meeting someone you know increases when you are with someone you don't want to be seen with.
+280    Jacob's Law                                        To err is human; to blame it on someone else is even more human.
+281    Iske's Teenage Corollary to Parkinson's Law        The stomach expands to accommodate the amount of junk food available.
+282    Banana Principle                                   If you buy bananas or avocados before they are ripe, there won't be any left by the time they are ripe. If you buy them ripe, they rot before they are eaten.
+283    Britt's Green Thumb Postulate                      The life expectancy of a house plant varies inversely with its price and directly with its ugliness.
+284    Ballance's Law of Reliability                      How long a minute is depends on which side of the bathroom door you're on.
+285    Jones' First Law of TV Programming                 The only new show worth watching will be canceled.
+286    Jones' Second Law of TV Programming                If there are only two shows worth watching, they will be on at the same time.
+287    Jones' Third Law of TV Programming                 The show you've been looking forward to all week will be preempted.
+288    Ryan's Application of Parkinson's Law              Possessions increase to fill the space available for their storage.
+289    Cornuelle's Law                                    Authority tends to assign jobs to those least able to do them.
+290    Zymurgy's Law of Volunteer Labor                   People are always available for work in the past tense.
+291    Conway's Law                                       In any organization there will always be one person who knows what is going on. This person must be fired.
+292    Seit's Law of Higher Education                     The one course you must take to graduate will not be offered during your last semester.
+293    First Law of Class Scheduling                      Class schedules are designed so that every student will waste the maximum time between classes.
+294    Second Law of Class Scheduling                     A pre-requisite for a desired course will only be offered during the semester following the desired course.
+295    First Law of Applied Terror                        When reviewing your notes before an exam, the most important ones will be illegible.
+296    Second Law of Applied Terror                       The more studying you did for the exam, the less sure you are as to which answer they want.
+297    Third Law of Applied Terror                        80% of the final exam will be based on the one lecture you missed about the one book you didn't read.
+298    Fourth Law of Applied Terror                       Every instructor assumes that you have nothing else to do except study for that instructor's course.
+299    Fifth Law of Applied Terror                        If you are given an open-book exam, you will forget the book.
+300    Corollary to the Fifth Law of Applied Terror       If you are given a take-home exam, you will forget where you live.
+301    Sixth Law of Applied Terror                        At the end of the semester you will recall having enrolled in a course at the beginning of the semester and never attending.
+302    Duggan's Law of Scholarly Research                 The most valuable quotation will be the one for which you cannot determine the source.
+303    Rominger's First Rule for Students                 The more general the title of a course, the less you will learn from it.
+304    Rominger's Second Rule for Students                The more specific the title of a course, the less you will be able to apply it later.
+305    Wallace's Observation                              Everything is in a state of utter dishevelment.
+306    Johnson's Second Law                               If in the course of several months, only three worthwhile social events take place, they will all fall on the same evening.
+307    Terman's Law of Innovation                         If you want a track team to win the high jump, you find one person who can jump seven feet, not seven people who can jump one foot.
+308    Churchill's Commentary on Man                      Man will occasionally stumble over the truth, but most of the time he will pick himself up and continue on.
+309    Farmer's Credo                                     Sow your wild oats on Saturday night--then on Sunday pray for crop failure.
+310    Matz's Maxim                                       A conclusion is the place where you get tired of thinking.
+311    Fagin's Rule on Past Predictions                   Hindsight is an exact science.
+312    Merkin's Maxim                                     When in doubt, predict that the trend will continue.
+313    Meyer's Law                                        It is a simple task to make things complex, but a complex task to make them simple.
+314    Hlade's Law                                        If you have a difficult task give it to a lazy man; he will find an easier way to do it.
+315    Matz's Rule Regarding Medications                  A drug is that substance which, when injected into a rat, will produce a scientific report.
+316    Cochran's Aphorism                                 Before ordering a test decide what you will do if it is (1) positive, or (2) negative. If both answers are the same, don't do the test.
+317    Moser's Law of Spectator Sports                    Exciting plays occur only while you are watching the scoreboard or out buying a hot dog.
+318    Murray's Rule of Football                          The wrong quarterback is the one that's in there.
+319    Murray's Law of Hockey                             Hockey is a game played by six good players and a home team.
+320    Ground Rule for Laboratory Workers                 When you do not know what you are doing, do it neatly.
+321    Lee's Law                                          In any dealings with a collective body of people, the people will always be more tacky than originally expected.
+322    Spencer's First Law of Accountability              Trial balances don't.
+323    Spencer's Second Law of Accountability             Working capital doesn't.
+324    Spencer's Third Law of Accountability              Liquidity tends to run out.
+325    Spencer's Fourth Law of Accountability             Return on investments won't.
+326    O'Brien's Law                                      Nothing is ever done for the right reasons.
+327    Webwe's Definition                                 An expert is one who knows more and more about less and less until he knows absolutely everything about nothing.
+328    Warren's Rule                                      To spot the expert, pick the one who predicts the job will take the longest and cost the most.
+329    Mars' Rule                                         An expert is anyone from out of town.
+330    Green's Law of Debate                              Anything is possible if you don't know what you're talking about.
+331    Law of Revelation                                  The hidden flaw never remains hidden.
+332    Sodd's Second Law                                  Sooner or later, the worst possible set of circumstances is bound to occur.
+333    First Principle for Patients                       Just because your doctor has a name for your condition doesn't mean he knows what it is.
+334    Second Principle for Patients                      The more boring and out-of-date the magazines in the waiting room, the longer you will have to wait for your scheduled appointment.
+335    Third Principle for Patients                       Only adults have difficulty with child-proof bottles.
+336    Fourth Principle for Patients                      You never have the right number of pills left on the last day ofa prescription.
+337    Fifth Principle for Patients                       If your condition seems to be getting better, it's probably your doctor getting sick.
+338    Telesco's First Law of Nursing                     All the IVs are at the other end of the hall.
+339    Telesco's Second Law of Nursing                    There are two kinds of adhesive tape: the one that won't stay on and the one that won't come off.
+340    Working Cooks' First Law                           If you're wondering if you took the meat out to thaw, you didn't.
+341    Working Cooks' Second Law                          If you're wondering if you left the coffee pot plugged in, you did.
+342    Van Roy's Law                                      An unbreakable toy is useful for breaking other toys.
+343    Fish's First Law of Animal Behavior                The probability of a cat eating its dinner has absolutely nothing to do with the price of the food placed before it.
+344    Fish's Second Law of Animal Behavior               The probability that a household pet will raise a fuss is directly proportional to the number and importance of your guests.
+345    Ron's Observation                                  The pimples don't appear until the hour before the date.
+346    Jaffe's Precept                                    There are some things which are impossible to know, but it is impossible to know which things these are.
+347    Gray's Bus Law                                     A bus will arrive only when the would-be rider has walked to a point so close to the destination that it is no longer worthwhile to board the bus.
+348    Law of the Individual                              Nobody really cares or understands what anyone else is doing.
+349    Parker's Law                                       Beauty is only skin deep, but ugly goes clean to the bone.
+350    Sausage Principle                                  People who love sausage and respect the law should never watch either one being made.
+351    Watergate Principle                                Government corruption is always reported in the past tense.
+352    Todd's First Principle                             No matter what they're telling you, they're not telling you the whole truth.
+353    Todd's Second Principle                            No matter what they're talking about, they're taking about money.
+354    Miles' Law                                         Where you stand depends on where you sit.
+355    Kennedy Constant                                   Don't get mad; get even.
+356    Bernstein's Precept                                The radiologists' national flower is the hedge.
+357    First Law of Photography                           The best shots happen immediately after the last frame is exposed.
+358    Second Law of Photography                          The best shots are generally attempted through the lens cap.
+359    Third Law of Photography                           The best shots will be ruined when someone inadvertently opens the darkroom door.
+360    Dialectic of Progress                              Direct action produces direct reaction.
+361    The Army Axiom                                     Any order that can be misunderstood has been misunderstood.
+362    Imhoff's Law                                       The organization of any bureaucracy is very much like a septic tank--the really big chunks always rise to the top.
+363    Spark's First Rule for Managers                    Strive to look tremendously important.
+364    Spark's Second Rule for Managers                   Attempt to be seen with important people.
+365    Spark's Third Rule for Managers                    Speak with authority; however, only expound on the obvious and proven facts.
+366    Spark's Fourth Rule for Managers                   Don't engage in arguments, but if cornered, ask an irrelevant question and lean back with a satisfied grin while your opponent tries to figure out what's going on--then quickly change the subject.
+367    Spark's Fifth Rule for Managers                    Always keep the office door closed. This puts visitors on the defensive and also makes it look as if you are always in an important conference.
+368    Jay's First Law of Leadership                      Changing things is central to leadership, and changing them before anyone else is creativeness.
+369    Jacquin's Postulate on Democratic Government       No man's life, liberty, or property are safe while legislature is in session.
+370    Trischmann's Paradox                               A pipe gives a wise man time to think and a fool something to stick in his mouth.
+371    Bucy's Law                                         Nothing is ever accomplished by a reasonable man.
+372    Dedera's Law                                       In a three-story building served by one elevator, nine times out of ten the elevator car will be on a floor you are not.
+373    The SNAFU Equation                                 The object or bit of information most needed will be the one least available.
+374    Toutmann's Programming Postulate #1                Job control cards that positively cannot be arranged in improper order will be.
+375    Toutmann's Programming Postulate #2                Profanity is the one language all programmers know best.
+376    Professor Block's Motto                            Forgive and remember.
+377    Glib's Law of Unreliability                        Computers are unreliable, but humans are even more unreliable.
+378    Law of the Perversity of Nature                    You cannot successfully determine beforehand which side of the bread to butter.
+379    Heller's Law                                       The first myth of management is that it exists.
+380    Johnson's Corollary                                Nobody really knows what is going on anywhere within the organization.
+381    Freeman's Rule                                     Circumstances can force a generalized incompetent to become competent, at least in a specialized field.
+382    McGowan's Christmas Shopping Axiom                 If an item is advertised as "under $50.00", you can bet it's not $19.95.
+383    Luposchainsky's Hurry-Up-and-Wait Principle        If you're early, it'll be cancelled. If you knock yourself out to be on time, you will have to wait. If you're late, you will be too late.
+384    Dehay's Axiom                                      Simple jobs always get put off because there will be time to do them later.
+385    Thumb's Second Postulate                           An easily-understood, workable falsehood is more useful than a complex, incomprehensible truth.
+386    Evan's Law                                         If you can keep your head when all about you are losing theirs, you don't understand the problem.
+387    Matz's Warning                                     Beware of the physician who is great at getting out of trouble.
+388    Wise Fan's Lament                                  Fools rush in - and get the best seats.
+389    Thomas' Law                                        The one who least wants to play is the one who will win.
+390    Brook's First Law of Retailing                     Security isn't.
+391    Brook's Second Law of Retailing                    Management can't.
+392    Brook's Third Law of Retailing                     Sale promotions don't.
+393    Brook's Fourth Law of Retailing                    Consumer assistance doesn't.
+394    Brook's Fifth Law of Retailing                     Workers won't.
+395    Finman's Bargain Basement Principle                The one you want is never the one on sale.
+396    Hershiser's First Rule                             Anything labeled "NEW" and/or "IMPROVED" isn't.
+397    Hershiser's Second Rule                            The label "NEW" and/or "IMPROVED" means the price went up
+398    Hershiser's Third Rule                             The label "ALL NEW," "COMPLETELY NEW," or "GREAT NEW" means the price went way up.
+399    Hadley's First Rule of Clothing Shopping           If you like it, they don't have it in your size.
+400    Hadley's Second Rule of Clothing Shopping          If you like it and it's in your size, it doesn't fit anyway.
+401    Hadley's Third Rule of Clothing Shopping           If you like it and it fits, you can't afford it.
+402    Hadley's Fourth Rule of Clothing Shopping          If you like it, it fits, and you can afford it, it falls apart the first time you wash it.
+403    Herblock's Law                                     If it's good, they discontinue it.
+404    Gold's Law                                         If the shoe fits, it's ugly.
+405    Beryl's Law                                        The "Consumer Report" on the item will come out a week after you've made your purchase.
+406    Beryl's First Corollary                            The one you bought will be rated "unacceptable."
+407    Beryl's Second Corollary                           The one you almost bought will be rated "best buy."
+408    Murphy's Tenth Corollary                           Mother nature is a bitch.
+409    Sineteto's First Law of Consumerism                A 60-day warranty guarantees that the product will self-destruct on the 61st day.
+410    First Rule of Intelligent Tinkering                Save all the parts.
+411    Lewis' Second Law                                  People will buy anything that's one to a customer.
+412    Law of Gifts                                       You get the most of what you need the least.
+413    Chisolm's First Corollary                          If you do something which you are sure will meet with everybody's approval, somebody won't like it.
+414    Chisolm's Second Corollary                         If you explain so clearly that nobody can misunderstand, somebody will.
+415    Quantum Revision of Murphy's Law                   Everything goes wrong all at once.
+416    Cooper's Metalaw                                   A proliferation of new laws creates a proliferation of new loopholes.
+417    DiGiovanni's Law                                   The number of laws will expand to fill the publishing space available.
+418    The Last Law                                       If several things that could have gone wrong  have not gone wrong, it would have been ultimately beneficial for them to have gone wrong.
+419    Wade's Advice                                      Never put off until tomorrow that which you could have forgotten about entirely.
+
+(419 rows affected)
+
+
+Completion time: 2023-01-27T15:03:27.0927974-06:00
