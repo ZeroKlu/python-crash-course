@@ -27,6 +27,7 @@ beginning developer.
 * [Lambda Functions](./S11_Lambdas/01_lambda_functions.md)
 * [MySQL Databases](./S12_MySQL_Databases/00_mysql_setup.md)
 * [NumPy](./S14_Numpy/01_Fundamentals/00_fundamentals.md)
+* [Pandas](./S15_Pandas/00_intro.md)
 
 ---
 
