@@ -28,6 +28,7 @@ beginning developer.
 * [MySQL Databases](./S12_MySQL_Databases/00_mysql_setup.md)
 * [NumPy](./S14_Numpy/01_Fundamentals/00_fundamentals.md)
 * [Pandas](./S15_Pandas/00_intro.md)
+* [SciPy](./S16_SciPy/00_intro.md)
 
 ---
 
