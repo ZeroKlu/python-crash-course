@@ -35,3 +35,9 @@ Running SciPy version: 1.14.0
 ```
 
 ---
+
+> Note: Graphs appearing in the accompanying lessons were produced using
+> the [desmos](https://www.desmos.com/calculator) online graphing
+> calculator.
+
+---
