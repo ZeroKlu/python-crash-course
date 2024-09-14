@@ -15,12 +15,14 @@ def find_root() -> int|float:
 
 def x_squared_plus_x_plus_2(x: int|float|ndarray[int|float]) -> int|float:
     """Compute x² + x + 2"""
+    if isinstance(x, ndarray): x = x[0]
     return x ** 2 + x + 2
 
 def find_minimum() -> int|float:
     """Find the minimum of the equation x² + x + 2"""
-    m = minimize(x_squared_plus_x_plus_2, 0, method="BFGS")
-    print(f"minimum of x² + x + 2 = {m.x[0]:.2f}\n")
+    x = minimize(x_squared_plus_x_plus_2, 0, method="BFGS")
+    y = x_squared_plus_x_plus_2(x.x[0])
+    print(f"minimum of x² + x + 2 = ({x.x[0]:.2f}, {y})\n")
 
 def main() -> None:
     find_root()
