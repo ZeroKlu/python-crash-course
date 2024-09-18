@@ -43,8 +43,8 @@ def cube(n: int) -> int:
     return n
 ```
 
-Note how the functions just return `n` without performing a computation. This
-is because the decorator's closure `_inner_power()` is doing the math.
+Note how the functions just return `n` without performing a computation. 
+This is because the decorator's closure `_inner_power()` is doing the math.
 
 ---
 
@@ -68,5 +68,51 @@ Output:
 ```
 
 Now that's some powerful programming!
+
+---
+
+### Additional Arguments
+
+We can also pass and perform work on additional arguments to the inner 
+function:
+
+Let's create a decorator to protect against division by zero:
+
+```python
+def smart_divide(func: callable) -> float|None:
+    """Decorator to protect against division by zero"""
+    def inner(a, b):
+        print(f"I am going to divide {a} by {b}")
+        if b == 0:
+            print("Whoops! cannot divide by zero")
+            return None
+        return func(a, b)
+    return inner
+```
+
+Then we can call a decorated function...
+
+```python
+@smart_divide
+def divide(a: int, b: int) -> float:
+    """Perform division (protected by decorator)"""
+    return a / b
+
+for tup in [(2, 5), (2, 0)]:
+    x, y = tup
+    z = divide(x, y)
+    if z: print(f"Returned {z}")
+    print()
+```
+
+Output:
+
+```
+I am going to divide 2 by 5
+Returned 0.4
+
+I am going to divide 2 by 0
+Whoops! cannot divide by zero
+```
 
 ---

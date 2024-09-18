@@ -36,8 +36,35 @@ logging the function arguments.
 
 ### Usage and Testing
 
-To access the decorator functionality, we simply add `@decorator_name` to the
-definition of any function.
+We can now wrap a function in a decorator using this syntax:  
+`new_func = decorator_name(function)`
+
+```python
+def sum(a: int, b: int) -> int:
+    """Sum two numbers"""
+    return a + b
+
+total = debug(sum)
+
+total(1, 2)
+total(3, b=4)
+```
+
+... we'll see the debug information along with the function results.
+
+Output:
+
+```
+sum(args: (1, 2), kwargs: {}) -> 3
+sum(args: (3,), kwargs: {'b': 4}) -> 7
+```
+
+---
+
+#### Decorating with `@`
+
+Alternately, we simply add `@decorator_name` to the definition of any 
+function.
 
 ```python
 @debug

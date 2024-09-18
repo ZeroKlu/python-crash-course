@@ -48,7 +48,7 @@ Stored 4: Mean = 2.5
 Stored 5: Mean = 3.0
 ```
 
-We can see tha the value passed on each call was appended to the list.
+We can see that the value passed on each call was appended to the list.
 
 This is powerful, but it illustrates the need to be aware of how mutable
 objects behave, as accessing a modified closure can otherwise have unexpected 

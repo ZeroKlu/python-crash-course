@@ -32,6 +32,10 @@ def timer(func: callable) -> callable:
     
     return _timer
 
+def sum(a: int, b: int) -> int:
+    """Sum two numbers"""
+    return a + b
+
 @debug
 def add(a: int, b: int) -> int:
     """Add two numbers"""
@@ -51,6 +55,10 @@ def run_fibonacci(n: int) -> int:
     return fibonacci(n)
 
 def main() -> None:
+    total = debug(sum)
+    total(1, 2)
+    total(3, b=4)
+    print()
     add(5, 6)
     add(7, b=8)
     print()

@@ -90,18 +90,31 @@ syntax, Python only has errors during runtime.
 
 #### Comments
 
-Any line of code staring with `#` + a whitespace character is a comment
+Any line or partial line of code staring with `#` + a whitespace character 
+is a comment:
 
 ```python
 # This is a comment
-print("I created a comment!")
+print("I created a comment!") # This is also a comment
+```
+
+There is no syntax for a multi-line comment. However, because string 
+literals are ignored if not assigned to a variable or passed to a function,
+you can use multiline strings as comments:
+
+```python
+def my_function:
+    """
+    This is a multi-line comment.
+    This form is typically used for function documentation (doc strings)
+    """
 ```
 
 ---
 
 #### Variable Naming
 
-Rules:
+**Rules**:
 
 * Only use ASCII characters
 * May contain letters, numbers, and underscores
@@ -109,11 +122,12 @@ Rules:
 * May not contain spaces
 * Should not use Python reserved words
 * Avoid "l" and "O" which may be mistaken for "1" and "0"
+* Names are case-sensitive
 * Except where specifically recommended, avoid upper-case letters
 
 ---
 
-Conventions:
+**Conventions**:
 
 `snake_case` is used for
 * modules and packages
@@ -137,6 +151,29 @@ Conventions:
 
 ---
 
+### Data Types:
+
+Variables can store data of different types, and different types can do 
+different things.
+
+In Python, even primitive types are defined as classes.
+
+Python has the following data types built-in by default, in these 
+categories:
+
+|Category|Data Types|
+|-|-|
+|Text Type|`str`|
+|Numeric Types|`int`, `float`, `complex`|
+|Sequence Types|`list`, `tuple`, `range`|
+|Mapping Type|`dict`|
+|Set Types|`set`, `frozenset`|
+|Boolean Type|`bool`|
+|Binary Types|`bytes`, `bytearray`, `memoryview`|
+|None Type|`NoneType`|
+
+---
+
 ### Using a Variable in "Hello World"
 
 Instead of just passing the string value "Hello World" to the `print()`
@@ -153,6 +190,9 @@ locations where the actual data is stored.
 > though, it's accurate enough, and it explains how a coder uses variables.
 
 In Python, the syntax for declaring a variable is `name = value`
+
+The variable is created at the time a value is assigned and does not
+require a separate declaration.
 
 ```python
 # Store the value in a variable
@@ -192,10 +232,93 @@ Goodbye World
 
 ---
 
+### Changing the Type of a Variable
+
+Python is a loosely typed language. As a result, unlike many other 
+languages, you can change the data type of a variable dynamically in your
+code:
+
+```python
+message = "Hello "
+print(message + message)
+
+# Assign a new value to the variable
+message = 10
+print(message + message)
+```
+
+Result:
+
+```
+Hello Hello 
+20
+```
+
+---
+
+### Type Casting
+
+If you want to specify the data type of a variable, this can be done with 
+casting functions:
+
+```python
+x = str(3)    # x will be '3'
+y = int("3")  # y will be 3
+z = float(3)  # z will be 3.0
+
+print(x, y, z)
+```
+
+Output:
+
+```
+3 3 3.0
+```
+
+---
+
+### Identifying Type
+
+The `type()` function returns the data type of the variable:
+
+```python
+msg = "Hello"
+t = type(msg)
+print(t)
+```
+
+Output:
+
+```
+<class 'str'>
+```
+
+---
+
+### Memory References
+
+Although not typical in Python, it is sometimes useful to be able to
+identify the memory address where a variable is stored. Python provides
+the `id()` function for this purpose:
+
+```python
+msg = "Hello"
+loc = id(msg)
+print(loc)
+```
+
+Output (your result will differ):
+
+```
+2635577512688
+```
+
+---
+
 ### Variables and the `NameError`
 
 In Python, like most languages, both the spelling and capitalization of
-variable names matters.
+variable names matter.
 
 This code will result in an error:
 
