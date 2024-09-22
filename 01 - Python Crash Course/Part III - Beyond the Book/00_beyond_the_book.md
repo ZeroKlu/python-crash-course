@@ -26,9 +26,25 @@ beginning developer.
 * [Web Scraping](./S10_Web_Scraping/00_web_scraping.md)
 * [Lambda Functions](./S11_Lambdas/01_lambda_functions.md)
 * [MySQL Databases](./S12_MySQL_Databases/00_mysql_setup.md)
+* [Publishing a Library](./S13_Publish_a_Library/00_intro.md)
 * [NumPy](./S14_Numpy/01_Fundamentals/00_fundamentals.md)
 * [Pandas](./S15_Pandas/00_intro.md)
-* [SciPy](./S16_SciPy/00_intro.md)
+* [SciPy](./S16_SciPy/00_intro.md) <span style="color:salmon">*</span>
+* [MongoDB](./S17_MongoDB/00_intro.md)
+
+Lessons marked with a <span style="color:salmon">*</span> are incomplete.
+
+---
+
+To save effort reproducing utility functions, in some of these lessons, I
+will use a practice library I created (see 
+[Publishing a Library](./S13_Publish_a_Library/00_intro.md)).
+
+To install this library, run the following command:
+
+```
+python -m pip install sm_utils
+```
 
 ---
 
