@@ -62,3 +62,15 @@ My cat's name is Pickles.
 ```
 
 ---
+
+### Risks with Mutable Types
+
+It's important to understand how default values are handled in Python. If
+you provide a default value of a mutable type (like a list or dictionary),
+you may run into unexpected behavior.
+
+Take a look at bonus lesson 16 
+[Mutable Defaults](./16_bonus_mutable_defaults.md) for an explanation of
+this behavior.
+
+---
