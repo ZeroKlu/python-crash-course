@@ -16,6 +16,7 @@ def main() -> None:
     """Main executable entry point"""
     clear_terminal()
     t = initialize_trie("words.txt", "data")
+    t.list_words("app")
     pause()
 
     while True:

@@ -23,14 +23,14 @@ class Trie:
             current_node = current_node.children[index]
         current_node.word_end = True
 
-    def prefix_exists(self, key: str) -> bool:
+    def prefix_exists(self, key: str, get_node: bool=False) -> bool|TrieNode:
         """Check if prefix exists in the trie"""
         current_node = self.root
         for c in key.lower():
             if current_node.children[ord(c) - self.offset] is None:
-                return False
+                return None if get_node else False
             current_node = current_node.children[ord(c) - self.offset]
-        return True
+        return current_node if get_node else True
 
     @timer
     def search(self, key: str) -> bool:
@@ -70,6 +70,23 @@ class Trie:
             return True
         self.root.children[ord(key[0]) - self.offset] = None
         return True
+
+    def list_words(self, prefix: str=None) -> None:
+        """List all words in the trie that start with the given prefix"""
+        current_node = self.root if prefix is None else self.prefix_exists(prefix, True)
+        if current_node is None:
+            return
+        self.show_all_words(current_node, prefix)
+
+    def show_all_words(self, current_node: TrieNode, prefix: str) -> None:
+        """Recursive function to list all words in the trie"""
+        if current_node.word_end:
+            print(prefix)
+        for i in range(self.size):
+            node = current_node.children[i]
+            if node is None:
+                continue
+            self.show_all_words(node, prefix + chr(i + self.offset))
 
     def load_words(self, file_name: str, folder: str = None) -> None:
         """Load words from a file into the trie"""
