@@ -31,8 +31,10 @@ beginning developer.
 * [Pandas](./S15_Pandas/00_intro.md)
 * [SciPy](./S16_SciPy/00_intro.md) <span style="color:salmon">*</span>
 * [MongoDB](./S17_MongoDB/00_intro.md)
+* [Trie Data Structure](./S18_Trie/00_intro.md)
 
-Lessons marked with a <span style="color:salmon">*</span> are incomplete.
+Lessons marked with <span style="color:salmon">*</span> are incomplete. 
+Sorry about that.
 
 ---
 
