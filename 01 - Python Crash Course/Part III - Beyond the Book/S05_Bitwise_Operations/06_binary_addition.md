@@ -1,5 +1,14 @@
 ## Binary Addition
 
+<style>
+    td, th {
+        border: 0!important;
+        padding: 0!important;
+        margin: 0!important;
+        padding-left: 25px!important;
+    }
+</style>
+
 In order to understand how binary representations of integers work,
 it's useful to first take a look at the way binary addition is handled
 by a computer.
@@ -12,15 +21,15 @@ A binary adder (at its core) is a circuit. Optimally, all that circuit
 should do is:
 
 1. Take in two bits `A` & `B` (plus a carry bit `C`)
-2. Add them together where
-```
-           A   B   Sum Carry
-        a. 0 + 0 =  0    0
-        b. 0 + 1 =  1    0
-        c. 1 + 0 =  1    0
-        d. 1 + 1 =  0    1
-```
-3. Return the output and pass the carry bit (if needed) to the next bit adder
+2. Add them together where  
+   |A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B|Sum|Carry|
+   |:-:|:-:|:-:|
+   |$0~+~0$|$0$|$0$|
+   |$0~+~1$|$1$|$0$|
+   |$1~+~0$|$1$|$0$|
+   |$1~+~1$|$0$|$1$|
+3. Return the output and pass the carry bit (if needed) to the next bit 
+   adder
 
 ---
 
@@ -49,46 +58,55 @@ Such a circuit looks sort of like this:
 Looking at the behavior of the circuit, we can see that there are eight 
 possible scenarios to account for:
 
-|   A   |   B   |  Cin  |       |   S   | Cout  |
-|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
-|   0   |   0   |   0   |       |   0   |   0   |
-|   0   |   0   |   1   |       |   1   |   0   |
-|   0   |   1   |   0   |       |   1   |   0   |
-|   0   |   1   |   1   |       |   0   |   1   |
-|   1   |   0   |   0   |       |   1   |   0   |
-|   1   |   0   |   1   |       |   0   |   1   |
-|   1   |   1   |   0   |       |   0   |   1   |
-|   1   |   1   |   1   |       |   1   |   1   |
+|A|B|Cin||Sum|Cout|
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|$0$|$0$|$0$||$0$|$0$|
+|$0$|$0$|$1$||$1$|$0$|
+|$0$|$1$|$0$||$1$|$0$|
+|$0$|$1$|$1$||$0$|$1$|
+|$1$|$0$|$0$||$1$|$0$|
+|$1$|$0$|$1$||$0$|$1$|
+|$1$|$1$|$0$||$0$|$1$|
+|$1$|$1$|$1$||$1$|$1$|
 
 ---
 
-Let's examine the case where `A = 1`, `B = 1`, and `Cin = 0`
+#### Case Study
 
-This is equivalent to adding `1 + 1` with no previous carry coming in.
+Note: I am using the following symbols for bitwise operationd
 
-* `A` & `B` enter the first half-adder
-    * Both are 1s, so:
-        * SUM (S₁) = `A XOR B` = `1 XOR 1` = `0`
-        * CARRY (C₁) = `A AND B` = `1 AND 1` = `1`
-* S₁ and Cin enter the second half-adder
-    * Both are 0s, so:
-        * SUM (S) = `S₁ XOR Cin` = `0 XOR 0` = `0`
-        * CARRY (C₂) = `S₁ AND Cin` = `0 AND 0` = `0`
-* S is 0, so the output sum is `0`
-* C₁ + C₂ = `1 + 0` = 1, and since `1 ≥ 1`, `Cout = 1`
+|Symbol|Operation|
+|:-:|:-:|
+|$\&$|AND|
+|$\|$|OR|
+|$\sim$|NOT|
+|$\oplus$|XOR|
 
-So, binary 1 + 1 = 0, with a carry (to the next place) of 1
+Let's examine the case where $A = 1$, $B = 1$, and $C_{in} = 0$
 
-```
-  0000 0001
-+ 0000 0001
-  ---------
-          ⌄--- S
-  0000 0010
-         ^--- C
-```
+This is equivalent to adding $1 + 1$ with no previous carry coming in.
 
-Hence 1 + 1 = 2 (or rather `10` in binary)
+* $A$ and $B$ enter the first half-adder
+    * Both are $1$s, so:
+        * SUM $(S_1)=A\oplus B=1\oplus1=0$
+        * CARRY $(C_1)=A~\&~B=1~\&~1=1$
+* $S_1$ and $C_{in}$ enter the second half-adder
+    * Both are $0$s, so:
+        * SUM $(S)=S_1\oplus C_{in}=0\oplus0=0$
+        * CARRY $(C_2)=S_1~\&~C_{in}=0~\&~0=0$
+* $S=0$, so the output sum is $0$
+* $C_1+C_2=1+0=1$, and since $1\ge1$, $C_{out}=1$
+
+So, binary $1+1=0$, with a carry (to the next place) of $1$
+
+|||
+|-:|-:|
+|$01_2~~~$||
+|$\underline{+~~01_2}~~~$|
+|$10_2~~~$||
+|$C\uparrow~\uparrow S$|
+
+Hence, $1_2+1_2=10_2=2_{10}$
 
 ---
 
@@ -108,6 +126,6 @@ requiring a different circuit for negative numbers (or subtraction).
 We know that we can use a specific bit for the sign, but how do we create a
 binary numbering system where the results are consistent?
 
-The next topics will explain that...
+The upcoming topics will explain that...
 
 ---

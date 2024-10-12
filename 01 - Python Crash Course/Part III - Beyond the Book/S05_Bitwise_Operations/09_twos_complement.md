@@ -1,5 +1,14 @@
 ## Two's Complement
 
+<style>
+    td, th {
+        border: 0!important;
+        padding: 0!important;
+        margin: 0!important;
+        padding-left: 25px!important;
+    }
+</style>
+
 Enter the solution that is implemented for numbers in modern computing: **two's complement**
 
 Two's complement is just one's complement *plus one*.
@@ -10,28 +19,29 @@ Two's complement is just one's complement *plus one*.
 
 So with our known positive values (in our imaginary 4-bit integer):
 
-* `0000` = 0
-* `0001` = 1
-* `0010` = 2
-* `0011` = 3
-* `0100` = 4
-* `0101` = 5
-* `0110` = 6
-* `0111` = 7
+* $0000_2=0_{10}$
+* $0001_2=1_{10}$
+* $0010_2=2_{10}$
+* $0011_2=3_{10}$
+* $0100_2=4_{10}$
+* $0101_2=5_{10}$
+* $0110_2=6_{10}$
+* $0111_2=7_{10}$
 
 ---
 
 The two's complement implementation for negatives would look like this:
-* `0000` =  0
-* `1111` = -1
-* `1110` = -2
-* `1101` = -3
-* `1100` = -4
-* `1011` = -5
-* `1010` = -6
-* `1001` = -7  
-  ... which leaves a wasted bit, so
-* `1000` = -8
+
+* $0000_2= ~~~0_{10}$
+* $1111_2=-1_{10}$
+* $1110_2=-2_{10}$
+* $1101_2=-3_{10}$
+* $1100_2=-4_{10}$
+* $1011_2=-5_{10}$
+* $1010_2=-6_{10}$
+* $1001_2=-7_{10}$  
+  ... which would leave a wasted bit, so ...
+* $1000_2=-8_{10}$
 
 ... and this is why we have an extra negative value in integer data types
 
@@ -43,31 +53,29 @@ We can check ourselves by looking at the same examples we've been using:
 
 ---
 
-### 1 - 1
+### $1-1$
 
-```
-      0001
-    + 1111
-    ------
- 1 <- 0000
-```
+> ||
+> |-:|
+> |$0001_2$|
+> |$\underline{+~1111_2}$|
+> |$1\Larr0000_2$|
 
-The previously lost carry bit doesn't matter any more, and we get the 
-correct answer: ```1 - 1 = 0```
+We don't care about the lost carry bit (adding one accounted for it),
+but now we get the correct answer: $1-1=0$
 
 ---
 
-### 7 - 3
+### $7-3$
 
-```
-      0111
-    + 1101
-    ------
- 1 <- 0100
-```
+> ||
+> |-:|
+> |$0111_2$|
+> |$\underline{+~1101_2}$|
+> |$1\Larr0100_2$|
 
 Again, although we lose a carry bit, we end up with the right answer:
-```7 - 3 = 4```
+$7-3=4$
 
 ---
 
@@ -102,14 +110,13 @@ int main() {
 We can predict that this is the expected overflow behavior by doing the
 binary addition:
 
-```
-  0111 1111
-+ 0000 0001
------------
-  1000 0000
-```
+> ||
+> |-:|
+> |$0111~1111_2$|
+> |$\underline{+~0000~0001_2}$|
+> |$1000~0000_2$|
 
-And we see the previously inexplicable behavior of ```127 + 1 = -128``` for
+And we see the previously inexplicable behavior of $127+1=-128$ for
 an 8-bit signed integer emerge as a result of overflowing into the sign 
 bit.
 
@@ -119,10 +126,10 @@ bit.
 
 Just to verify that this is the expected behavior:
 
-* 128 in binary is ```1000 0000```
-* One's complement of that is ```0111 1111```
-* Two's complement (one's complement plus one) then is ```1000 0000```
+* $128_{10}$ in binary is $1000~0000_2$
+* One's complement of that is $0111~1111_2$
+* Two's complement (one's complement plus one) then is $1000~0000_2$
 
-So ```-128``` is the expected result
+So, $-128$ is the expected result of the overflow
 
 ---

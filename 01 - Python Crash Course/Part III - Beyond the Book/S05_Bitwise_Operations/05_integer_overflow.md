@@ -1,5 +1,14 @@
 ## Integer Overflow
 
+<style>
+    td, th {
+        border: 0!important;
+        padding: 0!important;
+        margin: 0!important;
+        padding-left: 25px!important;
+    }
+</style>
+
 There is a general problem when working with a fixed number of bits.
 
 What happens when we exceed the maximum value? That is to say, what 
@@ -41,28 +50,27 @@ int main() {
 ```
 
 If we add ```1``` to our integer ```b```, the value (in real world
-numbers) would be 256
+numbers) would be $256$
 
-```
-    1111 1111         255
- +  0000 0001       +   1
-  -----------        ----
-  1 0000 0000         256
-```
+> |||
+> |-:|-:|
+> |$1111~1111_2$|$255_{10}$|
+> |$\underline{+~0000~0001_2}$|$\underline{+~~~~~1_{10}}$|
+> |$1~0000~0000_2$|$256_{10}$|
 
 But as you can see, that would require a ninth bit, which we don't 
-have available in a fixed-size, 8-bit value.
+have available in a fixed-size, $8$-bit value.
 
 In the computer, the binary math is computed the same way as real-world
 arithmetic, but when the carry value of 1 moves to the 9th bit, it is 
-simply lost, the result of which is that we see 255 + 1 = 0.
+simply lost, the result of which is that we see  
+$$255+1=0$$
 
-```
-    | 1111 1111         255
- +  | 0000 0001       +   1
-  -------------        ----
-  ̷1 | 0000 0000           0
-```
+> |||
+> |-:|-:|
+> |$1111~1111_2$|$255_{10}$|
+> |$\underline{+~0000~0001_2}$|$\underline{+~~~~~1_{10}}$|
+> |${1\mkern-9mu/}~0000~0000_2$|$0_{10}$|
 
 Output:
 
@@ -96,23 +104,22 @@ int main() {
 
 The arithmetic in the real world looks like this:
 
-```
-    0111 1111         127
- +  0000 0001       +   1
-  -----------        ----
-    1000 0000         128
-```
+> |||
+> |-:|-:|
+> |$0111~1111_2$|$127_{10}$|
+> |$\underline{+~0000~0001_2}$|$\underline{+~~~~~1_{10}}$|
+> |$1000~0000_2$|$128_{10}$|
 
 But, what's happened in our integer is that while we haven't 
-overflowed outside the 8-bit size, we ***have*** overflowed our value
+overflowed outside the $8$-bit size, we ***have*** overflowed our value
 into the sign bit.
 
-```
-    0111 1111         127
- +  0000 0001       +   1
-  -----------        ----
-    1000 0000        -128 (why ?)
-```
+> ||||
+> |-:|-:|-|
+> |$0111~1111_2$|$127_{10}$||
+> |$\underline{+~0000~0001_2}$|$\underline{+~~~~~1_{10}}$||
+> |$1000~0000_2$|$-128_{10}$|(why ?)|  
+$$127+1=-128~~???$$
 
 Output:
 

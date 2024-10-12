@@ -1,21 +1,21 @@
 ## Using Bitwise OR (`|`)
 
 The bitwise OR operator (`|`) is used to compare two values and return
-the union of their set (`1`) bits.
+the union of their set ($1$) bits.
 
 This operation is an *inclusive* OR, meaning that the result bit will be 
-set to 1 any time a 1 is found in either value, irrespective of the other 
-value.
+set to $1$ any time a $1$ is found in either value, irrespective of the 
+other value.
 
 This can be seen by observing the truth table we previously laid out for 
 the bitwise OR operation.
 
-| b1 | │ | b2 |
-|:---|:-:|---:|
-| 1  | 1 |  1 |
-| 1  | 1 |  0 |
-| 0  | 1 |  1 |
-| 0  | 0 |  0 |
+|$b_1$|\||$b_2$|
+|:-|:-:|-:|
+|$1$|$1$|$1$|
+|$1$|$1$|$0$|
+|$0$|$1$|$1$|
+|$0$|$0$|$0$|
 
 ---
 

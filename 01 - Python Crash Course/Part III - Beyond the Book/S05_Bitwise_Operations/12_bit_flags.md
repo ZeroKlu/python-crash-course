@@ -1,6 +1,16 @@
 ## Bitwise AND - Real-World Example: Bit-Flags
 
-One example where we commonly use a bitwise AND is when checking a bit-flag.
+<style>
+    td, th {
+        border: 0!important;
+        padding: 0!important;
+        margin: 0!important;
+        padding-left: 25px!important;
+    }
+</style>
+
+One example where we commonly use a bitwise AND is when checking a 
+bit-flag.
 
 ### Scenario
 
@@ -67,8 +77,8 @@ computers, but if you're storing active license information in a database,
 it's using eight columns (at a minimum of one byte apiece) for this 
 information.
 
-Supposing MacroWare sells a billion copies, that's consuming about 8GB of 
-disk space.
+Supposing MacroWare sells a billion copies, that's consuming about $8$GB 
+of disk space.
 
 ---
 
@@ -76,7 +86,7 @@ disk space.
 
 Suppose, instead of using one byte per product, instead, you used one bit. 
 That would reduce the size of the licensing data eightfold, and the 
-database licensing data would be only 1GB.
+database licensing data would be only $1$GB.
 
 The idea sounds great, but how would we do it.
 
@@ -144,40 +154,38 @@ if licenses & wp != wp
 How does that work?
 
 Well, you already know that each value in your enum only has a single bit 
-set to 1.
+set to $1$.
 
 Because of that, you can be certain that regardless of the value you 
-compare to it, that bit is the only one for which a 1 could possibly be 
+compare to it, that bit is the only one for which a $1$ could possibly be 
 returned by a bitwise AND operation.
 
-So, if the compared value does not have that bit set to 1, the AND 
-operation will return 0, and if it does, it will return the value of that 
-bit position.
+So, if the compared value does not have that bit set to $1$, the AND 
+operation will return $0$, and if it does, it will return the value of 
+that bit position.
 
-Let's imagine an example where the stored value for licenses is 11, and 
-we're checking for the bit that represents word processing (1).
+Let's imagine an example where the stored value for licenses is $11$, and 
+we're checking for the bit that represents word processing ($1$).
 
 The bitwise comparison looks like this:
 
-```
-  0000_1011 (licenses)
-& 0000_0001 (word processing enum value)
------------
-  0000_0001
-```
+> |||
+> |-:|:-|
+> |$0000~1011$|(licenses)|
+> |$\underline{\&~0000~0001}$|(word processing enum value)|
+> |$0000~0001$||
 
 Only the rightmost bit (value 1) has ones in both values, so the returned 
-value is 1 (which is the same as the value we compared from the enum), so 
-we know that word processing is licensed.
+value is $1$ (which is the same as the value we compared from the enum), 
+so we know that word processing is licensed.
 
-If the value in licenses is 10 instead, we'd get a result of 0:
+If the value in licenses is $10$ instead, we'd get a result of $0$:
 
-```
-  0000_1010 (licenses)
-& 0000_0001 (word processing enum value)
------------
-  0000_0000
-```
+> |||
+> |-:|:-|
+> |$0000~1010$|(licenses)|
+> |$\underline{\&~0000~0001}$|(word processing enum value)|
+> |$0000~0000$||
 
 So we know that word processing is not licensed.
 
