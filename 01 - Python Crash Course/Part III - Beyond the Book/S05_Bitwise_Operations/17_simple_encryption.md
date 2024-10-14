@@ -1,25 +1,37 @@
 ## Bitwise XOR - Real-World Example: Encryption
 
+<style>
+    td, th {
+        border: 0!important;
+        padding: 0!important;
+        margin: 0!important;
+        padding-left: 25px!important;
+    }
+</style>
+
 One particularly interesting behavior of XOR is that it is reversible.
 
-If you perform ```z = x ^ y```, then ```z ^ y``` is equivalent to ```x```
+If you perform `z = x ^ y`, then `z ^ y` is equivalent to `x`
 
-Imagine that we have some known value ```y = 85 = 01010101```
+Imagine that we have some known value:  
+$y=85_{10}=0101~0101_2$
 
-Then we can take any value, for example ```x = 42 = 00101010```, and do the 
-following:
+Then we can take any value, for example  
+$x=42_{10}=0010~1010_2$
 
-```
-  00101010   (x)
-^ 01010101   (y)
-  --------
-  01111111
+and do the following:
 
-  01111111   (x ^ y)
-^ 01010101   (y)
-  --------
-  00101010   (x)
-```
+> |||
+> |-:|:-|
+> |$0010~1010_2$|($x$)|
+> |$\underline{\^~~~0101~0101_2}$|($y$)|
+> |$0111~1111_2$||
+> 
+> |||
+> |-:|:-|
+> |$0111~1111_2$|($xx~\^~~y$)|
+> |$\underline{\^~~~0101~0101_2}$|($y$)|
+> |$0010~1010_2$|($x$)|
 
 ---
 
@@ -81,16 +93,16 @@ Encrypted Text: V{rrq>Iqlrz?
 
 This yields a cipherText value of `V{rrq>Iqlrz?`
 
-Let's step through the first character 'H' (ASCII 72: ```0100 1000```)
+Let's step through the first character 'H' (ASCII $72_{10}$:
+$0100~1000_2$)
 
-```
-  01001000 (H)
-^ 00011110 (key)
-  --------
-  01010110 = 86 (V)
-```
+> ||||
+> |-:|-:|:-|
+> |$0100~1000_2$|$72_{10}$|(H)|
+> |$\underline{\^~~~0001~1110_2}$|$30_{10}$|(key)|
+> |$0101~0110_2$|$86_{10}$|(V)|
 
-ASCII 86 is the 'V' character, which we see starting the cipherText
+ASCII $86$ is the 'V' character, which we see starting the cipherText
 
 You can repeat this process with the ASCII values of the remaining 
 characters to verify the value above.
@@ -119,14 +131,13 @@ Decrypted Text: Hello World!
 
 Let's look at the first character again...
 
-'V' is 86 (```0101 0110```)
+'V' is $86_{10}$ ($0101~0110_2$)
 
-```
-  01010110 (V)
-^ 00011110 (key)
-  --------
-  01001000 = 72 (H)
-```
+> ||||
+> |-:|-:|:-|
+> |$0101~0110_2$|$86_{10}$|(V)|
+> |$\underline{\^~~~0001~1110_2}$|$30_{10}$|(key)|
+> |$0100~1000_2$|$72_{10}$|(H)|
 
 Reversing the XOR operation restores the original plaintext character 'H'
 
@@ -139,20 +150,20 @@ Repeating that across the entire cipherText string returns the plainText
 
 As noted, this algorithm is not secure, for a number of reasons including:
 
-* It uses a single integer value as its key, which means that it is possible
-  to brute-force a decryption just by trying all of the possible integer
-  values.
+* It uses a single integer value as its key, which means that it is 
+  possible to brute-force a decryption just by trying all of the possible 
+  integer values.
 * In our case, since we're performing XOR across single byte values, there
-  can only be 256 possible keys (or rather, for any larger key it 
-  effectively behaves as ```key = key % 256```, so any other part of the
+  can only be $256$ possible keys (or rather, for any larger key it 
+  effectively behaves as `key = key % 256`, so any other part of the
   key can be ignored when guessing).
 * It requires both parties to share the same private key (as opposed to
   more modern algorithms that use a public key to encrypt but individual
   private keys for decryption).
 
 That said, the concept of using bitwise XOR with a symmetric key value is 
-used widely as a step in some existing encryption algorithms like DES, AES, 
-etc.
+used widely as a step in some existing encryption algorithms like DES, 
+AES,  tc.
 
 ---
 

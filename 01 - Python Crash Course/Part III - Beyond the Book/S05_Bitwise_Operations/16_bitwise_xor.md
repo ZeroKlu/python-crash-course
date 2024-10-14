@@ -1,17 +1,26 @@
-## Using Bitwise XOR (```^```)
+## Using Bitwise XOR (`^`)
 
-The bitwise XOR operator (```^```) compares two values and returns 1 in 
+<style>
+    td, th {
+        border: 0!important;
+        padding: 0!important;
+        margin: 0!important;
+        padding-left: 25px!important;
+    }
+</style>
+
+The bitwise XOR operator (`^`) compares two values and returns 1 in 
 each position where the bits are not equal across the two values. That is, 
 one or the other of the bits (but not both) contains a 1.
 
 This *exclusive* OR operation follows the truth table below:
 
-| b1 | ^ | b2 |
-|:---|:-:|---:|
-| 1  | 0 |  1 |
-| 1  | 1 |  0 |
-| 0  | 1 |  1 |
-| 0  | 0 |  0 |
+|$b_1$|^|$b_2$|
+|:-|:-:|-:|
+|$1$|$0$|$1$|
+|$1$|$1$|$0$|
+|$0$|$1$|$1$|
+|$0$|$0$|$0$|
 
 ---
 
@@ -19,14 +28,14 @@ This *exclusive* OR operation follows the truth table below:
 
 Consider this scenario:
 
-```
-    a = 10011100₂ = 156₁₀
-    b = 00110100₂ =  52₁₀
-a ^ b = 10101000₂ = 168₁₀
-```
+||
+|-:|
+|$a=1001~1100_2=156_{10}$|
+|$b=0011~0100_2=~~52_{10}$|
+|$a~\^~~b=1010~1000_2=168_{10}$|
 
-Any position where either value's bit is 1 (excluding when both are set) 
-will return a 1.
+Any position where either value's bit is $1$ (excluding when both are set) 
+will return a $1$.
 
 As long as we understand that what's being compared are the individual
 bits, we can express the values in any base with the same results
@@ -84,33 +93,37 @@ Let's look at how this works.
 
 At the start:
 
-* a = 5 (0101)
-* b = 8 (1000)
+* $a=5_{10}=0101_2$
+* $b=8_{10}=1000_2$
 
 So, the swap process looks like this:
 
 Step 1: ```a = a ^ b```
-```
-  0101
-^ 1000
-  ---
-  1101
-```
+
+||
+|-:|
+|$0101_2$|
+|$\underline{\^~~~1000_2}$
+|$1101_2$|
 
 Step 2: ```b = a ^ b```
-```
-  1101
-^ 1000
-  ---
-  0101  ... now b contains a's original value
-```
+
+||
+|-:|
+|$1101_2$|
+|$\underline{\^~~~1000_2}$
+|$0101_2$|
+
+... now $b$ contains $a$'s original value
 
 Step 3: ```a = a ^ b```
-```
-  1101
-^ 0101
-  ---
-  1000  ... now a contains b's original value
-```
+
+||
+|-:|
+|$1101_2$|
+|$\underline{\^~~~1000_2}$
+|$0101_2$|
+
+... now $a$ contains $b$'s original value
 
 ---

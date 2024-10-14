@@ -1,5 +1,14 @@
 ## Bitwise OR - Real-World Example: Bit-Flags (Redux)
 
+<style>
+    td, th {
+        border: 0!important;
+        padding: 0!important;
+        margin: 0!important;
+        padding-left: 25px!important;
+    }
+</style>
+
 Sometimes it's useful to have a particular value represented by more than 
 one bit in a bit-flag. Bitwise OR can be used to simplify this.
 
@@ -34,7 +43,6 @@ Specifically:
 
 Intuition might suggest that the easy approach is to switch to using a 
 larger integer type and add values for each package
-
 
 ```python
 from enum import IntFlag
@@ -101,17 +109,18 @@ For example, you know that the Personal license includes Word Processing
 and an Email Client. In your existing bit-flag enumeration, you have 
 values for those.
 
-`word_processing` = 1 = 0000 0001
-`email_client`    = 8 = 0000 1000
+|||
+|-|-:|
+|`word_processing`|$=1_{10}=0000~0001_2$|
+|`email_client`|$=8_{10}=0000~1000_2$|
 
 If you perform a bitwise OR on those values...
 
-```
-  0000 0001  (1)
-| 0000 1000  (8)
------------
-  0000 1001  (9)
-```
+> |||
+> |-:|-:|
+> |$0000~0001_2$|$(1_{10})$|
+> |$\underline{~\|~~0000~1000_2}$|$(8_{10})$|
+> |$0000~1001_2$|$(9_{10})$|
 
 ... you end up with the value 9, where both bits are set.
 
@@ -165,7 +174,8 @@ class ProductLicenses(IntFlag):
     # -- SNIP --
 
     personal = word_processing[0] | email_client[0],
-    work = personal[0] | spreadsheets[0] | presentations[0] | notebook[0] | collaboration[0],
+    work = personal[0] | spreadsheets[0] | presentations[0] \
+         | notebook[0] | collaboration[0],
     ultra_deluxe = work[0] | project_management[0] | publishing[0]
 ```
 
@@ -189,7 +199,8 @@ class ProductLicenses(IntFlag):
     project_management = 0b0100_0000,
     publishing         = 0b1000_0000,
     personal = word_processing[0] | email_client[0],
-    work = personal[0] | spreadsheets[0] | presentations[0] | notebook[0] | collaboration[0],
+    work = personal[0] | spreadsheets[0] | presentations[0] \
+         | notebook[0] | collaboration[0],
     ultra_deluxe = work[0] | project_management[0] | publishing[0]
 ```
 
@@ -222,16 +233,15 @@ package that includes it.
 If we consider the Work package, its value is 0011 1111. Even though it has
 several bits set, if you perform a bitwise AND against Word Processing...
 
-```
-  0011 1111
-& 0000 0001
------------
-  0000 0001
-```
+> ||
+> |-:|
+> |$0011~1111_2$|
+> |$\underline{\&~~0000~0001_2}$|
+> |$0000~0001_2$|
 
-It still results in the same value as when you didn't define packages, so
-you don't need to make changes in your license checks if the packages
-are modified. You only need to change the enum.
+It still results in the same value ($1$) as when you didn't define 
+packages, so you don't need to make changes in your license checks if the 
+packages are modified. You only need to change the enum.
 
 ---
 
@@ -253,7 +263,8 @@ class ProductLicenses(IntFlag):
     project_management = 0b0100_0000,
     publishing         = 0b1000_0000,
     personal = word_processing[0] | email_client[0],
-    work = personal[0] | spreadsheets[0] | presentations[0] | notebook[0] | collaboration[0],
+    work = personal[0] | spreadsheets[0] | presentations[0] | \
+           notebook[0] | collaboration[0],
     ultra_deluxe = work[0] | project_management[0] | publishing[0]
 
 def main() -> None:

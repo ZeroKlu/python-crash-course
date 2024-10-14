@@ -1,7 +1,7 @@
-## Using Bit-Shifts (```<<``` and ```>>```)
+## Using Bit-Shifts (`<<` and`>>`)
 
 A bit-shift operation literally shifts the bit values in a field a
-specified number of positions to the left (```<<```) or right (```>>```).
+specified number of positions to the left (`<<`) or right (`>>`).
 
 ---
 
@@ -10,10 +10,10 @@ specified number of positions to the left (```<<```) or right (```>>```).
 Right-shifting a value is equivalent to dividing the value by two to the 
 power of the number of positions shifted:
 
-```n >> p = n / 2ᵖ```
+`n >> p = n / 2 ** p`
 
-So, if we have a value ```n = 128```, and bit-shift it to the right 3 
-places, we get the value ```128 / 2³ = 16```
+So, if we have a value $n=128$, and bit-shift it to the right $3$ 
+places, we get the value $128/2^3=16$
 
 ```python
 x = 128

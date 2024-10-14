@@ -1,14 +1,23 @@
-## Using Bitwise NOT (```~```)
+## Using Bitwise NOT (`~`)
 
-The bitwise NOT operator (```~```) is used with a single value and returns the
+<style>
+    td, th {
+        border: 0!important;
+        padding: 0!important;
+        margin: 0!important;
+        padding-left: 25px!important;
+    }
+</style>
+
+The bitwise NOT operator (`~`) is used with a single value and returns the
 one's complement of the original value (reverses the values of each bit).
 
 You can see the per-bit behavior in the truth table we created previously.
 
-| ~ | b |
-|:--|--:|
-| 0 | 1 |
-| 1 | 0 |
+|~|$b$|
+|:-:|:-:|
+|$0$|$1$|
+|$1$|$0$|
 
 ---
 
@@ -16,11 +25,10 @@ You can see the per-bit behavior in the truth table we created previously.
 
 Consider this scenario:
 
-```
-  a = 10011100₂ = 156₁₀
-  -------------
- ~a = 01100011₂ =  99₁₀
-```
+||
+|-:|
+|$a=1001~1100_2=156_{10}$|
+|$~a=0110~0011_2=~~99_{10}$|
 
 ```python
 b = 0b10011100
@@ -51,11 +59,10 @@ results if you're treating a bitwise value as unsigned.
 
 For example, when Python processes the following, it yields the wrong answer.
 
-```
-~ 10011100
-  --------
- -10011101  (*wrong answer)
-```
+|||
+|-:|-:|
+|$a=1001~1100_2=156_{10}$||
+|$~a=1001~1101_2=157_{10}$|(*wrong answer)|
 
 ```python
 b = 0b10011100
@@ -84,10 +91,10 @@ b = 0b10011100
 n = bitwise_not(b)  # 01100011 (*right answer)
 ```
 
-This works because the value of ```(1 << num_bits) - 1``` (with an 8-bit 
-value) will be ```1111 1111```
+This works because the value of `(1 << num_bits) - 1` (with an 8-bit 
+value) will be `1111 1111`
 
-The ```&``` operation in ```~n & ((1 << num_bits) - 1)``` will lose the 
+The `&` operation in `~n & ((1 << num_bits) - 1)` will lose the 
 sign bit and yield the correct answer.
 
 ---

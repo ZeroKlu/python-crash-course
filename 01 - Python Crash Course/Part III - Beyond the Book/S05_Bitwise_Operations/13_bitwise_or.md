@@ -1,5 +1,14 @@
 ## Using Bitwise OR (`|`)
 
+<style>
+    td, th {
+        border: 0!important;
+        padding: 0!important;
+        margin: 0!important;
+        padding-left: 25px!important;
+    }
+</style>
+
 The bitwise OR operator (`|`) is used to compare two values and return
 the union of their set ($1$) bits.
 
@@ -21,14 +30,14 @@ the bitwise OR operation.
 
 Consider this scenario:
 
-```
-    a = 10011100₂ = 156₁₀
-    b = 00110100₂ =  52₁₀
-a | b = 10111100₂ = 188₁₀
-```
+> ||
+> |-:|
+> |$a=1001~1100_2=156_{10}$|
+> |$b=0011~0100_2=~~52_{10}$|
+> |$a~\|~b=1011~1100_2=188_{10}$|
 
-Any position where either value's bit is 1 (including when both are set) 
-will return a 1.
+Any position where either value's bit is $1$ (including when both are set) 
+will return a $1$.
 
 As long as we understand that what's being compared are the individual
 bits, we can express the values in any base with the same results
@@ -70,11 +79,11 @@ write = 2
 read_write = 3
 ```
 
-Your first thought upon seeing this example is that `3` (`0011`) is not a 
-power of two, so it cannot be represented by setting a single bit.
+Your first thought upon seeing this example is that $3$ ($0011$) is not 
+a power of two, so it cannot be represented by setting a single bit.
 
-Worse, it uses both of the bits already in use by read (`0001`) and write 
-(`0010`).
+Worse, it uses both of the bits already in use by read ($0001$) and write 
+($0010$).
 
 We can use the bitwise OR operator (in this case, the combined assignment
 operator) to apply the permissions we need.
@@ -82,7 +91,7 @@ operator) to apply the permissions we need.
 ```python
 # -- SNIP --
 
-file_path = r"C:\Temp\test.txt"
+file_path = "C:\\Temp\\test.txt"
 need_to_write = True
 
 # Start with just read permission 0000_0001 (1 = read)
