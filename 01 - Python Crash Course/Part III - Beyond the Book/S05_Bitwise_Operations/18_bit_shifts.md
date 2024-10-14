@@ -19,7 +19,7 @@ specified number of positions to the left (`<<`) or right (`>>`).
 Right-shifting a value is equivalent to dividing the value by two to the 
 power of the number of positions shifted:
 
-$$n\gg p=n/2^p$$
+$$n~\texttt{>>}~p=n\div2^p$$
 
 So, if we have a value $n=128$, and bit-shift it to the right $3$ 
 places, we get the value $128/2^3=16$
@@ -42,7 +42,7 @@ Looking at that in binary, we have:
 > |-|-:|-:|-|
 > ||$1000~0000_2$|($128_{10}$)||
 > ||$\uparrow~~~\downarrow~~~~~~~~~~~$||(the $1$ moves three places to the right)|
-> |$\gg~3$|$0001~0000_2$|($16_{10}$)
+> |$\texttt{>>}~3$|$0001~0000_2$|($16_{10}$)
 
 ---
 
@@ -51,7 +51,7 @@ Looking at that in binary, we have:
 Left-shifting a value is equivalent to multiplying the value by two to the 
 power of the number of positions shifted:
 
-$$n~\ll~p=n\times2^p$$
+$$n~\texttt{<<}~p=n\times2^p$$
 
 With our existing value $n=16_{10}$, if we shift to the left three places, 
 we get the value $16\times2^3=128$
@@ -72,14 +72,14 @@ Output:
 > |-|-:|-:|-|
 > ||$0001~0000_2$|($16_{10}$)||
 > ||$\downarrow~~~\uparrow~~~~~~~~~~~$|(the $1$ moves three places to the left)|
-> |$\ll~3$|$1000~0000_2$|($128_{10}$)
+> |$\texttt{<<}~3$|$1000~0000_2$|($128_{10}$)
 
 ---
 
 ### Overflow and Underflow Can Result in Data Loss
 
-Assuming we're limited to $-bits, what happens when we shift so that we
-overflow a bit into the ninth place?
+Assuming we're limited to $8$ bits, what happens when we shift so that we
+overflow a bit into the ninth (or tenth) bit position?
 
 #### No Overflow In Python
 
@@ -105,7 +105,7 @@ Binary View:
 > |-|-:|-:|-|
 > ||$0100~0000_2$|($64_{10}$)||
 > ||$~\downarrow~~~~~\uparrow~~~~~~~~~~~~~~$|(the $1$ moves three places to the left)|
-> |$\ll~3$|$10~0000~0000_2$|($512_{10}$)
+> |$\texttt{<<}~3$|$10~0000~0000_2$|($512_{10}$)
 
 The Python integer grows to support the extra bits required.
 
@@ -145,11 +145,11 @@ Binary View:
 > |-|-:|-:|-|
 > ||$0100~0000_2$|($64_{10}$)||
 > ||$~\downarrow~~~~~\uparrow~~~~~~~~~~~~~~$|(the $1$ moves three places to the left)|
-> |$\ll~3$|$10~0000~0000_2$|($512_{10}$)
+> |$\texttt{<<}~3$|$10~0000~0000_2$|($512_{10}$)
 
-This would yield $512$ if we had a ninth bit into which to shift. But, since
-we only have $8$ bits to consider, the bit containing the 1 is lost, and the
-returned value is $0$.
+This would yield $512$ if we had a tenth bit into which to shift. But, 
+since we only have $8$ bits to consider, the bit containing the $1$ is 
+lost, and the returned value is $0$.
 
 ---
 
@@ -178,7 +178,7 @@ Binary View:
 > |-|:-|-:|-|
 > ||$0000~0100_2$|($4_{10}$)||
 > ||$~~~~~~~~~~~\uparrow~~~~~\downarrow~$||(the $1$ moves three places to the right)|
-> |$\ll~3$|$0000~0000~1_2$|(undefined)|(There is no $0$s place)|
+> |$\texttt{>>}~3$|$0000~0000~1_2$|(undefined)|(There is no $0$s place)|
 
 ---
 
@@ -213,11 +213,11 @@ Binary View:
 > |-|:-|-:|-|
 > ||$0000~0100_2$|($4_{10}$)||
 > ||$~~~~~~~~~~~\uparrow~~~~~\downarrow~$||(the $1$ moves three places to the right)|
-> |$\ll~3$|$0000~0000~1_2$|(undefined)|(There is no $0$s place)|
+> |$\texttt{>>}~3$|$0000~0000~1_2$|(undefined)|(There is no $0$s place)|
 
 ---
 
-### A Simple Example: Iterating Over a BitFlag
+### A Simple Example: Iterating Over a Bit-Flag
 
 In some scenarios, it's useful to check all the bits in a bit-flag value.
 
