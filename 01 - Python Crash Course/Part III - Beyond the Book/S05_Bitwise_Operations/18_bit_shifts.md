@@ -1,5 +1,14 @@
 ## Using Bit-Shifts (`<<` and`>>`)
 
+<style>
+    td, th {
+        border: 0!important;
+        padding: 0!important;
+        margin: 0!important;
+        padding-left: 25px!important;
+    }
+</style>
+
 A bit-shift operation literally shifts the bit values in a field a
 specified number of positions to the left (`<<`) or right (`>>`).
 
@@ -10,7 +19,7 @@ specified number of positions to the left (`<<`) or right (`>>`).
 Right-shifting a value is equivalent to dividing the value by two to the 
 power of the number of positions shifted:
 
-`n >> p = n / 2 ** p`
+$$n\gg p=n/2^p$$
 
 So, if we have a value $n=128$, and bit-shift it to the right $3$ 
 places, we get the value $128/2^3=16$
@@ -29,11 +38,11 @@ Output:
 
 Looking at that in binary, we have:
 
-```
-        1000 0000 (128)
-        ^--⌄  (the 1 moves three places to the right)
->> 3    0001 0000  (16)
-```
+> |||||
+> |-|-:|-:|-|
+> ||$1000~0000_2$|($128_{10}$)||
+> ||$\uparrow~~~\downarrow~~~~~~~~~~~$||(the $1$ moves three places to the right)|
+> |$\gg~3$|$0001~0000_2$|($16_{10}$)
 
 ---
 
@@ -42,10 +51,10 @@ Looking at that in binary, we have:
 Left-shifting a value is equivalent to multiplying the value by two to the 
 power of the number of positions shifted:
 
-```n << p = n * 2ᵖ```
+$$n~\ll~p=n\times2^p$$
 
-With our existing value ```n = 16```, if we shift to the left three places, 
-we get the value ```16 * 2³ = 128```
+With our existing value $n=16_{10}$, if we shift to the left three places, 
+we get the value $16\times2^3=128$
 
 ```python
 x = 16
@@ -53,17 +62,23 @@ b = x << 3
 print(f"{x} << 3 = {b}")
 ```
 
+Output:
+
 ```
-        0001 0000  (16)
-        ⌄--^  (the 1 moves three places to the left)
-<< 3    1000 0000 (128)
+16 << 3 = 128
 ```
+
+> |||||
+> |-|-:|-:|-|
+> ||$0001~0000_2$|($16_{10}$)||
+> ||$\downarrow~~~\uparrow~~~~~~~~~~~$|(the $1$ moves three places to the left)|
+> |$\ll~3$|$1000~0000_2$|($128_{10}$)
 
 ---
 
 ### Overflow and Underflow Can Result in Data Loss
 
-Assuming we're limited to 8-bits, what happens when we shift so that we
+Assuming we're limited to $-bits, what happens when we shift so that we
 overflow a bit into the ninth place?
 
 #### No Overflow In Python
@@ -86,11 +101,11 @@ Output:
 
 Binary View:
 
-```
-         0100 0000  (64)
-      ⌄---^  (the 1 moves three places to the left)
-<< 3  10 0000 0000 (512)
-```
+> |||||
+> |-|-:|-:|-|
+> ||$0100~0000_2$|($64_{10}$)||
+> ||$~\downarrow~~~~~\uparrow~~~~~~~~~~~~~~$|(the $1$ moves three places to the left)|
+> |$\ll~3$|$10~0000~0000_2$|($512_{10}$)
 
 The Python integer grows to support the extra bits required.
 
@@ -99,7 +114,7 @@ The Python integer grows to support the extra bits required.
 #### Overflow in Languages with Static-Size Integer Types
 
 Let's take a look at integer overflow in C. We'll use an `unsigned char` type,
-which is the equivalent of an 8-bit byte in C.
+which is the equivalent of an $8$-bit byte in C.
 
 See [bit_shift_overflow.c](./18_bit_shift_overflow.c)
 
@@ -126,15 +141,15 @@ Output:
 
 Binary View:
 
-```
-         0100 0000  (64)
-      ⌄---^  (the 1 moves three places to the left)
-<< 3  10 0000 0000 (512)
-```
+> |||||
+> |-|-:|-:|-|
+> ||$0100~0000_2$|($64_{10}$)||
+> ||$~\downarrow~~~~~\uparrow~~~~~~~~~~~~~~$|(the $1$ moves three places to the left)|
+> |$\ll~3$|$10~0000~0000_2$|($512_{10}$)
 
-This would yield 256 if we had a ninth bit into which to shift. But, since
-we only have 8 bits to consider, the bit containing the 1 is lost, and the
-returned value is 0.
+This would yield $512$ if we had a ninth bit into which to shift. But, since
+we only have $8$ bits to consider, the bit containing the 1 is lost, and the
+returned value is $0$.
 
 ---
 
@@ -159,11 +174,11 @@ Output:
 
 Binary View:
 
-```
-        0000 0100    (4)
-              ^---⌄  (the 1 moves three places to the left)
->> 3    0000 0000 1  (Undefined value - There is no zeros place)
-```
+> |||||
+> |-|:-|-:|-|
+> ||$0000~0100_2$|($4_{10}$)||
+> ||$~~~~~~~~~~~\uparrow~~~~~\downarrow~$||(the $1$ moves three places to the right)|
+> |$\ll~3$|$0000~0000~1_2$|(undefined)|(There is no $0$s place)|
 
 ---
 
@@ -194,11 +209,11 @@ Output:
 
 Binary View:
 
-```
-        0000 0100    (4)
-              ^---⌄  (the 1 moves three places to the left)
->> 3    0000 0000 1  (Undefined value - There is no zeros place)
-```
+> |||||
+> |-|:-|-:|-|
+> ||$0000~0100_2$|($4_{10}$)||
+> ||$~~~~~~~~~~~\uparrow~~~~~\downarrow~$||(the $1$ moves three places to the right)|
+> |$\ll~3$|$0000~0000~1_2$|(undefined)|(There is no $0$s place)|
 
 ---
 
