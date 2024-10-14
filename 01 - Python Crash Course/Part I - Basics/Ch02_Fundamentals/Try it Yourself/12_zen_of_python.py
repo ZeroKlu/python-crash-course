@@ -1,5 +1,7 @@
-# Assignment 2-12
-# Zen of Python: Enter "import this" into a Python terminal session and skim through the additional principles.
+"""Assignment 2.12"""
+
+# Zen of Python: Enter "import this" into a Python terminal session
+#   and skim through the additional principles.
 
 # Note: In the 2nd edition, this is assignment 2.11
 
@@ -17,13 +19,13 @@ import this
 # Result:
 
 # >>> import this
-# The Zen of Python, by Tim Peters   
+# The Zen of Python, by Tim Peters
 #
-# Beautiful is better than ugly.     
-# Explicit is better than implicit.  
-# Simple is better than complex.     
+# Beautiful is better than ugly.
+# Explicit is better than implicit.
+# Simple is better than complex.
 # Complex is better than complicated.
-# Flat is better than nested.        
+# Flat is better than nested.
 # Sparse is better than dense.
 # Readability counts.
 # Special cases aren't special enough to break the rules.

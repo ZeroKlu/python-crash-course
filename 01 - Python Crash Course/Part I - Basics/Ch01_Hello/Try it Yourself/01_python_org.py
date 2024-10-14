@@ -1,4 +1,5 @@
-# Assignment 1.1
+"""Assignment 1.1"""
+
 # Simple Message: Explore the Python home page [python.org](https://python.org)
 #                 to find topics that interest you. As you become familiar
 #                 with Python, different parts of the  site will be more

@@ -1,3 +1,5 @@
+"""Chapter 2: Lesson 4"""
+
 print("Chapter 2:")
 print("Exercise 4 - Manipulating String Case")
 

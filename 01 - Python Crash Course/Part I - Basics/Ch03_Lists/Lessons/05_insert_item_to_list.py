@@ -1,3 +1,5 @@
+"""Chapter 3: Lesson 5"""
+
 print("Chapter 3:")
 print("Exercise 5 - Inserting an Item in a List")
 

@@ -1,3 +1,4 @@
+"""Chapter 2: Lesson 10"""
 
 print("Chapter 2:")
 print("Exercise 10 - Understanding floating-point rounding error\n")

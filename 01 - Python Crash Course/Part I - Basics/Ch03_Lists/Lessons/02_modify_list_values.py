@@ -1,3 +1,5 @@
+"""Chapter 3: Lesson 2"""
+
 print("Chapter 3:")
 print("Exercise 2 - Modifying List Values")
 

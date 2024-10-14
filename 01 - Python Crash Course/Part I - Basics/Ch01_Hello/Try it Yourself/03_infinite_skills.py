@@ -1,4 +1,5 @@
-# Assignment 1.1
+"""Assignment 1.3"""
+
 # Infinite Skills: If you had infinite programming skills, what would you
 #                  build? You're about to learn how to program. If you have
 #                  an end goal in mind, you'll have an immediate use for your

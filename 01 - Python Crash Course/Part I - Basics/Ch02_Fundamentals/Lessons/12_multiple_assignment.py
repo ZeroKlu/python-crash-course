@@ -1,5 +1,7 @@
+"""Chapter 2: Lesson 12"""
+
 print("Chapter 2:")
-print("Exercise 11 - Multiple Assignment")
+print("Exercise 12 - Multiple Assignment")
 
 # You can assign multiple variables simultaneously
 x, y, z, = 1, 2, 3

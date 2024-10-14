@@ -1,3 +1,5 @@
+"""Chapter 3: Lesson 0"""
+
 # Python Collection Examples
 
 my_list = [1, 2, 3]

@@ -1,3 +1,5 @@
+"""Chapter 2: Lesson 8"""
+
 print("Chapter 2:")
 print("Exercise 8 - Numerical Operators")
 

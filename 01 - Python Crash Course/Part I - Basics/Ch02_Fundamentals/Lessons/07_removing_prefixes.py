@@ -1,3 +1,5 @@
+"""Chapter 2: Lesson 7"""
+
 print("Chapter 2:")
 print("Exercise 7 - Removing Prefixes")
 
@@ -10,7 +12,8 @@ print(no_starch_url.removeprefix("https://"))
 print(no_starch_url)
 
 # The removesuffix() function allows you to remove specified characters at the end of a string
-print(f"\nThe protocol used by the No Starch URL is {no_starch_url.removesuffix('://nostarch.com')}")
+print("\nThe protocol used by the No Starch URL is " + \
+      f"{no_starch_url.removesuffix('://nostarch.com')}")
 
 # Note: This function does not modify the original string either
 print(no_starch_url)

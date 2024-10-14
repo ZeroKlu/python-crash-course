@@ -1,4 +1,5 @@
-# Assignment 1.1
+"""Assignment 1.2"""
+
 # Simple Message: Open the `hello_world.py` file you just created. Make a
 # typo somewhere in the line and run the program again. Can you make a typo
 # that generates an error? Can you make sense of the error message? Can you

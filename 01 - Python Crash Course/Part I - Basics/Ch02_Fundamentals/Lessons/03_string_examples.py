@@ -1,3 +1,5 @@
+"""Chapter 2: Lesson 3"""
+
 print("Chapter 2:")
 print("Exercise 3 - Strings")
 

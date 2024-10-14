@@ -1,3 +1,5 @@
+"""Chapter 3: Lesson 7"""
+
 print("Chapter 3:")
 print("Exercise 7 - Popping an Item from a List")
 
