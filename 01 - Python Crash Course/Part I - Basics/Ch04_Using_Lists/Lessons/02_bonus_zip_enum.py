@@ -1,3 +1,5 @@
+"""Chapter 4: Lesson 2"""
+
 def noob_loop_list(lst: list[int]) -> None:
     """Print items and indices in a list looping on index"""
     print("Looping list on index:")
@@ -46,6 +48,7 @@ def loop_dict(dic: dict[int, str]) -> None:
     print()
 
 def main() -> None:
+    """Main function to demonstrate loops"""
     nums = [1, 42, 73]
     letters = ["S", "W", "M"]
     noob_loop_list(nums)

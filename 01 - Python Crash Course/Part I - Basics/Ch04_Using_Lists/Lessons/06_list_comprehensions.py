@@ -1,5 +1,7 @@
+"""Chapter 4: Lesson 6"""
+
 print("Chapter 4:")
-print("Exercise 5 - List Comprehensions")
+print("Exercise 6 - List Comprehensions")
 
 squares = []
 for value in range(1, 11):

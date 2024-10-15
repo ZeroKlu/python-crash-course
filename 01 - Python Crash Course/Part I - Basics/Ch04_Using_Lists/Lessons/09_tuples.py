@@ -1,5 +1,7 @@
+"""Chapter 4: Lesson 9"""
+
 print("Chapter 4:")
-print("Exercise 8 - Tuples")
+print("Exercise 9 - Tuples")
 
 dimensions = (200, 50)
 print(f"\nDimensions: {dimensions[0]} x {dimensions[1]}")

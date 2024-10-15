@@ -1,5 +1,7 @@
+"""Chapter 4: Lesson 7"""
+
 print("Chapter 4:")
-print("Exercise 6 - Slicing Lists")
+print("Exercise 7 - Slicing Lists")
 
 players = ["charles", "martina", "michael", "florence", "eli"]
 

@@ -1,5 +1,7 @@
+"""Chapter 4: Lesson 3"""
+
 print("Chapter 4:")
-print("Exercise 2 - Be Careful with Loops")
+print("Exercise 3 - Be Careful with Loops")
 
 numbers = [1, 2, 3, 4, 5]
 

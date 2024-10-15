@@ -1,7 +1,9 @@
-print("Chapter 4:")
-print("Exercise 4 - List Statistics")
+"""Chapter 4: Lesson 5"""
 
 import statistics
+
+print("Chapter 4:")
+print("Exercise 5 - List Statistics")
 
 digits = list(range(0, 10))
 print(digits)

@@ -1,5 +1,7 @@
+"""Chapter 4: Lesson 8"""
+
 print("Chapter 4:")
-print("Exercise 7 - Copying Lists")
+print("Exercise 8 - Copying Lists")
 
 my_foods = ["pizza", "falafel", "carrot cake"]
 print(f"My favorite foods are:          {my_foods}")
