@@ -1,5 +1,7 @@
+"""Assignment 7.9"""
+
 print("Chapter 7:")
-print("Exercise 11 - Stacks and Queues")
+print("Bonus Exercise 9 - Stacks and Queues")
 
 my_stack = [1, 2, 3, 4, 5]
 print(f"Stack: {my_stack}")

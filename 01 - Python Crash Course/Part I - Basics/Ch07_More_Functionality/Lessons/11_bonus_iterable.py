@@ -1,3 +1,5 @@
+"""Assignment 7.11"""
+
 from typing import Iterable
 
 def is_iterable(obj: any) -> Iterable|None:
@@ -19,10 +21,12 @@ def show_iteration(coll: Iterable, level: int=0) -> None:
             if is_iterable(item) and len(item) > 1:
                 show_iteration(item, level + 1)
         except StopIteration:
-            if not level: print()
+            if not level:
+                print()
             break
 
 def main() -> None:
+    """Main program"""
     try:
         iter(None)
     except TypeError as e:

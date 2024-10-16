@@ -1,3 +1,5 @@
+"""Assignment 7.5"""
+
 print("Chapter 7:")
 print("Exercise 5 - Using a Boolean Flag")
 

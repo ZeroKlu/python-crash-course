@@ -1,5 +1,7 @@
-# Assignment 7.3
-# Multiples of Ten: Ask the user for a number, and then report whether the number is a multiple of 10 or not.
+"""Assignment 7.3"""
+
+# Multiples of Ten: Ask the user for a number, and then report whether
+#                   the number is a multiple of 10 or not.
 
 print("Try-it-Yourself:")
 print("Assignment 7.3")

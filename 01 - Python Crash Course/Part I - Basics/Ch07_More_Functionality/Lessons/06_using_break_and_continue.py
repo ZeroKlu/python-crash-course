@@ -1,3 +1,5 @@
+"""Assignment 7.6"""
+
 print("Chapter 7:")
 print("Exercise 6 - Using 'break' and 'continue'")
 
@@ -8,8 +10,7 @@ while True:
     city = input(prompt)
     if city.lower() == "quit":
         break
-    else:
-        print(f"I'd love to go to {city.title()}!")
+    print(f"I'd love to go to {city.title()}!")
 
 current_number = 0
 while current_number < 10:

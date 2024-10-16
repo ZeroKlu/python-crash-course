@@ -1,3 +1,5 @@
+"""Assignment 7.2"""
+
 print("Chapter 7:")
 print("Exercise 2 - Getting Numeric Input")
 
