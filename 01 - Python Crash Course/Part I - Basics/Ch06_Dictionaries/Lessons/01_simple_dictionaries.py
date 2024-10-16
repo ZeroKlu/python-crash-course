@@ -1,3 +1,5 @@
+"""Assignment 6.1"""
+
 print("Chapter 6:")
 print("Exercise 1 - Simple Dictionaries")
 

@@ -1,3 +1,5 @@
+"""Assignment 6.2"""
+
 print("Chapter 6:")
 print("Exercise 2 - Adding Values to a Dictionary")
 

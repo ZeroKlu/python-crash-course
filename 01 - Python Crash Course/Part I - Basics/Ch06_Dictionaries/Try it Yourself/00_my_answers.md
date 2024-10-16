@@ -6,7 +6,10 @@ Here are my solutions for the chapter 6 try-it-yourself exercises.
 
 ### Assignment 6.1 - Person
 
-Use a dictionary to store information about a person you know. Store their first name, last name, age, and the city in which they live. You should have keys such as `first_name`, `last_name`, `age`, and `city`. Print each piece of information stored in your dictionary.
+Use a dictionary to store information about a person you know. Store their
+first name, last name, age, and the city in which they live. You should
+have keys such as `first_name`, `last_name`, `age`, and `city`. Print each
+piece of information stored in your dictionary.
 
 Solution:
 
@@ -14,7 +17,8 @@ Solution:
 <summary>Spoiler Code</summary>
 
 ```python
-person = { "first_name": "Scott", "last_name": "McLean", "age": 54, "city": "Lewisville" }
+person = { "first_name": "Scott", "last_name": "McLean",
+           "age": 54, "city": "Lewisville" }
 print(f"First Name: {person['first_name']}")
 print(f"Last Name:  {person['last_name']}")
 print(f"Age:        {person['age']}")
@@ -106,11 +110,11 @@ Solution:
 
 ```python
 coding_terms = {
-    "Program": "An organized collection of instructions, which when executed perform a specific task or function",
-    "Boolean": "An expression used for creating statements that are either TRUE or FALSE",
-    "Bug": "A term used to denote an unexpected error or defect in hardware or software",
-    "Object": "A combination of related variables, which can be selected and manipulated together.",
-    "Code": "A written set of instructions, written using the protocols of a particular language",
+    "Program": "A collection of instructions, which perform a specific task",
+    "Boolean": "An expression used for statements that are TRUE or FALSE",
+    "Bug": "A term used to denote an error or defect in hardware or software",
+    "Object": "Combination of related variables, which can be used together.",
+    "Code": "A set of instructions using the protocols of a given language",
 }
 
 print(f"\nProgram:\n{coding_terms['Program']}")
@@ -128,19 +132,19 @@ print(f"\nCode:\n{coding_terms['Code']}")
 
 ```
 Program:
-An organized collection of instructions, which when executed perform a specific task or function
+A collection of instructions, which perform a specific task
 
 Boolean:
-An expression used for creating statements that are either TRUE or FALSE
+An expression used for statements that are TRUE or FALSE
 
 Bug:
-A term used to denote an unexpected error or defect in hardware or software
+A term used to denote an error or defect in hardware or software
 
 Object:
-A combination of related variables, which can be selected and manipulated together.
+Combination of related variables, which can be used together.
 
 Code:
-A written set of instructions, written using the protocols of a particular language
+A set of instructions using the protocols of a given language
 ```
 
 </details>
@@ -163,11 +167,11 @@ Solution:
 
 ```python
 coding_terms = {
-    "Program": "An organized collection of instructions, which when executed perform a specific task or function",
-    "Boolean": "An expression used for creating statements that are either TRUE or FALSE",
-    "Bug": "A term used to denote an unexpected error or defect in hardware or software",
-    "Object": "A combination of related variables, which can be selected and manipulated together.",
-    "Code": "A written set of instructions, written using the protocols of a particular language",
+    "Program": "A collection of instructions, which perform a specific task",
+    "Boolean": "An expression used for statements that are TRUE or FALSE",
+    "Bug": "A term used to denote an error or defect in hardware or software",
+    "Object": "Combination of related variables, which can be used together.",
+    "Code": "A set of instructions using the protocols of a given language",
 }
 
 for term, definition in coding_terms.items():
@@ -180,7 +184,7 @@ more_coding_terms = {
     "PEP 8": "The Python Enhancement Proposal is a style guide of Python code",
     "Literal": "A data item that has a fixed value",
     "Loop": "A loop is used for iterating over a sequence",
-    "Module": "A module is a file consisting of Python code that can be imported and reused in a program",
+    "Module": "A Python code file that can be imported and reused",
 }
 
 coding_terms.update(more_coding_terms)
@@ -196,35 +200,19 @@ for term, definition in coding_terms.items():
 
 ```
 Program:
-An organized collection of instructions, which when executed perform a specific task or function
+A collection of instructions, which perform a specific task
 
 Boolean:
-An expression used for creating statements that are either TRUE or FALSE
+An expression used for statements that are TRUE or FALSE
 
 Bug:
-A term used to denote an unexpected error or defect in hardware or software
+A term used to denote an error or defect in hardware or software
 
 Object:
-A combination of related variables, which can be selected and manipulated together.
+Combination of related variables, which can be used together.
 
 Code:
-A written set of instructions, written using the protocols of a particular language
--------------------------------------------------------------------
-
-Program:
-An organized collection of instructions, which when executed perform a specific task or function
-
-Boolean:
-An expression used for creating statements that are either TRUE or FALSE
-
-Bug:
-A term used to denote an unexpected error or defect in hardware or software
-
-Object:
-A combination of related variables, which can be selected and manipulated together.
-
-Code:
-A written set of instructions, written using the protocols of a particular language
+A set of instructions using the protocols of a given language
 
 List:
 An ordered, mutable set of objects
@@ -239,7 +227,7 @@ Loop:
 A loop is used for iterating over a sequence
 
 Module:
-A module is a file consisting of Python code that can be imported and reused in a program
+A Python code file that can be imported and reused
 ```
 
 </details>
@@ -454,3 +442,216 @@ Melissa owns a cat
 
 ---
 
+### Assignment 6.9 - Favorite Places
+
+Make a dictionary called `favorite_places`. Think of three names to use as 
+keys in the dictionary, and store one to three favorite places for each 
+person. To make this exercise a bit more interesting, ask some friends to 
+name a few of their favorite places. Loop through the dictionary, and 
+print each person's name and their favorite places.
+
+<details>
+<summary>Spoiler Code</summary>
+
+```python
+favorite_places = {
+    "scott": ["ireland", "spain", "mexico"],
+    "matt": ["puerto rico"],
+    "pat": ["minnesota", "scotland"],
+}
+
+for name, places in favorite_places.items():
+    print(f"\n{name.title()}'s favorite places include:")
+    for place in places:
+        print(f"\t{place.title()}")
+```
+
+</details>
+<br>
+
+<details>
+<summary>Output</summary>
+
+```
+Scott's favorite places include:
+        Ireland
+        Spain
+        Mexico
+
+Matt's favorite places include:
+        Puerto Rico
+
+Pat's favorite places include:
+        Minnesota
+        Scotland
+```
+
+</details>
+
+---
+
+### Assignment 6.10 - Favorite Numbers
+
+Modify your program from Exercise 6.2 so each person can have more than 
+one favorite number. Then print each person's name along with their 
+favorite numbers.
+
+<details>
+<summary>Spoiler Code</summary>
+
+```python
+favorite_numbers = {
+    "Scott": [42, 73],
+    "Sean": [13, 42],
+    "Andy": [37],
+    "Rene": [1, 2, 343],
+    "Matt": [12, 6, 4, 3],
+    "John": ["i", "√-1"],
+}
+
+for name, numbers in favorite_numbers.items():
+    print(f"\n{name.title()}'s favorite numbers include:")
+    for number in numbers:
+        print(f"\t{number}")
+```
+
+</details>
+<br>
+
+<details>
+<summary>Output</summary>
+
+```
+Scott's favorite numbers include:
+        42
+        73
+
+Sean's favorite numbers include:
+        13
+        42
+
+Andy's favorite numbers include:
+        37
+
+Rene's favorite numbers include:
+        1
+        2
+        343
+
+Matt's favorite numbers include:
+        12
+        6
+        4
+        3
+
+John's favorite numbers include:
+        i
+        √-1
+```
+
+</details>
+
+---
+
+### Assignment 6.11 - Cities
+
+Make a dictionary called cities. Use the names of three cities as keys in
+your dictionary. Create a dictionary of information about each city and
+include the country that the city is in, its approximate population, and
+one fact about that city. The keys for each city's dictionary should be 
+something like `country`, `population`, and `fact`. Print the name of each
+city and all of the information you have stored about it.
+
+<details>
+<summary>Spoiler Code</summary>
+
+```python
+cities = {
+    "cleveland": {
+        "country": "united states",
+        "population": 383_331,
+        "fact": "Home of the Rock & Roll Hall of Fame"
+    },
+    "london": {
+        "country": "england",
+        "population": 8_982_000,
+        "fact": "Hosted the 2012 Summer Olympics"
+    },
+    "ensenada": {
+        "country": "mexico",
+        "population": 443_807,
+        "fact": "Known as the 'Capital del vino Mexicano' (Capital of Mexican wine)"
+    },
+}
+
+for city, facts in cities.items():
+    print(f"\n{city.title()}")
+    for heading, fact in facts.items():
+        if heading == "country":
+            fact = fact.title()
+        print(f"\t{heading.upper()}:\n\t\t{fact}")
+```
+
+</details>
+<br>
+
+<details>
+<summary>Output</summary>
+
+```
+Cleveland
+        COUNTRY:
+                United States
+        POPULATION:
+                383331
+        FACT:
+                Home of the Rock & Roll Hall of Fame
+
+London
+        COUNTRY:
+                England
+        POPULATION:
+                8982000
+        FACT:
+                Hosted the 2012 Summer Olympics
+
+Ensenada
+        COUNTRY:
+                Mexico
+        POPULATION:
+                443807
+        FACT:
+                Known as the 'Capital del vino Mexicano' (Capital of Mexican wine)
+```
+
+</details>
+
+---
+
+### Assignment 6.12 - Extensions
+
+We're now working with examples that are complex enough that they can be 
+extended in any number of ways. Use one of the example programs from this 
+chapter, and extend it by adding new keys and values, changing the context 
+of the program or improving the formatting of the output.
+
+<details>
+<summary>Spoiler Code</summary>
+
+```python
+print("As homework, try doing this assignment yourself.")
+```
+
+</details>
+<br>
+
+<details>
+<summary>Output</summary>
+
+```
+As homework, try doing this assignment yourself.
+```
+
+</details>
+
+---

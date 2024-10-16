@@ -1,3 +1,5 @@
+"""Assignment 6.12"""
+
 print("Chapter 6:")
 print("Exercise 12 - Nesting Dictionaries in a List")
 
