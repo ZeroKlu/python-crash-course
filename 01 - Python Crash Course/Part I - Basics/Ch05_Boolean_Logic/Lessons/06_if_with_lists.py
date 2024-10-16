@@ -1,3 +1,5 @@
+"""Chapter 5: Lesson 6"""
+
 print("Chapter 5:")
 print("Exercise 6 - Using 'if' with Lists")
 
@@ -31,7 +33,8 @@ if requested_toppings:
 else:
     print("\nAre you sure you want a plain pizza?\n")
 
-available_toppings = ["mushrooms", "olives", "green peppers", "pepperoni", "pineapple", "extra cheese"]
+available_toppings = ["mushrooms", "olives", "green peppers",
+                      "pepperoni", "pineapple", "extra cheese"]
 out_of_stock = ["green peppers", "mushrooms"]
 requested_toppings = ["mushrooms", "french fries", "extra cheese"]
 for requested_topping in requested_toppings:

@@ -1,3 +1,5 @@
+"""Chapter 5: Lesson 7"""
+
 user_entry = input("Enter whatever you want:\n> ")
 
 if not user_entry.strip():

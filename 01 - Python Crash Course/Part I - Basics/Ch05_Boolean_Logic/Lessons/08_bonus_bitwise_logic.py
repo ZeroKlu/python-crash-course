@@ -1,5 +1,7 @@
+"""Chapter 5: Lesson 8"""
+
 print("Chapter 5:")
-print("Exercise 7 - Bitwise Operations")
+print("Exercise 8 - Bitwise Operations")
 
 my_settings = 9
 

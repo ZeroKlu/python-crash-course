@@ -1,3 +1,5 @@
+"""Chapter 5: Lesson 5"""
+
 print("Chapter 5:")
 print("Exercise 5 - Using 'if' Statements")
 
@@ -64,11 +66,15 @@ i = 0
 while i < 5:
     i += 1
     print(i)
+    if i > 5:
+        break
 else:
     print("If this ran, i must be 5 or more.")
 
 print()
 for i in range(1, 6):
     print(i)
+    if i > 5:
+        break
 else:
     print("This ran when I exhausted the range.")

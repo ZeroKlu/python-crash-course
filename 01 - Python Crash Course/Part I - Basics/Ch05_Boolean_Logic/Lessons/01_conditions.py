@@ -1,3 +1,5 @@
+"""Chapter 5: Lesson 1"""
+
 print("Chapter 5:")
 print("Exercise 1 - Handling Conditions")
 
@@ -7,4 +9,3 @@ for car in cars:
         print(car.upper())
     else:
         print(car.title())
-

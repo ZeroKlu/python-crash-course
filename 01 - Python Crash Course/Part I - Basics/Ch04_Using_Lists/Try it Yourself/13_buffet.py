@@ -1,6 +1,7 @@
-# Assignment 4.13
-# Buffet: A buffet-style restaurant offers only five basic foods. Think of five simple foods, and
-#         store them in a tuple.
+"""Assignment 4.13"""
+
+# Buffet: A buffet-style restaurant offers only five basic foods.
+#         Think of five simple foods, and store them in a tuple.
 #         • Use a for loop to print each food the restaurant offers.
 #         • Try to modify one of the items, and make sure that Python rejects the change.
 #         • The restaurant changes its menu, replacing two of the items with different foods.
@@ -12,11 +13,13 @@ print("Assignment 4.13")
 
 menu = ("sandwich", "pastry", "coffee", "tea", "bagel")
 print("Menu:")
-for food in menu: print(f" - {food}")
+for food in menu:
+    print(f" - {food}")
 
 # Uncomment this line to see immutability error
 # menu[0] = "toast"
 
 menu = ("toast", "pastry", "coffee", "tea", "yoghurt")
 print("Updated Menu:")
-for food in menu: print(f" - {food}")
+for food in menu:
+    print(f" - {food}")

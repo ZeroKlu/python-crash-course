@@ -6,7 +6,8 @@ Here are my solutions for the chapter 5 try-it-yourself exercises.
 
 ### Assignment 5.1 - Conditional Tests
 
-Write a series of conditional tests. Print a statement describing each test and your prediction for the results of each test.
+Write a series of conditional tests. Print a statement describing each test
+and your prediction for the results of each test.
 
 Your code should look something like this:
 
@@ -468,7 +469,7 @@ Solution:
 ```python
 usernames = ["anna", "bob", "charlie", "diana", "admin"]
 for user in usernames:
-    if (user.lower() == "admin"):
+    if user.lower() == "admin":
         print(f"Hello {user}, would you like to see a status report?")
     else:
         print(f"Hello {user.title()}, thank you for logging in again.")
@@ -505,10 +506,11 @@ Solution:
 <summary>Spoiler Code</summary>
 
 ```python
+# usernames = ["anna", "bob", "charlie", "diana", "admin"]
 usernames = []
 if usernames:
     for user in usernames:
-        if (user.lower() == "admin"):
+        if user.lower() == "admin":
             print(f"Hello {user},would you like to see a status report?")
         else:
             print(f"Hello {user}, thank you for logging in again.")
@@ -557,7 +559,7 @@ for user in current_users:
     lower_case_users.append(user.lower())
 new_users = ["abigail", "bob", "curtis", "diana", "edward"]
 for user in new_users:
-    if (user.lower() in lower_case_users):
+    if user.lower() in lower_case_users:
         print(f"Sorry. Username {user} is already in use. Choose another username")
     else:
         print(f"Username {user} is available.")
