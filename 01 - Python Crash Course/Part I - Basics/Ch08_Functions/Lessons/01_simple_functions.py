@@ -1,3 +1,5 @@
+"""Lesson 8.1"""
+
 print("Chapter 8:")
 print("Exercise 1 - Simple Functions")
 

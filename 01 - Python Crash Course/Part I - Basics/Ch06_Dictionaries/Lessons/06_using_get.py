@@ -1,4 +1,4 @@
-"""Assignment 6.6"""
+"""Lesson 6.6"""
 
 print("Chapter 6:")
 print("Exercise 6 - Using 'get()'")

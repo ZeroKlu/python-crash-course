@@ -1,4 +1,4 @@
-"""Assignment 6.14"""
+"""Lesson 6.14"""
 
 print("Chapter 6:")
 print("Exercise 14 - Nesting Dictionaries in a Dictionary")

@@ -1,5 +1,7 @@
+"""Lesson 8.11"""
+
 print("Chapter 8:")
-print("Exercise 19 - Bonus Lesson - Type Hints")
+print("Exercise 13 - Bonus Lesson - Type Hints")
 
 def calculate(operation: str, x: int|float, y: int|float) -> int|float:
     """
@@ -22,21 +24,21 @@ def calculate(operation: str, x: int|float, y: int|float) -> int|float:
     if op == "a":
         # add
         return x + y
-    elif op == "s":
+    if op == "s":
         # subtract
         return x - y
-    elif op == "m":
+    if op == "m":
         # multiply
         return x * y
-    elif op == "d":
+    if op == "d":
         # divide
         return x / y
-    else:
-        print(f"Operation [{operation}] not supported!")
-        return None
 
-x = 3
-y = 2
-print(f"{x} + {y} = {calculate('add', x, y)}")
-print(f"{x} - {y} = {calculate('subtract', x, y)}")
-print(f"{x} * {y} = {calculate('multiply', x, y)}")
+    print(f"Operation [{operation}] not supported!")
+    return None
+
+a = 3
+b = 2
+print(f"{a} + {b} = {calculate('add', a, b)}")
+print(f"{a} - {b} = {calculate('subtract', a, b)}")
+print(f"{a} * {b} = {calculate('multiply', a, b)}")

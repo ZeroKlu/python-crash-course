@@ -1,3 +1,5 @@
+"""Module for demonstrating rounding strategies"""
+
 import math
 
 def truncate(n: float, dec: int=0) -> float:

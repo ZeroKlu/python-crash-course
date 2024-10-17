@@ -1,4 +1,4 @@
-"""Assignment 7.11"""
+"""Lesson 7.11"""
 
 from typing import Iterable
 

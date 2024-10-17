@@ -1,3 +1,5 @@
+"""Lesson 8.6"""
+
 print("Chapter 8:")
 print("Exercise 6 - Returning Dictionaries from Functions")
 

@@ -1,3 +1,5 @@
+"""Lesson 8.2"""
+
 print("Chapter 8:")
 print("Exercise 2 - Function Arguments and Parameters")
 
@@ -15,8 +17,8 @@ def greet_users(names):
         msg = f"\nHello, {name.title()}!"
         print(msg)
 
-name = "abe"
-greet_named_user(name)
+person = "abe"
+greet_named_user(person)
 
 first = "charles"
 last = "babbage"

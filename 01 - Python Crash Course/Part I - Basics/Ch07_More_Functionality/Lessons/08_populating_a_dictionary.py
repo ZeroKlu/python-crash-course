@@ -1,4 +1,4 @@
-"""Assignment 7.8"""
+"""Lesson 7.8"""
 
 print("Chapter 7:")
 print("Exercise 8 - Using a Loop to Populate a Dictionary")

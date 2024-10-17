@@ -1,4 +1,4 @@
-"""Assignment 7.4"""
+"""Lesson 7.4"""
 
 print("Chapter 7:")
 print("Exercise 4 - Using 'while' Loops")

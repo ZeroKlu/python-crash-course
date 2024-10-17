@@ -1,4 +1,4 @@
-"""Assignment 6.9"""
+"""Lesson 6.9"""
 
 print("Chapter 6:")
 print("Exercise 9 - Looping Dictionary Keys for Conditional Handling")

@@ -1,4 +1,4 @@
-"""Chapter 5: Lesson 7"""
+"""Lesson 5.7"""
 
 user_entry = input("Enter whatever you want:\n> ")
 

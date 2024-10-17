@@ -1,3 +1,5 @@
+"""Lesson 8.15"""
+
 adj = "awesome"
 
 def use_global(use_adv: bool=False):
@@ -34,6 +36,7 @@ def use_nonlocal(x: int=1, y: int=1) -> None:
     print(f"Outer: x = {x}, y = {y}\n")
 
 def main() -> None:
+    """Main function"""
     use_global()
     try_to_modify_global()
     use_global()

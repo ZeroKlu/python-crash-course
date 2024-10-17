@@ -1,3 +1,5 @@
+"""Lesson 8.16"""
+
 def my_bad_function(my_arg: list[str]=[]) -> list[str]:
     """Demonstrate the result of a default mutable argument"""
     print("Using an empty list as a default argument:")
@@ -40,6 +42,7 @@ def run_repeat(repeat: int, functions: list[callable], *args, **kwargs) -> dict[
     return ret
 
 def main() -> None:
+    """Main program"""
     run_repeat(3, [my_bad_function, my_good_function])
     n = 40
     for _ in range(2):

@@ -1,4 +1,4 @@
-"""Assignment 6.3"""
+"""Lesson 6.3"""
 
 print("Chapter 6:")
 print("Exercise 3 - Modifying Values in a Dictionary")

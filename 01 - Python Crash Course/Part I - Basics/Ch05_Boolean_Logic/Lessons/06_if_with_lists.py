@@ -1,4 +1,4 @@
-"""Chapter 5: Lesson 6"""
+"""Lesson 5.6"""
 
 print("Chapter 5:")
 print("Exercise 6 - Using 'if' with Lists")

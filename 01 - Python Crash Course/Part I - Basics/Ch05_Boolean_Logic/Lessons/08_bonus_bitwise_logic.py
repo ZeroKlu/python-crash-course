@@ -1,4 +1,4 @@
-"""Chapter 5: Lesson 8"""
+"""Lesson 5.8"""
 
 print("Chapter 5:")
 print("Exercise 8 - Bitwise Operations")

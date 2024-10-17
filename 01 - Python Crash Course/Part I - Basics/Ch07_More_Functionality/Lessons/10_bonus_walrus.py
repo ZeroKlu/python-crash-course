@@ -1,4 +1,4 @@
-"""Assignment 7.10"""
+"""Lesson 7.10"""
 
 def check_square_old(n: int, max_n: int=100) -> None:
     """Check if the square of a number is greater than the max allowed"""

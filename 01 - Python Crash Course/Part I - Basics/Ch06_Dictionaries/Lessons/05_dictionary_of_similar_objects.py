@@ -1,4 +1,4 @@
-"""Assignment 6.5"""
+"""Lesson 6.5"""
 
 print("Chapter 6:")
 print("Exercise 5 - Using Dictionaries to Group Similar Objects")

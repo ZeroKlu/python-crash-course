@@ -1,4 +1,4 @@
-"""Chapter 5: Lesson 4"""
+"""Lesson 5.4"""
 
 print("Chapter 5:")
 print("Exercise 4 - Check if List Contains Value")

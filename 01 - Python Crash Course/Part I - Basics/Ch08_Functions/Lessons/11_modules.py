@@ -1,7 +1,9 @@
+"""Lesson 8.11"""
+
 import pizza
 
 print("Chapter 8:")
-print("Exercise 12 - Importing a Module")
+print("Exercise 11 - Importing a Module")
 
 pizza.make_pizza(16, "pepperoni")
 pizza.make_pizza(12, "mushrooms", "green pepper")

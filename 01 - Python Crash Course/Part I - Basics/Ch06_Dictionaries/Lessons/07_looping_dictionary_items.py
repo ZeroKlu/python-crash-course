@@ -1,4 +1,4 @@
-"""Assignment 6.7"""
+"""Lesson 6.7"""
 
 print("Chapter 6:")
 print("Exercise 7 - Looping Dictionary Items")

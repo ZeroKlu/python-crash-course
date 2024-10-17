@@ -1,4 +1,4 @@
-"""Assignment 7.7"""
+"""Lesson 7.7"""
 
 print("Chapter 7:")
 print("Exercise 7 - Using a Loop to Move/Remove List Items")

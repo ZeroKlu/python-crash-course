@@ -1,4 +1,4 @@
-"""Assignment 7.6"""
+"""Lesson 7.6"""
 
 print("Chapter 7:")
 print("Exercise 6 - Using 'break' and 'continue'")

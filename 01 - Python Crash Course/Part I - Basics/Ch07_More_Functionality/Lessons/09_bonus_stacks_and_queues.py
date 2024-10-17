@@ -1,4 +1,4 @@
-"""Assignment 7.9"""
+"""Lesson 7.9"""
 
 print("Chapter 7:")
 print("Bonus Exercise 9 - Stacks and Queues")

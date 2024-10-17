@@ -1,4 +1,4 @@
-"""Assignment 7.3"""
+"""Lesson 7.3"""
 
 print("Chapter 7:")
 print("Exercise 3 - Using the Modulo Operator")

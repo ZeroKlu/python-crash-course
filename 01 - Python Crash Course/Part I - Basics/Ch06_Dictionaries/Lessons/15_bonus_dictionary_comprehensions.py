@@ -1,4 +1,4 @@
-"""Assignment 6.15"""
+"""Lesson 6.15"""
 
 print("Chapter 6:")
 print("Exercise 15 - Dictionary Comprehensions")

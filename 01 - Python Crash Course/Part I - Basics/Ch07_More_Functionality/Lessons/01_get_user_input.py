@@ -1,4 +1,4 @@
-"""Assignment 7.1"""
+"""Lesson 7.1"""
 
 print("Chapter 7:")
 print("Exercise 1 - Getting User Input")

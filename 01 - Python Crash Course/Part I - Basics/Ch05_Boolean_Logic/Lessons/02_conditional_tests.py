@@ -1,4 +1,4 @@
-"""Chapter 5: Lesson 2"""
+"""Lesson 5.2"""
 
 print("Chapter 5:")
 print("Exercise 2 - Conditional Tests")

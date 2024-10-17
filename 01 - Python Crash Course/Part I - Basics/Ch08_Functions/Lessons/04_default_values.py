@@ -1,3 +1,5 @@
+"""Lesson 8.4"""
+
 print("Chapter 8:")
 print("Exercise 4 - Default Parameter Values")
 

@@ -1,3 +1,5 @@
+"""Lesson 8.9"""
+
 print("Chapter 8:")
 print("Exercise 9 - Passing an Arbitrary Amount of Arguments")
 
@@ -30,6 +32,7 @@ make_pizza(12, "mushrooms", "green peppers", "extra cheese")
 pause()
 
 def sum_up(x, y, z):
+    """Sum the provided numbers."""
     print(f"{x} + {y} + {z} = {x + y + z}")
 
 values = [2, 3, 4]

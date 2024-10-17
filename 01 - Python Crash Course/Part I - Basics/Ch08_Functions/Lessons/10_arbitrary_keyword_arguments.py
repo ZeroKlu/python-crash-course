@@ -1,3 +1,5 @@
+"""Lesson 8.10"""
+
 print("Chapter 8:")
 print("Exercise 10 - Passing an Arbitrary Amount of Keyword Arguments")
 
@@ -11,6 +13,7 @@ user_profile = build_profile("albert", "einstein", location="princeton", field="
 print(user_profile)
 
 def sum_up(x, y, z):
+    """Calculate the sum of three numbers."""
     print(f"{x} + {y} + {z} = {x + y + z}")
 
 values = {"z": 4, "y": 3}
