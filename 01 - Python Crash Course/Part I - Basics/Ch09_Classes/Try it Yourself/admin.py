@@ -16,7 +16,7 @@ class Privileges:
 
     def __init__(self, privileges = None):
         """Initialize a new instance of the Privileges class"""
-        if privileges == None:
+        if privileges is None:
             self.privileges = ["create", "delete", "modify", "ban"]
         else:
             self.privileges = privileges

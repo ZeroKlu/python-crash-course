@@ -6,8 +6,13 @@ Here are my solutions for the chapter 9 try-it-yourself exercises.
 
 ### Assignment 9.1 - Restaurant
 
-Make a class called `Restaurant`. The `__init__()` method for `Restaurant` should store two attributes: a `restaurant_name` and a `cuisine_type`. Make a method called `describe_restaurant()` that prints these two pieces of information, and a method called `open_restaurant()` that prints a message indicating that the restaurant is open. Make an instance called `restaurant` from your class. Print the two attributes individually, and then call both methods.
-
+Make a class called `Restaurant`. The `__init__()` method for `Restaurant` 
+should store two attributes: a `restaurant_name` and a `cuisine_type`. 
+Make a method called `describe_restaurant()` that prints these two pieces 
+of information, and a method called `open_restaurant()` that prints a 
+message indicating that the restaurant is open. Make an instance called 
+`restaurant` from your class. Print the two attributes individually,
+and then call both methods.
 
 Solution:
 
@@ -283,9 +288,17 @@ We have served 25 people today.
 
 ### Assignment 9.5 - Login Attempts
 
-Add an attribute called `login_attempts` to your `User` class from Exercise 9.3. Write a method called `increment_login_attempts()` that increments the value of `login_attempts` by `1`. Write another method called `reset_login_attempts()` that resets the value of `login_attempts` to `0`.
+Add an attribute called `login_attempts` to your `User` class from
+Exercise 9.3. Write a method called `increment_login_attempts()`
+that increments the value of `login_attempts` by `1`. Write another
+method called `reset_login_attempts()` that resets the value of
+`login_attempts` to `0`.
 
-Make an instance of the `User` class and call `increment_login_attempts()` several times. Print the value of `login_attempts` to make sure it was incremented properly, and then call `reset_login_attempts()`. Print `login_attempts` again to make sure it was reset to `0`.
+Make an instance of the `User` class and call
+`increment_login_attempts()` several times. Print the value of
+`login_attempts` to make sure it was incremented properly, and
+then call `reset_login_attempts()`. Print `login_attempts` again
+to make sure it was reset to `0`.
 
 Solution:
 
@@ -356,7 +369,12 @@ Login Attempts: 0
 
 ### Assignment 9.6 - Ice Cream Stand
 
-An ice cream stand is a specific kind of restaurant. Write a class called `IceCreamStand` that inherits from the `Restaurant` class you wrote in Exercise 9.1 or Exercise 9.4. Either version of the class will work; just pick the one you like better. Add an attribute called `flavors` that stores a list of ice cream flavors. Write a method that displays these flavors. Create an instance of `IceCreamStand`, and call this method.
+An ice cream stand is a specific kind of restaurant. Write a class called
+`IceCreamStand` that inherits from the `Restaurant` class you wrote in
+Exercise 9.1 or Exercise 9.4. Either version of the class will work; just
+pick the one you like better. Add an attribute called `flavors` that
+stores a list of ice cream flavors. Write a method that displays these
+flavors. Create an instance of `IceCreamStand`, and call this method.
 
 Solution:
 
@@ -490,7 +508,13 @@ Frosty Freeze has the following flavors available:
 
 ### Assignment 9.7 - Admin
 
-An administrator is a special kind of user. Write a class called `Admin` that inherits from the `User` class you wrote in Exercise 9.3 or Exercise 9.5. Add an attribute, `privileges`, that stores a list of strings like "can add post", "can delete post", "can ban user", and so on. Write a method called `show_privileges()` that lists the administrator's set of privileges. Create an instance of `Admin`, and call your method.
+An administrator is a special kind of user. Write a class called `Admin`
+that inherits from the `User` class you wrote in Exercise 9.3 or
+Exercise 9.5. Add an attribute, `privileges`, that stores a list of
+strings like "can add post", "can delete post", "can ban user", and
+so on. Write a method called `show_privileges()` that lists the
+administrator's set of privileges. Create an instance of `Admin`, and
+call your method.
 
 Solution:
 
@@ -609,9 +633,12 @@ Privileges:
 
 ### Assignment 9.8 - Privileges
 
-Write a separate `Privileges` class. The class should have one attribute, `privileges`, that stores a list of strings as described in Exercise 9.7. Move the `show_privileges()` method to this class.
+Write a separate `Privileges` class. The class should have one attribute,
+`privileges`, that stores a list of strings as described in Exercise 9.7.
+Move the `show_privileges()` method to this class.
 
-Make a `Privileges` instance as an attribute in the `Admin` class. Create a new instance of `Admin` and use your method to show its privileges.
+Make a `Privileges` instance as an attribute in the `Admin` class. Create
+a new instance of `Admin` and use your method to show its privileges.
 
 Solution:
 
@@ -743,7 +770,12 @@ Privileges:
 
 ### Assignment 9.9 - Battery Upgrade
 
-Use the final version of electric_car.py from this section. Add a method to the `Battery` class called `upgrade_battery()`. This method should check the battery size and set the capacity to 100 if it isn't already. Make an electric car with a default battery size, call `get_range()` once, and then call `get_range()` a second time after upgrading the battery. You should see an increase in the car's range.
+Use the final version of electric_car.py from this section. Add a method
+to the `Battery` class called `upgrade_battery()`. This method should check
+the battery size and set the capacity to 100 if it isn't already. Make an
+electric car with a default battery size, call `get_range()` once, and then
+call `get_range()` a second time after upgrading the battery. You should
+see an increase in the car's range.
 
 Solution:
 
@@ -1242,7 +1274,10 @@ Privileges:
 
 ### Assignment 9.13 - Dice
 
-Make a class `Die` with one attribute called `sides`, which has a default value of 6. Write a method called `roll_die()` that prints a random number between 1 and the number of sides the die has. Make a 6-sided die and roll it 10 times. Make a 10-sided die and a 20-sided die. Roll each die 10 times.
+Make a class `Die` with one attribute called `sides`, which has a default
+value of 6. Write a method called `roll_die()` that prints a random number
+between 1 and the number of sides the die has. Make a 6-sided die and roll
+it 10 times. Make a 10-sided die and a 20-sided die. Roll each die 10 times.
 
 Solution:
 
@@ -1430,8 +1465,11 @@ My ticket ['1', '2', '3', '4'] won after 646 attempts!
 
 ### Assignment 9.16 - Python Module of the Week
 
-One excellent resource for exploring the Python standard library is a site called Python Module of the Week. Go to 
-[https://pymotw.com/](https://pymotw.com/) and look at the table of contents. Find a module that looks interesting to you and read about it, perhaps starting with the random module.
+One excellent resource for exploring the Python standard library is a site
+called Python Module of the Week. Go to
+[https://pymotw.com/](https://pymotw.com/) and look at the table of
+contents. Find a module that looks interesting to you and read about it,
+perhaps starting with the random module.
 
 Solution:
 

@@ -1,3 +1,5 @@
+"""Lesson 9.7"""
+
 from random import randint, choice
 from sm_utils import pause
 

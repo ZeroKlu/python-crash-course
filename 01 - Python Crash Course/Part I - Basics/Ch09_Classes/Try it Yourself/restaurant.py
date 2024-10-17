@@ -1,3 +1,5 @@
+"""Class to model a Restaurant"""
+
 class Restaurant:
     """Defines a restaurant object"""
 
@@ -18,7 +20,7 @@ class Restaurant:
     def get_number_served(self):
         """Get the number of people served by the restaurant"""
         print(f"We have served {self.number_served} people today.\n")
-        
+
     def set_number_served(self, num):
         """Set the number of people served by the restaurant"""
         if num >= self.number_served:

@@ -1,3 +1,5 @@
+"""Lesson 9.5"""
+
 print("Chapter 9:")
 print("Exercise 5 - Classes as Attributes")
 
@@ -87,15 +89,15 @@ class Battery:
 
     def get_range(self):
         """Get the range of the battery"""
-        range = "unknown"
+        battery_range = "unknown"
         if self.battery_size == 75:
-            range = 260
+            battery_range = 260
         elif self.battery_size == 100:
-            range = 315
+            battery_range = 315
         else:
             print(f"Range unknown for battery size: {self.battery_size}-kWh.")
             return
-        print(f"This car can go about {range} miles on a full charge.")
+        print(f"This car can go about {battery_range} miles on a full charge.")
 
 
 my_e_car = ElectricCar("nissan", "leaf", 2024)

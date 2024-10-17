@@ -1,3 +1,5 @@
+"""Lesson 9.2"""
+
 print("Chapter 9:")
 print("Exercise 2 - Working with Class Attributes")
 

@@ -5,7 +5,7 @@ from random import randint
 class Die:
     """Defines an n-sided die"""
 
-    def __init__(self, sides = 6):
+    def __init__(self, sides=6):
         """Initialize a new instance of the Die class"""
         self.sides = sides
 

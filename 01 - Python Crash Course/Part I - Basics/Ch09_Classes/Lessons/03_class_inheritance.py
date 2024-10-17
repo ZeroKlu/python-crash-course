@@ -1,3 +1,5 @@
+"""Lesson 9.3"""
+
 print("Chapter 9:")
 print("Exercise 3 - Class Inheritance")
 
@@ -58,5 +60,6 @@ my_e_car.describe_battery()
 my_gas_car = Car("ford", "thunderbird", 1978)
 
 print(my_gas_car.get_descriptive_name())
+
 # This will result in an AttributeError
 # my_gas_car.describe_battery()

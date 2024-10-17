@@ -1,9 +1,11 @@
+"""Lesson 9.1"""
+
 print("Chapter 9:")
 print("Exercise 1 - Creating and Using a Class")
 
 class Dog:
     """This is a simple model for a dog"""
-    
+
     def __init__(self, name, age):
         """Initialize a new instance of the Dog class"""
         self.name = name.title()

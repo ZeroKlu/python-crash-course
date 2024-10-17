@@ -31,7 +31,6 @@ class User:
         """Read the login attempt counter"""
         print(f"Login Attempts: {self.login_attempts}\n")
 
-
 class Admin(User):
     """Define an admin ad a subclass of User"""
 
@@ -40,13 +39,12 @@ class Admin(User):
         super().__init__(first_name, last_name)
         self.privileges = Privileges(privileges)
 
-
 class Privileges:
     """Define a collection of user privileges"""
 
     def __init__(self, privileges = None):
         """Initialize a new instance of the Privileges class"""
-        if privileges == None:
+        if privileges is None:
             self.privileges = ["create", "delete", "modify", "ban"]
         else:
             self.privileges = privileges

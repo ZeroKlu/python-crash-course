@@ -125,12 +125,12 @@ class Battery:
 
     def get_range(self) -> None:
         """Get the battery range in miles"""
-        range = "unknown"
+        battery_range = "unknown"
         if self.battery_size == 75:
-            range = 260
+            battery_range = 260
         elif self.battery_size == 100:
-            range = 315
-        print(f"This car can go about {range} miles on a full charge.\n")
+            battery_range = 315
+        print(f"This car can go about {battery_range} miles on a full charge.\n")
 
     def upgrade_battery(self) -> None:
         """Upgrade the battery"""

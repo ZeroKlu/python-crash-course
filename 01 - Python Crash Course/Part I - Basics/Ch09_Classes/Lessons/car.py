@@ -75,4 +75,4 @@ class Car:
             fuel_state = "one quarter full"
         elif self.fuel_level > 0.0:
             fuel_state = "running on fumes"
-        print(f"Fuel Status: {fuel_state}\n")  
+        print(f"Fuel Status: {fuel_state}\n")

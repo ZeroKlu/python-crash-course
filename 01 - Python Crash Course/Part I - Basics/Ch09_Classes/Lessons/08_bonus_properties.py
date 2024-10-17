@@ -1,9 +1,11 @@
+"""Lesson 9.8"""
+
 from sm_utils import clear_terminal, pause
 
 print("Chapter 9:")
 print("Exercise 14 (Bonus) - Properties")
 
-class Person(object):
+class Person:
     """Class to define a person"""
 
     def __init__(self, first_name: str, last_name: str) -> None:
@@ -26,7 +28,7 @@ pause()
 # You can also use name mangling to conceal your attributes and expose them using properties
 # This is called encapsulation
 
-class Human(object):
+class Human:
     """Class to define a human"""
 
     def __init__(self, first_name: str, last_name: str) -> None:
@@ -34,12 +36,12 @@ class Human(object):
         # first_name and last_name are attributes of the class
         self.__first_name = first_name
         self.__last_name = last_name
-    
+
     @property
     def first_name(self):
         """Return the first name of the person"""
         return self.__first_name.title()
-    
+
     @property
     def last_name(self):
         """Return the last name of the person"""

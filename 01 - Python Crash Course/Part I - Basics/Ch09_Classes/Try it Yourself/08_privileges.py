@@ -1,8 +1,11 @@
-# Assignment 9.8
-# Privileges: Write a separate Privileges class. The class should have one attribute, privileges, that stores
-#             a list of strings as described in Exercise 9-7. Move the show_privileges() method to this class.
-#             Make a Privileges instance as an attribute in the Admin class. Create a new instance of Admin and
-#             use your method to show its privileges.
+"""Assignment 9.8"""
+
+# Privileges: Write a separate `Privileges` class. The class should have
+#             one attribute, `privileges`, that stores a list of strings
+#             as described in Exercise 9.7. Move the `show_privileges()`
+#             method to this class. Make a `Privileges` instance as an
+#             attribute in the `Admin` class. Create a new instance of
+#             `Admin` and use your method to show its privileges.
 
 print("Try-it-Yourself:")
 print("Assignment 9.8")
@@ -51,14 +54,14 @@ class Privileges:
 
     def __init__(self, privileges = None):
         """Initialize a new instance of the Privileges class"""
-        if privileges == None:
+        if privileges is None:
             self.privileges = ["create", "delete", "modify", "ban"]
         else:
             self.privileges = privileges
 
     def show_privileges(self):
         """Print out the user's privileges"""
-        print("\nPrivileges:")
+        print("Privileges:")
         for privilege in self.privileges:
             print(f" - {privilege}")
 

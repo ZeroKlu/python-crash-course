@@ -1,3 +1,5 @@
+"""Lesson 9.6d"""
+
 import electric_car
 
 print("Chapter 9:")

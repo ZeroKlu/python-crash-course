@@ -1,3 +1,5 @@
+"""Lesson 9.4"""
+
 print("Chapter 9:")
 print("Exercise 4 - Overriding Parent Class Methods")
 
@@ -10,6 +12,7 @@ class Car:
         self.model = model
         self.year = year
         self.odometer_reading = 0
+        self.fuel_level = None
 
     def get_descriptive_name(self):
         """Describe the car"""
