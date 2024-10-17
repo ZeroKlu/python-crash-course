@@ -1,5 +1,7 @@
-# Assignment 8.9
-# Messages: Make a list containing a series of short text messages. Pass the list to a function called show_messages(),
+"""Assignment 8.9"""
+
+# Messages: Make a list containing a series of short text messages.
+#           Pass the list to a function called `show_messages()`,
 #           which prints each text message.
 
 print("Try-it-Yourself:")
@@ -10,5 +12,5 @@ def show_messages(messages):
     for message in messages:
         print(message)
 
-messages = ["Hi there!", "Having fun at code camp!", "Python is great!"]
-show_messages(messages)
+my_messages = ["Hi there!", "Having fun at code camp!", "Python is great!"]
+show_messages(my_messages)
