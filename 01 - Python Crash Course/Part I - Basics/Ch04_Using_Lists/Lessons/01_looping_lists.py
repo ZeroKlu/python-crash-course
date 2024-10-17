@@ -1,4 +1,4 @@
-"""Chapter 4: Lesson 1"""
+"""Lesson 4.1"""
 
 print("Chapter 4:")
 print("Exercise 1 - Looping in lists")

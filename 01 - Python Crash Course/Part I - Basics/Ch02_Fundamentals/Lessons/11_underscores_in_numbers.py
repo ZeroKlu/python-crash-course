@@ -1,4 +1,4 @@
-"""Chapter 2: Lesson 11"""
+"""Lesson 2.11"""
 
 print("Chapter 2:")
 print("Exercise 11 - Underscores for grouping")

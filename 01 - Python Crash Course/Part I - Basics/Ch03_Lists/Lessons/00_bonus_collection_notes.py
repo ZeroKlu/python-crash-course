@@ -1,4 +1,4 @@
-"""Chapter 3: Lesson 0"""
+"""Lesson 3.0"""
 
 # Python Collection Examples
 

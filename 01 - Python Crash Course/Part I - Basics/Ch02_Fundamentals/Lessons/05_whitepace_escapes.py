@@ -1,4 +1,4 @@
-"""Chapter 2: Lesson 5"""
+"""Lesson 2.5"""
 
 print("Chapter 2:")
 print("Exercise 5 - Whitespace Escapes")

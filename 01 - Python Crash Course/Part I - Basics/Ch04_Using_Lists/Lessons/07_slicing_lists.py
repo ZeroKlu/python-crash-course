@@ -1,4 +1,4 @@
-"""Chapter 4: Lesson 7"""
+"""Lesson 4.7"""
 
 print("Chapter 4:")
 print("Exercise 7 - Slicing Lists")

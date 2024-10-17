@@ -1,4 +1,4 @@
-"""Chapter 2: Lesson 7"""
+"""Lesson 2.7"""
 
 print("Chapter 2:")
 print("Exercise 7 - Removing Prefixes")

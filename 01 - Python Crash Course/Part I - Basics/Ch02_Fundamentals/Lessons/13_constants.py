@@ -1,4 +1,4 @@
-"""Chapter 2: Lesson 13"""
+"""Lesson 2.13"""
 
 print("Chapter 2:")
 print("Exercise 13 - 'Constants'\n")

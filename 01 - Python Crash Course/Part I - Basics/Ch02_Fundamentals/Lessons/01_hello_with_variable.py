@@ -1,4 +1,4 @@
-"""Chapter 2: Lesson 1"""
+"""Lesson 2.1"""
 
 print("Chapter 2:")
 print("Exercise 1 - Use a variable in 'Hello World'")

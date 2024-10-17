@@ -1,4 +1,4 @@
-"""Chapter 2: Lesson 2"""
+"""Lesson 2.2"""
 
 print("Chapter 2:")
 print("Exercise 2 - Populate a variable from user input")

@@ -1,4 +1,4 @@
-"""Chapter 3: Lesson 8"""
+"""Lesson 3.8"""
 
 print("Chapter 3:")
 print("Exercise 8 - Removing an Item from a List by Value")

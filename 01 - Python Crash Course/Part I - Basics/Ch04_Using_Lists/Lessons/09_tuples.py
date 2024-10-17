@@ -1,4 +1,4 @@
-"""Chapter 4: Lesson 9"""
+"""Lesson 4.9"""
 
 print("Chapter 4:")
 print("Exercise 9 - Tuples")

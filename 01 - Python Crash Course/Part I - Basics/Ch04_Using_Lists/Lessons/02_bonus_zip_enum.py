@@ -1,4 +1,4 @@
-"""Chapter 4: Lesson 2"""
+"""Lesson 4.2"""
 
 def noob_loop_list(lst: list[int]) -> None:
     """Print items and indices in a list looping on index"""

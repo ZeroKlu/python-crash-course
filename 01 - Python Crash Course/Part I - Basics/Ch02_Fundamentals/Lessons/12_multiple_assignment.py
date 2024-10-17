@@ -1,4 +1,4 @@
-"""Chapter 2: Lesson 12"""
+"""Lesson 2.12"""
 
 print("Chapter 2:")
 print("Exercise 12 - Multiple Assignment")
