@@ -1,3 +1,5 @@
+"""Lesson 10.16"""
+
 import json
 
 class Thing:

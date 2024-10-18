@@ -1,4 +1,5 @@
-# Assignment 10.13
+"""Assignment 10.2 (2nd Edition)"""
+
 # Verify User: The final listing for remember_me.py assumes either that the user has already entered
 #              their username or that the program is running for the first time. We should modify it
 #              in case the current user is not the person who last used the program. Before printing
@@ -10,39 +11,39 @@ import json
 
 ROOT_DIR = os.path.dirname(__file__)
 
-def store_user(file_path):
+def store_user(filepath):
     """Store the username to JSON file"""
     first_name = input("Enter your first name:\n> ")
     last_name = input("Enter your last name:\n> ")
 
     username = f"{first_name[0]}{last_name}".upper()
 
-    with open(file_path, "w") as f:
+    with open(filepath, "w", encoding="utf-8") as f:
         json.dump(username, f)
 
     return username
 
-def get_stored_user(file_path):
+def get_stored_user(filepath):
     """Attempt to retrieve the username from JSON file"""
     try:
-        with open(file_path) as f:
+        with open(filepath, encoding="utf-8") as f:
             username = json.load(f)
     except FileNotFoundError:
         return None
     else:
         return username
 
-def greet_user(file_path):
+def greet_user(filepath):
     """Show desired greeting to user"""
-    username = get_stored_user(file_path)
+    username = get_stored_user(filepath)
     matched = False
     if username:
         answer = input(f"Are you {username.upper()}? (Y|N)\n> ")
         matched = answer[0].lower() == "y"
         if not matched:
-            username = store_user(file_path)
+            username = store_user(filepath)
     else:
-        username = store_user(file_path)
+        username = store_user(filepath)
 
     if matched:
         print(f"\nWelcome back, {username.upper()}\n")

@@ -1,3 +1,5 @@
+"""Lesson 10.15"""
+
 print("Chapter 10:")
 print("Exercise 15 - Bonus Lesson - Why `except: pass` is Bad!\n")
 

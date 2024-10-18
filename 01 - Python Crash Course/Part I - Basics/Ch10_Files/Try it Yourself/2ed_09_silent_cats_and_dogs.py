@@ -1,5 +1,7 @@
-# Assignment 10.9
-# Silent Cats and Dogs: Modify your except block in Exercise 10-8 to fail silently if either file is missing.
+"""Assignment 10.9 (2nd Edition)"""
+
+# Silent Cats and Dogs: Modify your except block in Exercise 10.8 to
+#                       fail silently if either file is missing.
 
 import os
 
@@ -9,18 +11,17 @@ log_path = os.path.join(ROOT_DIR, "Files", "missing_files.log.txt")
 print("Try-it-Yourself:")
 print("Assignment 10.9\n")
 
-def read_file(file_name):
+def read_file(filename):
     """Read the selected file"""
-    file_path = os.path.join(ROOT_DIR, "Files", file_name)
+    file_path = os.path.join(ROOT_DIR, "Files", filename)
     try:
-        with open(file_path) as f:
-            content = f.read()
+        with open(file_path, encoding="utf-8") as file:
+            content = file.read()
     except FileNotFoundError:
-        with open(log_path, "a") as l:
-            l.write(f"Missing File:\n{file_path}\n\n")
-        pass
+        with open(log_path, "a", encoding="utf-8") as log:
+            log.write(f"Missing File:\n{file_path}\n\n")
     else:
-        print(f"{file_name}:")
+        print(f"{filename}:")
         print(content)
 
 file_names = ["cats.txt", "dogs.txt", "pets.txt"]

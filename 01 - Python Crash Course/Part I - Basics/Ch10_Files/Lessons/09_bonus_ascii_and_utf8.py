@@ -1,9 +1,15 @@
+"""Lesson 10.9"""
+
+import os
+from pathlib import Path
+from relative_paths import get_path
+
 print("Chapter 10:")
-print("Exercise 8 - Working with Multiple Files\n")
+print("Exercise 9 - Working with Multiple Files\n")
 
 # --- 2nd Edition Method ---
 
-import os
+# import os
 
 ROOT_DIR = os.path.dirname(__file__)
 file_name = "moby_dick.txt"
@@ -15,8 +21,8 @@ with open(file_path, encoding="utf-8") as f:
 
 # --- 3rd Edition Method ---
 
-from relative_paths import get_path
-from pathlib import Path
+# from relative_paths import get_path
+# from pathlib import Path
 
 file_name = "moby_dick.txt"
 file_path = get_path(file_name, "Files")

@@ -1,8 +1,9 @@
+"""Lesson 10.6"""
+
+from random import randrange
 
 print("Chapter 10:")
 print("Exercise 8 - Handling Errors\n")
-
-from random import randrange
 
 # This code would crash on a ZeroDivisionError
 # for i in range(100):
