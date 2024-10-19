@@ -1,21 +1,23 @@
+"""Lesson 11.2 (2nd Edition)"""
+
 import unittest
 
 class AnonymousSurvey:
     """Collect anonymous answers to a survey question."""
-    
+
     def __init__(self, question: str) -> None:
         """Store a question, and prepare to store responses."""
         self.question = question
         self.responses = []
-        
+
     def show_question(self) -> None:
         """Show the survey question."""
         print(self.question)
-        
+
     def store_response(self, new_response: str) -> None:
         """Store a single response to the survey."""
         self.responses.append(new_response.lower())
-        
+
     def show_results(self) -> None:
         """Show all the responses that have been given."""
         print("Survey results:")
@@ -37,10 +39,10 @@ def language_survey() -> None:
 
     print("\nThank you to everyone who participated in the survey!")
     my_survey.show_results()
-    
+
 class AnonymousSurveyTestCase(unittest.TestCase):
     """Tests for the class AnonymousSurvey"""
-    
+
     def setUp(self):
         """
         Create a survey and a set of responses for use in all test methods.
@@ -62,12 +64,13 @@ class AnonymousSurveyTestCase(unittest.TestCase):
             self.assertIn(response.lower(), self.my_survey.responses)
 
 def main():
+    """Run the tests"""
     print("Chapter 11:\nExercise 2 - Testing a Class\n")
     process = input("Test [a]utomatically or [m]anually\n> ")
     if process[0].lower() == "a":
         unittest.main()
     else:
         language_survey()
-    
+
 if __name__ == "__main__":
     main()

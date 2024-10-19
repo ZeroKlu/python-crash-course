@@ -1,3 +1,5 @@
+"""Module for employee class and functions"""
+
 class Employee():
     """Class to model an employee"""
     def __init__(self, first_name, last_name, annual_salary):

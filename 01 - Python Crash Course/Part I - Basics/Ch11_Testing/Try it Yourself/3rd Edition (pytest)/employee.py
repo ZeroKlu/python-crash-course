@@ -1,3 +1,5 @@
+"""Class to model an employee"""
+
 class Employee():
     """A class to represent an employee."""
 
@@ -9,7 +11,8 @@ class Employee():
 
     def __str__(self):
         """Return a representation of the employee as a string."""
-        print(f"{self.first_name} {self.last_name} - Salary : ${self.annual_salary}".title())
+        return f"{self.first_name} {self.last_name} - " + \
+               f"Salary : ${self.annual_salary}".title()
 
     def give_raise(self, amount=5000):
         """Increase the employee's salary"""

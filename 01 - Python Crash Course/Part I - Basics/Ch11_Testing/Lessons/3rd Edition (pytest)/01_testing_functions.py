@@ -1,3 +1,5 @@
+"""Lesson 11.1 (3rd Edition)"""
+
 from name_function import formatted_name
 
 def main() -> None:

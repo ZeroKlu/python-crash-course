@@ -1,6 +1,9 @@
+"""Lesson 11.0"""
+
 from sm_utils import pause, clear_terminal
 
 def main() -> None:
+    """Main Function: Test Main Guarding"""
     print("Chapter 11:")
     print("Exercise 1 - Using a `main()` Function\n")
 

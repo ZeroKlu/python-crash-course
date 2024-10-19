@@ -43,6 +43,30 @@
 * Some of the examples I provide include languages other than Python.  
   For these, you may need to install this extension in VS Code:
     * [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner)
+* Some developers prefer to use a linter to ensure they are following
+  best practices and style guidelines. For this, I recommend the
+  following VS Code Extension:
+    * [Pylint](https://marketplace.visualstudio.com/items?itemName=ms-python.pylint)
+    * **Note**: If you are using Pylint, while I have tried to ensure that
+      most of the example code uses best practices, because this is a
+      training repository, some items will be caught by the linter. This
+      is sadly unavoidable.
+    * To avoid some of the most common issues, I have added these Pylint
+      arguments to the User Settings JSON file in VS Code
+      ```json
+      {
+          ...
+
+          "pylint.args": [
+              "--disable=invalid-name",
+              "--disable=global-statement",
+              "--disable=global-variable-undefined",
+              "--disable=broad-exception-caught"
+          ],
+
+          ...
+      }
+      ```
 
 ### Documentation ###
 

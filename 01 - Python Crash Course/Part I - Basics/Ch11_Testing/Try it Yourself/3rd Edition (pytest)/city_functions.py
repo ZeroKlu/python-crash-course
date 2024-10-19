@@ -1,3 +1,5 @@
+"""Module for city functions"""
+
 def city_country(city, country):
     """Return formatted city and country string"""
     return f"{city}, {country}".title()

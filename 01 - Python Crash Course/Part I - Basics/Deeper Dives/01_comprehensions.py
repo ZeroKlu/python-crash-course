@@ -1,3 +1,5 @@
+"""Examples of more complicated comprehensions"""
+
 from sm_utils import timer, pause, clear_terminal
 
 def basic_loop(n: int) -> None:
@@ -110,6 +112,7 @@ def matrix_comprehension(n: int) -> None:
     pause()
 
 def main() -> None:
+    """Main function"""
     n = 10
     basic_loop(n)
     basic_comprehension(n)

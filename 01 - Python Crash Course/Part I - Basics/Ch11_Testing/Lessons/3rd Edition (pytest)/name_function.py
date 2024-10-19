@@ -19,4 +19,3 @@ def formatted_name(first: str, last: str, middle: str | None="") -> str:
     else:
         full_name = f"{first} {last}"
     return full_name.title()
-

@@ -1,3 +1,5 @@
+"""Pytest tests for survey class"""
+
 import pytest
 from survey_class import AnonymousSurvey
 
@@ -5,8 +7,8 @@ from survey_class import AnonymousSurvey
 def language_survey():
     """A survey that will be available to all test functions."""
     question = "What language did you first learn to speak?"
-    language_survey = AnonymousSurvey(question)
-    return language_survey
+    survey = AnonymousSurvey(question)
+    return survey
 
 def test_store_single_response(language_survey: AnonymousSurvey):
     """Test that a single response is stored properly."""

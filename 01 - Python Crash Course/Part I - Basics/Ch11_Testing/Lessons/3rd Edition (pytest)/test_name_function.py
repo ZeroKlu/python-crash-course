@@ -1,3 +1,5 @@
+"""Pytest tests for formatted name function"""
+
 from name_function import formatted_name
 
 def test_first_last_name():

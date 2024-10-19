@@ -1,3 +1,5 @@
+"""Module to test city functions"""
+
 from city_functions import city_country_population
 
 def main() -> None:
@@ -5,7 +7,7 @@ def main() -> None:
     done = False
     while not done:
         obj = {"city": "", "country": "", "population": None}
-        for key in obj.keys():
+        for key in obj:
             datum = None
             if key != "population":
                 while not datum:
@@ -29,7 +31,6 @@ def main() -> None:
                         obj[key] = None
         if not done:
             print(city_country_population(obj["city"], obj["country"], obj["population"]))
-            
 
 if __name__ == "__main__":
     main()

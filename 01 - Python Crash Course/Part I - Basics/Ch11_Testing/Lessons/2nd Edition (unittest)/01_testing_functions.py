@@ -1,3 +1,5 @@
+"""Lesson 11.1 (2nd Edition)"""
+
 import unittest
 
 # This function will fail both tests
@@ -20,8 +22,6 @@ def formatted_name(first: str, last: str, middle: str | None="") -> str:
         full_name = f"{first} {last}"
     return full_name.title()
 
-import unittest
-
 class NamesTestCase(unittest.TestCase):
     """Tests for the `formatted_name()` function"""
 
@@ -36,6 +36,7 @@ class NamesTestCase(unittest.TestCase):
         self.assertEqual(result, "Janis Joplin")
 
 def main():
+    """Run the tests"""
     print("Chapter 11:\nExercise 1 - Testing a Function\n")
     unittest.main()
 
