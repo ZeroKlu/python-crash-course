@@ -1,3 +1,5 @@
+"""Enumerations"""
+
 from enum import Enum
 
 class Weekday(Enum):
@@ -11,7 +13,7 @@ class Weekday(Enum):
     SUNDAY = 7
 
 def main() -> None:
-    
+    """Main function"""
     print(Weekday(3), "\n")
 
     print(repr(Weekday(2)))

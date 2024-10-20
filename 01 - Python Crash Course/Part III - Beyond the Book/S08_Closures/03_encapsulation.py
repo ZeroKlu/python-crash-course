@@ -1,7 +1,9 @@
+"""Encapsulation"""
+
 def increment(n: int) -> int:
     """Increment an integer by 1"""
-    max = 10
-    if n >= max:
+    max_n = 10
+    if n >= max_n:
         return n
     def inner_increment():
         """Encapsulated function"""
@@ -9,6 +11,7 @@ def increment(n: int) -> int:
     return inner_increment()
 
 def main() -> None:
+    """Main function"""
     n = 5
     print(f"{n}++ = {increment(n)}")
     n = 10

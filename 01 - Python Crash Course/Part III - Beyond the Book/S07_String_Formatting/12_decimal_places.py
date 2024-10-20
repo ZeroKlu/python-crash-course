@@ -1,3 +1,5 @@
+"""Control the number of decimal places shown"""
+
 import math
 
 def format_pi() -> None:
@@ -12,6 +14,7 @@ def format_currency(val: float) -> None:
     print(f"${val:.2f}")
 
 def main() -> None:
+    """Main function"""
     format_pi()
     price = 1.75
     qty = 2

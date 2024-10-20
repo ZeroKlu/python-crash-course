@@ -1,8 +1,9 @@
+"""Aliases and Uniqueness"""
+
 from enum import Enum, auto, unique
-import json
 
 class TiffCompression(Enum):
-    """Defines names for days of the week as bit-flags"""
+    """Defines names for days of the week"""
     NONE = auto()
     LZW = auto()
     ZIP = auto()
@@ -14,12 +15,14 @@ class TiffCompression(Enum):
 
 @unique
 class NoRepeats(Enum):
+    """Defines names for numbers"""
     ONE = 1
     TWO = 2
     THREE = 3
     # TRES = 3
 
 def main() -> None:
+    """Main function"""
     print(TiffCompression.CCITT_T6.name, TiffCompression.CCITT_T6.value)
     print(TiffCompression.GROUP_IV.name, TiffCompression.GROUP_IV.value)
 

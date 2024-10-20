@@ -1,3 +1,5 @@
+"""Using f-strings"""
+
 from datetime import datetime
 
 def hello_f_string() -> None:
@@ -19,9 +21,11 @@ def convert_f_string() -> None:
     print(f"{now!r}\n")
 
 def replace_invalid_f_string(invalid_string: str) -> str:
+    """Remove invalid characters from a string"""
     return f"{invalid_string!a}"
 
 def main() -> None:
+    """Main function"""
     hello_f_string()
     price_f_string("bananas", 5, 0.39)
     convert_f_string()

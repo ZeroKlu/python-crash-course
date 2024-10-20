@@ -1,3 +1,5 @@
+"""Width, Fill, and Alignment"""
+
 def width() -> None:
     """Set the minimum width of the string"""
     s = "abc"
@@ -21,6 +23,7 @@ def fill() -> None:
     print(f"{s:~^9}")
 
 def main() -> None:
+    """Main program"""
     width()
     align()
     fill()

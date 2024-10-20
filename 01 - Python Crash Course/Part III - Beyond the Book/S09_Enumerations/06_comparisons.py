@@ -1,3 +1,6 @@
+"""Enum Comparisons"""
+
+import sys
 from enum import Enum, IntEnum
 
 class Weekday(Enum):
@@ -56,6 +59,7 @@ def check_equivalency():
     print("IntWeekday.MONDAY.value == 1:",
           IntWeekday.MONDAY.value == 1)
 
+# pylint: disable=literal-comparison
 def check_identity():
     """Perform identity `is` comparisons"""
     print("Weekday.MONDAY is IntWeekday.MONDAY:",
@@ -87,13 +91,15 @@ def pause(end: bool=False) -> None:
     """Wait for user input"""
     act = "end program" if end else "continue"
     input(f"\nPress <ENTER> to {act}...")
-    if end: quit()
+    if end:
+        sys.exit()
 
 def clear_terminal(end: str="") -> None:
     """Clear the terminal"""
     print("\033c", end=end)
 
 def main() -> None:
+    """Main program"""
     clear_terminal()
     print(check_types.__doc__, "\n")
     check_types()

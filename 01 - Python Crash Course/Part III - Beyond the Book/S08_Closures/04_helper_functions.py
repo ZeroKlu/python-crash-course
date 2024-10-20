@@ -1,3 +1,5 @@
+"""Inner Functions as Helpers"""
+
 import os
 import sys
 import csv
@@ -31,6 +33,7 @@ def process_hotspots(file: str | io.TextIOWrapper) -> None:
         most_common_provider(file)
 
 def main() -> None:
+    """Run the program"""
     file_path = os.path.join(os.path.dirname(sys.argv[0]), "data", "hotspots.csv")
 
     # We can now call our outer function with a string path...

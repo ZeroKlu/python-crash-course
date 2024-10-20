@@ -1,3 +1,5 @@
+"""Arguments with Decorators"""
+
 def power(exp: int) -> callable:
     """Generates a decorator (applying a non-local value for the exponent)"""
     def _power(func: callable) -> callable:
@@ -35,10 +37,12 @@ def divide(a: int, b: int) -> float:
     return a / b
 
 def main() -> None:
+    """Run the program"""
     for tup in [(2, 5), (2, 0)]:
         x, y = tup
         z = divide(x, y)
-        if z: print(f"Returned {z}")
+        if z:
+            print(f"Returned {z}")
         print()
 
     for n in range(1, 6):

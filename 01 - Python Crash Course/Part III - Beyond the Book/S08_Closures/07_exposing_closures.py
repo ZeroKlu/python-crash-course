@@ -1,3 +1,5 @@
+"""Exposing Closures"""
+
 def make_point(x: int, y: int) -> callable:
     """Generates a point with access to its coordinate values"""
     def point():
@@ -7,14 +9,14 @@ def make_point(x: int, y: int) -> callable:
     def get_x() -> int:
         """Getter function for x"""
         return x
-    
+
     def get_y() -> int:
         """Getter function for y"""
         return y
-    
+
     point.get_x = get_x
     point.get_y = get_y
-    
+
     def set_x(val: int) -> None:
         """Setter function for x"""
         nonlocal x
@@ -31,6 +33,7 @@ def make_point(x: int, y: int) -> callable:
     return point
 
 def main() -> None:
+    """Main function"""
     point = make_point(1, 2)
     point()
     print(f"x = {point.get_x()}")

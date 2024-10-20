@@ -1,3 +1,5 @@
+"""Automatic Flag Values"""
+
 from enum import Flag, auto
 
 class Weekday(Flag):
@@ -12,6 +14,7 @@ class Weekday(Flag):
     WEEKEND = SATURDAY | SUNDAY
 
 def main() -> None:
+    """Main function"""
     for day in [Weekday.SATURDAY, Weekday.SUNDAY, Weekday.WEEKEND]:
         print(day, "=", day.value)
     print()

@@ -1,3 +1,5 @@
+"""Digit grouping"""
+
 def integer_grouping() -> None:
     """Adding grouping separators to integers"""
     n = 1234567
@@ -11,6 +13,7 @@ def float_grouping() -> None:
     print(f"{n:,}\t{n:_}\n")
 
 def main() -> None:
+    """Main program"""
     integer_grouping()
     float_grouping()
 

@@ -1,3 +1,5 @@
+"""Flags"""
+
 from enum import Flag
 from datetime import date
 
@@ -12,9 +14,9 @@ class Weekday(Flag):
     SUNDAY = 64
 
     @classmethod
-    def from_date(cls, date: date) -> Flag:
+    def from_date(cls, day: date) -> Flag:
         """Get weekday name of the given date"""
-        return cls(2 ** date.weekday())
+        return cls(2 ** day.weekday())
 
 def show_chores(chores: dict[str: Flag], day: Flag) -> None:
     """Show chores for a given day"""
@@ -24,6 +26,7 @@ def show_chores(chores: dict[str: Flag], day: Flag) -> None:
             print("-", chore)
 
 def main() -> None:
+    """Main function"""
     today = Weekday.from_date(date.today())
     print(f"Today is {today.name.title()}.\n")
 
@@ -50,7 +53,7 @@ def main() -> None:
         "do the dishes": Weekday.TUESDAY | Weekday.THURSDAY,
         "answer stack overflow questions": Weekday.MONDAY | Weekday.SATURDAY,
     }
-                
+
     show_chores(my_chores, Weekday.MONDAY)
 
 if __name__ == "__main__":

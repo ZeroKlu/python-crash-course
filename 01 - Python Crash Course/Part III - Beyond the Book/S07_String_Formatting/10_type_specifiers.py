@@ -1,3 +1,5 @@
+"""Type Specifiers"""
+
 def data_types() -> None:
     """Demonstrates the use of format specifiers to control data types"""
     answer = 42
@@ -21,6 +23,7 @@ def data_type_labels() -> None:
     print(f"g: {answer:#g}\n")
 
 def main() -> None:
+    """Main function"""
     data_types()
     data_type_labels()
 

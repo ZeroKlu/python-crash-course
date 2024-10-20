@@ -1,3 +1,5 @@
+"""Zero Padding"""
+
 def pad_zeros() -> None:
     """Pad numbers with zeros"""
     nums = [1, -7, 123]
@@ -16,6 +18,7 @@ def drown_zeros() -> None:
         print(f"{n:•>05d}, {n:•>06.1f}")
 
 def main() -> None:
+    """Main function"""
     pad_zeros()
     print()
     pad_zeros_str()

@@ -1,3 +1,5 @@
+"""Closures"""
+
 def generate_power(exponent: int) -> callable:
     """Closure factory (creates a new closure each time it is called)"""
     def power(base: int) -> int:
@@ -6,6 +8,7 @@ def generate_power(exponent: int) -> callable:
     return power
 
 def main() -> None:
+    """Instantiating and using a closure"""
     squared = generate_power(2)
     print("\ncalling `squared()`...")
     for n in range(1, 6):

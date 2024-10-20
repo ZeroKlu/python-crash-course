@@ -1,3 +1,5 @@
+"""Mutating the Closure State"""
+
 def mean() -> callable:
     """Creates a mutable mean function that updates as numbers are added"""
     sample = []
@@ -7,6 +9,7 @@ def mean() -> callable:
     return inner_mean
 
 def main() -> None:
+    """Main function"""
     sample_mean = mean()
     for i in range(1, 6):
         print(f"Stored {i}: Mean = {sample_mean(i)}")

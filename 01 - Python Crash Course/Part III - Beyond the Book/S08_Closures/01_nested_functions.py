@@ -1,3 +1,5 @@
+"""Nested functions"""
+
 def outer_function() -> None:
     """Executes the inner function"""
     def inner_function() -> None:
@@ -25,6 +27,7 @@ def greeting(name: str) -> callable:
     return hello
 
 def main() -> None:
+    """Main function"""
     outer_function()
     outer_function_with_args("Scott")
     x, y, = 2, 3
