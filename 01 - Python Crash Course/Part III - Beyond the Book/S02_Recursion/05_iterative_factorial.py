@@ -1,3 +1,5 @@
+"""Computing factorials without recursion"""
+
 def iterative_factorial(n: int) -> int | None:
     """Calculate the factorial of n"""
     if not isinstance(n, int) or n < 0:
@@ -9,6 +11,7 @@ def iterative_factorial(n: int) -> int | None:
     return f
 
 def main() -> None:
+    """Main program"""
     # print(iterative_factorial(1001))
     for n in range(10):
         print(f"{n}! = {iterative_factorial(n)}")

@@ -1,6 +1,8 @@
-from common_functions import file_to_list, efficiency_report
+"""Implements the binary search algorithm"""
+
 from random import randint
 from sm_utils import timer
+from common_functions import file_to_list, efficiency_report
 
 # Pseudocode Algorithm:
 # ----------------------------------------------------------------------
@@ -23,12 +25,15 @@ from sm_utils import timer
 folder = "data"
 file_name = "ordered_integers.txt"
 
-def binary_search(array: list[int], target: int, low: int=-1, high: int=-1, count: int=0) -> tuple[int, int]:
+def binary_search(array: list[int], target: int, low: int=-1,
+                  high: int=-1, count: int=0) -> tuple[int, int]:
     """Find the index where the target value is stored"""
-    if low == -1: low = 0
-    if high == -1: high = len(array) - 1
+    if low == -1:
+        low = 0
+    if high == -1:
+        high = len(array) - 1
     count += 1
-    
+
     if high >= low:
         mid = (high + low) // 2
         if array[mid] == target:
@@ -36,8 +41,8 @@ def binary_search(array: list[int], target: int, low: int=-1, high: int=-1, coun
         if array[mid] < target:
             return binary_search(array, target, mid + 1, high, count)
         return binary_search(array, target, low, mid - 1, count)
-    else:
-        return (-1, count)
+    
+    return (-1, count)
 
 @timer
 def search_runner(array: list[int], target: int) -> tuple[int, int]:
@@ -45,6 +50,7 @@ def search_runner(array: list[int], target: int) -> tuple[int, int]:
     return binary_search(array, target)
 
 def main() -> None:
+    """Test the binary search"""
     numbers = file_to_list(file_name, folder)
     seek = randint(min(numbers), max(numbers))
     result = search_runner(numbers, seek)

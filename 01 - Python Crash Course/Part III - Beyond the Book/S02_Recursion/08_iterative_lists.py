@@ -1,3 +1,5 @@
+"""Traversing a nested list without recursion"""
+
 def count_leaves(items: list[str | list]) -> int:
     """Iteratively count the number of leaves in a (possibly) nested list"""
     count = 0
@@ -8,10 +10,9 @@ def count_leaves(items: list[str | list]) -> int:
         if i == len(current_list):
             if current_list == items:
                 return count
-            else:
-                current_list, i = stack.pop()
-                i += 1
-                continue
+            current_list, i = stack.pop()
+            i += 1
+            continue
         if isinstance(current_list[i], list):
             stack.append([current_list, i])
             current_list = current_list[i]
@@ -21,6 +22,7 @@ def count_leaves(items: list[str | list]) -> int:
             i += 1
 
 def main() -> None:
+    """Main function to demonstrate the count_leaves function"""
     names = [
         "Adam",
         [

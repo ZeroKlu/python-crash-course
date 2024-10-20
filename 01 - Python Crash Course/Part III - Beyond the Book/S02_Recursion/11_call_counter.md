@@ -20,7 +20,8 @@ For this topic, instead of timing completion (which is still important), we'll
 track the number of recursive calls are necessary for our function to compute
 a given solution.
 
-For this purpose, I have provided a special class `CountCalls` that can be used as a decorator on the functions we develop and test.
+For this purpose, I have provided a special class `CountCalls` that can be
+used as a decorator on the functions we develop and test.
 
 This class implements an override of the `__call__()` method to wrap a
 function with a counter and expose its value after all recursive calls

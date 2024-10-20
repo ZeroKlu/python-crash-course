@@ -1,3 +1,5 @@
+"""Compute factorials using recursion"""
+
 def factorial(n: int) -> int | None:
     """Calculate the factorial of n"""
     if not isinstance(n, int) or n < 0:
@@ -8,6 +10,7 @@ def factorial(n: int) -> int | None:
     return n * factorial(n - 1)
 
 def main() -> None:
+    """Main process to test factorial function"""
     for n in range(10):
         print(f"{n}! = {factorial(n)}")
 

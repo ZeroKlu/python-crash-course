@@ -1,3 +1,5 @@
+"""Implementation of several Fibonacci methods"""
+
 from count_calls import CountCalls
 
 @CountCalls

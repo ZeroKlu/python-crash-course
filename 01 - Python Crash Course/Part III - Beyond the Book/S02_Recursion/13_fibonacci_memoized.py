@@ -1,3 +1,5 @@
+"""Memoized recursive Fibonacci algorithm"""
+
 from count_calls import CountCalls
 
 @CountCalls
@@ -9,6 +11,7 @@ def fibonacci(n: int, cache: dict[int, int]={0: 0, 1: 1}) -> int:
     return cache[n]
 
 def main() -> None:
+    """Main program"""
     n = 40
     print(f"Calculated F({n}) = {fibonacci(n):,}")
     print(f"call_count = {fibonacci.call_count:,}")

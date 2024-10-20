@@ -1,3 +1,5 @@
+"""Naive recursive Fibonacci algorithm"""
+
 from count_calls import CountCalls
 
 @CountCalls
@@ -8,6 +10,7 @@ def fibonacci(n: int) -> int:
     return fibonacci(n - 1) + fibonacci(n - 2)
 
 def main() -> None:
+    """Main function"""
     n = 40
     print(f"Calculated F({n}) = {fibonacci(n):,}")
     print(f"call_count = {fibonacci.call_count:,}")

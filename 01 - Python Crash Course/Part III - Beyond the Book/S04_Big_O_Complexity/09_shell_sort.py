@@ -1,5 +1,8 @@
-from common_functions import file_to_list, efficiency_report, list_to_file, is_sorted
+"""Implements the shell sort algorithm"""
+
+import sys
 from math import log2, ceil
+from common_functions import file_to_list, efficiency_report, list_to_file, is_sorted
 from sm_utils import timer
 
 # Pseudocode Algorithm:
@@ -31,15 +34,16 @@ def shell_sort(array: list[int]) -> tuple[list[int], int]:
                 j -= interval
             array[j] = temp
         k -= 1
-    
+
     return (array, count)
 
 def main() -> None:
+    """Test the shell sort"""
     numbers = file_to_list(input_file_name, folder)
     result = shell_sort(numbers)
     if not is_sorted(result[0]):
         print("Failed to sort array!")
-        exit()
+        sys.exit()
     list_to_file(result[0], output_file_name, folder)
     efficiency_report("Shell Sort", len(numbers), result[1])
     print(f"Check file: ./{folder}/{output_file_name} to validate results")

@@ -1,3 +1,5 @@
+"""Handling command line arguments"""
+
 import sys
 
 def parse_args() -> None:
@@ -24,6 +26,7 @@ def greet_user() -> None:
     print(f"Hello, {first_name} {last_name}")
 
 def main() -> None:
+    """Main function"""
     parse_args()
     greet_user()
 

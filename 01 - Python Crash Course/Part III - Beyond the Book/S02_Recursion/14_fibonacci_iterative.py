@@ -1,3 +1,5 @@
+"""Iterative Fibonacci algorithm"""
+
 from count_calls import CountCalls
 
 @CountCalls
@@ -9,6 +11,7 @@ def fibonacci(n: int) -> int:
     return values[-1]
 
 def main() -> None:
+    """Main function to test the Fibonacci function"""
     n = 40
     print(f"Calculated F({n}) = {fibonacci(n):,}")
     print(f"call_count = {fibonacci.call_count:,}")

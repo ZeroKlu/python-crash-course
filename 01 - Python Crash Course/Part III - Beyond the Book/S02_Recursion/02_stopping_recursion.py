@@ -1,3 +1,5 @@
+"""Stopping recursion"""
+
 from time import sleep
 
 def countdown(n: int) -> bool:
@@ -13,6 +15,7 @@ def countdown(n: int) -> bool:
     return countdown(n - 1)
 
 def main() -> None:
+    """Main program"""
     n = 3
     if countdown(n):
         print("\nrecursions complete...")

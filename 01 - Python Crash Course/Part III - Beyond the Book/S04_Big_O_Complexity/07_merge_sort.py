@@ -1,3 +1,6 @@
+"""Implements the merge sort algorithm"""
+
+import sys
 from common_functions import file_to_list, efficiency_report, list_to_file, is_sorted
 from sm_utils import timer
 
@@ -20,7 +23,7 @@ def merge_sort(array: list[int], count: int=0) -> tuple[list[int], int]:
     array_2, count = merge_sort(array[mid + 1:], count)
 
     result, count = merge(array_1, array_2, count)
-    
+
     return (result, count)
 
 def merge(array_1: list[int], array_2: list[int], count: int) -> tuple[list[int], int]:
@@ -37,12 +40,12 @@ def merge(array_1: list[int], array_2: list[int], count: int) -> tuple[list[int]
             merged.append(array_2[j])
             j += 1
     if i > len(array_1)-1:
-        while(j <= len(array_2) - 1):
+        while j <= len(array_2) - 1:
             count += 1
             merged.append(array_2[j])
             j += 1
     else:
-        while(i <= len(array_1) - 1):
+        while i <= len(array_1) - 1:
             count += 1
             merged.append(array_1[i])
             i += 1
@@ -54,11 +57,12 @@ def sort_runner(array: list[int]) -> tuple[int, int]:
     return merge_sort(array)
 
 def main() -> None:
+    """Test the merge sort"""
     numbers = file_to_list(input_file_name, folder)
     result = sort_runner(numbers)
     if not is_sorted(result[0]):
         print("Failed to sort array!")
-        exit()
+        sys.exit()
     list_to_file(result[0], output_file_name, folder)
     efficiency_report("Merge Sort", len(numbers), result[1])
     print(f"Check file: ./{folder}/{output_file_name} to validate results")

@@ -1,3 +1,5 @@
+"""Implementing recursion call counter"""
+
 from time import sleep
 from count_calls import CountCalls
 
@@ -15,6 +17,7 @@ def countdown(n: int) -> bool:
     return countdown(n - 1)
 
 def main() -> None:
+    """Main program"""
     n = 3
     if countdown(n):
         print(f"\nrecursions complete after {countdown.call_count} calls...")

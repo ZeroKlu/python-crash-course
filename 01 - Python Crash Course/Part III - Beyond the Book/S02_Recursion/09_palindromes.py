@@ -1,3 +1,5 @@
+"""Identifying palindromes"""
+
 def clean_text(text: str) -> str:
     """Remove non-letters and standardize case"""
     return "".join([(text[i] if text[i].isalpha() else "")
@@ -23,6 +25,7 @@ def is_palindrome_iterative(text: str) -> bool:
     return True
 
 def main() -> None:
+    """Main function"""
     words = ["foo", "race car", "boot", "toot", "Madam, I'm Adam."]
 
     algorithms = {

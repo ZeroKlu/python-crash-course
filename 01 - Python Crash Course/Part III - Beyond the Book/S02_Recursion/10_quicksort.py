@@ -1,3 +1,5 @@
+"""Implementation of the Quicksort algorithm"""
+
 from statistics import median
 from random import randint
 
@@ -6,7 +8,7 @@ def quicksort(numbers: list[int]) -> list[int]:
     # Base case: 0- or 1-length lists are sorted
     if len(numbers) <= 1:
         return numbers
-    
+
     # Get the pivot using the median of the first, last and middle numbers
     pivot = median([numbers[0], numbers[len(numbers) // 2], numbers[-1]])
 
@@ -23,6 +25,7 @@ def generate_random_list(length: int=10, minimum: int=-100, maximum: int=100):
     return [randint(minimum, maximum) for _ in range(length)]
 
 def main() -> None:
+    """Main program"""
     lists = [
         # Base cases
         [],
@@ -39,7 +42,7 @@ def main() -> None:
     print()
 
 if __name__ == "__main__":
-    numbers = [randint(-100, 100) for _ in range(10)]
-    print(f"Unsorted: {numbers}")
-    print(f"Sorted: {quicksort(numbers)}")
+    nums = [randint(-100, 100) for _ in range(10)]
+    print(f"Unsorted: {nums}")
+    print(f"Sorted: {quicksort(nums)}")
     # main()

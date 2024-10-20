@@ -64,7 +64,7 @@ def merge_sort(array: list[int]) -> list[int]:
     array_2 = merge_sort(array[mid + 1:])
 
     result = merge(array_1, array_2)
-    
+
     return result
 
 def merge(array_1: list[int], array_2: list[int]) -> list[int]:
@@ -80,11 +80,11 @@ def merge(array_1: list[int], array_2: list[int]) -> list[int]:
             merged.append(array_2[j])
             j += 1
     if i > len(array_1)-1:
-        while(j <= len(array_2) - 1):
+        while j <= len(array_2) - 1:
             merged.append(array_2[j])
             j += 1
     else:
-        while(i <= len(array_1) - 1):
+        while i <= len(array_1) - 1:
             merged.append(array_1[i])
             i += 1
     return merged
@@ -97,7 +97,7 @@ def heap_sort(array: list[int]) -> list[int]:
     for i in range(n - 1, 0, -1):
         array[i], array[0] = array[0], array[i]
         make_heap(array, i, 0)
-    
+
     return array
 
 def make_heap(array: list[int], n: int, i: int) -> None:
@@ -105,13 +105,13 @@ def make_heap(array: list[int], n: int, i: int) -> None:
     largest = i
     l = 2 * i + 1
     r = 2 * i + 2
-    
+
     if l < n and array[largest] < array[l]:
         largest = l
 
     if r < n and array[largest] < array[r]:
         largest = r
-    
+
     if largest != i:
         array[i], array[largest] = array[largest], array[i]
         make_heap(array, n, largest)
@@ -132,5 +132,5 @@ def shell_sort(array: list[int]) -> list[int]:
                 j -= interval
             array[j] = temp
         k -= 1
-    
+
     return array

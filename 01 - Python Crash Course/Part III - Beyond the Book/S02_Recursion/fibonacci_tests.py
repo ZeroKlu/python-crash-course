@@ -1,3 +1,5 @@
+"""Test program for Fibonacci functions"""
+
 import fibonacci_functions as fib
 
 def print_menu() -> None:
@@ -10,6 +12,7 @@ def print_menu() -> None:
     print("[Q]uit")
 
 def main() -> None:
+    """Main function"""
     options = ["r", "m", "i", "f", "q"]
 
     while True:
@@ -24,30 +27,34 @@ def main() -> None:
             while n < 0 and option != "q":
                 try:
                     n = int(input("Enter a non-negative integer:\n> "))
-                except:
+                except Exception:
                     continue
         if option == "r":
             # Call naive recursive function
             print(f"\nF({n}) = {fib.fibonacci_recursive(n):,}")
-            print(f"Recursive calculation required {fib.fibonacci_recursive.call_count:,} function calls.")
+            print("Recursive calculation required " + \
+                  f"{fib.fibonacci_recursive.call_count:,} function calls.")
         elif option == "m":
             # Call recursive function with memoization
             print(f"\nF({n}) = {fib.fibonacci_recursive_memo(n):,}")
-            print(f"Cached recursive calculation required {fib.fibonacci_recursive_memo.call_count:,} function calls.")
+            print("Cached recursive calculation required " + \
+                  f"{fib.fibonacci_recursive_memo.call_count:,} function calls.")
         elif option == "i":
             # Call iterative function
             print(f"\nF({n}) = {fib.fibonacci_iterative(n):,}")
             suffix = "s"
             if fib.fibonacci_iterative.call_count == 1:
                 suffix = ""
-            print(f"Iterative calculation required {fib.fibonacci_iterative.call_count:,} function call{suffix}.")
+            print("Iterative calculation required " + \
+                  f"{fib.fibonacci_iterative.call_count:,} function call{suffix}.")
         elif option == "f":    
             # Call formulaic function
             print(f"\nF({n}) = {fib.fibonacci_formulaic(n):,}")
             suffix = "s"
             if fib.fibonacci_formulaic.call_count == 1:
                 suffix = ""
-            print(f"Formula-based calculation required {fib.fibonacci_formulaic.call_count:,} function call{suffix}.")
+            print("Formula-based calculation required " + \
+                  f"{fib.fibonacci_formulaic.call_count:,} function call{suffix}.")
         else:
             break
 

@@ -1,3 +1,5 @@
+"""Recursive vs iterative performance comparison"""
+
 from time import perf_counter_ns
 from functools import reduce
 from math import factorial
@@ -44,6 +46,7 @@ def check_performance(func: callable, n: int, r: int) -> int:
     return end - start
 
 def main() -> None:
+    """Compare the performance of different factorial calculation methods"""
     n = 10
     repeat = 1_000_000
     functions = {

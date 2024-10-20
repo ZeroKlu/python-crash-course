@@ -1,3 +1,5 @@
+"""Implements the heap sort algorithm"""
+
 from common_functions import file_to_list, efficiency_report, list_to_file, is_sorted
 from sm_utils import timer
 
@@ -23,7 +25,7 @@ def heap_sort(array: list[int]) -> tuple[list[int], int]:
         count += 1
         array[i], array[0] = array[0], array[i]
         count = make_heap(array, i, 0, count)
-    
+
     return (array, count)
 
 def make_heap(array: list[int], n: int, i: int, count: int) -> int:
@@ -31,21 +33,22 @@ def make_heap(array: list[int], n: int, i: int, count: int) -> int:
     largest = i
     l = 2 * i + 1
     r = 2 * i + 2
-    
+
     if l < n and array[largest] < array[l]:
         largest = l
 
     if r < n and array[largest] < array[r]:
         largest = r
-    
+
     if largest != i:
         count += 1
         array[i], array[largest] = array[largest], array[i]
         count = make_heap(array, n, largest, count)
-    
+
     return count
 
 def main() -> None:
+    """Test the heap sort algorithm"""
     numbers = file_to_list(input_file_name, folder)
     result = heap_sort(numbers)
     if not is_sorted(result[0]):

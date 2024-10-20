@@ -1,3 +1,6 @@
+"""Implements the quick sort algorithm"""
+
+import sys
 from common_functions import file_to_list, efficiency_report, list_to_file, is_sorted
 from sm_utils import timer
 
@@ -29,7 +32,7 @@ def quick_sort(array: list[int], count: int=0) -> tuple[list[int], int]:
         count = res[1]
     else:
         return (array, count)
-    
+
     return (array, count)
 
 @timer
@@ -38,11 +41,12 @@ def sort_runner(array: list[int]) -> tuple[int, int]:
     return quick_sort(array)
 
 def main() -> None:
+    """Run the quick_sort function"""
     numbers = file_to_list(input_file_name, folder)
     result = sort_runner(numbers[:])
     if not is_sorted(result[0]):
         print("Failed to sort array!")
-        exit()
+        sys.exit()
     list_to_file(result[0], output_file_name, folder)
     efficiency_report("Quick Sort", len(numbers), result[1])
     print(f"Check file: ./{folder}/{output_file_name} to validate results")

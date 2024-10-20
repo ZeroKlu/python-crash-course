@@ -1,3 +1,5 @@
+"""Iterating over nested lists"""
+
 def count_leaves(items: list[str | list]) -> int:
     """Recursively count the number of leaves in a (possibly) nested list"""
     print(f"Counting list: {items}")
@@ -11,6 +13,7 @@ def count_leaves(items: list[str | list]) -> int:
     return count
 
 def main() -> None:
+    """Main function to demonstrate the count_leaves function"""
     names = [
         "Adam",
         [
@@ -29,7 +32,7 @@ def main() -> None:
         ],
         "Ann"
     ]
-    
+
     num = len(names)
     print(f"The list contains {num} {'leaf' if num == 1 else 'leaves'}")
     for index, name in enumerate(names):

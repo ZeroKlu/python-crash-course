@@ -1,3 +1,5 @@
+"""Working with regular expressions"""
+
 import re
 from sm_utils import pause, clear_terminal
 
@@ -15,6 +17,7 @@ def test_regex_matching(data: list[str], patterns: dict[str, str]) -> None:
         pause()
 
 def main() -> None:
+    """Main function"""
     phone_numbers = [
         "7134833111",
         "713-483-3111",

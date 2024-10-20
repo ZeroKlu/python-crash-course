@@ -1,3 +1,5 @@
+"""Common functions for algorthm tests"""
+
 from relative_paths import get_path
 from pathlib import Path
 from math import log2, ceil, factorial
@@ -6,14 +8,14 @@ def file_to_list(file_name: str, folder: str=None) -> list[int]:
     """Read a space-delimited file into a list of integers"""
     numbers = []
     path = Path(get_path(file_name, folder))
-    for line in path.read_text().splitlines():
+    for line in path.read_text(encoding="utf-8").splitlines():
         numbers += [int(n) for n in line.split()]
     return numbers
 
 def list_to_file(array: list[int], file_name: str, folder: str=None) -> None:
     """Write a list of integers a space-delimited file"""
     path = Path(get_path(file_name, folder))
-    path.write_text(" ".join(str(n) for n in array))
+    path.write_text(" ".join(str(n) for n in array), encoding="utf-8")
 
 def is_sorted(array: list[int]) -> bool:
     """Verify that all values in the array are in the sorted order"""
@@ -86,7 +88,7 @@ def efficiency_report(algorithm: str, size: int, count: int) -> None:
         o = big_o["n"]
     elif count > 2:
         o = big_o["log_n"]
-        
+
     print(f"Computed complexity: O({o['big_o']}) - {o['name']}\n")
     print("Approximate values for reference:")
     for item in big_o.values():
