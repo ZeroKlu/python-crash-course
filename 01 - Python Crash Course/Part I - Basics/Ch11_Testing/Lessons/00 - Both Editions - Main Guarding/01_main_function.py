@@ -6,6 +6,9 @@ def main() -> None:
     """Main Function: Test Main Guarding"""
     print("Chapter 11:")
     print("Exercise 1 - Using a `main()` Function\n")
+    
+    # pylint: disable=unused-import
+    # pylint: disable=import-outside-toplevel
 
     pause()
     clear_terminal()

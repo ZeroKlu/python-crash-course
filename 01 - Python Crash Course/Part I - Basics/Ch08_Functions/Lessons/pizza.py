@@ -1,3 +1,5 @@
+"""Module exposing the make_pizza() function"""
+
 # This file is designed to be a module, called from another file
 # We're only exposing the make_pizza() method
 

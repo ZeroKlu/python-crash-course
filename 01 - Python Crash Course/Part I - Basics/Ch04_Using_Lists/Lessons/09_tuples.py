@@ -8,13 +8,17 @@ print(f"\nDimensions: {dimensions[0]} x {dimensions[1]}")
 
 three = (3,)
 
-for dim in dimensions: print(dim)
+for dim in dimensions:
+    print(dim)
 
 print("\nOriginal dimensions:")
-for dim in dimensions: print(dim)
+for dim in dimensions:
+    print(dim)
+
 dimensions = (250, 50)
 print("\nModified dimensions:")
-for dim in dimensions: print(dim)
+for dim in dimensions:
+    print(dim)
 
 coordinates = (2, 6)
 x, y = coordinates

@@ -15,6 +15,7 @@
 #                `test_city_country()` passes.
 
 from city_functions import city_country
+# pylint: disable = no-name-in-module
 from city_functions import city_country_population
 
 def test_city_country():

@@ -10,7 +10,8 @@ class Employee():
 
     def show_details(self):
         """Show details of the employee"""
-        print(f"{self.first_name} {self.last_name} - Salary : ${self.annual_salary}".title())
+        print(f"{self.first_name} {self.last_name} - Salary : " + \
+              f"${self.annual_salary}".title())
 
     def give_raise(self, amount = 5000):
         """Give the employee a raise"""

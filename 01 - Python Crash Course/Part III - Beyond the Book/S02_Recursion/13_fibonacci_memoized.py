@@ -2,6 +2,7 @@
 
 from count_calls import CountCalls
 
+# pylint: disable=dangerous-default-value
 @CountCalls
 def fibonacci(n: int, cache: dict[int, int]={0: 0, 1: 1}) -> int:
     """Return the nth Fibonacci number (memoized algorithm)"""

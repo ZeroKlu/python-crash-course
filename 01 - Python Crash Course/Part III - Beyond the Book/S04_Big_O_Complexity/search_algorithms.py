@@ -1,3 +1,5 @@
+"""Search algorithms"""
+
 def linear_search(array: list[int], target: int) -> int:
     """Find the index where the target value is stored"""
     for i, elem in enumerate(array):

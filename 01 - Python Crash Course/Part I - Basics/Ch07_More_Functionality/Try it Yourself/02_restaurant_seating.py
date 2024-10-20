@@ -10,7 +10,7 @@ print("Assignment 7.2")
 
 guests = input("How many guests in your party?\n> ")
 guests = int(guests)
-if (guests > 8):
+if guests > 8:
     print("There will be a little wait for a table.")
 else:
     print("Your table is ready.")

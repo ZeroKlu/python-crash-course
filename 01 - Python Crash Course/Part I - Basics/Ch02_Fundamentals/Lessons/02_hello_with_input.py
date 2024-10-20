@@ -11,5 +11,6 @@ message = f"Hello {name}"
 print(message)
 
 # In older versions, you would need to use this syntax:
+# pylint: disable=consider-using-f-string
 message = "Hello {0}".format(name)
 print(message)

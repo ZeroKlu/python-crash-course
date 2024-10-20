@@ -1,3 +1,5 @@
+"""Override the `__repr__()` Method"""
+
 from dataclasses import dataclass
 
 @dataclass(repr=False)
@@ -13,6 +15,7 @@ class Employee:
             f"age: {self.age}, city: {self.city})"
 
 def main() -> None:
+    """Main Function"""
     emp = Employee("Scott McLean", "smclean", 54, "Dallas")
     print(emp)
 

@@ -1,10 +1,14 @@
+"""Bitwise XOR"""
+
 def swap_values(a: int, b: int) -> tuple[int, int]:
+    """Swap the values of two variables"""
     a = a ^ b
     b = b ^ a
     a = a ^ b
     return a, b
 
 def main() -> None:
+    """Test bitwise XOR"""
     a = 0b10011100 # 156
     b = 0b00110100 # 52
     print(f"{(a ^ b):>08b}") # --> 10101000 (168)

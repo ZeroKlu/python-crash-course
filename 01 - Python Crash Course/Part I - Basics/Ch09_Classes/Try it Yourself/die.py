@@ -2,6 +2,7 @@
 
 from random import randint
 
+# pylint: disable=too-few-public-methods
 class Die:
     """Defines an n-sided die"""
 

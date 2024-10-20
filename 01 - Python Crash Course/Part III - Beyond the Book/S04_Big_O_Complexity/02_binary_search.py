@@ -1,5 +1,6 @@
 """Implements the binary search algorithm"""
 
+import sys
 from random import randint
 from sm_utils import timer
 from common_functions import file_to_list, efficiency_report
@@ -41,7 +42,7 @@ def binary_search(array: list[int], target: int, low: int=-1,
         if array[mid] < target:
             return binary_search(array, target, mid + 1, high, count)
         return binary_search(array, target, low, mid - 1, count)
-    
+
     return (-1, count)
 
 @timer
@@ -56,7 +57,7 @@ def main() -> None:
     result = search_runner(numbers, seek)
     if result[0] < 0:
         print(f"\nDid not find value: {seek}")
-        exit()
+        sys.exit()
     print(f"\nIndex of target [{seek}]: i = [{result[0]}]")
     efficiency_report("Binary Search", len(numbers), result[1])
 

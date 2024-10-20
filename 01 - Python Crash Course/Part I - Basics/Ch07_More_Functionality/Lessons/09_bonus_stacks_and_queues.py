@@ -13,4 +13,5 @@ print(f"\nQueue: {my_queue}")
 while my_queue:
     print(my_queue.pop(0))
 
-# This isn't a complete illustration of stacks and queues, just of removal order
+# This isn't a complete illustration of stacks and queues,
+#   just of removal order

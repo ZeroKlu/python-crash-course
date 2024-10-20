@@ -1,11 +1,15 @@
 """Implements the heap sort algorithm"""
 
+import sys
 from common_functions import file_to_list, efficiency_report, list_to_file, is_sorted
 from sm_utils import timer
 
+# pylint: disable=fixme
+
 # Pseudocode Algorithm:
 # --------------------------------------------------------------
-# TODO: n log n
+# O(n log n)
+# TODO: Describe algorithm
 # --------------------------------------------------------------
 
 folder = "data"
@@ -53,7 +57,7 @@ def main() -> None:
     result = heap_sort(numbers)
     if not is_sorted(result[0]):
         print("Failed to sort array!")
-        exit()
+        sys.exit()
     list_to_file(result[0], output_file_name, folder)
     efficiency_report("Heap Sort", len(numbers), result[1])
     print(f"Check file: ./{folder}/{output_file_name} to validate results")

@@ -19,7 +19,8 @@ motorcycles.append(too_expensive)
 print(f"{len(motorcycles)} elements")
 print(motorcycles)
 
-# CAUTION - If a value exists more than once in a list, list.remove(value) only removes the first occurrence
+# CAUTION - If a value exists more than once in a list,
+#           list.remove(value) only removes the first occurrence
 motorcycles.remove(too_expensive)
 print(f"I removed '{too_expensive}', because it's too expensive...")
 print(f"{len(motorcycles)} elements")

@@ -1,14 +1,13 @@
-def encrypt_decrypt(text: str, key: int) -> str:
-    outString = []
+"""Using XOR for Encryption and Decryption"""
 
-    for i in range(len(text)):
-        outString.append(chr(ord(text[i]) ^ key))
-    
-    return "".join(outString)
+def encrypt_decrypt(text: str, key: int) -> str:
+    """Encrypts and decrypts a string using XOR"""
+    return "".join([chr(ord(c) ^ key) for c in text])
 
 def main() -> None:
+    """Main program"""
     key = 30
-    
+
     text = "Hello World!"
     print(f"Plain Text:     {text}")
 

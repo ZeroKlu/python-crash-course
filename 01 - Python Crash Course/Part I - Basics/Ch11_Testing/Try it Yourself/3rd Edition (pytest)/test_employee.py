@@ -34,6 +34,8 @@ def employee():
     fixed_employee = Employee("scott", "mclean", 65_000)
     return fixed_employee
 
+# pylint: disable=redefined-outer-name
+
 def test_give_default_raise(employee: Employee):
     """Test that a default raise works correctly."""
     employee.give_raise()

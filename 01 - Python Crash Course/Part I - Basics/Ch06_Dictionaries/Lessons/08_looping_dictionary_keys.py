@@ -12,6 +12,7 @@ favorite_languages = {
 
 print(favorite_languages.keys(), "\n")
 
+# pylint: disable=consider-iterating-dictionary
 for name in favorite_languages.keys():
     print(name.title())
 

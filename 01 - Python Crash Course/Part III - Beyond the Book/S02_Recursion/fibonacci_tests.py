@@ -27,6 +27,7 @@ def main() -> None:
             while n < 0 and option != "q":
                 try:
                     n = int(input("Enter a non-negative integer:\n> "))
+                # pylint: disable=broad-except
                 except Exception:
                     continue
         if option == "r":

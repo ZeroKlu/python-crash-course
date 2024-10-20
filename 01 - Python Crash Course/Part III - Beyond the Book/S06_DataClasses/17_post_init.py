@@ -1,3 +1,5 @@
+"""Post-Init Hook"""
+
 from dataclasses import dataclass, field
 
 @dataclass()
@@ -14,6 +16,7 @@ class Employee:
         self.age_verified = self.age > min_age
 
 def main() -> None:
+    """Main Function"""
     emp = Employee("Scott McLean", "smclean", 54, "Dallas")
     print(emp)
 

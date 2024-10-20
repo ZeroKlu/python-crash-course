@@ -21,6 +21,7 @@ def count_words(filename):
             contents = f.read()
     except FileNotFoundError:
         print(f"Sorry, the file {filename} does not exist.")
+    # pylint: disable=broad-except
     except Exception as ex:
         print(ex)
     else:
@@ -48,6 +49,7 @@ def count_file_words(filename):
         contents = file.read_text(encoding="utf-8")
     except FileNotFoundError:
         print(f"Sorry, the file {filename} does not exist.")
+    # pylint: disable=broad-except
     except Exception as ex:
         print(ex)
     else:

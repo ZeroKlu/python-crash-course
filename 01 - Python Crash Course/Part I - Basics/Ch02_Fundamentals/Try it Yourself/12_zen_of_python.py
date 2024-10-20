@@ -14,6 +14,8 @@ print("2. Enter:                >>> import this")
 
 input("Press <ENTER> to continue...")
 
+# pylint: disable=wrong-import-position
+# pylint: disable=unused-import
 import this
 
 # Result:

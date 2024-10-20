@@ -3,6 +3,7 @@
 def noob_loop_list(lst: list[int]) -> None:
     """Print items and indices in a list looping on index"""
     print("Looping list on index:")
+    # pylint: disable=consider-using-enumerate
     for i in range(len(lst)):
         item = lst[i]
         print(f"Index: {i}, Item: {item}")
@@ -18,6 +19,7 @@ def loop_list(lst: list[int]) -> None:
 def noob_loop_two_lists(lst_1: list[int], lst_2: list[str]) -> None:
     """Print items from two lists, looping on index"""
     print("Looping two lists on index:")
+    # pylint: disable=consider-using-enumerate
     for i in range(len(lst_1)):
         item_1 = lst_1[i]
         item_2 = lst_2[i]

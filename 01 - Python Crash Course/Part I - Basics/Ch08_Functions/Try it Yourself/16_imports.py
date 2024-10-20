@@ -13,9 +13,11 @@
 # ----------------------------------------------------
 
 import album
+# pylint: disable=reimported
 import album as a
 from album import make_album
 from album import make_album as ma
+# pylint: disable=wildcard-import
 from album import *
 
 print("Try-it-Yourself:")

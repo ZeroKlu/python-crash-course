@@ -8,7 +8,7 @@ print(f"The alien is {alien['color']}")
 
 alien["color"] = "yellow"
 print(f"The alien is now {alien['color']}")
-    
+
 # Book Example
 alien = {'x_position': 0, 'y_position': 25, 'speed': 'medium'}
 print(f"\nOriginal x-position: {alien['x_position']}")

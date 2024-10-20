@@ -5,6 +5,7 @@ from sm_utils import clear_terminal, pause
 print("Chapter 9:")
 print("Exercise 14 (Bonus) - Properties")
 
+# pylint: disable=too-few-public-methods
 class Person:
     """Class to define a person"""
 

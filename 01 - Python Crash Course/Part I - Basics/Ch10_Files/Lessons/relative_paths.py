@@ -34,6 +34,7 @@ def initialize(debug: bool | None=False) -> None:
     Parameters:  
     * **debug**: If True, print debug information (optional - default: False)
     """
+    # pylint: disable=global-statement
     global ROOT_DIR
     if ROOT_DIR is not None:
         return

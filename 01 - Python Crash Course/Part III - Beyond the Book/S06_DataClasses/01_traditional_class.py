@@ -1,3 +1,5 @@
+"""Employee Class (Traditional)"""
+
 class Employee:
     """Metadata about an employee"""
 
@@ -19,14 +21,15 @@ class Employee:
             (value.name, value.emp_id, value.age, value.city)
 
 def main() -> None:
+    """Main Function"""
     emp_1 = Employee("Scott", "smclean", 53, "Dallas")
     emp_2 = Employee("John", "Smith", 30, "Cleveland")
 
     print(emp_1)
     print(emp_2)
-    
+
     emp_3 = Employee("Scott", "smclean", 53, "Dallas")
-    
+
     print(f"emp_1 == emp_2? {emp_1 == emp_2}")
     print(f"emp_1 == emp_3? {emp_1 == emp_3}")
 

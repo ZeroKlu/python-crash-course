@@ -1,3 +1,5 @@
+"""Overriding the equality operator"""
+
 from dataclasses import dataclass
 
 @dataclass(eq=False)
@@ -15,6 +17,7 @@ class Employee:
            and self.city == value.city
 
 def main() -> None:
+    """Main function"""
     emp_1 = Employee("Scott McLean", "smclean", 54, "Dallas")
     emp_2 = Employee("Saul Goodman", "sgoodman", 47, "Albuquerque")
     emp_3 = Employee("Scott McLean", "smclean", 54, "Dallas")

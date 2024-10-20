@@ -1,4 +1,7 @@
+"""Bitwise OR"""
+
 def bitwise_or_example() -> None:
+    """Demonstrate bitwise OR"""
     a = 0b10011100 # 156
     b = 0b00110100 # 52
     print(f"{(a | b):>08b}") # --> 1011 1100 (188)
@@ -8,6 +11,7 @@ def bitwise_or_example() -> None:
     print(x | y) # --> 188
 
 def permissions_example() -> None:
+    """Create permissions using bitwise OR"""
     read = 1
     write = 2
     read_write = 3
@@ -20,6 +24,7 @@ def permissions_example() -> None:
         print("Success!")
 
 def main() -> None:
+    """Main program"""
     bitwise_or_example()
     print("\n---\n")
     permissions_example()

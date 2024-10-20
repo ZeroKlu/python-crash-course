@@ -10,6 +10,7 @@ def language_survey():
     survey = AnonymousSurvey(question)
     return survey
 
+# pylint: disable=redefined-outer-name
 def test_store_single_response(language_survey: AnonymousSurvey):
     """Test that a single response is stored properly."""
     language_survey.store_response("english")

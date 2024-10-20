@@ -4,9 +4,12 @@ import sys
 from common_functions import file_to_list, efficiency_report, list_to_file, is_sorted
 from sm_utils import timer
 
+# pylint: disable=fixme
+
 # Pseudocode Algorithm:
 # --------------------------------------------------------------
-# TODO: n log n
+# O(n log n)
+# TODO: Describe algorithm
 # --------------------------------------------------------------
 
 folder = "data"

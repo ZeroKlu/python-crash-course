@@ -1,5 +1,6 @@
 """Lesson 8.16"""
 
+# pylint: disable=dangerous-default-value
 def my_bad_function(my_arg: list[str]=[]) -> list[str]:
     """Demonstrate the result of a default mutable argument"""
     print("Using an empty list as a default argument:")
@@ -24,6 +25,7 @@ def counter(func: callable) -> callable:
     _counter.calls = 0
     return _counter
 
+# pylint: disable=dangerous-default-value
 @counter
 def fibonacci(n: int, memo: dict[int, int]={0: 0, 1: 1}) -> int:
     """Return the nth Fibonacci number (memoized algorithm)"""

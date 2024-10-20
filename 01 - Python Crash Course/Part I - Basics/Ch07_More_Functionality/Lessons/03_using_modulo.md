@@ -86,6 +86,8 @@ The number 7 is odd.
 
 ---
 
+<span style="color:salmon">**Homework Alert!**</span>
+
 ### Checking for Prime Numbers
 
 A fun exercise you can try is using modulo to determine if a number is prime

@@ -1,3 +1,5 @@
+"""DataClass `order` Argument"""
+
 from dataclasses import dataclass
 
 @dataclass(order=True)
@@ -9,6 +11,7 @@ class Employee:
     city: str
 
 def main() -> None:
+    """Main function"""
     emp_1 = Employee("Scott McLean", "smclean", 54, "Dallas")
     emp_2 = Employee("Saul Goodman", "sgoodman", 57, "Albuquerque")
     emp_3 = Employee("Scott McLean", "smclean", 54, "Dallas")

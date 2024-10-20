@@ -22,6 +22,7 @@ for language in set(favorite_languages.values()):
 
 counts = {}
 for language in favorite_languages.values():
+    # pylint: disable=consider-iterating-dictionary
     if language in counts.keys():
         counts[language] += 1
     else:

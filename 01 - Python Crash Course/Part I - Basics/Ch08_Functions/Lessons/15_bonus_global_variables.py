@@ -9,17 +9,20 @@ def use_global(use_adv: bool=False):
 
 def try_to_modify_global() -> None:
     """Try (and fail) to modify a global variable"""
+    # pylint: disable=redefined-outer-name
     adj = "fantastic"
     print(f"Python is {adj}")
 
 def modify_global() -> None:
     """Modify a global variable"""
+    # pylint: disable=global-statement
     global adj
     adj = "super"
     print(f"Python is {adj}")
 
 def create_global() -> None:
     """Create a global variable"""
+    # pylint: disable=global-variable-undefined
     global adv
     adv = "really"
     print(f"Python is {adv} {adj}")

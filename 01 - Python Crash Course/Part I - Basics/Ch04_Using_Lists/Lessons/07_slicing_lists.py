@@ -13,7 +13,8 @@ print(players[2:])
 print(players[-3:])
 
 print("Here are the first 3 players on my team")
-for player in players[:3]: print(player)
+for player in players[:3]:
+    print(player)
 
 print(players[::2])
 

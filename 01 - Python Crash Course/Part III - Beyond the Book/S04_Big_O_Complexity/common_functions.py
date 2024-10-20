@@ -1,8 +1,8 @@
-"""Common functions for algorthm tests"""
+"""Common functions for algorithm tests"""
 
-from relative_paths import get_path
 from pathlib import Path
 from math import log2, ceil, factorial
+from relative_paths import get_path
 
 def file_to_list(file_name: str, folder: str=None) -> list[int]:
     """Read a space-delimited file into a list of integers"""
@@ -64,6 +64,7 @@ def complexities(n: int) -> dict[dict[str, any]]:
         }
     }
 
+# pylint: disable=too-many-branches
 def efficiency_report(algorithm: str, size: int, count: int) -> None:
     """Print out a report of the Big-O efficiency of the algorithm"""
     print(f"\n{algorithm} performed {count:,}", end=" ")

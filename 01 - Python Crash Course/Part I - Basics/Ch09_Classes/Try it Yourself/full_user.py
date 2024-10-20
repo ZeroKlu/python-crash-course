@@ -39,6 +39,7 @@ class Admin(User):
         super().__init__(first_name, last_name)
         self.privileges = Privileges(privileges)
 
+# pylint: disable=too-few-public-methods
 class Privileges:
     """Define a collection of user privileges"""
 

@@ -9,6 +9,7 @@ def fibonacci_recursive(n: int) -> int:
         return n
     return fibonacci_recursive(n - 1) + fibonacci_recursive(n - 2)
 
+# pylint: disable=dangerous-default-value
 @CountCalls
 def fibonacci_recursive_memo(n: int, cache: dict[int, int]={0: 0, 1: 1}) -> int:
     """Return the nth Fibonacci number (memoized algorithm)"""

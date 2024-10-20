@@ -1,3 +1,5 @@
+"""DataClass with Keyword Only Arguments"""
+
 from dataclasses import dataclass
 
 @dataclass(kw_only=True)
@@ -9,6 +11,7 @@ class Employee:
     city: str
 
 def main() -> None:
+    """Main Function"""
     # Results in a TypeError
     # emp = Employee("Scott McLean", "smclean", 54, "Dallas")
 

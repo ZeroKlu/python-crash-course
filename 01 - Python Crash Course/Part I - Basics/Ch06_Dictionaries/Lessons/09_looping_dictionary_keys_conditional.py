@@ -11,6 +11,7 @@ favorite_languages = {
 }
 
 friends = ["phil", "sarah"]
+# pylint: disable=consider-using-dict-items
 for name in favorite_languages:
     print(f"Hi {name.title()}!")
     if name in friends:

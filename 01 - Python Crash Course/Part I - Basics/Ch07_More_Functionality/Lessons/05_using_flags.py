@@ -13,5 +13,6 @@ while active:
         active = False
     else:
         print(message)
+# pylint: disable=useless-else-on-loop
 else:
     print(f"\nThe loop terminated because the 'active' flag is now '{active}'")

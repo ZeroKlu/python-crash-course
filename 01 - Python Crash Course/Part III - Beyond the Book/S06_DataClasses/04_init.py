@@ -1,3 +1,5 @@
+"""Overriding the `__init__()` Method"""
+
 from dataclasses import dataclass
 
 @dataclass(init=False)
@@ -15,6 +17,7 @@ class Employee:
         self.emp_id = f"{name[0].lower()}{name.split()[-1].lower()}"
 
 def main() -> None:
+    """Main Function"""
     emp = Employee("Scott McLean", 54, "Dallas")
     print(emp)
 

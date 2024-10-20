@@ -1,4 +1,7 @@
+"""Bit Shifts"""
+
 def main() -> None:
+    """Main program"""
     x = 128
     b = x >> 3
     print(f"{x} >> 3 = {b}")
@@ -21,7 +24,8 @@ def main() -> None:
     print(f"In value [{flag}], the following bits are set:")
     currentValue = 1
     while flag > 0:
-        if flag & 1: print(currentValue)
+        if flag & 1:
+            print(currentValue)
         flag >>= 1
         currentValue <<= 1
 

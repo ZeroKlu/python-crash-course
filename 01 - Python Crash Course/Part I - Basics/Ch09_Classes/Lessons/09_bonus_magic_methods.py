@@ -12,6 +12,7 @@ clear_terminal()
 print(dir(str))
 pause()
 
+# pylint: disable=too-few-public-methods
 class Person:
     """Class to define a person"""
 

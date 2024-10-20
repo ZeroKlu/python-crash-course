@@ -1,4 +1,6 @@
-from dataclasses import dataclass, field
+"""Inheritance with DataClasses"""
+
+from dataclasses import dataclass
 
 @dataclass()
 class Staff:
@@ -14,6 +16,7 @@ class Employee(Staff):
     salary: int
 
 def main() -> None:
+    """Main Function"""
     emp = Employee("Scott McLean", "smclean", 54, "Dallas", 50_000)
     print(emp)
 

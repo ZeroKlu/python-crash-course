@@ -34,7 +34,6 @@ class User:
         print(f"Location:   {self.location.title()}")
         print(f"Profession: {self.profession.title()}\n")
 
-
 user_1 = User("scott", "mclean", location="dallas", profession="programmer")
 user_1.greet()
 user_1.describe()

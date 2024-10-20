@@ -1,3 +1,5 @@
+"""Frozen DataClasses"""
+
 from dataclasses import dataclass
 
 @dataclass(frozen=True)
@@ -9,6 +11,7 @@ class Employee:
     city: str
 
 def main() -> None:
+    """Main Function"""
     emp = Employee("Scott McLean", "smclean", 53, "Dallas")
     print(emp)
 

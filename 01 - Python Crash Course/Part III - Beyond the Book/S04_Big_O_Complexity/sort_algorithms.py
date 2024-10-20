@@ -1,3 +1,5 @@
+"""Sort algorithms"""
+
 from math import ceil, log2
 
 def selection_sort(array: list[int]) -> list[int]:

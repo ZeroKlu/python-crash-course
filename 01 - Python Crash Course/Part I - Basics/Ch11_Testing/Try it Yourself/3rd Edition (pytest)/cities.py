@@ -1,5 +1,6 @@
 """Module to test city functions"""
 
+# pylint: disable = no-name-in-module
 from city_functions import city_country_population
 
 def main() -> None:
@@ -21,7 +22,7 @@ def main() -> None:
                 if not datum:
                     obj[key] = None
                 else:
-                    if datum.lower()[0] == "q":
+                    if datum.lower() == "q" or datum.lower() == "quit":
                         done = True
                         break
                     try:

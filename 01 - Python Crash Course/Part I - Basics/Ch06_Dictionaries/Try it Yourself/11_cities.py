@@ -1,4 +1,5 @@
 """Assignment 6.11"""
+
 # Cities: Make a dictionary called cities. Use the names of three cities
 #         as keys in your dictionary. Create a dictionary of information
 #         about each city and include the country that the city is in,
