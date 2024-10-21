@@ -1,3 +1,5 @@
+"""Test the morse code encoder and decoder"""
+
 from morse import Morse
 
 debug_mode = True
@@ -5,10 +7,13 @@ debug_mode = True
 def main():
     """Run the program"""
     morse = Morse()
-    if debug_mode: debug(morse)
-    else: prog(morse)
+    if debug_mode:
+        debug(morse)
+    else:
+        prog(morse)
 
 def prog(morse):
+    """Run the program"""
     valid_tasks = ["e", "d", "q"]
     while True:
         task = input("\nSelect a task: ([e]ncode, [d]ecode, [q]uit)\n> ")
@@ -31,13 +36,17 @@ def debug(morse):
     print(morse.encode("SOS"))
     print(morse.decode("... -.-. --- - -_-- -.-. .-.. . .- -."))
     print(morse.encode("Scott McLean"))
-    print(morse.decode("... -.-. --- - -_-- -.-. .-.. . .- -. ---..._.----. . -. .--- --- -.-- . .-._--- ..-._.--. -.-- - .... --- -. .----."))
+    print(morse.decode("... -.-. --- - -_-- -.-. .-.. . .- -. ---..._.----." + \
+                       " . -. .--- --- -.-- . .-._--- ..-._.--. -.-- - ...." + \
+                       " --- -. .----."))
     print(morse.encode("Scott McLean: 'Enjoyer of Python'"))
-    print(morse.decode(".- -... -.-. -.. . ..-. -.-. .... .. .--- -.- .-.. -- -. --- .--. --.- .-. ... - ..- ...- .-- -..- -.-- --.. .---- ..--- "
-        + "...-- ....- ..... -.... --... ---.. ----. ----- .-.-.- --..-- ..--.. -.-.-. ---... -....- -..-. .----. .-..-. -.--. -.--.- ..--.-"))
+    print(morse.decode(".- -... -.-. -.. . ..-. -.-. .... .. .--- -.- .-.." + \
+                       " -- -. --- .--. --.- .-. ... - ..- ...- .-- -..-" + \
+                       " -.-- --.. .---- ..--- ...-- ....- ..... -...." + \
+                       " --... ---.. ----. ----- .-.-.- --..-- ..--.. -.-.-." + \
+                       " ---... -....- -..-. .----. .-..-. -.--. -.--.- ..--.-"))
     print(morse.encode("ABCDEFCHIJKLMNOPQRSTUVWXYZ1234567890.,?;:-/'\"()_"))
     print(morse.encode("~"))
 
 if __name__ == "__main__":
-    """Only execute if this is the running file"""
     main()

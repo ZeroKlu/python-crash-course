@@ -1,9 +1,12 @@
+"""Morse code encoder/decoder"""
+
 from node import Node
 from range_char import range_char
 
 class Morse:
     """Implement a Morse code encoder/decoder using a binary tree"""
 
+    # pylint: disable=too-many-statements
     def __init__(self):
         """Initialize the Morse code tree"""
         self.tree = Node(None)
@@ -91,38 +94,43 @@ class Morse:
             decoded_words.append("".join(decoded))
         result = ""
         for word in decoded_words:
-            if len(result) > 0: result += " "
+            if len(result) > 0:
+                result += " "
             result += word
         return result
 
-    def encode(self, message, delimiter = " ", invalid_char_sub = "□", space_char_sub = "■"):
+    def encode(self, message, delimiter = " ", invalid_char_sub = "□",
+               space_char_sub = "■"):
         """Encode letters to Morse code"""
         morse = ""
         for character in message.upper():
             valid_chars = list(range_char("A", "Z"))
-            for i in range(0, 10): valid_chars.append(str(i))
-            valid_chars.extend([".", ",", "?", ";", ":", "-", "/", "'", "\"", "!", "--", "(", ")", "_"])
+            for i in range(0, 10):
+                valid_chars.append(str(i))
+            valid_chars.extend([".", ",", "?", ";", ":", "-", "/", "'",
+                                "\"", "!", "--", "(", ")", "_"])
             if character not in valid_chars:
                 code = space_char_sub if character == " " else invalid_char_sub
             else:
                 encoded = []
                 self.get_code(self.tree, character, encoded)
                 code = "".join(encoded)
-            if len(morse) > 0: morse += delimiter
+            if len(morse) > 0:
+                morse += delimiter
             morse += code
-        return morse.replace(" " + invalid_char_sub + " ", invalid_char_sub).replace(" " + space_char_sub + " ", space_char_sub)
+        return morse.replace(" " + invalid_char_sub + " ", invalid_char_sub) \
+            .replace(" " + space_char_sub + " ", space_char_sub)
 
     def get_code(self, node, character, code):
         """Traverse tree to obtain morse for character"""
-        if node == None:
+        if node is None:
             return False
-        elif node.value == character:
+        if node.value == character:
             return True
-        else:
-            if self.get_code(node.left, character, code):
-                code.insert(0, ".")
-                return True
-            elif self.get_code(node.right, character, code):
-                code.insert(0, "-")
-                return True
-            return False
+        if self.get_code(node.left, character, code):
+            code.insert(0, ".")
+            return True
+        if self.get_code(node.right, character, code):
+            code.insert(0, "-")
+            return True
+        return False

@@ -12,6 +12,7 @@ for key in range(len(SYMBOLS)):
             translated += symbol
             continue
         pos = SYMBOLS.find(symbol) - key
-        if pos < 0: pos += len(SYMBOLS)
+        if pos < 0:
+            pos += len(SYMBOLS)
         translated += SYMBOLS[pos]
     print(f"Key: #{str(key).rjust(2)} : {translated}")

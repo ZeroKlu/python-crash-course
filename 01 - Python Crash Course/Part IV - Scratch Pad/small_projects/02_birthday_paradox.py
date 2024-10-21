@@ -1,8 +1,11 @@
 """Birthday Paradox Simulation"""
 
-import datetime, random
+import datetime
+import random
 
-MONTHS = [None, "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+MONTHS = [
+    None, "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"]
 MAX_SIMS = 100_000
 
 def is_leap_year(year):
@@ -26,13 +29,16 @@ def has_matches(birthdays):
 
 def get_matches(birthdays):
     """Get all duplicate days in list"""
-    if not has_matches(birthdays): return None
+    if not has_matches(birthdays):
+        return None
     matches = []
+    # pylint: disable=consider-using-enumerate
     for i in range(len(birthdays)):
         dup = birthdays[:]
         day = birthdays[i]
         del dup[i]
-        if day in dup and day not in matches: matches.append(day)
+        if day in dup and day not in matches:
+            matches.append(day)
     return matches
 
 def get_number_of_birthdays():
@@ -56,7 +62,8 @@ def single_simulation(num_bd):
         print("Matches:\n----------")
         for m in matches:
             month, day = m
-            suffix = "st" if day in [1, 21, 31] else ("nd" if day in [2, 22] else ("rd" if day in [3, 23] else "th"))
+            suffix = "st" if day in [1, 21, 31] else ("nd" if day in [2, 22] \
+                     else ("rd" if day in [3, 23] else "th"))
             print(f"{MONTHS[month]} {day}{suffix}")
     else: print("No matches found")
     input("\nPress <ENTER> to continue...")
@@ -66,14 +73,18 @@ def multiple_simulations(num_bd):
     print(f"\nProcessing {MAX_SIMS:,} simulations...")
     matched_count = 0
     for i in range(MAX_SIMS):
-        if i > 0 and i % 10_000 == 0: print(f"{i:,}", "simulations completed...")
+        if i > 0 and i % 10_000 == 0:
+            print(f"{i:,}", "simulations completed...")
         birthdays = get_birthdays(num_bd)
         matches = get_matches(birthdays)
-        if matches: matched_count += 1
+        if matches:
+            matched_count += 1
     print(f"{MAX_SIMS:,} simulations completed...")
     probability = round(matched_count / MAX_SIMS * 100, 2)
-    print(f"\nOut of {MAX_SIMS:,} simulations of {num_bd} people, there was a matching birthday in that group {matched_count:,} times.")
-    print(f"This means that {num_bd} people have a {probability}% chance of having a matching birthday in their group.")
+    print(f"\nOut of {MAX_SIMS:,} simulations of {num_bd} people, " + \
+          "there was a matching birthday in that group {matched_count:,} times.")
+    print(f"This means that {num_bd} people have a {probability}% chance" + \
+          "of having a matching birthday in their group.")
     print("That's probably more than you would think!\n")
 
 def main():
@@ -83,5 +94,4 @@ def main():
     multiple_simulations(num_bd)
 
 if __name__ == "__main__":
-    """Only execute if not imported"""
     main()

@@ -1,3 +1,5 @@
+"""Model a cell in the game of life"""
+
 from random import randint
 
 class Cell:
@@ -14,7 +16,7 @@ class Cell:
     def is_alive(self):
         """Check if the cell is alive"""
         return self.alive
-    
+
     def get_age(self):
         """Check how many turns the cell has been alive"""
         return self.turns_alive
@@ -22,9 +24,11 @@ class Cell:
     def set(self, alive):
         """Set the cell alive state"""
         self.alive = alive
-        if self.alive: self.turns_alive += 1
-        else: self.turns_alive = 0
-    
+        if self.alive:
+            self.turns_alive += 1
+        else:
+            self.turns_alive = 0
+
     def get_neighbors(self):
         """Get the current neighbor value of the cell"""
         return self.neighbors
@@ -40,17 +44,25 @@ class Cell:
         pos = [-1, 0, 1]
         for i in pos:
             y = r + i
-            if wrap: y = (y + len(grid)) %  len(grid)
-            if y < 0 or y >=  len(grid): continue
+            if wrap:
+                y = (y + len(grid)) %  len(grid)
+            if y < 0 or y >=  len(grid):
+                continue
             for j in pos:
-                if i == 0 and j == 0: continue
+                if i == 0 and j == 0:
+                    continue
                 x = c + j
-                if wrap: x = (x + len(grid[r])) % len(grid[r])
-                if x < 0 or x >= len(grid[r]): continue
-                if grid[y][x].is_alive(): n += 1
+                if wrap:
+                    x = (x + len(grid[r])) % len(grid[r])
+                if x < 0 or x >= len(grid[r]):
+                    continue
+                if grid[y][x].is_alive():
+                    n += 1
         self.set_neighbors(n)
 
     def update(self, n):
         """Apply the rules to update the cell for the next generation"""
-        if n == 3: self.set(True)
-        if n < 2 or n > 3: self.set(False)
+        if n == 3:
+            self.set(True)
+        if n < 2 or n > 3:
+            self.set(False)

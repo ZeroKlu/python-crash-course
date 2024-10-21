@@ -20,7 +20,8 @@ def show_rules():
     print("  Cards 2 through 10 are worth their face value.")
     print("  (H)it to take another card.")
     print("  (S)tand to stop taking cards.")
-    print("  On your first play, you can (D)ouble down to increase your bet but must hit exactly one more time before standing.")
+    print("  On your first play, you can (D)ouble down to increase your" + \
+          " bet but must hit exactly one more time before standing.")
     print("  In case of a tie, the bet is returned to the player.")
     print("  The dealer stops hitting at 17.")
 
@@ -29,17 +30,21 @@ def place_bet(max_bet):
     while True:
         print(f"How much do you want to bet? (1 - {max_bet}, or [q]uit)")
         bet = input("> ")
-        if bet == "": continue
+        if bet == "":
+            continue
         if not bet.isdecimal():
-            if bet.lower().startswith("q"): game_over(False)
+            if bet.lower().startswith("q"):
+                game_over(False)
             continue
         bet = int(bet)
-        if 1 <= bet <= max_bet: return bet
+        if 1 <= bet <= max_bet:
+            return bet
         continue
 
 def game_over(lost):
     """Close out the game"""
-    if lost: print("You're broke!\nGood thing you weren't playing with real money.")
+    if lost:
+        print("You're broke!\nGood thing you weren't playing with real money.")
     print("Thanks for playing!")
     sys.exit()
 
@@ -61,14 +66,17 @@ def hand_value(hand):
 
     for card in hand:
         rank = card[0]
-        if rank == "A": aces += 1
-        elif rank in ["K", "Q", "J"]: value += 10
+        if rank == "A":
+            aces += 1
+        elif rank in ["K", "Q", "J"]:
+            value += 10
         else: value += int(rank)
-    
+
     value += aces
     for _ in range(aces):
-        if value + 10 <= 21: value += 10
-    
+        if value + 10 <= 21: 
+            value += 10
+
     return value
 
 def show_cards(hand):
@@ -85,7 +93,8 @@ def show_cards(hand):
             rows[1] += f"|{rank.ljust(2)} | "
             rows[2] += f"| {suit} | "
             rows[3] += f"|_{rank.rjust(2, '_')}| "
-    for row in rows: print(row)
+    for row in rows:
+        print(row)
 
 def show_hands(player_hand, dealer_hand, show_dealer_hand):
     """Display the current hands"""
@@ -102,7 +111,8 @@ def show_hands(player_hand, dealer_hand, show_dealer_hand):
 def play(money):
     """Play the game"""
     while True:
-        if money < 1: game_over(True)
+        if money < 1:
+            game_over(True)
 
         print(f"You have ${money} remaining...")
         bet = place_bet(money)
@@ -114,13 +124,14 @@ def play(money):
         for _ in range(2):
             player_hand.append(deck.pop())
             dealer_hand.append(deck.pop())
-            
+
         print(f"Bet: ${bet}")
         while True:
             show_hands(player_hand, dealer_hand, False)
             print()
 
-            if hand_value(player_hand) > 21: break
+            if hand_value(player_hand) > 21:
+                break
 
             move = play_turn(player_hand, money - bet, bet)
 
@@ -132,15 +143,18 @@ def play(money):
                 player_hand.append(deck.pop())
                 rank, suit = player_hand[-1]
                 print(f"You drew a {rank} of {suit}.")
-                if hand_value(player_hand) > 21: continue
-            if move in ["S", "D"]: break
+                if hand_value(player_hand) > 21:
+                    continue
+            if move in ["S", "D"]:
+                break
 
         if hand_value(player_hand) <= 21:
             while hand_value(dealer_hand) < 17:
                 print("Dealer hits...")
                 dealer_hand.append(deck.pop())
                 show_hands(player_hand, dealer_hand, False)
-                if hand_value(dealer_hand) > 21: break
+                if hand_value(dealer_hand) > 21:
+                    break
             input("Press <ENTER> to continue...")
             print("\n\n")
 
@@ -160,7 +174,7 @@ def play(money):
             money += bet
         else:
             print("It's a tie. Your bet is returned.")
-            
+
         input("Press <ENTER> to continue...")
         print("\n\n")
 
@@ -168,9 +182,12 @@ def play_turn(hand, money, bet):
     """Get player move"""
     while True:
         moves = ["[H]it", "[S]tand"]
-        if len(hand) == 2 and money >= bet: moves.append("[D]ouble down")
+        if len(hand) == 2 and money >= bet:
+            moves.append("[D]ouble down")
         move = input(", ".join(moves) + "\n> ").upper()
-        if move != "" and (move[0] in ["H", "S"] or (len(moves) > 2 and move[0] == "D")): return move
+        if move != "" and (move[0] in ["H", "S"] \
+                           or (len(moves) > 2 and move[0] == "D")):
+            return move
         print("Invalid entry...")
 
 def main():
@@ -180,5 +197,4 @@ def main():
     play(money)
 
 if __name__ == "__main__":
-    """Only run if not imported"""
     main()

@@ -1,3 +1,5 @@
+"""Validate that the DB is created and loaded"""
+
 import mysql.connector as mysql
 
 # MySQL Settings
@@ -27,7 +29,8 @@ def main() -> None:
         my_cursor.execute(f"SELECT * FROM {table} LIMIT 5")
         print("First Five Rows")
         print("---------------")
-        for row in my_cursor.fetchall(): print("-", row)
+        for row in my_cursor.fetchall():
+            print("-", row)
         print()
 
 if __name__ == "__main__":

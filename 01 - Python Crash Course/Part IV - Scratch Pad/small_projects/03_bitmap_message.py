@@ -1,18 +1,21 @@
+"""Draw a message on an ASCII bitmap"""
+
+from pathlib import Path
 from sm_utils import clear_terminal
 from relative_paths import get_path
-from pathlib import Path
 
 def get_bitmap() -> str:
     """Obtain the bitmap ASCII pattern from file"""
     bitmap_path = get_path("bitmap_world.txt", "data")
     file_path = Path(bitmap_path)
-    return file_path.read_text().rstrip()
+    return file_path.read_text(encoding="UTF-8").rstrip()
 
 def draw_bitmap(word: str, bitmap: str, boundary: str=".") -> None:
     """Draw the ASCII bitmap on screen"""
     clear_terminal()
     lines = bitmap.splitlines()
     for line in lines:
+        # pylint: disable=consider-using-enumerate
         for i in range(len(line)):
             tail = "\n" if i == len(line) - 1 else ""
             if line[i] == " ":
@@ -33,6 +36,7 @@ def do_bitmap() -> None:
     draw_bitmap(word, bitmap)
 
 def main() -> None:
+    """Main function"""
     do_bitmap()
 
 if __name__ == "__main__":

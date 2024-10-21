@@ -1,3 +1,5 @@
+"""Run the game of life"""
+
 from game import GameOfLife
 
 def main():
@@ -8,5 +10,4 @@ def main():
     game.play()
 
 if __name__ == "__main__":
-    """Only execute if this is the running file"""
     main()

@@ -1,6 +1,9 @@
+"""Bagels Game"""
+
+import sys
 from random import randint
 
-class Bagels(object):
+class Bagels():
     """The Bagels Game"""
 
     def __init__(self, num_digits: int=3, num_guesses: int=10, debug: bool=False) -> None:
@@ -9,6 +12,7 @@ class Bagels(object):
         self.num_digits = num_digits
         self.num_guesses = num_guesses
         self.first_game = True
+        self.secret_number = 0
 
     def play(self) -> None:
         """Start a new game"""
@@ -67,7 +71,8 @@ class Bagels(object):
             Utilities.clear_terminal()
             if num is not None:
                 print("Invalid entry!")
-            if self.debug: print(self.secret_number)
+            if self.debug:
+                print(self.secret_number)
             print(f"Guesses remaining [{self.num_guesses - turn}]")
             num = input(f"Enter a {self.num_digits}-digit number:\n> ")
         return [int(num[i]) for i in range(self.num_digits)]
@@ -90,7 +95,8 @@ class Bagels(object):
             # A digit in the guess counts as a fermi if and only if
             #    The same digit appears in the same position in the secret number
             if guess[i] == self.secret_number[i]:
-                # I am placing the actual number in the list (rather than a bool) to help subsequent pico finds
+                # I am placing the actual number in the list (rather than a bool)
+                #   to help subsequent pico finds
                 fermi[i] = guess[i]
         return fermi
 
@@ -117,7 +123,8 @@ class Utilities(object):
         """Wait for user input"""
         act = "end program" if end else "continue"
         input(f"Press <ENTER> to {act}...")
-        if end: quit()
+        if end:
+            sys.exit()
 
     @staticmethod
     def clear_terminal(end: str="") -> None:

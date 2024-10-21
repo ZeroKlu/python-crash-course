@@ -1,3 +1,5 @@
+"""Load the ExternalData database into MySQL"""
+
 import mysql.connector as mysql
 import pandas as pd
 from sm_utils import file_path
@@ -7,6 +9,10 @@ hostname = "localhost"
 username = "python"
 password = "training"
 database = "ExternalData"
+
+# Globals
+conn = None
+cmd = None
 
 # Database Table Descriptions
 tables = {
@@ -59,6 +65,7 @@ tables = {
 
 def connect_to_mysql() -> None:
     """Establish connection to MySQL Server"""
+    # pylint: disable=global-statement
     global conn
     conn = mysql.connect(
         host=hostname,
@@ -89,22 +96,26 @@ def create_tables() -> None:
     for table, cols in tables.items():
         print(f"Creating table [{table}]...")
         col_str = ""
-        for col, type in cols.items():
+        for col, db_type in cols.items():
             print(f"Adding column [{col}]...")
-            if len(col_str) > 0: col_str += ", "
-            col_str += f"{col} {type}"
+            if len(col_str) > 0:
+                col_str += ", "
+            col_str += f"{col} {db_type}"
         sql = f"CREATE TABLE {table} ({col_str})"
         cmd.execute(sql)
         print(f"Created table [{table}]...")
 
 def populate_data() -> None:
     """Populate all ExternalData tables from the CSV files"""
-    for csv in tables.keys():
-        # Note to self: The use of fillna() is needed because in the "Numbers" table, the German and Norwegian for 0 is "NULL",
-        #               and pandas is interpreting that as NaN instead of the word "NULL".
-        df = pd.read_csv(file_path(f"{csv}.csv"), index_col=False, delimiter=",").fillna("NULL")
+    for csv in tables:
+        # Note to self: The use of fillna() is needed because in the
+        #               "Numbers" table, the German and Norwegian for 0 is
+        #               "NULL", and pandas is interpreting that as NaN
+        #               instead of the word "NULL".
+        df = pd.read_csv(file_path(f"{csv}.csv"), index_col=False,
+                         delimiter=",").fillna("NULL")
         df.head()
-        pars = ("%s, " * df.shape[1])
+        pars = "%s, " * df.shape[1]
         pars = pars[:len(pars) - 2]
         sql = f"INSERT INTO {csv} VALUES ({pars})"
         for _, row in df.iterrows():
@@ -116,7 +127,9 @@ def populate_data() -> None:
             print(f"Added {cnt} row(s) to {csv}")
 
 def main() -> None:
-    """Create and fill my ExternalData MySQL database from the CSV files containing the data from my SQL Server database"""
+    """Main program"""
+    # Create and fill my ExternalData MySQL database from the CSV files
+    # containing the data from my SQL Server database
     connect_to_mysql()
     remove_existing_database()
     create_database()

@@ -1,8 +1,11 @@
+"""Implements Conway's Game of Life"""
+
 import os
 import json
 import pygame
 from cell import Cell
 
+# pylint: disable=too-many-instance-attributes
 class GameOfLife:
     """Implements Conway's Game of Life"""
     # Rules:
@@ -15,9 +18,11 @@ class GameOfLife:
         # Load the settings from the JSON file
         self.ROOT_DIR = os.path.dirname(__file__)
         file_path = os.path.join(self.ROOT_DIR, "settings.json")
-        with open(file_path) as f: settings = json.load(f)
+        with open(file_path, encoding="utf-8") as f:
+            settings = json.load(f)
         self.debug_mode = settings["debug"]
-        if self.debug_mode: print(settings)
+        if self.debug_mode:
+            print(settings)
         # Initialize game settings
         self.wraparound = settings["wraparound"]
         self.rows = settings["rows"]
@@ -32,10 +37,15 @@ class GameOfLife:
         self.framerate = settings["framerate"]
         # Create the initial grid
         self.grid = self.create_grid()
+        self.progress = True
+        self.screen = None
+        self.cell_width = None
+        self.cell_height = None
 
     def play(self):
         """Play the game until stopped"""
         self.progress = False
+        # pylint: disable=no-member
         pygame.init()
         c = pygame.time.Clock()
         self.screen = pygame.display.set_mode((self.width, self.height))
@@ -48,13 +58,15 @@ class GameOfLife:
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     return
-            if self.progress: self.update_grid()
+            if self.progress:
+                self.update_grid()
             self.draw_grid()
             c.tick(self.framerate)
 
     def create_grid(self):
         """Create the initial grid"""
-        if self.preload.lower() != "none": return self.preload_grid()
+        if self.preload.lower() != "none":
+            return self.preload_grid()
         grid = []
         for _ in range(0, self.rows):
             row = []
@@ -62,11 +74,12 @@ class GameOfLife:
                 row.append(Cell(self.onein))
             grid.append(row)
         return grid
-    
+
     def preload_grid(self):
         """Load a pre-designed grid"""
         file_path = os.path.join(self.ROOT_DIR, "preloads.json")
-        with open(file_path) as f: preloads = json.load(f)
+        with open(file_path, encoding="utf-8") as f:
+            preloads = json.load(f)
         if self.preload not in preloads.keys():
             self.preload = "none"
             return self.create_grid()
@@ -89,18 +102,19 @@ class GameOfLife:
     def update_grid(self):
         """Update the grid for the next generation"""
         # Create a copy of the current grid
-        next = self.grid[:]
+        next_cell = self.grid[:]
         # Update all cells in the copy
-        for r in range(0, len(self.grid)):
-            for c in range(0, len(self.grid[r])):
-                next[r][c].update(self.grid[r][c].get_neighbors())
+        for row in self.grid:
+            for cell in row:
+                cell.update(cell.get_neighbors())
         # Use the updated copy for the next generation
-        self.grid = next
+        self.grid = next_cell
 
     def draw_grid(self):
         """Populate the grid with live and dead cells"""
         self.cell_width = self.width // self.cols - 1
         self.cell_height = self.height // self.rows - 1
+        # pylint: disable=consider-using-enumerate
         for r in range(0, len(self.grid)):
             y = (self.cell_height + 1) * r + 1
             for c in range(0, len(self.grid[r])):
@@ -110,6 +124,8 @@ class GameOfLife:
                 pygame.draw.rect(self.screen, color, rect)
                 self.grid[r][c].count_neighbors(self.grid, r, c, self.wraparound)
                 if self.debug_mode:
-                    self.screen.blit(pygame.font.SysFont('Arial', 16).render(str(self.grid[r][c].get_neighbors()), True, (200, 0, 0)), (x + 1, y + 2))
+                    self.screen.blit(pygame.font.SysFont('Arial', 16).render(
+                        str(self.grid[r][c].get_neighbors()), True, (200, 0, 0)),
+                        (x + 1, y + 2))
         self.progress = True
         pygame.display.update()

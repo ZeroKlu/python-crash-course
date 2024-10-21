@@ -1,3 +1,5 @@
+"""Test using .NET (Unity API) from Python"""
+
 import clr
 
 clr.AddReference("DLL/DBIMX.FileConversionUtility.Common")
@@ -17,14 +19,16 @@ def main() -> None:
     op_settings.Action = Operation.Convert
     op_settings.DestinationType = FileFormat.Pdf
     op_settings.SourceFiles = List[FileDefinition]()
-    for file in [r"C:\Users\SMCLEAN\Desktop\Recent Cleanup\COMM MASS classify task.docx", r"C:\Users\SMCLEAN\Desktop\Recent Cleanup\Extropy.html"]:
+    for file in [r"C:\Users\SMCLEAN\Desktop\Recent Cleanup\COMM MASS classify task.docx",
+                 r"C:\Users\SMCLEAN\Desktop\Recent Cleanup\Extropy.html"]:
         op_settings.SourceFiles.Add(FileDefinition(file))
 
     # This results in ['OperationSettings' object has no attribute 'ToConfigFile']
     #      because pythonnet cannot execute extension methods
     # xml = op_settings.ToConfigFile(FileDefinition("test.fcu"))
 
-    xml = SettingsFileSerializer.ToConfigFile(op_settings, FileDefinition(r"C:\Users\SMCLEAN\Desktop\test.fcu"))
+    xml = SettingsFileSerializer.ToConfigFile(op_settings,
+          FileDefinition(r"C:\Users\SMCLEAN\Desktop\test.fcu"))
 
     print(xml)
 
