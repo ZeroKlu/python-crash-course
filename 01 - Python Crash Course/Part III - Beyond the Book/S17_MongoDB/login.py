@@ -1,3 +1,5 @@
+"""Connect to MongoDB"""
+
 import json
 from sm_utils import file_path
 from pymongo import MongoClient
@@ -5,7 +7,7 @@ from pymongo.errors import ConnectionFailure
 
 def get_settings() -> dict[str,any]:
     """Retrieve MongoDB connection details from secrets.json"""
-    with open(file_path("secrets.json")) as f:
+    with open(file_path("secrets.json"), encoding="utf-8") as f:
         return json.load(f)
 
 def get_client(settings: dict[str,any]=None) -> MongoClient|None:
@@ -18,6 +20,7 @@ def get_client(settings: dict[str,any]=None) -> MongoClient|None:
         return MongoClient(url)
     except ConnectionFailure:
         print("Failed to connect to MongoDB")
+        return None
 
 def server_connected(client: MongoClient=None) -> bool:
     """Check if MongoDB server is connected"""
@@ -26,6 +29,7 @@ def server_connected(client: MongoClient=None) -> bool:
     return client.admin.command("ping")["ok"] == 1
 
 def main() -> None:
+    """Test connection to MongoDB"""
     if server_connected():
         print("MongoDB server is connected")
     else:

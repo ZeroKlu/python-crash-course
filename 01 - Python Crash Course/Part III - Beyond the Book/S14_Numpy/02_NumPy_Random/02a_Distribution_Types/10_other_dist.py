@@ -1,4 +1,6 @@
-from numpy import random, ndarray
+"""Other Distribution Types"""
+
+from numpy import random
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -63,6 +65,7 @@ def zipf() -> None:
     plt.show()
 
 def main() -> None:
+    """Main Function"""
     multinomial()
     exponential()
     chi_square()

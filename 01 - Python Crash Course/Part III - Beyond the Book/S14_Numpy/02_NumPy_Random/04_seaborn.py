@@ -1,3 +1,5 @@
+"""Data Visualization using Seaborn"""
+
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
@@ -28,6 +30,7 @@ def use_displot(data: np.ndarray) -> None:
     plt.show()
 
 def main() -> None:
+    """Main function"""
     data = np.random.normal(size=1000)
     use_distplot(data)
     use_distplot_no_hist(data)

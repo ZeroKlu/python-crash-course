@@ -1,5 +1,7 @@
+"""Invalid Data Format"""
+
 import pandas as pd
-from utility_functions import file_path
+from utilities import file_path
 
 def load_from_csv(filepath: str, printout: bool=False) -> pd.DataFrame:
     """Load data from a CSV file into a Pandas DataFrame"""
@@ -19,6 +21,7 @@ def add_missing_quotes(val: str) -> str:
 
 def quote_date_strings(df: pd.DataFrame) -> None:
     """Quote string values in the Date column"""
+    # pylint: disable=unnecessary-lambda
     df["Date"].apply(lambda d: add_missing_quotes(d))
     print("Quoted string values in the Date column:")
     print(df.tail(10), "\n")
@@ -35,6 +38,7 @@ def add_missing_dates(df: pd.DataFrame) -> None:
     print(df.tail(10), "\n")
 
 def main() -> None:
+    """Main function"""
     filepath = file_path("bad_data.csv", "data")
     df = load_from_csv(filepath, printout=True)
     quote_date_strings(df)

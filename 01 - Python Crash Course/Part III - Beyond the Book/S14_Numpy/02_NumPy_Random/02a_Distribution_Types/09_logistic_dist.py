@@ -1,3 +1,5 @@
+"""Logistic Distribution"""
+
 from numpy import random, ndarray, float64
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -20,6 +22,7 @@ def logistic_compare(log: ndarray[float64],
     plt.show()
 
 def main() -> None:
+    """Main Function"""
     rng = random.default_rng()
     log = rng.logistic(size=1000)
     logistic_kde(log)

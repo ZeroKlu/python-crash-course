@@ -1,3 +1,5 @@
+"""Arithmetic `ufunc` Functions"""
+
 import numpy as np
 from numpy import ndarray
 
@@ -69,6 +71,7 @@ def abs_arr(arr: ndarray):
     print(f"np.absolute(arr): {np.absolute(arr)}\n")
 
 def main() -> None:
+    """Main function"""
     flt_fmt = "{:.2f}".format
     np.set_printoptions(formatter={"float_kind": flt_fmt})
     arr_x = np.array([10, 20, 30, 40, 50, 60])

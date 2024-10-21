@@ -1,3 +1,5 @@
+"""Retrieve records from MongoDB collection"""
+
 from login import get_settings, get_client, server_connected
 from pymongo import MongoClient
 from pymongo.synchronous.collection import Collection
@@ -43,13 +45,13 @@ def get_all_records(col: Collection) -> None:
         print(res)
     print()
 
-def get_filtered_records(col: Collection, filter: dict[str,any]) -> None:
+def get_filtered_records(col: Collection, doc_filter: dict[str, any]) -> None:
     """Retrieve records from MongoDB collection based on filter"""
     if col is None:
         print("No active MongoDB collection")
         return None
-    print(f"Find Records with Filter {filter}:")
-    for res in col.find(filter):
+    print(f"Find Records with Filter {doc_filter}:")
+    for res in col.find(doc_filter):
         print(res)
     print()
 
@@ -65,12 +67,13 @@ def get_all_no_id(col: Collection) -> None:
     print()
 
 def main() -> None:
+    """Main function"""
     settings = get_settings()
     client, col = connect(settings)
     get_record(col)
     get_all_records(col)
-    filter = {"name": "John"}
-    get_filtered_records(col, filter)
+    doc_filter = {"name": "John"}
+    get_filtered_records(col, doc_filter)
     get_all_no_id(col)
     client.close()
 

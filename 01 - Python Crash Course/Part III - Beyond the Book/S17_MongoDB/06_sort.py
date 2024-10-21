@@ -1,4 +1,7 @@
+"""Sort documents from MongoDB collection"""
+
 from login import get_settings, get_client, server_connected
+# pylint: disable=unused-import
 from pymongo import MongoClient, ASCENDING, DESCENDING
 from pymongo.synchronous.collection import Collection
 
@@ -26,6 +29,7 @@ def sort_results(col: Collection, field: str) -> None:
         print(f"Sorting documents by field: {field}")
         for doc in col.find({}, {"_id": 0}).sort(field):
             print(doc)
+    # pylint: disable=broad-except
     except Exception as e:
         print(f"Error sorting documents: {str(e)}")
     print()
@@ -36,11 +40,13 @@ def reverse_results(col: Collection, field: str) -> None:
         print(f"Sorting documents by field: {field} (reversed)")
         for doc in col.find({}, {"_id": 0}).sort(field, DESCENDING):
             print(doc)
+    # pylint: disable=broad-except
     except Exception as e:
         print(f"Error sorting documents: {str(e)}")
     print()
 
 def main() -> None:
+    """Main function"""
     settings = get_settings()
     client, col = connect(settings)
     field = "name"

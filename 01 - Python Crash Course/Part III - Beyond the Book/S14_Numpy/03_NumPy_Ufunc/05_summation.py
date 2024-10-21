@@ -1,3 +1,5 @@
+"""Summation of Numpy Arrays"""
+
 import numpy as np
 
 def addition(arr_a: np.ndarray, arr_b: np.ndarray) -> None:
@@ -34,6 +36,7 @@ def cumulative_summation(arr: np.ndarray) -> None:
     print(f"np.cumsum(arr):       {np.cumsum(arr)}\n")
 
 def main() -> None:
+    """Main function"""
     arr_a = np.array([1, 2, 3, 4])
     arr_b = np.array([5, 6, 7, 8])
     addition(arr_a, arr_b)

@@ -1,3 +1,5 @@
+"""Create a new database in MongoDB"""
+
 from login import get_settings, get_client, server_connected
 from pymongo import MongoClient
 
@@ -37,8 +39,10 @@ def db_exists(db_names: list[str], db_name: str) -> bool:
     return db_name in db_names
 
 def main() -> None:
+    """Main function"""
     client = connect()
-    if not client: return
+    if not client:
+        return
     settings = get_settings()
     db_name = settings["db_name"]
     make_db(client, db_name)

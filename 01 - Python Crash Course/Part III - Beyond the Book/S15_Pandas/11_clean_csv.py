@@ -1,5 +1,7 @@
+"""Clean Data File"""
+
 import pandas as pd
-from utility_functions import file_path
+from utilities import file_path
 
 def load_from_csv(filepath: str, printout: bool=False) -> pd.DataFrame:
     """Load data from a CSV file into a Pandas DataFrame"""
@@ -23,6 +25,7 @@ def add_missing_quotes(val: str) -> str:
 
 def quote_date_strings(df: pd.DataFrame) -> None:
     """Quote string values in the Date column"""
+    # pylint: disable=unnecessary-lambda
     df["Date"].apply(lambda d: add_missing_quotes(d))
 
 def format_dates(df: pd.DataFrame) -> None:
@@ -57,6 +60,7 @@ def clean_data_file(csv: str) -> pd.DataFrame:
     return df
 
 def main() -> None:
+    """Main function"""
     filepath = file_path("bad_data.csv", "data")
     df = clean_data_file(filepath)
     print("Cleaned data:")

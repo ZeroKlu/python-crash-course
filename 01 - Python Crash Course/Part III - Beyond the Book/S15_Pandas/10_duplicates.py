@@ -1,5 +1,7 @@
+"""Pandas DataFrame with Duplicate Rows"""
+
 import pandas as pd
-from utility_functions import file_path
+from utilities import file_path
 
 def load_from_csv(filepath: str, printout: bool=False) -> pd.DataFrame:
     """Load data from a CSV file into a Pandas DataFrame"""
@@ -34,6 +36,7 @@ def drop_duplicates(df: pd.DataFrame) -> None:
     print(df.loc[10:20], "\n")
 
 def main() -> None:
+    """Main function"""
     filepath = file_path("bad_data.csv", "data")
     df = load_from_csv(filepath, printout=True)
     check_duplicates(df)

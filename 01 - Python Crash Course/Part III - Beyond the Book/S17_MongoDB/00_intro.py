@@ -1,3 +1,5 @@
+"""Introduction to MongoDB"""
+
 import pymongo
 from login import get_settings
 
@@ -17,6 +19,7 @@ def test_mongodb_connection() -> None:
     client.close()
 
 def main() -> None:
+    """Main function"""
     test_mongodb_connection()
 
 if __name__ == "__main__":

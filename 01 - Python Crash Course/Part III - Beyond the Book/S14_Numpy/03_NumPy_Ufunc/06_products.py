@@ -1,3 +1,5 @@
+"""Products of Numpy Arrays"""
+
 import numpy as np
 
 def multiplication(arr_a: np.ndarray, arr_b: np.ndarray) -> None:
@@ -34,6 +36,7 @@ def cumulative_product(arr: np.ndarray) -> None:
     print(f"np.cumprod(arr):             {np.cumprod(arr)}\n")
 
 def main() -> None:
+    """Main Function"""
     arr_a = np.array([1, 2, 3, 4])
     arr_b = np.array([5, 6, 7, 8])
     multiplication(arr_a, arr_b)

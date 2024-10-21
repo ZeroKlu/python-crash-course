@@ -1,3 +1,5 @@
+"""Insert a document into a collection in MongoDB"""
+
 from login import get_settings, get_client, server_connected
 from pymongo import MongoClient
 from pymongo.synchronous.collection import Collection
@@ -25,8 +27,9 @@ def insert_doc(col: Collection, data: dict[str, any]) -> None:
     try:
         print(f"Inserting document into collection...\n{data}")
         result = col.insert_one(data)
-        id = result.inserted_id
-        print(f"Document inserted successfully as ID: `{id}`\n")
+        doc_id = result.inserted_id
+        print(f"Document inserted successfully as ID: `{doc_id}`\n")
+    # pylint: disable=broad-except
     except Exception as e:
         print(f"Failed to insert document: {str(e)}\n")
 
@@ -38,10 +41,12 @@ def insert_multiple(col: Collection, data: list[dict[str, any]]) -> None:
             print(f"• {doc}")
         _ = col.insert_many(data)
         print("Documents inserted successfully.\n")
+    # pylint: disable=broad-except
     except Exception as e:
         print(f"Failed to insert documents: {str(e)}\n")
 
 def main() -> None:
+    """Main function"""
     client, col = connect()
 
     single = { "name": "John", "address": "Highway 37" }

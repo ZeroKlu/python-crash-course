@@ -1,3 +1,5 @@
+"""Random Distribution in NumPy."""
+
 import numpy as np
 from numpy import random
 
@@ -34,6 +36,7 @@ def distribution_2d(dist_data: dict[int, float]) -> None:
     print()
 
 def main() -> None:
+    """Main function."""
     dist_data = {
         3: 0.1,
         5: 0.3,

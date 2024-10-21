@@ -1,3 +1,5 @@
+"""Poisson Distribution"""
+
 from numpy import random, ndarray, long
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -20,6 +22,7 @@ def poisson_compare(poi: ndarray[long], norm: ndarray[long]) -> None:
     plt.show()
 
 def main() -> None:
+    """Main function"""
     rng = random.default_rng()
     poi = rng.poisson(lam=2, size=1000)
     poisson_kde(poi)

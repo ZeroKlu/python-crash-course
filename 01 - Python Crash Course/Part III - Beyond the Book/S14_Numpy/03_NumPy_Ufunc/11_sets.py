@@ -1,3 +1,5 @@
+"""NumPy Set Operations"""
+
 import numpy as np
 
 def arr_set(arr: np.ndarray) -> None:
@@ -30,6 +32,7 @@ def arr_symmetric_diff(arr_a: np.ndarray, arr_b: np.ndarray) -> None:
     print(f"Symmetric Difference: {np.setxor1d(arr_a, arr_b)}\n")
 
 def main() -> None:
+    """Main Function"""
     arr = np.array([1, 2, 3, 2, 1, 4, 5, 5, 6, 2, 3])
     arr_set(arr)
     arr_a = np.array([1, 2, 3, 4])

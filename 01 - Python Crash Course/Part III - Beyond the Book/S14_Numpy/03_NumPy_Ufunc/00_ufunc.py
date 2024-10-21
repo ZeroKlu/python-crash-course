@@ -1,3 +1,5 @@
+"""NumPy Universal Functions (ufunc)"""
+
 import numpy as np
 
 def traditional_zip(lx: list[int], ly: list[int]) -> None:
@@ -27,6 +29,7 @@ def ufunc_add_arrays(lx: np.ndarray[int], ly: np.ndarray[int]) -> None:
     print(f"Result: {az}\n")
 
 def main() -> None:
+    """Main function"""
     lx = [1, 2, 3, 4]
     ly = [5, 6, 7, 8]
     traditional_zip(lx, ly)

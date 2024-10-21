@@ -1,6 +1,7 @@
+"""Drop a collection from MongoDB"""
+
 from login import get_settings, get_client, server_connected
 from pymongo import MongoClient
-from pymongo.synchronous.collection import Collection
 from pymongo.synchronous.database import Database
 
 def connect(settings: dict[str, any]=None) -> tuple[MongoClient, Database]|None:
@@ -60,9 +61,10 @@ def remove_database(client: MongoClient, db_name: str) -> None:
     view_databases(client)
 
 def main() -> None:
+    """Main function"""
     settings = get_settings()
     client, db = connect(settings)
-    
+
     remove_collection(db, settings["col_name"])
     print("-----\n")
     remove_database(client, settings["db_name"])

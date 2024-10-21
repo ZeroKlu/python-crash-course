@@ -1,9 +1,11 @@
+"""Working with Graphs"""
+
 import numpy as np
 from scipy.sparse import csr_matrix
 from scipy.sparse.csgraph import connected_components, dijkstra
 from scipy.sparse.csgraph import floyd_warshall, bellman_ford
-from scipy.sparse.csgraph import depth_first_order, breadth_first_order
-from utility_functions import clear_terminal, pause
+# from scipy.sparse.csgraph import depth_first_order, breadth_first_order
+from utilities import clear_terminal, pause
 
 def create_csr(arr: np.ndarray) -> csr_matrix:
     """Create a CSR matrix"""
@@ -59,6 +61,7 @@ def find_shortest_path_bellman_ford(csr: csr_matrix) -> None:
     pause()
 
 def main() -> None:
+    """Main function"""
     arr = np.array([[0, 1, 2], [1, 0, 0], [2, 0, 0]])
     csr = create_csr(arr)
     count_connected_components(csr)

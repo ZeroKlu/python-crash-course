@@ -1,5 +1,7 @@
+"""Pandas DataFrame Partitions"""
+
 import pandas as pd
-from utility_functions import file_path
+from utilities import file_path
 
 def load_from_json(filepath: str) -> pd.DataFrame:
     """Load data from a JSON file into a Pandas DataFrame"""
@@ -7,12 +9,12 @@ def load_from_json(filepath: str) -> pd.DataFrame:
 
 def show_info(df: pd.DataFrame) -> None:
     """Display information about the DataFrame"""
-    print(f"DataFrame Info:")
+    print("DataFrame Info:")
     print(df.info(), "\n")
 
 def top_rows(df: pd.DataFrame) -> None:
     """Display the first 5 rows of the DataFrame"""
-    print(f"Top 5 rows:")
+    print("Top 5 rows:")
     print(df.head(), "\n")
 
 def top_n_rows(df: pd.DataFrame, n: int=10) -> None:
@@ -22,7 +24,7 @@ def top_n_rows(df: pd.DataFrame, n: int=10) -> None:
 
 def bottom_rows(df: pd.DataFrame) -> None:
     """Display the first 5 rows of the DataFrame"""
-    print(f"Bottom 5 rows:")
+    print("Bottom 5 rows:")
     print(df.tail(), "\n")
 
 def bottom_n_rows(df: pd.DataFrame, n: int=10) -> None:
@@ -31,6 +33,7 @@ def bottom_n_rows(df: pd.DataFrame, n: int=10) -> None:
     print(df.tail(n), "\n")
 
 def main() -> None:
+    """Main program"""
     filepath = file_path("data.json", "data")
     df = load_from_json(filepath)
     show_info(df)

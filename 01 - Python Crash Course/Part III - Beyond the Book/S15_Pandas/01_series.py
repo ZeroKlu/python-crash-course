@@ -1,3 +1,5 @@
+"""Pandas Data Series"""
+
 import pandas as pd
 
 def create_series(data: list[int], named: bool=False,
@@ -14,8 +16,8 @@ def create_series(data: list[int], named: bool=False,
 def view_indices(series: pd.Series) -> None:
     """View the indices of a Series"""
     print("View the indices of a Series:")
-    for i in range(len(series)):
-        print(f"series[{i}] = {series[i]}")
+    for i, val in enumerate(series):
+        print(f"series[{i}] = {val}")
     print()
 
 def view_named(series: pd.Series, names: list[str]) -> None:
@@ -38,6 +40,7 @@ def create_series_from_dict(data: dict[str,int],
     return series
 
 def main() -> None:
+    """Main program"""
     data = [1, 2, 3, 4, 5]
     series = create_series(data)
     view_indices(series)

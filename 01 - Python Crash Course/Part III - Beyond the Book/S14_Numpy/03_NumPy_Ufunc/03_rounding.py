@@ -1,6 +1,9 @@
+"""Rounding Functions"""
+
 import numpy as np
 
 def main() -> None:
+    """Main Function"""
     arr = np.array([-3.1666, 3.6667])
     print(f"Array:    {arr}")
     print(f"Truncate: {np.trunc(arr)}")

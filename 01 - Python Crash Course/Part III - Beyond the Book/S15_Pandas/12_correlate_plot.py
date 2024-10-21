@@ -1,6 +1,8 @@
+"""Pandas DataFrame Correlations and Plots"""
+
 import pandas as pd
 import matplotlib.pyplot as plt
-from utility_functions import file_path
+from utilities import file_path
 
 def load_from_csv(filepath: str, printout: bool=True) -> pd.DataFrame:
     """Load data from a CSV file into a Pandas DataFrame"""
@@ -32,6 +34,7 @@ def hist_one_column(df: pd.DataFrame, col: str) -> None:
     plt.show()
 
 def main() -> None:
+    """Main function"""
     filepath = file_path("data.csv", "data")
     df = load_from_csv(filepath)
     correlations(df)

@@ -1,3 +1,5 @@
+"""Pandas Introduction"""
+
 import pandas as pd
 
 def check_version() -> None:
@@ -5,6 +7,7 @@ def check_version() -> None:
     print(f"Running Pandas version: {pd.__version__}\n")
 
 def main() -> None:
+    """Main function"""
     check_version()
 
 if __name__ == "__main__":

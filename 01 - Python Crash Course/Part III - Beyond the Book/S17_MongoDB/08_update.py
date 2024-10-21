@@ -1,3 +1,5 @@
+"""Update documents in MongoDB collection"""
+
 from login import get_settings, get_client, server_connected
 from pymongo import MongoClient
 from pymongo.synchronous.collection import Collection
@@ -46,6 +48,7 @@ def view_all(col: Collection) -> None:
     print()
 
 def main() -> None:
+    """Main program"""
     settings = get_settings()
     client, col = connect(settings)
     view_all(col)

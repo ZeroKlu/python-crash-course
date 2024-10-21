@@ -1,5 +1,7 @@
+"""Empty Data"""
+
 import pandas as pd
-from utility_functions import file_path
+from utilities import file_path
 
 def load_from_csv(filepath: str, printout: bool=False) -> pd.DataFrame:
     """Load data from a CSV file into a Pandas DataFrame"""
@@ -57,6 +59,7 @@ def fill_average(df: pd.DataFrame) -> None:
     print(f"----------\n{df.tail(10)}\n")
 
 def main() -> None:
+    """Main program"""
     csv = file_path("bad_data.csv", "data")
     df = load_from_csv(csv, True)
     remove_rows(df)

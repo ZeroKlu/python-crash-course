@@ -1,11 +1,13 @@
+"""Random numbers in NumPy."""
+
 import numpy as np
 from numpy import random
 
 def random_int() -> None:
     """Generate a random integer between 1 and 100."""
-    min, max = 1, 100
-    x = random.randint(min, max + 1)
-    print(f"Random integer ({min} to {max}):\n{x}\n")
+    min_n, max_n = 1, 100
+    x = random.randint(min_n, max_n + 1)
+    print(f"Random integer ({min_n} to {max_n}):\n{x}\n")
 
 def random_float() -> None:
     """Generate a random floating-point number between 0 and 1."""
@@ -15,31 +17,31 @@ def random_float() -> None:
 def random_array_1d_int() -> None:
     """Generate a 1D array of random integers between 1 and 100."""
     ar_sz = 5
-    min, max = 1, 100
+    min_n, max_n = 1, 100
     arr = random.randint(1, 101, ar_sz)
-    print(f"Random 1D int array ({min} to {max})", end=" ")
+    print(f"Random 1D int array ({min_n} to {max_n})", end=" ")
     print(f"size: ({ar_sz}):\n{arr}\n")
 
 def random_array_2d_int() -> None:
     """Generate a 2D array of random integers between 1 and 100."""
     ar_sz = (5, 3)
-    min, max = 1, 100
+    min_n, max_n = 1, 100
     arr = random.randint(1, 101, size=ar_sz)
-    print(f"Random 2D int array ({min} to {max})", end=" ")
+    print(f"Random 2D int array ({min_n} to {max_n})", end=" ")
     print(f"size: {ar_sz}:\n{arr}\n")
 
 def random_array_1d_float() -> None:
     """Generate a 1D array of random floats between 0 and 1."""
     ar_sz = 5
     arr = random.rand(ar_sz)
-    print(f"Random 1D float array", end=" ")
+    print("Random 1D float array", end=" ")
     print(f"size: ({ar_sz}):\n{arr}\n")
 
 def random_array_2d_float() -> None:
     """Generate a 1D array of random floats between 0 and 1."""
     ar_sz = (5, 3)
     arr = random.rand(*ar_sz)
-    print(f"Random 2D float array", end=" ")
+    print("Random 2D float array", end=" ")
     print(f"size: {ar_sz}:\n{arr}\n")
 
 def choose_element() -> None:
@@ -65,6 +67,7 @@ def choose_2d_array_elements() -> None:
     print(f"{new_arr}\n")
 
 def main() -> None:
+    """Run the main program."""
     random_int()
     random_float()
     random_array_1d_int()

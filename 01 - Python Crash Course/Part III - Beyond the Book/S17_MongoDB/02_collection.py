@@ -1,3 +1,5 @@
+"""Create a new collection in MongoDB"""
+
 from login import get_settings, get_client, server_connected
 from pymongo import MongoClient
 from pymongo.synchronous.database import Database
@@ -42,6 +44,7 @@ def get_collections(db: Database, settings: dict[str, any]=None) -> None:
         print("does not exist\n")
 
 def main() -> None:
+    """Main function"""
     settings = get_settings()
     client, db = connect(settings)
     make_collection(db, settings)

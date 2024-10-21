@@ -1,5 +1,7 @@
+"""SciPy Constants"""
+
 from scipy import constants as sc
-from utility_functions import clear_terminal, pause
+from utilities import clear_terminal, pause
 
 def metric_constants() -> None:
     """Display metric prefix constants."""
@@ -235,6 +237,7 @@ def math_constants() -> None:
     pause(end=True)
 
 def main() -> None:
+    """Display all constants."""
     metric_constants()
     binary_constants()
     mass_constants()

@@ -1,6 +1,8 @@
+"""Working with Sparse Matrices"""
+
 import numpy as np
 from scipy.sparse import csr_matrix, csc_matrix
-from utility_functions import clear_terminal, pause
+from utilities import clear_terminal, pause
 
 def sparse_row_matrix(arr: np.ndarray) -> None:
     """Create a CSR matrix"""
@@ -63,6 +65,7 @@ def convert(csr: csr_matrix) -> None:
     pause(end=True)
 
 def main() -> None:
+    """Main function"""
     arr = np.array([[0, 0, 0], [0, 0, 1], [1, 0, 2]], dtype=np.int8)
     sparse_row_matrix(arr)
     sparse_col_matrix(arr)

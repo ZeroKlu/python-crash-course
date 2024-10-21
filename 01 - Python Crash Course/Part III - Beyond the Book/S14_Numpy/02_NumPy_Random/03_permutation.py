@@ -1,3 +1,5 @@
+"""Permutations in NumPy"""
+
 import numpy as np
 from numpy import random
 
@@ -18,6 +20,8 @@ def permute_array() -> None:
     print(f"Original Array: {arr}\n")
 
 def main() -> None:
+    """Main function"""
+    print("Permutations in NumPy")
     shuffle_array()
     permute_array()
 

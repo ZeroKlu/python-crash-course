@@ -1,3 +1,5 @@
+"""Differences of Numpy Arrays"""
+
 import numpy as np
 from utility_functions import ord_suffix
 
@@ -44,6 +46,7 @@ def difference_x(arr_a: np.ndarray, arr_b: np.ndarray) -> None:
     print(f"{np.diff([arr_a, arr_b], axis=1)}\n")
 
 def main() -> None:
+    """Main Function"""
     arr_a = np.array([3, 9, 6, 1, 4])
     arr_b = np.array([5, 8, 7, 2, 0])
     subtraction(arr_a, arr_b)

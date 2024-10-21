@@ -1,5 +1,7 @@
+"""Pandas DataFrame from CSV File"""
+
 import pandas as pd
-from utility_functions import file_path, clear_terminal, pause
+from utilities import file_path, clear_terminal, pause
 
 def load_from_csv(filepath: str) -> pd.DataFrame:
     """Load data from a CSV file into a Pandas DataFrame"""
@@ -19,6 +21,7 @@ def show_200_rows(df: pd.DataFrame) -> None:
     print(df, "\n")
 
 def main():
+    """Main program"""
     filepath = file_path("data.csv", "data")
     df = load_from_csv(filepath)
     pause()

@@ -1,5 +1,7 @@
-import numpy as np
+"""Logarithms in NumPy `ufunc` Functions"""
+
 from math import log
+import numpy as np
 
 def log_calc() -> None:
     """Calculate Logarithms of an Array"""
@@ -20,6 +22,7 @@ def log_any_base():
     print("\b]")
 
 def main():
+    """Main Function"""
     flt_fmt = "{:.2f}".format
     np.set_printoptions(formatter={"float_kind": flt_fmt})
     log_calc()

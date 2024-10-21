@@ -1,11 +1,14 @@
+"""SciPy Optimizers"""
+
+from math import cos
 from scipy.optimize import root
 from scipy.optimize import minimize
 from numpy import ndarray
-from math import cos
 
 def x_plus_cos_x(x: int|float|ndarray[int|float]) -> int|float:
     """Compute x plus cos(x)"""
-    if isinstance(x, ndarray): x = x[0]
+    if isinstance(x, ndarray):
+        x = x[0]
     return x + cos(x)
 
 def find_root() -> int|float:
@@ -15,7 +18,8 @@ def find_root() -> int|float:
 
 def x_squared_plus_x_plus_2(x: int|float|ndarray[int|float]) -> int|float:
     """Compute x² + x + 2"""
-    if isinstance(x, ndarray): x = x[0]
+    if isinstance(x, ndarray):
+        x = x[0]
     return x ** 2 + x + 2
 
 def find_minimum() -> int|float:
@@ -25,6 +29,7 @@ def find_minimum() -> int|float:
     print(f"minimum of x² + x + 2 = ({x.x[0]:.2f}, {y})\n")
 
 def main() -> None:
+    """Main function"""
     find_root()
     find_minimum()
 

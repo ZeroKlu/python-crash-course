@@ -1,11 +1,17 @@
+"""Hyperbolic Functions"""
+
 import numpy as np
 
 def print_out(txt: str, lbl: str, lst: list[int], arr: np.ndarray) -> None:
+    """Print out the results"""
     print(f"{txt.title()}:")
     for d, r in zip(lst, arr):
-        if round(d) == 0: d = 0.0
-        if round(r) == 0: r = 0.0
-        if r > 1000000: r = np.inf
+        if round(d) == 0:
+            d = 0.0
+        if round(r) == 0:
+            r = 0.0
+        if r > 1000000:
+            r = np.inf
         if isinstance(d, int):
             print(f"{lbl}({d:>3}) = {r:>5.2f}")
         else:
@@ -29,6 +35,7 @@ def do_trig_h(lst: list[int]) -> None:
     print_out("hyperbolic arctangent", "arctanh", c, a_t)
 
 def main() -> None:
+    """Main function"""
     circle_degrees = [45, 90, 135, 180, 225, 270, 315, 360]
     do_trig_h(circle_degrees)
 

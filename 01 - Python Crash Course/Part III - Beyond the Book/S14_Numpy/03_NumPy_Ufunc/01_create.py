@@ -1,3 +1,5 @@
+"""Creating `ufunc` Functions"""
+
 import numpy as np
 
 def add_up(x: int|list[int], y: int|list[int]) -> int:
@@ -28,6 +30,7 @@ def add_np() -> None:
     print(f"adder({lx}, {ly}) yields: {adder(lx, ly)}\n")
 
 def main() -> None:
+    """Main function"""
     add_trad()
     add_np()
 

@@ -1,3 +1,5 @@
+"""Pandas DataFrame"""
+
 import pandas as pd
 import json
 
@@ -36,6 +38,7 @@ def label_cols(data: dict[str,list[any]]) -> None:
     print(df, "\n")
 
 def main() -> None:
+    """Main function"""
     data = {
         "Name": ["John", "Anna", "Peter", "Linda"],
         "Age": [24, 30, 28, 26],

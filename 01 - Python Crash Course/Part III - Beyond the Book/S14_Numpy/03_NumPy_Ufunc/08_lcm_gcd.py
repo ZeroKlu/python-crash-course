@@ -1,3 +1,5 @@
+"""Greatest Common Divisor and Least Common Multiple"""
+
 import numpy as np
 from utility_functions import timer
 
@@ -46,6 +48,7 @@ def test_np_lcm(arr: np.ndarray) -> int:
     return np.lcm.reduce(arr)
 
 def main() -> None:
+    """Main Function"""
     lst = [12, 15, 27, 30]
     arr = np.array(lst)
 
