@@ -1,19 +1,4 @@
-#region Copyright
-#######################################################################
-#                  Copyright (C) 2024, DataBank IMX                   #
-#                                                                     #
-# All rights reserved                                                 #
-#                                                                     #
-# For further information consult:                                    #
-#  - The DataBank IMX End User License Agreement (EULA)               #
-#    or                                                               #
-#  - DataBank IMX Intellectual Property Statement                     #
-#                                                                     #
-# Above referenced documents available upon request from:             #
-#     development@databankimx.com                                     #
-#                                                                     #
-#######################################################################
-#endregion
+"""Models a trie"""
 
 #region Imports
 from pathlib import Path
@@ -30,7 +15,7 @@ class Trie:
         self.size = size
         self.root = TrieNode(self.size)
     #endregion
-    
+
     #region Methods
     def insert_key(self, key: str) -> None:
         """Insert a string into the trie"""
@@ -90,17 +75,11 @@ class Trie:
             return True
         self.root.children[ord(key[0]) - ord("a")] = None
         return True
-    
+
     def load_words(self, file_name: str, folder: str = None) -> None:
-        words = Path(file_path(file_name, folder)).read_text().split("\n")
+        """Load words into the trie"""
+        path = Path(file_path(file_name, folder))
+        words = path.read_text(encoding="UTF-8").split("\n")
         for word in words:
             self.insert_key(word)
     #endregion
-
-#region Source Code Information
-#######################################################################
-#                  Copyright (C) 2024, DataBank IMX                   #
-#                                                                     #
-# Source code provided for reference only! Reuse not permitted!       #
-#######################################################################
-#endregion

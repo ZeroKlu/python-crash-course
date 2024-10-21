@@ -1,3 +1,5 @@
+"""Defines the ranks in a deck of cards"""
+
 from enum import Enum
 from suits import Suits
 
@@ -27,6 +29,8 @@ class Ranks(Enum):
         code = val if val < 12 else val + 1
         return chr(base_hex + suits[suit.value] + code)
 
+    # pylint: disable=function-redefined
+    # pylint: disable=arguments-renamed
     @classmethod
     def name(cls, rank: Enum) -> str:
         """Returns the rank name"""

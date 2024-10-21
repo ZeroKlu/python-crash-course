@@ -1,3 +1,5 @@
+"""Example Comprehensions"""
+
 from sm_utils import timer
 
 @timer
@@ -14,6 +16,7 @@ def list_comprehension(n: int) -> list[int]:
     return [i ** 2 for i in range(n)]
 
 def main() -> None:
+    """Run the program"""
     n = 10 ** 6
     print("Using for_loop...")
     for_loop(n)

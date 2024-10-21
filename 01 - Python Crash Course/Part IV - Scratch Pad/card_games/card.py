@@ -1,12 +1,16 @@
+"""Models a playing card"""
+
+import json
 from colors import Colors
 from suits import Suits
 from ranks import Ranks
-import json
 
-class Card(object):
+class Card():
     """Models a playing card"""
 
-    def __init__(self, game: str=None, suit: Suits=None, rank: Ranks=None, color: Colors=Colors.WHITE, back: bool=False) -> None:
+    # pylint: disable=too-many-arguments
+    def __init__(self, game: str=None, suit: Suits=None, rank: Ranks=None,
+                 color: Colors=Colors.WHITE, back: bool=False) -> None:
         """Initialize"""
         self.suit: Suits = Suits.SPADES if back else suit
         self.rank: Ranks = Ranks.BACK if back else rank
@@ -18,8 +22,9 @@ class Card(object):
 
     def __str__(self) -> str:
         """String representation of the card"""
-        return "#" if self.rank == Ranks.BACK else f"{Ranks.initial(self.rank)}{Suits.glyph(self.suit, self.color)}"
-    
+        return "#" if self.rank == Ranks.BACK else \
+            f"{Ranks.initial(self.rank)}{Suits.glyph(self.suit, self.color)}"
+
     def __repr__(self) -> str:
         """Return a string for replication of the card"""
         return json.dumps({
@@ -29,13 +34,15 @@ class Card(object):
 
     def get_name(self):
         """Get the long name for the card"""
-        return "Back" if self.rank == Ranks.BACK else f"{Ranks.name(self.rank)} of {Suits.name(self.suit)}"
+        return "Back" if self.rank == Ranks.BACK else \
+            f"{Ranks.name(self.rank)} of {Suits.name(self.suit)}"
 
     def get_value(self, game: str) -> int:
         """Get the value of the card"""
         if game is None or game == "":
             return self.rank.value
         match game.lower():
+            # pylint: disable=fixme
             # TODO: Add support for more games
             case "blackjack":
                 return self.rank.value if self.rank.value < 11 else 10

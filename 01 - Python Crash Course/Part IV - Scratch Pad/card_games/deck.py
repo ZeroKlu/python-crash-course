@@ -1,12 +1,15 @@
+"""Models a deck of playing cards"""
+
+from random import shuffle
 from colors import Colors
 from suits import Suits
 from ranks import Ranks
 from card import Card
 from hand import Hand
-from random import shuffle
 
 class Deck(object):
     """Models a deck of playing cards"""
+    # pylint: disable=fixme
     # TODO: Add support for jokers
 
     def __init__(self, game: str=None, color: Colors=Colors.WHITE) -> None:

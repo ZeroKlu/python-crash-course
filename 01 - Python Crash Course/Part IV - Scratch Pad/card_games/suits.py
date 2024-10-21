@@ -1,3 +1,5 @@
+"""Defines the suits in a deck of cards"""
+
 from enum import Enum
 from colors import Colors
 
@@ -17,6 +19,8 @@ class Suits(Enum):
         codes = white if color == Colors.WHITE else black
         return chr(base_hex + codes[suit.value])
 
+    # pylint: disable=function-redefined
+    # pylint: disable=arguments-renamed
     @classmethod
     def name(cls, suit: Enum) -> str:
         """Gets the name of the suit"""

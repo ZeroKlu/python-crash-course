@@ -1,3 +1,6 @@
+"""
+Defines the colors for the filled or hollow suit characters"""
+
 from enum import Enum
 
 class Colors(Enum):

@@ -1,3 +1,5 @@
+"""Trie Testing"""
+
 from Trie import Trie
 from sm_utils import timer, clear_terminal, pause
 
@@ -18,7 +20,8 @@ def main() -> None:
 
     while True:
         clear_terminal()
-        word = input("\nEnter a word to search (letters only) or press <ENTER> to quit:\n> ").lower()
+        word = input("\nEnter a word to search (letters only) or " + \
+                     "press <ENTER> to quit:\n> ").lower()
         print()
         if word is None or word == "":
             clear_terminal()

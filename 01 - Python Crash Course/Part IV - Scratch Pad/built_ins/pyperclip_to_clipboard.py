@@ -1,3 +1,5 @@
+"""Copy to the clipboard and paste from it!"""
+
 import pyperclip
 
 # Copies to the clipboard

@@ -1,12 +1,19 @@
+"""Models a hand of cards"""
+
+import json
 from card import Card
 from ranks import Ranks
-import json
 
 class Hand(object):
     """Models a hand of cards"""
 
-    def __init__(self, game: str=None, cards: list[Card]|None=[], hidden: list[int]|None=[]) -> None:
+    def __init__(self, game: str=None, cards: list[Card]|None=None,
+                 hidden: list[int]|None=None) -> None:
         """Initialize"""
+        if cards is None:
+            cards = []
+        if hidden is None:
+            hidden = []
         self.game: str = game
         self.cards: list[Card] = cards
         self._hidden: list[int] = hidden
@@ -33,7 +40,9 @@ class Hand(object):
 
     def _set_value(self) -> None:
         """Set the indices for the hidden cards"""
-        self._value = sum([card.value for card in self.cards if self.cards.index(card) not in self._hidden])
+        # pylint: disable=consider-using-generator
+        self._value = sum([card.value for card in self.cards \
+                           if self.cards.index(card) not in self._hidden])
 
     value = property(
         fget=_get_value,
@@ -48,8 +57,8 @@ class Hand(object):
     def __repr__(self) -> str:
         """Return a string for replication of the hand"""
         cards = []
-        for i in range(len(self.cards)):
-            desc = json.loads(repr(self.cards[i]))
+        for i, card in self.cards:
+            desc = json.loads(repr(card))
             desc["hidden"] = i in self._hidden
             cards.append(desc)
         return json.dumps({
@@ -62,11 +71,14 @@ class Hand(object):
         """Display the hand as ASCII art or glyphs"""
         back = Card(back=True)
         if use_glyph:
-            print(" ".join([self.cards[i].glyph if i not in self._hidden else back.glyph for i in range(len(self.cards))]))
+            print(" ".join([self.cards[i].glyph if i not in self._hidden \
+                            else back.glyph for i in range(len(self.cards))]))
             return
         for r in range(4):
-            print(" ".join([self.cards[i].ascii[r] if i not in self._hidden else back.ascii[r] for i in range(len(self.cards))]))
+            print(" ".join([self.cards[i].ascii[r] if i not in self._hidden \
+                            else back.ascii[r] for i in range(len(self.cards))]))
 
     def count(self, rank: Ranks) -> int:
         """Returns the number of cards of a specific rank in the hand"""
-        return len([c for c in self.cards if c.rank == rank and self.cards.index(c) not in self._hidden])
+        return len([c for c in self.cards if c.rank == rank \
+                    and self.cards.index(c) not in self._hidden])

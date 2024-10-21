@@ -1,7 +1,10 @@
+"""Tests for the deck and hand classes"""
+
 from sm_utils import clear_terminal, pause
 from deck import Deck
 
 def main() -> None:
+    """Main function"""
     deck = Deck("poker")
 
     # View deck

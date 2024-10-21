@@ -1,11 +1,13 @@
+"""Models a game of blackjack"""
+
+import sys
+from sm_utils import clear_terminal
 from deck import Deck
 from hand import Hand
 from ranks import Ranks
 from colors import Colors
-import sys
-from sm_utils import clear_terminal
 
-class Blackjack(object):
+class Blackjack():
     """Models a game of blackjack"""
 
     INITIAL_BANKROLL = 5_000
@@ -30,7 +32,7 @@ class Blackjack(object):
 
     def play_hand(self) -> None:
         """Play one hand of blackjack"""
-        bet = self.place_bet()
+        self.place_bet()
 
     def place_bet(self) -> int:
         """Let the player place a bet"""
@@ -73,7 +75,8 @@ class Blackjack(object):
         print("  Cards 2 through 10 are worth their face value.")
         print("  (H)it to take another card.")
         print("  (S)tand to stop taking cards.")
-        print("  On your first play, you can (D)ouble down to increase your bet but must hit exactly one more time before standing.")
+        print("  On your first play, you can (D)ouble down to increase your" + \
+              " bet but must hit exactly one more time before standing.")
         print("  In case of a tie, the bet is returned to the player.")
         print("  The dealer stops hitting at 17.")
 
@@ -93,20 +96,25 @@ class Blackjack(object):
         return val
 
     def show_hands(self):
-        print(f"Dealer: {self.hand_value(self.dealer_hand)}{' + ??' if self.dealer_hand.hidden else ''}")
+        """Show the player's and dealer's hands"""
+        print(f"Dealer: {self.hand_value(self.dealer_hand)}" + \
+              f"{' + ??' if self.dealer_hand.hidden else ''}")
         self.dealer_hand.show()
-        p_val = self.hand_value(self.player_hand)
+        p_val = self.hand_value(self.player_hands[0])
         print(f"\nPlayer: {p_val}", end="")
         if p_val > 21:
             print(" (Busted!)")
-        elif p_val == 21 and len(self.player_hand.cards) == 2: #TODO
+        elif p_val == 21 and len(self.player_hands[0].cards) == 2:
+            # pylint: disable=fixme
+            #TODO
             print(" (Blackjack!)")
         else:
             print()
-        self.player_hand.show()
+        self.player_hands[0].show()
         print()
 
 def main() -> None:
+    """Run the game"""
     Blackjack().play()
 
 if __name__ == "__main__":

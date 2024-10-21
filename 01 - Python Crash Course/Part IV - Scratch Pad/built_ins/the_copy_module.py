@@ -1,4 +1,7 @@
-# We previously used an open-ended slice [:] to make a copy of a list, but the copy module gives us another way
+"""The copy module"""
+
+# We previously used an open-ended slice [:] to make a copy of a list,
+#but the copy module gives us another way
 
 from copy import copy, deepcopy
 
@@ -17,6 +20,8 @@ print(orig_deep_list)
 dup_deep_list = deepcopy(orig_deep_list)
 print(dup_deep_list)
 
-# Note: In my testing, I got all of the dep copy using copy() as well, but we should use deepcopy as a convention
+# Note: In my testing, I got all of the dep copy using copy() as well,
+# but we should use deepcopy as a convention
+#
 # dup_shallow_list = copy(orig_deep_list)
 # print(dup_shallow_list)
