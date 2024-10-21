@@ -1,3 +1,5 @@
+"""Iterating over an Array with a Loop"""
+
 import numpy as np
 
 def iter_one_d() -> None:
@@ -21,7 +23,7 @@ def iter_two_d_elem() -> None:
     arr = np.array([[1, 2, 3], [4, 5, 6]])
     print(f"2D Array:\n{arr}\nLooping rows...")
     for row in arr:
-        print(f" Looping elements in row...")
+        print(" Looping elements in row...")
         for el in row:
             print(f"  {el}")
     print()
@@ -31,13 +33,14 @@ def iter_three_d_elem() -> None:
     arr = np.array([[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]]])
     print(f"3D Array:\n{arr}\nLooping pages...")
     for page in arr:
-        print(f" Looping rows in page...")
+        print(" Looping rows in page...")
         for row in page:
-            print(f"  Looping elements in row...")
+            print("  Looping elements in row...")
             for el in row:
                 print(f"   {el}")
 
 def main():
+    """Main Function"""
     iter_one_d()
     iter_two_d()
     iter_two_d_elem()

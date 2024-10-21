@@ -1,8 +1,10 @@
+"""Splitting Arrays"""
+
 import numpy as np
 
 def print_2d(arr: list[np.ndarray]) -> None:
     """Print out 2D split results"""
-    print(f"Split array:\n[")
+    print("Split array:\n[")
     for ar in arr:
         print(f" array({','.join(str(ar).splitlines())})")
     print("]\n")
@@ -59,6 +61,7 @@ def vsplit_2d_to_3() -> None:
     print_2d(new_arr)
 
 def main() -> None:
+    """Main function"""
     split_1d_to_3()
     split_1d_to_4()
     split_1d_to_missing()

@@ -1,11 +1,13 @@
+"""Extracting Hyperlinks Using `BeautifulSoup`"""
+
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
 def scrape_with_soup(url: str) -> BeautifulSoup:
     """Returns soup object"""
-    page = urlopen(url)
-    html = page.read().decode("utf-8")
-    return BeautifulSoup(html, "html.parser")
+    with urlopen(url) as page:
+        html = page.read().decode("utf-8")
+        return BeautifulSoup(html, "html.parser")
 
 def get_links(url: str) -> list[str]:
     """Obtain the links to the profile pages"""
@@ -13,6 +15,7 @@ def get_links(url: str) -> list[str]:
     return [l["href"] for l in soup.find_all("a")]
 
 def main() -> None:
+    """Read web page and get the hyperlinks"""
     base_url = "http://olympus.realpython.org/profiles"
     links = get_links(base_url)
     for link in links:

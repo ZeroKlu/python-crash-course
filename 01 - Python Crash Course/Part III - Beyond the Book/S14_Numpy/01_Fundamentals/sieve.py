@@ -1,3 +1,5 @@
+"""Implementation of Sieve of Eratosthenes"""
+
 def sieve(n) -> list[bool]:
     """Get a list of all primes up to `n`"""
     primes = [True] * (n + 1)

@@ -1,4 +1,7 @@
+"""Prepare the MySQL database tables"""
+
 import mysql.connector
+# pylint: disable=no-name-in-module
 from utility_functions import get_settings
 
 def connect(settings: dict[str, str]) -> mysql.connector.connection:
@@ -69,6 +72,7 @@ def add_data(conn: mysql.connector.connection) -> None:
         print(f"{cursor.rowcount} record(s) added\n")
 
 def main() -> None:
+    """Main function"""
     settings = get_settings()
     conn = connect(settings)
     create_tables(conn)

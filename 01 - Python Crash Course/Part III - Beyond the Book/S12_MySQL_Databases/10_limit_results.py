@@ -1,4 +1,7 @@
+"""Limit Results"""
+
 import mysql.connector
+# pylint: disable=no-name-in-module
 from utility_functions import get_settings
 
 def connect(settings: dict[str, str]) -> mysql.connector.connection:
@@ -43,6 +46,7 @@ def offset_five_rows(conn: mysql.connector.connection) -> None:
     print()
 
 def main() -> None:
+    """Main function"""
     settings = get_settings()
     conn = connect(settings)
     get_five_rows(conn)

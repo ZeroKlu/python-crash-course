@@ -1,4 +1,7 @@
+"""Create a new database on the MySQL Server"""
+
 import mysql.connector
+# pylint: disable=no-name-in-module
 from utility_functions import get_settings
 
 def connect(settings: dict[str, str]) -> mysql.connector.connection:
@@ -40,6 +43,7 @@ def list_databases(conn: mysql.connector.connection) -> None:
         print(f" - {database[0]}")
 
 def main() -> None:
+    """Main function"""
     settings = get_settings()
     conn = connect(settings)
     create_database(conn, settings["schema"])

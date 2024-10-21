@@ -1,3 +1,5 @@
+"""nditer()"""
+
 import numpy as np
 
 def scalar_elements() -> None:
@@ -25,6 +27,7 @@ def different_steps() -> None:
     print()
 
 def enumerated_1d() -> None:
+    """Enumerate over each element in a 1D array"""
     arr = np.array([1, 2, 3])
     print(f"Array:\n{arr}\nEnumerated 1D Iteration:")
     for idx, x in np.ndenumerate(arr):
@@ -32,6 +35,7 @@ def enumerated_1d() -> None:
     print()
 
 def enumerated_2d() -> None:
+    """Enumerate over each element in a 2D array"""
     arr = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
     print(f"Array:\n{arr}\nEnumerated 2D Iteration:")
     for idx, x in np.ndenumerate(arr):
@@ -39,6 +43,7 @@ def enumerated_2d() -> None:
     print()
 
 def main() -> None:
+    """Main Function"""
     scalar_elements()
     conversions()
     different_steps()

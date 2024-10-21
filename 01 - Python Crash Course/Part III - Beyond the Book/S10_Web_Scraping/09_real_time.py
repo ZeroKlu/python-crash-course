@@ -1,3 +1,5 @@
+"""Real-Time Interaction"""
+
 import time
 import mechanicalsoup
 
@@ -14,6 +16,7 @@ def load_multiple_times(dice_url: str, num_loads: int) -> None:
             time.sleep(1)
 
 def main() -> None:
+    """Main function"""
     dice_url = "http://olympus.realpython.org/dice"
     load_multiple_times(dice_url, 5)
 

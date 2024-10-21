@@ -1,4 +1,7 @@
+"""Read data from MySQL Database Table"""
+
 import mysql.connector
+# pylint: disable=no-name-in-module
 from utility_functions import get_settings
 
 def connect(settings: dict[str, str]) -> mysql.connector.connection:
@@ -53,6 +56,7 @@ def get_one_row(conn: mysql.connector.connection) -> None:
     print(cursor.fetchone(), "\n")
 
 def main() -> None:
+    """Main function"""
     settings = get_settings()
     conn = connect(settings)
     get_all_rows(conn)

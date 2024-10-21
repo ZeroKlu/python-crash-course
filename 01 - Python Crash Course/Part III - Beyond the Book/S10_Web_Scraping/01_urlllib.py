@@ -1,10 +1,12 @@
+"""Using the `urllib` library"""
+
 from urllib.request import urlopen
 
 def scrape_page(url: str) -> str:
     """Returns the HTML content of a web page"""
-    page = urlopen(url)
-    page_bytes = page.read()
-    return page_bytes.decode("utf-8")
+    with urlopen(url) as page:
+        page_bytes = page.read()
+        return page_bytes.decode("utf-8")
 
 def parse_html(html: str, tag_to_find: str) -> str:
     """Locate specified HTML tag and returns its content"""
@@ -20,7 +22,7 @@ def main() -> None:
         "http://olympus.realpython.org/profiles/aphrodite",
         "http://olympus.realpython.org/profiles/poseidon"
     ]
-    
+
     for page in pages:
         html = scrape_page(page)
         title = parse_html(html, "title")

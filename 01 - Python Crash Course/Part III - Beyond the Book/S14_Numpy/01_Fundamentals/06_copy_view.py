@@ -1,3 +1,5 @@
+"""Views and Copies in NumPy"""
+
 import numpy as np
 
 def make_copy() -> None:
@@ -38,6 +40,7 @@ def base() -> None:
     print("view base =", y.base, "\n")
 
 def main() -> None:
+    """Main function"""
     make_copy()
     view_change_original()
     view_change_view()

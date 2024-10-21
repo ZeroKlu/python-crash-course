@@ -1,3 +1,5 @@
+"""Creating NumPy Arrays"""
+
 import numpy as np
 
 def array_from_list(lst: list[int]) -> np.ndarray:
@@ -9,6 +11,7 @@ def array_from_tuple(tpl: tuple[int]) -> np.ndarray:
     return np.array(tpl)
 
 def main() -> None:
+    """Main Function"""
     lst = [1, 2, 3, 4, 5]
     arr = array_from_list(lst)
     print("List:", lst, type(lst))

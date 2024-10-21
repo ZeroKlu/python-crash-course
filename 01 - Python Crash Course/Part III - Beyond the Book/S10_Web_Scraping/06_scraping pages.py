@@ -1,11 +1,13 @@
+"""Scraping Web Pages"""
+
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
 def scrape_with_soup(url: str) -> BeautifulSoup:
     """Returns soup object"""
-    page = urlopen(url)
-    html = page.read().decode("utf-8")
-    return BeautifulSoup(html, "html.parser")
+    with urlopen(url) as page:
+        html = page.read().decode("utf-8")
+        return BeautifulSoup(html, "html.parser")
 
 def get_links(url: str) -> list[str]:
     """Obtain the links to the profile pages"""
@@ -30,6 +32,7 @@ def scrape_page(url: str, data: list[str]) -> None:
     print()
 
 def main() -> None:
+    """Read web pages and scrape data"""
     base_url = "http://olympus.realpython.org/profiles"
     links = get_links(base_url)
     data = ["Name", "Hometown", "Favorite Animal", "Favorite Color"]

@@ -1,3 +1,5 @@
+"""Searching Arrays"""
+
 import numpy as np
 
 def indices_1d_by_loop() -> None:
@@ -19,6 +21,7 @@ def indices_1d_by_value() -> None:
     indices = np.where(arr == n)
     print(f"Found {n} at indices:", indices, "\n")
 
+# pylint: disable=fixme
 # TODO: Research how to use np.where() for 2D arrays
 #       This does not work as expected
 # def indices_2d_by_value() -> None:
@@ -35,8 +38,8 @@ def indices_1d_by_formula() -> None:
     print(f"Array: {arr}")
     odds = np.where(arr % 2 == 1)
     evens = np.where(arr % 2 == 0)
-    print(f"Found Odd values at indices:", odds)
-    print(f"Found Even values at indices:", evens, "\n")
+    print(f"Found Odd values at indices: {odds}")
+    print(f"Found Even values at indices: {evens}\n")
 
 def is_sorted(arr: np.ndarray) -> bool:
     """Check if an array is sorted in ascending order"""
@@ -65,14 +68,15 @@ def search_sorted_multiple() -> None:
     print(f"Search Values: {np.array(vals)}")
     l = np.searchsorted(arr, vals)
     r = np.searchsorted(arr, vals, side="right")
-    for i in range(len(vals)):
-        if l[i] == r[i]:
+    for i, left in enumerate(l):
+        if left == r[i]:
             print(f"Can insert {vals[i]} at index {l[i]}")
             continue
         print(f"Can insert {vals[i]} from index {l[i]} to {r[i]}")
     print()
 
 def main() -> None:
+    """Main Function"""
     indices_1d_by_loop()
     indices_1d_by_value()
     indices_1d_by_formula()

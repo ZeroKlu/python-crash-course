@@ -1,28 +1,31 @@
+"""Final Web Scraping Bot"""
+
 import json
 from pathlib import Path
+from urllib.request import urlopen
 from relative_paths import get_path
 from utility_functions import pause
 from mechanicalsoup import Browser
 import requests
 from bs4 import BeautifulSoup
-from urllib.request import urlopen
 
-class WebScraper(object):
+class WebScraper():
     """Simple web scraping bot"""
 
     def __init__(self, config_loc: str="data",
                  config_file: str="secrets.json") -> None:
         """Initialize"""
         settings = json.loads(
-            Path(get_path(config_file, config_loc)).read_text())
+            Path(get_path(config_file, config_loc)).read_text(encoding="utf-8"))
         self.base_url = settings["base_url"]
         self.username = settings["un"]
         self.password = settings["pw"]
         self.debug = settings["debug"]
         self.img_folder = settings["img_folder"]
         self.data = settings["data"]
-        if self.debug: self.debug_message("Initialized Web Scraper.\n")
-    
+        if self.debug:
+            self.debug_message("Initialized Web Scraper.\n")
+
     def debug_message(self, message: str) -> None:
         """Print a debug message"""
         print(message)
@@ -60,7 +63,8 @@ class WebScraper(object):
         """Obtain the links to the profile pages"""
         soup = self.scrape_with_soup(self.full_url(url))
         links = [l["href"] for l in soup.find_all("a")]
-        if self.debug: self.debug_message(f"Obtained links: {links}\n")
+        if self.debug:
+            self.debug_message(f"Obtained links: {links}\n")
         return links
 
     def parse_text_content(self, text: str, search: str) -> str:
@@ -71,11 +75,12 @@ class WebScraper(object):
 
     def download_image(self, url: str) -> None:
         """Store an image file"""
-        image = requests.get(self.full_url(url)).content
+        image = requests.get(self.full_url(url), timeout=10).content
         filename = url.split("/")[-1]
         filepath = Path(get_path(filename, self.img_folder))
         filepath.write_bytes(image)
-        if self.debug: self.debug_message(f"Stored image: {filename}\n")
+        if self.debug:
+            self.debug_message(f"Stored image: {filename}\n")
 
     def scrape_images(self, soup: BeautifulSoup) -> None:
         """Extract all images from the page"""
@@ -96,7 +101,7 @@ class WebScraper(object):
             print(f" - {datum}:{' ' * (span - len(datum))} {item}")
         self.scrape_images(soup)
         print()
-    
+
     def scrape(self) -> None:
         """Perform full scraping process"""
         links_url = self.log_in()

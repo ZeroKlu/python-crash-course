@@ -1,3 +1,5 @@
+"""Dimensions in Arrays"""
+
 import numpy as np
 
 def scalar() -> None:
@@ -45,6 +47,7 @@ def ordinal(n: int) -> str:
     return "th" 
 
 def main() -> None:
+    """Main Function"""
     scalar()
     unidimensional()
     matrix()

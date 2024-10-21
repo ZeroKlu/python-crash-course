@@ -1,3 +1,5 @@
+"""Sort arrays"""
+
 import numpy as np
 
 def sort_1d_int() -> None:
@@ -22,6 +24,7 @@ def sort_2d_int() -> None:
     print("Sorted array:\n", sorted_arr, "\n")
 
 def main() -> None:
+    """Main Function"""
     sort_1d_int()
     sort_1d_str()
     sort_2d_int()

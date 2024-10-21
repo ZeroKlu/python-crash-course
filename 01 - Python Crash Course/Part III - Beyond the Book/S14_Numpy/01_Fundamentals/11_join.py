@@ -1,3 +1,5 @@
+"""Joining Arrays"""
+
 import numpy as np
 
 def join_1d() -> None:
@@ -89,6 +91,7 @@ def dstack_2d() -> None:
     print(f"Depth Stacked 3D Array:\n{arr}\n")
 
 def main() -> None:
+    """Main function"""
     join_1d()
     join_2d_cols()
     join_2d_rows()

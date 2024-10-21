@@ -1,14 +1,16 @@
+"""Scraping images"""
+
 from urllib.request import urlopen
+from pathlib import Path
 from bs4 import BeautifulSoup
 import requests
-from pathlib import Path
 from relative_paths import get_path
 
 def scrape_with_soup(url: str) -> BeautifulSoup:
     """Returns soup object"""
-    page = urlopen(url)
-    html = page.read().decode("utf-8")
-    return BeautifulSoup(html, "html.parser")
+    with urlopen(url) as page:
+        html = page.read().decode("utf-8")
+        return BeautifulSoup(html, "html.parser")
 
 def get_links(url: str) -> list[str]:
     """Obtain the links to the profile pages"""
@@ -23,7 +25,7 @@ def parse_text_content(text: str, search: str) -> str:
 
 def download_image(url: str) -> None:
     """Store an image file"""
-    image = requests.get(url).content
+    image = requests.get(url, timeout=10).content
     filename = url.split("/")[-1]
     filepath = Path(get_path(filename, "images"))
     filepath.write_bytes(image)
@@ -50,6 +52,7 @@ def scrape_page(url: str, data: list[str]) -> None:
     print()
 
 def main() -> None:
+    """Read web pages and scrape images"""
     base_url = "http://olympus.realpython.org/profiles"
     links = get_links(base_url)
     data = ["Name", "Hometown", "Favorite Animal", "Favorite Color"]

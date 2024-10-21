@@ -34,7 +34,9 @@ main_folder/
 In the case of my example project, `__init__.py` contains this:
 
 ```python
-from .sm_utils import timer, Timed, root_path, dir_path, file_path, set_path, default_path, RelativePath, run, run_repeat, counter, reset_counter, Counted, pause, clear_terminal
+from .sm_utils import timer, Timed, root_path, dir_path, file_path, set_path, \
+    default_path, RelativePath, run, run_repeat, counter, reset_counter, \
+    Counted, pause, clear_terminal
 ```
 
 > Important Note!

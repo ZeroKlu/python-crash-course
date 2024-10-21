@@ -1,3 +1,5 @@
+"""Data types in NumPy arrays"""
+
 import numpy as np
 
 def integer() -> None:
@@ -10,7 +12,7 @@ def string() -> None:
     arr = np.array(["apple", "banana", "cherry"])
     print(arr, "type =", arr.dtype, "\n")
 
-def float() -> None:
+def floating_point() -> None:
     """Look at type of explicit float array"""
     arr = np.array([1, 2, 3, 4], dtype="f")
     print(arr, "type =", arr.dtype, "\n")
@@ -44,14 +46,15 @@ def type_change() -> None:
 
     new_arr = new_arr.astype(bool)
     print("New from new (bool):", new_arr, "type =", new_arr.dtype)
-    
+
     print("\nOriginal:", arr, "type =", arr.dtype, "\n")
 
 def main() -> None:
+    """Main Function"""
     integer()
     string()
     sized_int()
-    float()
+    floating_point()
     conv_error()
     type_change()
 

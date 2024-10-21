@@ -1,13 +1,15 @@
+"""Filtering Arrays"""
+
 import numpy as np
-from utility_functions import sieve
+from sieve import sieve
 
 def boolean_index_list() -> None:
     """Filter an array using a boolean index list"""
     arr = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
     print(f"Array: {arr}")
-    filter = sieve(len(arr) - 1)
-    print(f"Filter: {filter}")
-    print(f"Filtered array: {arr[filter]}\n")
+    arr_filter = sieve(len(arr) - 1)
+    print(f"Filter: {arr_filter}")
+    print(f"Filtered array: {arr[arr_filter]}\n")
 
 def loop_filter() -> None:
     """Filter an array using a loop"""
@@ -28,6 +30,7 @@ def condition_filter() -> None:
     print(f"Filtered array: {arr[filter_arr]}\n")
 
 def main() -> None:
+    """Main Function"""
     boolean_index_list()
     loop_filter()
     condition_filter()

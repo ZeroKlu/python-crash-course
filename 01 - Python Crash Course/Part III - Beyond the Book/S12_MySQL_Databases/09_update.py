@@ -1,4 +1,7 @@
+"""Update rows in database table"""
+
 import mysql.connector
+# pylint: disable=no-name-in-module
 from utility_functions import get_settings
 
 def connect(settings: dict[str, str]) -> mysql.connector.connection:
@@ -43,6 +46,7 @@ def parameterize(conn: mysql.connector.connection) -> None:
     print(cursor.rowcount, "record(s) affected\n")
 
 def main() -> None:
+    """Main program"""
     settings = get_settings()
     conn = connect(settings)
     update_rows(conn)

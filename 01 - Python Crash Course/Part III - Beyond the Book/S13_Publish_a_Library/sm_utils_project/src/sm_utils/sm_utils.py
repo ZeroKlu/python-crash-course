@@ -1,8 +1,11 @@
 """A collection of useful beginner Python utility functions"""
 
-#region Execution Timer
 import timeit
+import sys
+import os
+import json
 
+#region Execution Timer
 def timer(func: callable) -> callable:
     """Time the execution of a the decorated function"""
     def wrapped(*args, **kwargs):
@@ -11,23 +14,31 @@ def timer(func: callable) -> callable:
         end = timeit.default_timer()
         delta = end - start
 
-        if delta > 60: ex_time = f"{int(delta // 60)} m : {round(delta % 60, 4)} s"
-        elif delta * 1_000_000 < 1: ex_time = f"{round(delta * 1_000_000_000, 4)} ns"
-        elif delta * 1_000 < 1: ex_time = f"{round(delta * 1_000_000, 4)} µs"
-        elif delta < 1: ex_time = f"{round(delta * 1000, 4)} ms"
-        else: ex_time = f"{round(delta, 4)} s"        
-        print(f"Execution Time: {ex_time}")
+        print(f"Execution Time: {convert_delta(delta)}")
 
         return res
     return wrapped
 
-class Timed(object):
+def convert_delta(delta: float) -> str:
+    """Convert elapsed time to a string"""
+    if delta > 60:
+        return f"{int(delta // 60)} m : {round(delta % 60, 4)} s"
+    if delta * 1_000_000 < 1:
+        return f"{round(delta * 1_000_000_000, 4)} ns"
+    if delta * 1_000 < 1:
+        return f"{round(delta * 1_000_000, 4)} µs"
+    if delta < 1:
+        return f"{round(delta * 1000, 4)} ms"
+    return f"{round(delta, 4)} s"
+
+# pylint: disable=too-few-public-methods
+class Timed():
     """Class to time the execution of the decorated function"""
 
     def __init__(self, arg) -> None:
         """Initialize callable state for the decorated function"""
         self._arg = arg
-    
+
     def __call__(self, *args, **kwargs) -> callable:
         """Time the function and print out the result"""
         start = timeit.default_timer()
@@ -35,20 +46,13 @@ class Timed(object):
         end = timeit.default_timer()
         delta = end - start
 
-        if delta > 60: ex_time = f"{int(delta // 60)} m : {round(delta % 60, 4)} s"
-        elif delta * 1_000_000 < 1: ex_time = f"{round(delta * 1_000_000_000, 4)} ns"
-        elif delta * 1_000 < 1: ex_time = f"{round(delta * 1_000_000, 4)} µs"
-        elif delta < 1: ex_time = f"{round(delta * 1000, 4)} ms"
-        else: ex_time = f"{round(delta, 4)} s"        
-        print(f"Execution Time: {ex_time}")
+        print(f"Execution Time: {convert_delta(delta)}")
 
         return res
 #endregion
 
 #region Relative Path Functions
-import sys, os, json
-
-"""Default folder for accessing files"""
+# Default folder for accessing files
 default_path: str|None=None
 
 def root_path() -> str:
@@ -57,11 +61,14 @@ def root_path() -> str:
 
 def set_path(folder: str|None=None) -> str:
     """Set the default folder for accessing files"""
-    if folder: return folder
+    if folder:
+        return folder
     json_path = os.path.join(root_path(), "sm_utils.json")
-    if not os.path.isfile(json_path): return "data"
-    with open(json_path) as f:
+    if not os.path.isfile(json_path):
+        return "data"
+    with open(json_path, encoding="utf-8") as f:
         data = json.load(f)
+    # pylint: disable=global-statement
     global default_path
     default_path = data["default_path"]
     return data["default_path"]
@@ -70,7 +77,8 @@ set_path()
 
 def dir_path(folder_path: str=default_path) -> str:
     """Return the specified path under the root directory"""
-    if not folder_path: return root_path()
+    if not folder_path:
+        return root_path()
     return os.path.join(root_path(), folder_path)
 
 def file_path(filename: str, folder_path: str = default_path) -> str:
@@ -85,18 +93,21 @@ class RelativePath:
         self.root_path = os.path.dirname(sys.argv[0])
         self.set_path(folder)
 
-    def set_path(self, folder: str|None=None) -> str:
+    def set_path(self, folder: str|None=None) -> None:
         """Set the default folder for accessing files"""
-        if folder: return folder
+        if folder:
+            return
         json_path = os.path.join(self.root_path, "sm_utils.json")
-        if not os.path.isfile(json_path): return "data"
-        with open(json_path) as f:
+        if not os.path.isfile(json_path):
+            return
+        with open(json_path, encoding="utf-8") as f:
             data = json.load(f)
             self.default_path = data["default_path"]
 
     def dir_path(self, folder: str = default_path) -> str:
         """Return the specified path under the root directory"""
-        if not folder: return os.path.join(self.root_path, self.default_path)
+        if not folder:
+            return os.path.join(self.root_path, self.default_path)
         return os.path.join(self.root_path, folder)
 
     def file_path(self, filename: str, folder: str=default_path) -> str:
@@ -136,7 +147,7 @@ def reset_counter(func: callable) -> None:
     """Resets the count for a decorated function to zero"""
     func.calls = 0
 
-class Counted(object):
+class Counted():
     """Decorator class to count calls to the decorated function"""
     def __init__(self, arg: any):
         """Initialize counter for the decorated function"""
@@ -158,7 +169,8 @@ def pause(end: bool=False) -> None:
     """Wait for user input"""
     act = "end program" if end else "continue"
     input(f"Press <ENTER> to {act}...")
-    if end: quit()
+    if end:
+        sys.exit()
 
 def clear_terminal(end: str="") -> None:
     """Clear the terminal"""

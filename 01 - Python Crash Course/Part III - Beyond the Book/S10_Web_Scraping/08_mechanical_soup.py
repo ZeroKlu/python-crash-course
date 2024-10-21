@@ -1,3 +1,5 @@
+"""Web scraping with `MechanicalSoup`"""
+
 import mechanicalsoup
 
 def log_in(url: str, un: str, pw: str) -> str:

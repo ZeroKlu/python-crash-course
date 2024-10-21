@@ -1,4 +1,7 @@
+"""Sort Data"""
+
 import mysql.connector
+# pylint: disable=no-name-in-module
 from utility_functions import get_settings
 
 def connect(settings: dict[str, str]) -> mysql.connector.connection:
@@ -43,6 +46,7 @@ def sort_desc(conn: mysql.connector.connection) -> None:
     print()
 
 def main() -> None:
+    """Main Function"""
     settings = get_settings()
     conn = connect(settings)
     sort_data(conn)

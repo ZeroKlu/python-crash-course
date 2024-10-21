@@ -29,7 +29,8 @@ You cannot create an API key until after you set up 2FA on the account.
 Follow the on-screen instructions to enable two-factor authentication.
 
 First, it will make you generate recovery codes. You'll have to use one
-to enable the two-factor authentication, then you set it up using your mobile phone and whichever authentication app you use.
+to enable the two-factor authentication, then you set it up using your
+mobile phone and whichever authentication app you use.
 
 ---
 
@@ -39,7 +40,8 @@ When you use the `twines` module to upload a package, you will use an API
 key tied to your PyPI account as the password for every upload, so let's
 generate one.
 
-1. First, navigate your browser to [https://test.pypi.org/manage/account/#api-tokens](https://test.pypi.org/manage/account/#api-tokens)
+1. First, navigate your browser to
+   [https://test.pypi.org/manage/account/#api-tokens](https://test.pypi.org/manage/account/#api-tokens)
 2. Click on the [Add API Token] button
 3. Name the token, and select the scope of "Entire account (all projects)"
 4. Click on [Create Token]

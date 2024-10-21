@@ -1,4 +1,7 @@
+"""Cleanup MySQL Database"""
+
 import mysql.connector
+# pylint: disable=no-name-in-module
 from utility_functions import get_settings
 
 def connect(settings: dict[str, str]) -> mysql.connector.connection:
@@ -72,6 +75,7 @@ def list_databases(conn: mysql.connector.connection) -> None:
     print()
 
 def main() -> None:
+    """Main function"""
     settings = get_settings()
     conn = connect(settings)
     print("Before dropping tables:")

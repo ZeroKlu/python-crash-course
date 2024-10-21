@@ -1,3 +1,5 @@
+"""Closures in Loops"""
+
 def wrapped_function(n: int) -> callable:
     """Simple wrapper for a closure"""
     def func() -> None:
@@ -20,6 +22,7 @@ def call_wrapped_lambda() -> None:
     numbers = 1, 2, 3
     funcs = []
     for n in numbers:
+        # pylint: disable=cell-var-from-loop
         funcs.append(lambda: print(n, end=" "))
     for func in funcs:
         func()
@@ -36,12 +39,13 @@ def call_wrapped_lambda_defined() -> None:
     print()
 
 def main() -> None:
+    """Main function"""
     call_wrapped_function()
     print()
 
     call_wrapped_lambda()
     print()
-    
+
     call_wrapped_lambda_defined()
 
 if __name__ == "__main__":

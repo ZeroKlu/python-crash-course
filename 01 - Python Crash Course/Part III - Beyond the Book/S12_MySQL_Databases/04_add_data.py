@@ -1,4 +1,7 @@
+"""Add Data to MySQL Database Table"""
+
 import mysql.connector
+# pylint: disable=no-name-in-module
 from utility_functions import get_settings
 
 def connect(settings: dict[str, str]) -> mysql.connector.connection:
@@ -54,6 +57,7 @@ def add_rows(conn: mysql.connector.connection,
     print(f"Last inserted ID: {cursor.lastrowid}\n")
 
 def main() -> None:
+    """Main program"""
     settings = get_settings()
     conn = connect(settings)
     clear_table(conn)

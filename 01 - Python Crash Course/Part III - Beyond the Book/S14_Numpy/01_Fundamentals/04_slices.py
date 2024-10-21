@@ -1,3 +1,5 @@
+"""Slicing Arrays"""
+
 import numpy as np
 
 def simple() -> None:
@@ -42,6 +44,7 @@ def multidimensional() -> None:
     print(arr[0:2, 1:4], "\n")
 
 def main() -> None:
+    """Main Function"""
     simple()
     negative()
     copy()
