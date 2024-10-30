@@ -14,7 +14,7 @@ class GameOfLife:
     # * A living cell with more than three living neighboring cells dies in the next time step.
     # * A dead cell is revived if it has exactly three living neighboring cells.
 
-    def __init__(self):        
+    def __init__(self):
         # Load the settings from the JSON file
         self.ROOT_DIR = os.path.dirname(__file__)
         file_path = os.path.join(self.ROOT_DIR, "settings.json")
@@ -41,13 +41,13 @@ class GameOfLife:
         self.screen = None
         self.cell_width = None
         self.cell_height = None
+        self.clock = pygame.time.Clock()
 
     def play(self):
         """Play the game until stopped"""
         self.progress = False
         # pylint: disable=no-member
         pygame.init()
-        c = pygame.time.Clock()
         self.screen = pygame.display.set_mode((self.width, self.height))
         name = f"random 1/{str(self.onein)}" if self.preload == "none" else self.preload
         pygame.display.set_caption(f"Conway's Game of Life ({name})")
@@ -61,7 +61,7 @@ class GameOfLife:
             if self.progress:
                 self.update_grid()
             self.draw_grid()
-            c.tick(self.framerate)
+            self.clock.tick(self.framerate)
 
     def create_grid(self):
         """Create the initial grid"""
