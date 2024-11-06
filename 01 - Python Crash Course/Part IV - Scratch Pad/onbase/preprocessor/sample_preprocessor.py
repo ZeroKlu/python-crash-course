@@ -1,3 +1,5 @@
+"""Sample OnBase Preprocessor"""
+
 import os
 import sys
 import json
@@ -20,14 +22,14 @@ import logging
 #  1    | %I (input file)
 #  2    | %O (output file)
 
-class SamplePreprocessor(object):
-    """Model for an example preprocessor"""
+class SamplePreprocessor():
+    """Model for a sample preprocessor"""
 
     def __init__(self) -> None:
         """Initialize the preprocessor"""
         try:
             app_dir = os.path.dirname(sys.argv[0])
-            with open(os.path.join(app_dir, "config.json")) as f:
+            with open(os.path.join(app_dir, "config.json"), encoding="utf-8") as f:
                 settings = json.load(f)
             match settings["log_dir"].lower()[0]:
                 case "r":
@@ -46,9 +48,11 @@ class SamplePreprocessor(object):
                 case _:
                     log_level = logging.DEBUG
             self.debug = log_level == logging.DEBUG
-            logging.basicConfig(filename=os.path.join(log_dir, "sample_preprocessor.log"), filemode="a",
-                                level=log_level, format="%(asctime)s - %(levelname)s - %(message)s")
+            logging.basicConfig(filename=os.path.join(log_dir,
+                "sample_preprocessor.log"), filemode="a", level=log_level,
+                format="%(asctime)s - %(levelname)s - %(message)s")
             logging.info("Preprocessor initialized...")
+        # pylint: disable=broad-exception-caught
         except Exception as e:
             sys.stderr.write("Error initializing application from config.json")
             sys.stderr.write(e)
@@ -63,28 +67,31 @@ class SamplePreprocessor(object):
                 return 1
             in_path, out_path = sys.argv[1], sys.argv[2]
             if not os.path.isfile(in_path):
-                logging.error(f"Could not find input file: [{in_path}]")
+                logging.error("Could not find input file: [%s]", in_path)
                 return 2
             if self.debug:
-                logging.debug(f"Input File: [{in_path}]")
+                logging.debug("Input File: [%s]", in_path)
             out_dir = os.path.dirname(out_path)
             if not os.path.isdir(out_dir):
-                logging.error(f"Could not find output directory: [{out_dir}]")
+                logging.error("Could not find output directory: [%s]", out_dir)
                 return 3
             if self.debug:
-                logging.debug(f"Output File: [{out_path}]")
-            with open(in_path) as in_file, open(out_path, "w") as out_file:
+                logging.debug("Output File: [%s]", out_path)
+            with open(in_path, encoding="utf-8") as in_file, \
+                 open(out_path, "w", encoding="utf-8") as out_file:
                 for line in in_file.readlines():
                     out_file.write(self.process_line(line))
             return 0
+        # pylint: disable=broad-exception-caught
         except Exception as e:
             logging.error(e)
             return 4
 
     def process_line(self, line: str) -> str:
         """Process the current line from the source file"""
+        # pylint: disable=fixme
         # TODO: Perform some preprocessing logic on the line
-        return(line)
+        return line
 
 def main():
     """Load and execute the preprocessor"""
@@ -98,6 +105,7 @@ def main():
             logging.error("Preprocessing failed!")
             sys.stderr.write("Preprocessing failed!")
         sys.exit(status)
+    # pylint: disable=broad-exception-caught
     except Exception as e:
         sys.stderr.write("Error executing preprocessor")
         sys.stderr.write(e)
