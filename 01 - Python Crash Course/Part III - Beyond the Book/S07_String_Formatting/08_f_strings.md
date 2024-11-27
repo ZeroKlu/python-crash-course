@@ -23,7 +23,7 @@ s = "%d %s cost $%f" % (qty, item, total)
 s = "{} {} cost ${}".format(qty, item, total)
 
 # f-string
-s = "{qty} {item} cost ${total}"
+s = f"{qty} {item} cost ${total}"
 ```
 
 In each case the result value in `s` is:
@@ -34,6 +34,41 @@ In each case the result value in `s` is:
 
 But with the inline variable names, the f-string is far and away the easiest 
 to understand.
+
+> ### Technical Note: (*Lazy Evaluation*)
+>
+> While f-strings are far easier to read, they do have a downside:
+> F-strings are interpolated when the line of code is processed by
+> the Python interpreter. This means that even if a string is not used,
+> it will still be evaluated.
+>
+> > ```python
+> > # F-strings are always evaluated
+> > status = False
+> > if status:
+> >     # Even though the print is never executed, the string is
+> >     # interpolated when the line is processed
+> >     print(f"The status is {status}")
+> > ```
+>
+> By contrast. `string.format()` is evaluated when the line of code is
+> executed, meaning that if the string is not used, it will not be
+> evaluated.
+>
+> > ```python
+> > # `string.format()` is not evaluated until/unless needed
+> > status = False
+> > if status:
+> >     # Because the print is not executed, the string is not
+> >     # evaluated
+> >     print(f"The status is {}".format(status))
+> > ```
+>
+> The behavior in the `string.format()` example is called *lazy 
+> evaluation* and is less wasteful of resources in an example like this 
+> one. Because of this, a performance consideration must be made when
+> using f-strings, especially if there are use-cases where the string
+> may not require interpolation.
 
 ---
 
