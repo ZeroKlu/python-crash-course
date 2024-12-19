@@ -29,7 +29,8 @@ Because we are traversing the trie letter by letter until we either find
 the complete string or reach a dead end, the worst-case complexity for a
 search is O(*k*) where *k* is the number of letters in the word.
 
-In the image above, searching from the root, it requires three steps to locate the word "and" and only three steps to identify that "anbx" is not
+In the image above, searching from the root, it requires three steps to locate
+the word "and" and only three steps to identify that "anbx" is not
 in the trie.
 
 This may seem trivial when searching for a single word, but consider this
