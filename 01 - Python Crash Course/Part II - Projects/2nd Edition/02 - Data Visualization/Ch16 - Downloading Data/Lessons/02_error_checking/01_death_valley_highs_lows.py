@@ -1,14 +1,15 @@
-# The CSV module should not require installation
-import csv
-import matplotlib.pyplot as plt
+"""Lesson 2.1 - Error Checking"""
+
 from datetime import datetime
 import os
+import csv
+import matplotlib.pyplot as plt
 import numpy as np
 
 ROOT_DIR = os.path.dirname(__file__)
 file_path = os.path.join(ROOT_DIR, "Data", "death_valley_2018_simple.csv")
 
-with open(file_path) as f:
+with open(file_path, encoding="UTF-8") as f:
     reader = csv.reader(f)
     header_row = next(reader)
     dates, highs, lows = [], [], []
@@ -25,7 +26,7 @@ with open(file_path) as f:
             highs.append(high)
             lows.append(low)
 
-    plt.style.use("seaborn")
+    plt.style.use("seaborn-v0_8")
     fig, ax = plt.subplots()
     ax.plot(dates, highs, c = "red", alpha = 0.5)
     ax.plot(dates, lows, c = "blue", alpha = 0.5)

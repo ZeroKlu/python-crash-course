@@ -1,20 +1,21 @@
-# Assignment 16.07
-# Automated Title: In this section, we specified the title manually when defining my_layout, which means we have to
-#           remember to update the title every time the source file changes. Instead, you can use the title for the
-#           data set in the metadata part of the JSON file. Pull this value, assign it to a variable, and use this
-#           for the title of the map when you're defining my_layout.
+"""Assignment 16.07"""
+# Automated Title: In this section, we specified the title manually when defining
+#                  `my_layout`, which means we have to remember to update the title
+#                  every time the source file changes. Instead, you can use the title
+#                  for the data set in the metadata part of the JSON file. Pull this
+#                  value, assign it to a variable, and use this for the title of the
+#                  map when you're defining `my_layout`.
 
 import json
-from matplotlib.pyplot import title
-from plotly.graph_objs import Layout
-from plotly import offline
 from datetime import datetime
 import os
+from plotly.graph_objs import Layout
+from plotly import offline
 
 ROOT_DIR = os.path.dirname(__file__)
 file_path = os.path.join(ROOT_DIR, "Data", "eq_data_30_day_m1.json")
 
-with open(file_path) as f:
+with open(file_path, encoding="UTF-8") as f:
     all_eq_data = json.load(f)
 
 all_eq_dicts = all_eq_data["features"]

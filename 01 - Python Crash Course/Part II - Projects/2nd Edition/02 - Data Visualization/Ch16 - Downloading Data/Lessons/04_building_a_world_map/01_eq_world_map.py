@@ -1,14 +1,17 @@
-import json
-from plotly.graph_objs import Scattergeo, Layout
-from plotly import offline
+"""Lesson 4 - Building a World Map (plotly)"""
+
 import os
+import json
+# pylint: disable=unused-import
+from plotly.graph_objs import Layout, Scattergeo
+from plotly import offline
 
 ROOT_DIR = os.path.dirname(__file__)
 
 # file_path = os.path.join(ROOT_DIR, "Data", "eq_data_1_day_m1.json")
 # file_path = os.path.join(ROOT_DIR, "Data", "eq_data_7_day_m1.json")
 file_path = os.path.join(ROOT_DIR, "Data", "eq_data_30_day_m1.json")
-with open(file_path) as f:
+with open(file_path, encoding = "UTF-8") as f:
     all_eq_data = json.load(f)
 
 all_eq_dicts = all_eq_data["features"]

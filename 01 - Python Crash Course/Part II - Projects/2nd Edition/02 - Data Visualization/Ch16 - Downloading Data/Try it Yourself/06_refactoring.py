@@ -1,19 +1,22 @@
-# Assignment 16.06
-# Refactoring: The loop that pulls data from all_eq_dicts uses variables for the magnitude, longitude, latitude,
-#              and title of each earthquake before appending these values to their appropriate lists. This approach
-#              was chosen for clarity in how to pull data from a JSON file, but it's not necessary in your code.
-#              Instead of using these temporary variables, pull each value from eq_dict and append it to the appropriate
-#              list in one line. Doing so should shorten the body of this loop to just four lines.
+"""Assignment 16.06"""
+# Refactoring: The loop that pulls data from all_eq_dicts uses variables for the
+#              magnitude, longitude, latitude, and title of each earthquake before
+#              appending these values to their appropriate lists. This approach
+#              was chosen for clarity in how to pull data from a JSON file, but
+#              it's not necessary in your code. Instead of using these temporary
+#              variables, pull each value from eq_dict and append it to the appropriate
+#              list in one line. Doing so should shorten the body of this loop to
+#              just four lines.
 
 import json
-from plotly.graph_objs import Scattergeo, Layout
-from plotly import offline
 import os
+from plotly.graph_objs import Layout
+from plotly import offline
 
 ROOT_DIR = os.path.dirname(__file__)
 file_path = os.path.join(ROOT_DIR, "Data", "eq_data_30_day_m1.json")
 
-with open(file_path) as f:
+with open(file_path, encoding="UTF-8") as f:
     all_eq_data = json.load(f)
 
 all_eq_dicts = all_eq_data["features"]

@@ -1,15 +1,17 @@
+"""Lesson 1.1 - Reading CSV Data"""
+
+from datetime import datetime
+import os
 # The CSV module should not require installation
 import csv
 import matplotlib.pyplot as plt
-from datetime import datetime
-import os
 import numpy as np
 
 ROOT_DIR = os.path.dirname(__file__)
 # file_path = os.path.join(ROOT_DIR, "Data", "sitka_weather_07-2018_simple.csv")
 file_path = os.path.join(ROOT_DIR, "Data", "sitka_weather_2018_simple.csv")
 
-with open(file_path) as f:
+with open(file_path, encoding="UTF-8") as f:
     # Open the CSV file
     reader = csv.reader(f)
     # Read the first line of the file (automatically parsing to a list)
@@ -27,7 +29,7 @@ with open(file_path) as f:
         # We'll use strptime() to parse and format dates
         dates.append(datetime.strptime(row[2], "%Y-%m-%d"))
         highs.append(int(row[5]))
-    
+
     # The following format abbreviations are supported in strptime()
 	# -------------------------------------------------
 	#       Date/Time Formats
@@ -48,13 +50,13 @@ with open(file_path) as f:
 	# -------------------------------------------------
 
     # Plot the high temperatures.
-    plt.style.use("seaborn")
+    plt.style.use("seaborn-v0_8")
     fig, ax = plt.subplots()
     ax.plot(dates, highs, c = "red")
 
     # Format plot.
     # ax.set_title("Daily high temperatures, July 2018", fontsize = 24)
-    ax.set_title("Daily high temperatures - 2018", fontsize = 24)
+    ax.set_title("Sitka, AK - Daily high temperatures - 2018", fontsize = 24)
     ax.set_xlabel("", fontsize = 16)
     ax.set_ylabel("Temperature (F)", fontsize = 16)
     fig.autofmt_xdate()

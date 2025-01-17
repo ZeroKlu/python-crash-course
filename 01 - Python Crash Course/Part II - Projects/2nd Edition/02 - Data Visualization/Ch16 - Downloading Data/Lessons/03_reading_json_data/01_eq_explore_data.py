@@ -1,4 +1,7 @@
-# Note: Fresh data can be retrieved here: https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/1.0_day.geojson
+"""Lesson 3.1 - Reading JSON Data"""
+
+# Note: Fresh data can be retrieved here:
+#       https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/1.0_day.geojson
 
 import json
 import os
@@ -7,9 +10,11 @@ ROOT_DIR = os.path.dirname(__file__)
 
 # Explore the structure of the data
 file_path = os.path.join(ROOT_DIR, "Data", "eq_data_1_day_m1.json")
-with open(file_path) as f:
+with open(file_path, encoding="UTF-8") as f:
     # Load the entire JSON file into memory
     all_eq_data = json.load(f)
+
+# pylint: disable=line-too-long
 
 # JSON Structure:
 #region
