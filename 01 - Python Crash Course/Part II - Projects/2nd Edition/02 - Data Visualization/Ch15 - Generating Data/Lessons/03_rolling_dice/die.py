@@ -1,5 +1,8 @@
+"""Lesson 3 - Die Class"""
+
 from random import randint
 
+# pylint: disable=too-few-public-methods
 class Die:
     """Class representing a single die"""
 
@@ -10,4 +13,3 @@ class Die:
     def roll(self):
         """Return random number between 1 and number of sides"""
         return randint(1, self.num_sides)
-        

@@ -1,5 +1,7 @@
-import matplotlib.pyplot as plt
+"""Lesson 1.2 - Plotting a Simple Scatter Graph"""
+
 import os
+import matplotlib.pyplot as plt
 
 ROOT_DIR = os.path.dirname(__file__)
 
@@ -8,9 +10,10 @@ max_x = 1000
 x_values = range(1, max_x + 1)
 y_values = [x ** 2 for x in x_values]
 
-plt.style.use("seaborn")
+plt.style.use("seaborn-v0_8")
 fig, ax = plt.subplots()
-ax.scatter(x_values, y_values, c = y_values, cmap = plt.cm.Blues, s = 10)
+# pylint: disable=no-member
+ax.scatter(x_values, y_values, c=y_values, cmap=plt.cm.Blues, s=10)
 
 # Set chart title and label axes.
 ax.set_title("Square Numbers", fontsize = 24)

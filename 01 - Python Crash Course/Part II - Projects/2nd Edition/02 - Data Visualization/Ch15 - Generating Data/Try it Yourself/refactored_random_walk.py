@@ -1,3 +1,5 @@
+"""Refactored Random Walk Class"""
+
 from random import choice
 
 class RandomWalk:
@@ -27,11 +29,11 @@ class RandomWalk:
             self.y_values.append(point[1])
 
     def get_new_point(self, x, y):
-        """Calculate a new point"""
+        """Create a new point"""
         return [self.get_new_num(x), self.get_new_num(y)]
 
     def get_new_num(self, num):
-        """Calculate a new number"""
+        """Compute a new number"""
         direction = choice([1, 0, -1])
         distance = choice(list(range(0, 9)))
         step = direction * distance

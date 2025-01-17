@@ -1,3 +1,5 @@
+"""Lesson 1.1 - Plotting a Simple Line Graph"""
+
 # matplotlib provides graphing/charting capabilities
 # Samples here: https://matplotlib.org/gallery/
 # You may need to run the following to get this to work
@@ -5,7 +7,7 @@
 
 import matplotlib.pyplot as plt
 
-plt.style.use("seaborn")
+plt.style.use("seaborn-v0_8")
 input_values = [1, 2, 3, 4, 5]
 # squares = [1, 4, 9, 16, 25]
 squares = [value ** 2 for value in input_values]

@@ -1,11 +1,11 @@
-# Assignment 15.01
-# Cubes: A number raised to the third power is a cube. Plot the first five cubic numbers, 
+"""Assignment 15.01"""
+# Cubes: A number raised to the third power is a cube. Plot the first five cubic numbers,
 #        and then plot the first 5000 cubic numbers.
+
+import matplotlib.pyplot as plt
 
 print("Try-it-Yourself:")
 print("Assignment 15.1")
-
-import matplotlib.pyplot as plt
 
 # max_x = 5
 max_x = 5_000

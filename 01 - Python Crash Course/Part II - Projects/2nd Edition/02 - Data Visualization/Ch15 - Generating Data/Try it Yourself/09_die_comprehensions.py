@@ -1,7 +1,8 @@
-# Assignment 15.09
-# Die Comprehensions: For clarity, the listings in this section use the long form of for loops.
-#                     If you're comfortable using list comprehensions, try writing a comprehension
-#                     for one or both of the loops in each of these programs.
+"""Assignment 15.09"""
+# Die Comprehensions: For clarity, the listings in this section use the long form
+#                     of for loops. If you're comfortable using list comprehensions,
+#                     try writing a comprehension for one or both of the loops in
+#                     each of these programs.
 
 import os
 from plotly import offline
@@ -36,7 +37,8 @@ data = [Bar(x=x_values, y=frequencies)]
 x_axis_config = {"title": "Result", "dtick": 1}
 y_axis_config = {"title": "Frequency of Result"}
 suffix = "" if settings["rolls"] == 1 else "s"
-heading = f"Results of rolling {settings['num']} D{dice[1].num_sides} {settings['rolls']} time{suffix}"
+heading = f"Results of rolling {settings['num']} D{dice[1].num_sides} " + \
+    f"{settings['rolls']} time{suffix}"
 my_layout = Layout(title=heading, xaxis=x_axis_config, yaxis=y_axis_config)
 ROOT_DIR = os.path.dirname(__file__)
 file_path = os.path.join(

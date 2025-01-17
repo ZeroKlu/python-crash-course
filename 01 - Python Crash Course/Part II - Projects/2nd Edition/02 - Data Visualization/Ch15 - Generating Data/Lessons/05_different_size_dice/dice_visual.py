@@ -1,7 +1,9 @@
-from die import Die
+"""Lesson 5 - Rolling Two Different Dice (plotly)"""
+
+import os
 from plotly.graph_objs import Bar, Layout
 from plotly import offline
-import os
+from die import Die
 
 # Create a D6
 dice = [Die(), Die(10)]
@@ -16,7 +18,8 @@ for roll_num in range(roll_count):
 # Analyze the results
 frequencies = []
 max_result = 0
-for die in dice: max_result += die.num_sides
+for die in dice:
+    max_result += die.num_sides
 for value in range(len(dice), max_result + 1):
     frequency = results.count(value)
     frequencies.append(frequency)

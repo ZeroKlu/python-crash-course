@@ -1,10 +1,10 @@
-# Assignment 15.02
+"""Assignment 15.02"""
 # Colored Cubes: Apply a colormap to your cubes plot.
+
+import matplotlib.pyplot as plt
 
 print("Try-it-Yourself:")
 print("Assignment 15.2")
-
-import matplotlib.pyplot as plt
 
 # max_x = 5
 max_x = 5_000
@@ -14,6 +14,7 @@ y_values = [value ** 3 for value in x_values]
 
 plt.style.use("bmh")
 fig, ax = plt.subplots()
+# pylint: disable=no-member
 ax.scatter(x_values, y_values, c = y_values, cmap = plt.cm.Reds, s = 5)
 # ax.scatter(x_values, y_values, c = y_values, s = 5)
 

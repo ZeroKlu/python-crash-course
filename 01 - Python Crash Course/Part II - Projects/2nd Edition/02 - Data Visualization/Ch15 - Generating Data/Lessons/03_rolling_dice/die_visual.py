@@ -1,7 +1,9 @@
-from die import Die
+"""Lesson 3 -Rolling a D6 1000 times"""
+
+import os
 from plotly.graph_objs import Bar, Layout
 from plotly import offline
-import os
+from die import Die
 
 # Create a D6
 die = Die()

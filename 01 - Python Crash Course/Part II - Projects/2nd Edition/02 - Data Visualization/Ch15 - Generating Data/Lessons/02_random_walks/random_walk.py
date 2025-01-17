@@ -1,3 +1,5 @@
+"""Lesson 2 - Random Walk Class"""
+
 from random import choice
 
 class RandomWalk:
@@ -27,9 +29,11 @@ class RandomWalk:
             self.y_values.append(point[1])
 
     def get_new_point(self, x, y):
+        """Create a new point"""
         return [self.get_new_num(x), self.get_new_num(y)]
 
     def get_new_num(self, num):
+        """Compute a new number"""
         direction = choice([1, -1])
         distance = choice(list(range(0, 5)))
         step = direction * distance
