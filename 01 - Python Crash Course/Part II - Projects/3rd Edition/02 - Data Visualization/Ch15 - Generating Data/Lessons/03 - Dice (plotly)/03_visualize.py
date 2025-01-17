@@ -1,3 +1,5 @@
+"""Lesson 3.3 - Visualizing Results with Plotly Express"""
+
 from die import Die
 import plotly.express as px
 # python -m pip install pandas

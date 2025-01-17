@@ -1,3 +1,5 @@
+"""Lesson 1.5 - A Simple Scatter Graph"""
+
 import matplotlib.pyplot as plt
 
 plt.style.use("seaborn-v0_8")

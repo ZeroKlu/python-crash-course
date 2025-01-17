@@ -1,14 +1,15 @@
-# Assignment 15.08
-# Multiplication: When you roll two dice, you usually add the two numbers together to get the result. Create a
-#                 visualization that shows what happens if you multiply these numbers instead.
+"""Assignment 15.08"""
+# Multiplication: When you roll two dice, you usually add the two numbers together
+#                 to get the result. Create a visualization that shows what happens
+#                 if you multiply these numbers instead.
+
+import plotly.express as px
+# I am implementing this for access to the prod() method - a bit of a cheat... sue me.
+from numpy import prod
+from die import Die
 
 print("Try-it-Yourself:")
 print("Assignment 15.8")
-
-import plotly.express as px
-from die import Die
-# I am implementing this for access to the prod() method - a bit of a cheat... sue me.
-from numpy import prod
 
 settings = {
     "num_dice": 2,

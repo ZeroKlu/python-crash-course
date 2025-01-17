@@ -1,3 +1,5 @@
+"""Lesson 3.7 - Rolling D6 and D10"""
+
 import plotly.express as px
 from die import Die
 

@@ -1,17 +1,18 @@
-# Assignment 15.06
-# Two D8s: Create a simulation showing what happens when you roll two eight-sided dice 1000 times.
-#          Try to picture what you think the visualization will look like before you run the simulation;
-#          then see if your intuition was correct. Gradually increase the number of rolls until you
-#          start to see the limits of your system’s capabilities.
-
-print("Try-it-Yourself:")
-print("Assignment 15.6")
+"""Assignment 15.06"""
+# Two D8s: Create a simulation showing what happens when you roll two eight-sided
+#          dice 1000 times. Try to picture what you think the visualization will
+#          look like before you run the simulation; then see if your intuition was
+#          correct. Gradually increase the number of rolls until you start to see
+#          the limits of your system’s capabilities.
 
 import plotly.express as px
 from die import Die
 
+print("Try-it-Yourself:")
+print("Assignment 15.6")
+
 # Create two dice
-dice = [Die(8), Die(8)]
+dice = [Die(8)] * 2
 rolls = 1_000
 
 # Make some rolls and store in a list

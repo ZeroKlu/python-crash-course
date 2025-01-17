@@ -1,5 +1,8 @@
+"""Class representing a single die"""
+
 from random import randint
 
+# pylint: disable=too-few-public-methods
 class Die:
     """Class representing a single die"""
 

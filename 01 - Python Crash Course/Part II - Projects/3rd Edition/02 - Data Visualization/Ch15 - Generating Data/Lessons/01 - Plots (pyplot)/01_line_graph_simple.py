@@ -1,3 +1,5 @@
+"""Lesson 1.1 - Plotting a Simple Line Graph"""
+
 # matplotlib provides graphing/charting capabilities
 # Samples here: https://matplotlib.org/gallery/
 # You may need to run the following command to install matplotlib

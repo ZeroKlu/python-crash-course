@@ -1,3 +1,5 @@
+"""Lesson 2.4 - Highlighting the First and Last Points"""
+
 import matplotlib.pyplot as plt
 from random_walk import RandomWalk
 
@@ -7,7 +9,9 @@ while True:
 
     plt.style.use("classic")
     fix, ax = plt.subplots()
-    ax.scatter(rw.x_values, rw.y_values, s=5, c=range(rw.num_points), cmap=plt.cm.viridis, edgecolors="none")
+    # pylint: disable=no-member
+    ax.scatter(rw.x_values, rw.y_values, s=5, c=range(rw.num_points),
+               cmap=plt.cm.viridis, edgecolors="none")
     ax.set_aspect("equal")
 
     # Emphasize first and last points

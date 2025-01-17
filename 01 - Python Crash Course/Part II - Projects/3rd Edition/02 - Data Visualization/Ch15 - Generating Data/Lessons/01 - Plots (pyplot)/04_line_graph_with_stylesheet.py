@@ -1,9 +1,13 @@
+"""Lesson 1.4 - Using a Style Sheet"""
+
 import matplotlib.pyplot as plt
 
-# We can set a built-in stylesheet to be used for the plot (this must be done before calling plt.subplots())
+# We can set a built-in stylesheet to be used for the plot
+#     (this must be done before calling plt.subplots())
 plt.style.use("seaborn-v0_8")
 
-# If you use the following (book example), you'll receive a warning indicating that the style is deprecated
+# If you use the following (book example), you'll receive a warning indicating that
+#     the style is deprecated
 # plt.style.use("seaborn")
 
 # List of styles: https://matplotlib.org/stable/gallery/style_sheets/style_sheets_reference.html

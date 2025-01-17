@@ -1,3 +1,5 @@
+"""Lesson 1.7 - Adding Data to a Scatter Graph"""
+
 import matplotlib.pyplot as plt
 
 # Add back in some data lists

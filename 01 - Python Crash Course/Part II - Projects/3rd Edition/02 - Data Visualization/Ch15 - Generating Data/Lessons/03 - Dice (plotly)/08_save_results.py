@@ -1,7 +1,8 @@
+"""Lesson 3.8 - Saving Results to a File"""
+
 import plotly.express as px
 from die import Die
 from relative_paths import get_path
-from pathlib import Path
 
 # Create two dice (this time different numbers of sides)
 dice = [Die(), Die(10)]
@@ -33,6 +34,7 @@ filename = "d6d10_visualization.html"
 filepath = get_path(filename, "Files")
 
 # Write the figure to an HTML file
-# Note: If you have plotly 5.12 installed, this will generate an encoding error. Upgrade to at least 5.13
+# Note: If you have plotly 5.12 installed, this will generate an encoding error.
+#       Upgrade to at least 5.13
 fig.write_html(filepath)
 print(f"Stored file: {filepath}")

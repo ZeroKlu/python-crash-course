@@ -1,3 +1,5 @@
+"""Lesson 2.2 - Plotting a Random Walk Multiple Times"""
+
 import matplotlib.pyplot as plt
 from random_walk import RandomWalk
 

@@ -1,3 +1,5 @@
+"""Lesson 3.5 - Rolling Two D6 Dice"""
+
 import plotly.express as px
 from die import Die
 

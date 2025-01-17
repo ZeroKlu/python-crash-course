@@ -1,18 +1,19 @@
-# Assignment 15.07
-# Three Dice: When you roll three D6 dice, the smallest number you can roll is 3 and the largest number is 18.
-#             Create a visualization that shows what happens when you roll three D6 dice.
-
-print("Try-it-Yourself:")
-print("Assignment 15.7")
+"""Assignment 15.07"""
+# Three Dice: When you roll three D6 dice, the smallest number you can roll is 3
+#             and the largest number is 18. Create a visualization that shows what
+#             happens when you roll three D6 dice.
 
 import plotly.express as px
 from die import Die
+
+print("Try-it-Yourself:")
+print("Assignment 15.7")
 
 num_dice = 3
 rolls = 1_000
 
 # Create three dice
-dice = [Die() for _ in range(num_dice)]
+dice = [Die()] * num_dice
 
 # Make some rolls and store in a list
 results = []

@@ -1,3 +1,5 @@
+"""Lesson 1.8 - Adding More Data to a Scatter Graph"""
+
 import matplotlib.pyplot as plt
 
 # Increase the size of the data lists

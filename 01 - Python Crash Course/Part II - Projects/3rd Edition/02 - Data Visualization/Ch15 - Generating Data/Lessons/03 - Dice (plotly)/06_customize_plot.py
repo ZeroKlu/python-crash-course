@@ -1,3 +1,5 @@
+"""Lesson 3.6 - Customizing the Graph"""
+
 import plotly.express as px
 from die import Die
 

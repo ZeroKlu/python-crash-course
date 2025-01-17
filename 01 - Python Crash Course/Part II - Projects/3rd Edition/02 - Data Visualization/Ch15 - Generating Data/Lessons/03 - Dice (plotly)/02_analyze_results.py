@@ -1,3 +1,5 @@
+"""Lesson 3.2 - Analyzing Results"""
+
 from die import Die
 
 die = Die()

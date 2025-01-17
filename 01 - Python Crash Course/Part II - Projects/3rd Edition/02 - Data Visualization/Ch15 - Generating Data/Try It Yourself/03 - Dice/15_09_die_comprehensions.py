@@ -1,14 +1,15 @@
-# Assignment 15.09
-# Die Comprehensions: For clarity, the listings in this section use the long form of for loops. If you’re comfortable
-#                     using list comprehensions, try writing a comprehension for one or both of the loops in each of
-#                     these programs.
-
-print("Try-it-Yourself:")
-print("Assignment 15.9")
+"""Assignment 15.09"""
+# Die Comprehensions: For clarity, the listings in this section use the long form
+#                     of for loops. If you're comfortable using list comprehensions,
+#                     try writing a comprehension for one or both of the loops in
+#                     each of these programs.
 
 import plotly.express as px
 from die import Die
 from numpy import prod
+
+print("Try-it-Yourself:")
+print("Assignment 15.9")
 
 settings = {
     "num_dice": 2,

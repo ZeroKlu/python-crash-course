@@ -1,3 +1,5 @@
+"""Lesson 1.3 - Correcting a Simple Line Graph"""
+
 import matplotlib.pyplot as plt
 
 # We'll create a list of x-axis values

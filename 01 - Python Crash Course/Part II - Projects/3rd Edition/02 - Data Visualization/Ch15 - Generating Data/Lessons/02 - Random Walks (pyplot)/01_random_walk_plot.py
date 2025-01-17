@@ -1,3 +1,5 @@
+"""Lesson 2.1 - Plotting a Random Walk"""
+
 import matplotlib.pyplot as plt
 from random_walk import RandomWalk
 

@@ -1,3 +1,5 @@
+"""Lesson 1.2 - Improving a Simple Line Graph"""
+
 import matplotlib.pyplot as plt
 
 squares = [1, 4, 9, 16, 25]

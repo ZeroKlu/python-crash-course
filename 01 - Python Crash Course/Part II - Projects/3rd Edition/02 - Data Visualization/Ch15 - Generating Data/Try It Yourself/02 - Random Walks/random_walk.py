@@ -1,5 +1,8 @@
+"""A class to generate random walks"""
+
 from random import choice
 
+# pylint: disable=too-few-public-methods
 class RandomWalk:
     """A class to generate random walks"""
 

@@ -1,3 +1,5 @@
+"""Lesson 3.1 - Rolling a D6"""
+
 from die import Die
 
 # Create a D6

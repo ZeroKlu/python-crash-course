@@ -1,3 +1,5 @@
+"""Lesson 3.4 - Improving the Graph"""
+
 from die import Die
 import plotly.express as px
 # python -m pip install plotly.express
