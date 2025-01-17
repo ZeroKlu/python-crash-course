@@ -1,12 +1,13 @@
-# Assignment 17.01
-# Other Languages: Modify the API call in python_repos.py so it generates a chart showing the most popular projects
-#                  in other languages. Try languages such as JavaScript, Ruby, C, Java, Perl, Haskell, and Go.
+"""Assignment 17.01"""
+# Other Languages: Modify the API call in python_repos.py so it generates a chart
+#                  showing the most popular projects in other languages. Try languages
+#                  such as JavaScript, Ruby, C, Java, Perl, Haskell, and Go.
 
-from plotly import offline
-import requests
 from random import randint
 import os
 import sys
+from plotly import offline
+import requests
 
 ROOT_DIR = os.path.dirname(__file__)
 
@@ -17,7 +18,7 @@ print(f"Retrieving data for [{sel_lang}]...")
 
 url = f"https://api.github.com/search/repositories?q=language:{sel_lang}&sort=stars"
 headers = {"Accept": "application/vnd.github.v3+json"}
-r = requests.get(url, headers=headers)
+r = requests.get(url, headers=headers, timeout=10)
 
 if r.status_code != 200:
     print(f"API connection to [{url}] failed\n\twith status code: {r.status_code}")

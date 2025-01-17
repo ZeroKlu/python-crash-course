@@ -1,13 +1,15 @@
-# Assignment 17.02
-# Active Discussions: Using the data from hn_submissions.py, make a bar chart showing the most active discussions
-#                     currently happening on Hacker News. The height of each bar should correspond to the number of
-#                     comments each submission has. The label for each bar should include the submission's title and
-#                     should act as a link to the discussion page for that submission.
+"""Assignment 17.02"""
+# Active Discussions: Using the data from hn_submissions.py, make a bar chart showing
+#                     the most active discussions currently happening on Hacker News.
+#                     The height of each bar should correspond to the number of
+#                     comments each submission has. The label for each bar should
+#                     include the submission's title and should act as a link to
+#                     the discussion page for that submission.
 
-import requests
-from plotly import offline
 import os
 import sys
+import requests
+from plotly import offline
 
 ROOT_DIR = os.path.dirname(__file__)
 ITEM_COUNT = 20
@@ -15,8 +17,8 @@ MAX_RETRIEVE = 50
 
 # Make an API call and store the response.
 url = "https://hacker-news.firebaseio.com/v0/topstories.json"
-r = requests.get(url)
-if (r.status_code != 200):
+r = requests.get(url, timeout=10)
+if r.status_code != 200:
     print(f"Failed to consume API!\n Status: {r.status_code}")
     sys.exit(-1)
 
@@ -25,7 +27,7 @@ submission_ids = r.json()
 links, titles, comments = [], [], []
 for submission_id in submission_ids[:MAX_RETRIEVE]:
     url = f"https://hacker-news.firebaseio.com/v0/item/{submission_id}.json"
-    r = requests.get(url)
+    r = requests.get(url, timeout=10)
     response_dict = r.json()
     titles.append(response_dict["title"].split(")")[-1])
     links.append(

@@ -1,3 +1,5 @@
+"""Lesson 2.1 - Visualizing Results"""
+
 import requests
 from plotly import offline
 import os
@@ -9,8 +11,8 @@ ROOT_DIR = os.path.dirname(__file__)
 url = "https://api.github.com/search/repositories?q=language:python&sort=stars"
 headers = {"Accept": "application/vnd.github.v3+json"}
 
-r = requests.get(url, headers = headers)
-if (r.status_code != 200):
+r = requests.get(url, headers=headers, timeout=10)
+if r.status_code != 200:
     print(f"Failed to consume API!\n Status: {r.status_code}")
     sys.exit(-1)
 
