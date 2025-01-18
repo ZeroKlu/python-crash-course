@@ -1,3 +1,7 @@
+"""Assignment 16.0 - Download Your Own Data"""
+
+# pylint: disable=line-too-long
+
 # To obtain data, do the following:
 #
 # 1. Visit the NOAA Climate Data Online site at https://www.ncdc.noaa.gov/cdo-web/
@@ -28,18 +32,18 @@
 # NOAA data was down on the date I extracted the data, so I got this example from here:
 # https://open-meteo.com/en/docs/historical-weather-api#latitude=33.0462&longitude=-96.9942&start_date=2023-01-01&hourly=&daily=temperature_2m_max,temperature_2m_min,temperature_2m_mean,precipitation_sum,rain_sum,snowfall_sum&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timezone=America%2FChicago
 
-from relative_paths import get_path
 from pathlib import Path
 import csv
-import matplotlib.pyplot as plt
 from datetime import datetime
+import matplotlib.pyplot as plt
+from relative_paths import get_path
 
 folder = "Data"
 file_name = "lewisville_weather_2023_jan_to_sep.csv"
 file_path = get_path(file_name, folder)
 
 csv_file = Path(file_path)
-lines = csv_file.read_text().splitlines()
+lines = csv_file.read_text(encoding="UTF-8").splitlines()
 
 reader = csv.reader(lines)
 header_row = next(reader)
@@ -78,6 +82,6 @@ ax.tick_params(labelsize=8)
 
 # Add date formatting
 fig.autofmt_xdate()
-fig.canvas.manager.set_window_title(f"Lewisville, TX Weather")
+fig.canvas.manager.set_window_title("Lewisville, TX Weather")
 
 plt.show()

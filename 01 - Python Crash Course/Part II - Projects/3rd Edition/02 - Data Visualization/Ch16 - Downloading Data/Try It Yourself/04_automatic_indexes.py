@@ -1,21 +1,23 @@
-# Assignment 16.4
-# Automatic Indexes: In this section, we hardcoded the indexes corresponding to the TMIN and TMAX columns.
-#                    Use the header row to determine the indexes for these values, so your program can work
-#                    for Sitka or Death Valley. Use the station name to automatically generate an appropriate
-#                    title for your graph as well.
+"""Assignment 16.4"""
 
-from relative_paths import get_path
+# Automatic Indexes: In this section, we hardcoded the indexes corresponding to
+#                    the TMIN and TMAX columns. Use the header row to determine
+#                    the indexes for these values, so your program can work for
+#                    Sitka or Death Valley. Use the station name to automatically
+#                    generate an appropriate title for your graph as well.
+
 from pathlib import Path
 import csv
-import matplotlib.pyplot as plt
 from datetime import datetime
+import matplotlib.pyplot as plt
+from relative_paths import get_path
 
 folder = "Data"
 file_name = "sitka_weather_2021_full.csv"
 file_path = get_path(file_name, folder)
 
 csv_file = Path(file_path)
-lines = csv_file.read_text().splitlines()
+lines = csv_file.read_text(encoding="UTF-8").splitlines()
 
 reader = csv.reader(lines)
 header_row = next(reader)

@@ -1,3 +1,5 @@
+"""Lesson 2.3: Basic Map"""
+
 import json
 from pathlib import Path
 from relative_paths import get_path
@@ -8,7 +10,7 @@ folder = "Data"
 filename = "readable_eq_data_1_day_09102023.json"
 filepath = get_path(filename, folder)
 
-contents = Path(filepath).read_text()
+contents = Path(filepath).read_text(encoding="UTF-8")
 all_eq_data = json.loads(contents)
 all_eq_dicts = all_eq_data["features"]
 

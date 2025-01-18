@@ -1,13 +1,15 @@
-from relative_paths import get_path
-from pathlib import Path
+"""Lesson 1.2 - Understanding the Header Row"""
+
 import csv
+from pathlib import Path
+from relative_paths import get_path
 
 folder = "Data"
 file_name = "sitka_weather_07-2021_simple.csv"
 file_path = get_path(file_name, folder)
 
 csv_file = Path(file_path)
-lines = csv_file.read_text().splitlines()
+lines = csv_file.read_text(encoding="UTF-8").splitlines()
 
 reader = csv.reader(lines)
 header_row = next(reader)

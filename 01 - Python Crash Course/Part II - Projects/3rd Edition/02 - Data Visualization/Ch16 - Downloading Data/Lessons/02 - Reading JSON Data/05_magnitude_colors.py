@@ -1,3 +1,5 @@
+"""Lesson 2.5: Magnitude Colors"""
+
 import json
 from pathlib import Path
 from relative_paths import get_path
@@ -20,6 +22,7 @@ for eq_dict in all_eq_dicts:
 
 # Some of the magnitudes came back as negative numbers in my download.
 # So we'll clean those up
+# pylint: disable=consider-using-enumerate
 for i in range(len(mags)):
     if mags[i] < 0:
         mags[i] *= -1

@@ -1,3 +1,5 @@
+"""Lesson 2.6: Add Hover Text"""
+
 import json
 from pathlib import Path
 from relative_paths import get_path
@@ -19,6 +21,7 @@ for eq_dict in all_eq_dicts:
     lats.append(eq_dict["geometry"]["coordinates"][1])
     eq_titles.append(eq_dict["properties"]["title"])
 
+# pylint: disable=consider-using-enumerate
 for i in range(len(mags)):
     if mags[i] < 0:
         mags[i] *= -1

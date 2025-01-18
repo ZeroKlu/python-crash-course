@@ -1,19 +1,21 @@
-# Assignment 16.3
+"""Assignment 16.3"""
+
 # San Francisco: Are temperatures in San Francisco more like temperatures in Sitka or temperatures in
 #                Death Valley? Download some data for San Francisco, and generate a high-low temperature
 #                plot for San Francisco to make a comparison.
-from relative_paths import get_path
+
 from pathlib import Path
 import csv
-import matplotlib.pyplot as plt
 from datetime import datetime
+import matplotlib.pyplot as plt
+from relative_paths import get_path
 
 folder = "Data"
 file_name = "san_francisco_weather_2023_jan_to_sep.csv"
 file_path = get_path(file_name, folder)
 
 csv_file = Path(file_path)
-lines = csv_file.read_text().splitlines()
+lines = csv_file.read_text(encoding="UTF-8").splitlines()
 
 reader = csv.reader(lines)
 header_row = next(reader)
@@ -51,6 +53,6 @@ ax.tick_params(labelsize=8)
 
 # Add date formatting
 fig.autofmt_xdate()
-fig.canvas.manager.set_window_title(f"San Francisco, CA Weather")
+fig.canvas.manager.set_window_title("San Francisco, CA Weather")
 
 plt.show()

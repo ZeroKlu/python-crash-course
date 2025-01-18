@@ -1,5 +1,8 @@
-# We are working with the GeoJSON format. It is useful to understand the organization of its data
-# Note: Fresh data can be retrieved here: https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/1.0_day.geojson
+"""Lesson 2.2 - Exploring Earthquake JSON Data"""
+
+# We are working with the GeoJSON format. It is useful to understand the organizationof its data
+# Note: Fresh data can be retrieved here:
+#       https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/1.0_day.geojson
 
 import json
 from pathlib import Path
@@ -10,7 +13,7 @@ filename = "readable_eq_data_1_day_09102023.json"
 filepath = get_path(filename, folder)
 
 # Explore the structure of the data
-contents = Path(filepath).read_text()
+contents = Path(filepath).read_text(encoding="UTF-8")
 all_eq_data = json.loads(contents)
 
 # A good way to see if the JSON parses correctly is to:
@@ -18,6 +21,8 @@ all_eq_data = json.loads(contents)
 # 2. If you don't already have it, install the "JSTool" plugin
 # 3. Click on Plugins > JSTool > JSON Viewer
 # If the JSON parses correctly, it will appear as an explorable tree in a pop-out pane
+
+# pylint: disable=line-too-long
 
 #region JSON Structure:
 #
