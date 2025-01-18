@@ -1,12 +1,14 @@
-import requests
+"""Lesson 2.12 - Getting a Single Article"""
+
 import json
 import sys
+import requests
 
 # Reference:    https://github.com/HackerNews/API
 # Make an API call for a single article, and store the response
 url = "https://hacker-news.firebaseio.com/v0/item/31353677.json"
 
-response = requests.get(url)
+response = requests.get(url, timeout=10)
 print(f"Response Status: {response.status_code}")
 
 # Explore the structure of the data

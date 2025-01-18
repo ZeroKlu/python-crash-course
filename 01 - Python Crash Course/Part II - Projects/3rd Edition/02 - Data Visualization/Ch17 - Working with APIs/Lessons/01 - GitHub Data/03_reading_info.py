@@ -1,12 +1,14 @@
-import requests
+"""Lesson 1.3 - Reading Information"""
+
 import sys
+import requests
 
 url = "https://api.github.com/search/repositories"
 query_string = "?q=language:python+sort:stars+stars:>10000"
 request_url = url + query_string
 headers = {"Accept": "application/vnd.github.v3+json"}
 
-response = requests.get(request_url, headers=headers)
+response = requests.get(request_url, headers=headers, timeout=10)
 print(f"Status code: {response.status_code}")
 
 response_dict = response.json()
@@ -14,7 +16,7 @@ response_dict = response.json()
 if response.status_code != 200:
     print(f"API connection to [{url}] failed\n\twith status code: {response.status_code}")
     sys.exit(-1)
-    
+
 print("Success:")
 
 print(f"- Total repositories: {response_dict['total_count']}")

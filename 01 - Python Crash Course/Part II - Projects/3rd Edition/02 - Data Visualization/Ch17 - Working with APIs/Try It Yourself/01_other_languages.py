@@ -1,11 +1,13 @@
-# Assignment 17.01
-# Other Languages: Modify the API call in python_repos.py so it generates a chart showing the most popular projects
-#                  in other languages. Try languages such as JavaScript, Ruby, C, Java, Perl, Haskell, and Go.
+"""Assignment 17.01"""
 
-import requests
-import plotly.express as px
+# Other Languages: Modify the API call in python_repos.py so it generates a chart
+#                  showing the most popular projects in other languages. Try languages
+#                  such as JavaScript, Ruby, C, Java, Perl, Haskell, and Go.
+
 import sys
 from random import randint
+import requests
+import plotly.express as px
 
 languages = ["javascript", "ruby", "c", "java", "perl", "haskell", "go"]
 sel_lang = languages[randint(0, len(languages) - 1)]
@@ -17,7 +19,7 @@ query_string = f"?q=language:{sel_lang}+sort:stars+stars:>10000"
 request_url = url + query_string
 headers = {"Accept": "application/vnd.github.v3+json"}
 
-response = requests.get(request_url, headers=headers)
+response = requests.get(request_url, headers=headers, timeout=10)
 response_dict = response.json()
 
 if response.status_code != 200:

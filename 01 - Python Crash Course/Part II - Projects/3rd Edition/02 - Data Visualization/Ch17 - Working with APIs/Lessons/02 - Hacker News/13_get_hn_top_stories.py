@@ -1,11 +1,13 @@
-import requests
-from operator import itemgetter
+"""Lesson 2.13 - Getting a List of Top Articles"""
+
 import sys
+from operator import itemgetter
+import requests
 
 # Make an API call for a list of top articles, and store the response
 url = "https://hacker-news.firebaseio.com/v0/topstories.json"
 
-response = requests.get(url)
+response = requests.get(url, timeout=10)
 print(f"Response Status: {response.status_code}")
 
 if response.status_code != 200:
@@ -18,7 +20,7 @@ submission_dicts = []
 for submission_id in submission_ids[:5]:
     # Call the API to get the specific article
     url = f"https://hacker-news.firebaseio.com/v0/item/{submission_id}.json"
-    response = requests.get(url)
+    response = requests.get(url, timeout=10)
     print(f"{submission_id} Status: {response.status_code}")
     response_dict = response.json()
 
@@ -33,5 +35,5 @@ for submission_id in submission_ids[:5]:
 submission_dicts = sorted(submission_dicts, key=itemgetter("comments"), reverse=True)
 for submission_dict in submission_dicts:
     print(f"\nTitle: {submission_dict['title']}")
-    print(f"\Discussion Link: {submission_dict['hn_link']}")
-    print(f"\Comments: {submission_dict['comments']}")
+    print(f"Discussion Link: {submission_dict['hn_link']}")
+    print(f"Comments: {submission_dict['comments']}")

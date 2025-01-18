@@ -1,12 +1,14 @@
-import requests
+"""Lesson 1.2 - Working with Results"""
+
 import sys
+import requests
 
 url = "https://api.github.com/search/repositories"
 query_string = "?q=language:python+sort:stars+stars:>10000"
 request_url = url + query_string
 headers = {"Accept": "application/vnd.github.v3+json"}
 
-response = requests.get(request_url, headers=headers)
+response = requests.get(request_url, headers=headers, timeout=10)
 print(f"Status code: {response.status_code}")
 
 response_dict = response.json()
