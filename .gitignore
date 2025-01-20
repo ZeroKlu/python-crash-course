@@ -166,3 +166,4 @@ secret/
 secrets.json
 Book Collection.zip
 online_code_challenges/
+.ll_env/
