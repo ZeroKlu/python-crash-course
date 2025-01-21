@@ -1,3 +1,0 @@
-## Making the Home Page
-
-
