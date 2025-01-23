@@ -1,3 +1,14 @@
+## Styling the Home Page
+
+We'll modify the home page to make it more attractive.
+
+### Adding a Jumbotron
+
+Add a jumbotron to the home page, and add some text to the jumbotron.
+
+In `learning_logs/templates/learning_logs/index.html`:
+
+```html
 {% extends 'learning_logs/base.html' %}
 
 {% block page_header %}
@@ -16,3 +27,16 @@
         </div>
     </div>
 {% endblock page_header %}
+```
+
+---
+
+### Viewing the Home Page
+
+Refreshing the home page will show the jumbotron.
+
+<img src="../../images/index_style.png" alt="Styling the Home Page" style="width:500px;">
+
+---
+
+### Next Up: Styling the Login Page

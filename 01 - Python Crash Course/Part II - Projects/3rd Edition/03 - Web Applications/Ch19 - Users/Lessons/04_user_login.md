@@ -30,7 +30,7 @@ This will generate a new directory called `accounts` in the
 
 ---
 
-### Register the App
+### Registering the App
 
 Of course, we need to register the app in the `settings.py` file.
 
@@ -50,7 +50,7 @@ INSTALLED_APPS = [
 
 ---
 
-### Include the App URLs
+### Including the App URLs
 
 Just like the `learning_logs` app, we need to include the `accounts`
 URL file.
