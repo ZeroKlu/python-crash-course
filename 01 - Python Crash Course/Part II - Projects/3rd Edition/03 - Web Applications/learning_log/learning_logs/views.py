@@ -1,7 +1,8 @@
 """Views for learning_logs."""
 
-from django.shortcuts import render
-from .models import Topic
+from django.shortcuts import render, redirect
+from .models import Topic, Entry
+from .forms import TopicForm, EntryForm
 
 def index(request):
     """The home page for learning_logs."""
@@ -13,3 +14,67 @@ def topics(request):
     topic_list = Topic.objects.order_by("date_added")
     context = {"topics": topic_list}
     return render(request, "learning_logs/topics.html", context)
+
+def topic(request, topic_id):
+    """Show a single topic and all its entries."""
+    # pylint: disable=no-member
+    topic_item = Topic.objects.get(id=topic_id)
+    entries = topic_item.entry_set.order_by("date_added")
+    context = {"topic": topic_item, "entries": entries}
+    return render(request, "learning_logs/topic.html", context)
+
+def new_topic(request):
+    """Add a new topic."""
+    if request.method != "POST":
+        # No data submitted; create a blank form.
+        form = TopicForm()
+    else:
+        # POST data submitted; process data.
+        form = TopicForm(data=request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("learning_logs:topics")
+
+    # Display a blank or invalid form.
+    context = {"form": form}
+    return render(request, "learning_logs/new_topic.html", context)
+
+def new_entry(request, topic_id):
+    """Add a new entry for a particular topic."""
+    # pylint: disable=no-member
+    topic_item = Topic.objects.get(id=topic_id)
+
+    if request.method != "POST":
+        # No data submitted; create a blank form.
+        form = EntryForm()
+    else:
+        # POST data submitted; process data.
+        form = EntryForm(data=request.POST)
+        if form.is_valid():
+            new_entry_item = form.save(commit=False)
+            new_entry_item.topic = topic_item
+            new_entry_item.save()
+            return redirect("learning_logs:topic", topic_id=topic_id)
+
+    # Display a blank or invalid form.
+    context = {"topic": topic_item, "form": form}
+    return render(request, "learning_logs/new_entry.html", context)
+
+def edit_entry(request, entry_id):
+    """Edit an existing entry."""
+    # pylint: disable=no-member
+    entry = Entry.objects.get(id=entry_id)
+    topic_item = entry.topic
+    if request.method != "POST":
+        # Initial request; pre-fill form with the current entry.
+        form = EntryForm(instance=entry)
+    else:
+        # POST data submitted; process data.
+        form = EntryForm(instance=entry, data=request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("learning_logs:topic", topic_id=topic_item.id)
+
+    # Display a blank or invalid form.
+    context = {"entry": entry, "topic": topic_item, "form": form}
+    return render(request, "learning_logs/edit_entry.html", context)

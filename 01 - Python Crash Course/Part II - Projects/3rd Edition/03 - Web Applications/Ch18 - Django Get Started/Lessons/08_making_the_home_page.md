@@ -1,5 +1,10 @@
 ## Making the Home Page
 
+> Note: When making a portal application, you can't escape the need
+> to know at least the fundamentals of HTML and CSS. You can
+> complete this tutorial without that experience, but continuing into
+> designing your own portal wills require some HTML and CSS.
+
 Creating user pages in a Django portal consists of three steps:
 
 1. Defining the URL
