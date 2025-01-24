@@ -1,3 +1,14 @@
+## Styling the Topics Page
+
+The topics page is currently not well styled. Let's fix that.
+
+---
+
+### Implementing Bootstrap on the Topics Page
+
+In `topics.html`...
+
+```html
 {% extends 'learning_logs/base.html' %}
 
 {% block page_header %}
@@ -19,3 +30,14 @@
 
 <a href="{% url 'learning_logs:new_topic' %}">Add a new topic</a>
 {% endblock content %}
+```
+
+---
+
+### Viewing the Topics Page
+
+Now, if we visit the topics page, we should see the Bootstrap styling.
+
+<img src="../../images/topics_style.png" alt="Topics Page with Bootstrap styling" style="width:500px;">
+
+---

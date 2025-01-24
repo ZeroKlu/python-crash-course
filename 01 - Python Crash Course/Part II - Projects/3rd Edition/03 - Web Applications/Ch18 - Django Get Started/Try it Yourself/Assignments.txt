@@ -17,7 +17,7 @@ Assignment 18.1: New Projects
                  when starting a new project. Then delete the project
                  directories if you wish.
 
-Assignment 18.2: Short Entries
+Assignment 18.2: Short Entries (done)
                  The `__str__()` method in the Entry model currently
                  appends an ellipsis to every instance of Entry when
                  Django shows it in the admin site or the shell. Add

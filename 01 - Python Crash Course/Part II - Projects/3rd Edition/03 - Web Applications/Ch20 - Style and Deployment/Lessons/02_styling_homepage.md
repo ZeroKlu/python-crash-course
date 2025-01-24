@@ -14,6 +14,12 @@ In `learning_logs/templates/learning_logs/index.html`:
 {% block page_header %}
     <div class="p-3 mb-4 bg-light border rounded-3">
         <div class="container-fluid py-4">
+            {% if request.user.is_authenticated %}
+                <h1 class="display-3">Welcome back, {{ request.user.username }}!</h1>
+                <p class="lead">
+                    Let's continue learning!
+                </p>
+            {% else %}
             <h1 class="display-3">Track your learning.</h1>
             <p class="lead">
                 Make your own Learning Log, and keep a list of the 
@@ -24,19 +30,26 @@ In `learning_logs/templates/learning_logs/index.html`:
             <a class="btn btn-primary btn-lg mt-1" href="{% url 'accounts:register' %}">
                 Register &raquo;
             </a>
+            {% endif %}
         </div>
     </div>
 {% endblock page_header %}
 ```
 
+> Note: If you followed the book exactly, you'll notice that I added the
+> `{% if request.user.is_authenticated %}` section. I didn't like defaulting
+> to a "Register" button for an already registered (and logged-in) user.
+
 ---
 
 ### Viewing the Home Page
 
-Refreshing the home page will show the jumbotron.
+Refreshing the home page will show a "Register" button when not logged in...
 
 <img src="../../images/index_style.png" alt="Styling the Home Page" style="width:500px;">
 
----
+... or a "Welcome back" message when logged in.
 
-### Next Up: Styling the Login Page
+<img src="../../images/index_style_logged_in.png" alt="Styling the Home Page" style="width:500px;">
+
+---

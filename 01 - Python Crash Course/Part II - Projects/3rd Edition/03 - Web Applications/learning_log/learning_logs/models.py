@@ -21,8 +21,9 @@ class Entry(models.Model):
 
     class Meta:
         """Model management options."""
-        verbose_name_plural = 'entries'
+        verbose_name_plural = "entries"
 
     def __str__(self):
         """Return a string representation of the model."""
-        return str(self.text)[:50]
+        text = str(self.text)
+        return text[:47] + "..." if len(text) > 50 else text

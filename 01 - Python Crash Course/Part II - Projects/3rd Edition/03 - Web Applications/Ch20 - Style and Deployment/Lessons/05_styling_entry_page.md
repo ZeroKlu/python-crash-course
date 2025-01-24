@@ -1,3 +1,14 @@
+## Styling Entries on the Topic Page
+
+The entries page is currently not well styled. Let's fix that.
+
+---
+
+### Implementing Bootstrap on the Entries Page
+
+In `topic.html`...
+
+```html
 {% extends 'learning_logs/base.html' %}
 
 {% block page_header %}
@@ -30,3 +41,23 @@
     <li>There are no entries for this topic yet.</li>
 {% endfor %}
 {% endblock content %}
+```
+
+---
+
+### Viewing the Entries Page
+
+Now, when we view a specific topic, the entries appear as Bootstrap cards.
+
+<img src="../../images/entries_style.png" alt="Entries page with Bootstrap cards" style="width:500px;">>
+
+---
+
+### Styling the Remaining Forms Pages
+
+There are still several forms that need styling. They are covered in the 
+Try-it-Yourself section.
+
+[Styling Other Forms](../Try%20it%20Yourself/01_other_forms.md)
+
+---
