@@ -3,7 +3,7 @@
 
 <div style="text-align:center;padding-top:100px;">
 <a href="https://github.com/ZeroKlu">
-<img src="./images/zeroklu.png" alt="GitHub - ZeroKlu" style="width:80px;border-radius:40px;">
+<img src="./images/zeroklu-ghibli.png" alt="GitHub - ZeroKlu" style="width:80px;border-radius:40px;">
 </a>
 </div>
 
