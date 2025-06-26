@@ -87,4 +87,12 @@ Output:
 Hello John
 ```
 
+> Digging Deeper:
+> 
+> In some scenarios, you may want to use the `format()` function instead of
+> the f-string. This is because f-strings are evaluated whether or not they are
+> used, while `format()` is not evaluated until/unless needed.
+>
+> An example of this would be a string that is only used if a condition is met.
+
 ---
