@@ -147,7 +147,8 @@ def my_function:
 * Not used in Python standards
 
 `kebab-case`
-* Not used in Python standards
+* Not used in Python standards<br>(Note: This is not only non-standard but will not
+  work at all in Python)
 
 ---
 
