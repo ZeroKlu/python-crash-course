@@ -11,12 +11,12 @@ slice = list[[start]:[stop][:step]]
 All of the fields are optional, but the omission of any item affects how the
 slice range behaves.
 
-* If `start` is omitted (`list(:stop)`, e.g), the start is assumed to be 0
-* If `stop` is omitted (`list(start:)`, e.g), the stop is assumed to be the
+* If `start` is omitted (`list[:stop]`, e.g), the start is assumed to be 0
+* If `stop` is omitted (`list[start:]`, e.g), the stop is assumed to be the
   end of the list.
-* If `step` is to be included (`list(start:stop:step)`, e.g.), it will always
+* If `step` is to be included (`list[start:stop:step]`, e.g.), it will always
   be preceded by a second colon, even if `start`, `end`, or both are omitted
-  (`list(::step)`, e.g)
+  (`list[::step]`, e.g)
 
 ---
 
