@@ -95,7 +95,7 @@ So, when we evaluate the complex conditional (`n > min and n < max`), we do the
 following:
 
 1. Evaluate `n > min` which returns `True` for the left condition
-2. Evaluate `n < max>` which returns `True` for the right condition
+2. Evaluate `n < max` which returns `True` for the right condition
 3. Evaluate `True and True` which returns `True` based on the truth table
 
 So, the `and` is `True`, which routes us to the "OK" path in the `if`-`else`

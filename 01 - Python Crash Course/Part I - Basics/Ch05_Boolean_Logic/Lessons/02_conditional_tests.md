@@ -109,7 +109,7 @@ True
 
 ---
 
-### Inequalities (`>`, `<=`, `>`, `>=`)
+### Inequalities (`>`, `>=`, `<`, `<=`)
 
 Often, we're more interested in where an item falls in relation to another as
 opposed to actual equivalency between the items.
